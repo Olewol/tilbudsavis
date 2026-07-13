@@ -20,6 +20,9 @@
     header { text-align: center; padding: 2rem 0 1.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
     header h1 { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
     header p { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; }
+    .stores-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1rem 0 0.5rem; }
+    .store-pill { background: var(--accent-light); color: var(--accent); font-weight: 600; font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; text-decoration: none; }
+    .store-pill:hover { background: #c8dcc6; }
     .section-title {
       font-size: 1.3rem; font-weight: 700; padding: 1rem 0 0.5rem;
       margin: 2rem 0 1rem; border-bottom: 1px solid var(--border);
@@ -30,10 +33,16 @@
       margin: 0.6rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       display: flex; justify-content: space-between; align-items: flex-start;
       gap: 1rem; border: 1px solid var(--border);
+      transition: box-shadow 0.15s;
     }
+    .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .card .info { flex: 1; }
     .card .name { font-weight: 600; font-size: 1rem; margin-bottom: 0.2rem; }
-    .card .store { font-size: 0.8rem; color: var(--muted); }
+    .card .name a { color: var(--text); text-decoration: none; }
+    .card .name a:hover { color: var(--accent); text-decoration: underline; }
+    .card .store { font-size: 0.8rem; }
+    .card .store a { color: var(--muted); text-decoration: none; font-weight: 500; }
+    .card .store a:hover { color: var(--accent); text-decoration: underline; }
     .card .price { text-align: right; white-space: nowrap; flex-shrink: 0; }
     .card .price .current { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
     .card .price .savings { font-size: 0.8rem; color: var(--new-badge); font-weight: 600; }
@@ -49,7 +58,9 @@
     .top-picks h2 { font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--accent); }
     .top-picks ol { padding-left: 1.2rem; }
     .top-picks li { padding: 0.3rem 0; font-size: 0.95rem; }
+    .top-picks li a { color: var(--text); }
     .footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.8rem; }
+    .footer a { color: var(--muted); }
     @media (max-width: 500px) { body { padding: 1rem 0.5rem; } .card { padding: 0.8rem; } header h1 { font-size: 1.4rem; } }
   </style>
 </head>
@@ -57,13 +68,31 @@
   <div class="container">
     <header>
       <h1>🛒 Ukens tilbud</h1>
-      <p>Uke 29 — 13. July 2026 • Oppdatert 13.07.2026 kl 12:49</p>
+      <p>Uke 29 — 13. July 2026 • Oppdatert 13.07.2026 kl 18:38</p>
+      <div class="stores-bar">
+        <a class="store-pill" href="https://kiwi.no" target="_blank">Kiwi Mysen</a>
+        <a class="store-pill" href="https://rema.no" target="_blank">Rema 1000</a>
+        <a class="store-pill" href="https://coop.no/extra/" target="_blank">Extra</a>
+        <a class="store-pill" href="https://bunnpris.no" target="_blank">Bunnpris</a>
+        <a class="store-pill" href="https://coop.no/obs/" target="_blank">Obs Slitu</a>
+        <a class="store-pill" href="https://meny.no" target="_blank">Meny Askim</a>
+        <a class="store-pill" href="https://etilbudsavis.no" target="_blank">📄 Alle aviser</a>
+      </div>
     </header>
 
     <div class="top-picks">
   <h2>⭐ Ukas beste kjøp</h2>
   <ol>
-<li><strong>Ribbe grillet</strong> — Rema 1000 — <strong>79 kr</strong> (spar 40 kr)</li>
+<li><span class="rank">1.</span> <strong><a href="https://www.europris.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">NIDAR SJOKOLADE</a></strong> — <a href="https://europris.no" target="_blank" rel="noopener">Europris</a> — <strong>100 kr</strong> <span class="savings">spar 119 kr</span></li>
+<li><span class="rank">2.</span> <strong><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">YTTERØY KYLLING KJØTTDEIG</a></strong> — <a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a> — <strong>100 kr</strong> <span class="savings">spar 101 kr</span></li>
+<li><span class="rank">3.</span> <strong><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REKER 70/90</a></strong> — <a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a> — <strong>399 kr</strong> <span class="savings">spar 100 kr</span></li>
+<li><span class="rank">4.</span> <strong><a href="https://gigaboks.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Reker 40/60. 5 kg kartong</a></strong> — <a href="https://gigaboks.no" target="_blank" rel="noopener">Gigaboks</a> — <strong>899 kr</strong> <span class="savings">spar 100 kr</span></li>
+<li><span class="rank">5.</span> <strong><a href="https://gigaboks.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Culotte storfe ca. 1,3 kg</a></strong> — <a href="https://gigaboks.no" target="_blank" rel="noopener">Gigaboks</a> — <strong>209 kr</strong> <span class="savings">spar 60 kr</span></li>
+<li><span class="rank">6.</span> <strong><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Laksefilet</a></strong> — <a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a> — <strong>109 kr</strong> <span class="savings">spar 50 kr</span></li>
+<li><span class="rank">7.</span> <strong><a href="https://www.europris.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">FRIELE FILTERMALT</a></strong> — <a href="https://europris.no" target="_blank" rel="noopener">Europris</a> — <strong>90 kr</strong> <span class="savings">spar 49 kr</span></li>
+<li><span class="rank">8.</span> <strong><a href="https://narbutikken.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Reker</a></strong> — <a href="https://narbutikken.no" target="_blank" rel="noopener">Nærbutikken</a> — <strong>100 kr</strong> <span class="savings">spar 49 kr</span></li>
+<li><span class="rank">9.</span> <strong><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KJØTTDEIG</a></strong> — <a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a> — <strong>60 kr</strong> <span class="savings">spar 43 kr</span></li>
+<li><span class="rank">10.</span> <strong><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KYLLINGFILET 690 G</a></strong> — <a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a> — <strong>109 kr</strong> <span class="savings">spar 40 kr</span></li>
   </ol>
 </div>
 
@@ -71,49 +100,500 @@
     <div class="section-title">📦 Kylling</div>
 <div class="card">
   <div class="info">
-    <span class="badge-new">Ny</span> <div class="name">Kyllingfilet 400g</div>
-    <div class="store">Kiwi</div>
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">YTTERØY KYLLING KJØTTDEIG</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
   </div>
   <div class="price">
-    <div class="current">59 kr</div>
-    <div class="savings">-25%</div>
+    <div class="current">100 kr</div>
+    <div class="savings">spar 101 kr</div>
   </div>
 </div>
 <div class="card">
   <div class="info">
-    <div class="name">Kyllingkjøttdeig</div>
-    <div class="store">Rema 1000</div>
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KYLLINGFILET 690 G</a></div>
+    <div class="store"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a></div>
   </div>
   <div class="price">
-    <div class="current">49 kr</div>
+    <div class="current">109 kr</div>
+    <div class="savings">spar 40 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/mega?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">GRILL PERFEKT LÅRFILET</a></div>
+    <div class="store"><a href="https://coop.no/coop-mega/" target="_blank" rel="noopener">Coop Mega</a></div>
+  </div>
+  <div class="price">
+    <div class="current">80 kr</div>
+    <div class="savings">spar 40 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/coop-prix/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KYLLINGFILET 690 G</a></div>
+    <div class="store"><a href="https://coop.no/coop-prix/" target="_blank" rel="noopener">Coop Prix</a></div>
+  </div>
+  <div class="price">
+    <div class="current">100 kr</div>
+    <div class="savings">spar 30 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/mega?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">NYGRILLET KYLLINGLÅR</a></div>
+    <div class="store"><a href="https://coop.no/coop-mega/" target="_blank" rel="noopener">Coop Mega</a></div>
+  </div>
+  <div class="price">
+    <div class="current">20 kr</div>
+    <div class="savings">spar 13 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">DEN STOLTE HANE LOLLIPOP CHILI BBQ</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
+  </div>
+  <div class="price">
+    <div class="current">80 kr</div>
+    <div class="savings">spar 3 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Storfe</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://gigaboks.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Culotte storfe ca. 1,3 kg</a></div>
+    <div class="store"><a href="https://gigaboks.no" target="_blank" rel="noopener">Gigaboks</a></div>
+  </div>
+  <div class="price">
+    <div class="current">209 kr</div>
+    <div class="savings">spar 60 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KJØTTDEIG</a></div>
+    <div class="store"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 43 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/coop-prix/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KJØTTDEIG</a></div>
+    <div class="store"><a href="https://coop.no/coop-prix/" target="_blank" rel="noopener">Coop Prix</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 28 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Svin</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/mega?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">GILDE GRILLFILET SVIN</a></div>
+    <div class="store"><a href="https://coop.no/coop-mega/" target="_blank" rel="noopener">Coop Mega</a></div>
+  </div>
+  <div class="price">
+    <div class="current">199 kr</div>
+    <div class="savings">spar 18 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Laks</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Laksefilet</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">109 kr</div>
+    <div class="savings">spar 50 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Laks</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">99 kr</div>
+    <div class="savings">spar 36 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://meny.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">LAKSEBURGER FRA LERØY</a></div>
+    <div class="store"><a href="http://meny.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MENY</a></div>
+  </div>
+  <div class="price">
+    <div class="current">45 kr</div>
     <div class="savings">spar 15 kr</div>
   </div>
 </div>
-<div class="section-title">📦 Pålegg</div>
 <div class="card">
   <div class="info">
-    <div class="name">Stranda spekeskinke</div>
-    <div class="store">Extra</div>
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://jacobs.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">LAKSEBURGER</a></div>
+    <div class="store"><a href="https://jacobs.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Jacobs</a></div>
   </div>
   <div class="price">
-    <div class="current">32 kr</div>
-    <div class="savings">spar 12 kr</div>
+    <div class="current">45 kr</div>
+    <div class="savings">spar 15 kr</div>
   </div>
 </div>
 <div class="card">
   <div class="info">
-    <div class="name">Jacobs utvalgte skinke</div>
-    <div class="store">Kiwi</div>
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">LOFOTEN LAKSEBURGER</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
   </div>
   <div class="price">
-    <div class="current">28 kr</div>
+    <div class="current">60 kr</div>
+    <div class="savings">spar 13 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">LAKSEFILET M/LIMEPEPPER</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">160 kr</div>
+    <div class="savings">spar 10 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Reker/scampi</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REKER 70/90</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">399 kr</div>
+    <div class="savings">spar 100 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://gigaboks.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Reker 40/60. 5 kg kartong</a></div>
+    <div class="store"><a href="https://gigaboks.no" target="_blank" rel="noopener">Gigaboks</a></div>
+  </div>
+  <div class="price">
+    <div class="current">899 kr</div>
+    <div class="savings">spar 100 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://narbutikken.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Reker</a></div>
+    <div class="store"><a href="https://narbutikken.no" target="_blank" rel="noopener">Nærbutikken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">100 kr</div>
+    <div class="savings">spar 49 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">POLAR REKER</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
+  </div>
+  <div class="price">
+    <div class="current">499 kr</div>
+    <div class="savings">spar 40 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP REKER I LAKE XL</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 16 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SCAMPI NATURELL</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 5 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Yoghurt</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Yoghurt 8-pk.</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">35 kr</div>
+    <div class="savings">spar 13 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/extra/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Q SKYR MINI</a></div>
+    <div class="store"><a href="https://coop.no/extra/" target="_blank" rel="noopener">Extra</a></div>
+  </div>
+  <div class="price">
+    <div class="current">25 kr</div>
+    <div class="savings">spar 8 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Ost</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/extra/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP GREEK FETA BLOCK</a></div>
+    <div class="store"><a href="https://coop.no/extra/" target="_blank" rel="noopener">Extra</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 11 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://kiwi.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">GULOST&amp;CHEDDAR</a></div>
+    <div class="store"><a href="http://kiwi.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">KIWI</a></div>
+  </div>
+  <div class="price">
+    <div class="current">30 kr</div>
+    <div class="savings">spar 7 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Annet pålegg</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SERRANO GRAN RESERVA</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">80 kr</div>
+    <div class="savings">spar 15 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MILLS KLASSISK POTETSALAT</a></div>
+    <div class="store"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">40 kr</div>
+    <div class="savings">spar 15 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://narbutikken.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Potetsalat</a></div>
+    <div class="store"><a href="https://narbutikken.no" target="_blank" rel="noopener">Nærbutikken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">40 kr</div>
+    <div class="savings">spar 10 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/coop-prix/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MILLS KLASSISK POTETSALAT</a></div>
+    <div class="store"><a href="https://coop.no/coop-prix/" target="_blank" rel="noopener">Coop Prix</a></div>
+  </div>
+  <div class="price">
+    <div class="current">40 kr</div>
+    <div class="savings">spar 8 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Brød</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/coop-prix/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COOP KONGEBRØD</a></div>
+    <div class="store"><a href="https://coop.no/coop-prix/" target="_blank" rel="noopener">Coop Prix</a></div>
+  </div>
+  <div class="price">
+    <div class="current">30 kr</div>
+    <div class="savings">spar 27 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://kiwi.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">PIZZABUNN SURDEIG PRIME</a></div>
+    <div class="store"><a href="http://kiwi.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">KIWI</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 10 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://coop.no/obs/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">POLARBRØD SOMMERLYKKE</a></div>
+    <div class="store"><a href="https://coop.no/obs/" target="_blank" rel="noopener">Obs</a></div>
+  </div>
+  <div class="price">
+    <div class="current">35 kr</div>
+    <div class="savings">spar 6 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">POLAR-LEVAIN HVETE</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">45 kr</div>
+    <div class="savings">spar 4 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Snacks</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.europris.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">NIDAR SJOKOLADE</a></div>
+    <div class="store"><a href="https://europris.no" target="_blank" rel="noopener">Europris</a></div>
+  </div>
+  <div class="price">
+    <div class="current">100 kr</div>
+    <div class="savings">spar 119 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">KVIKK LUNSJ 6PK</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">55 kr</div>
+    <div class="savings">spar 34 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Beef Jerky</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">30 kr</div>
+    <div class="savings">spar 30 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Kvikk Lunsj</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">35 kr</div>
+    <div class="savings">spar 25 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/extra/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MAARUD POTETGULL</a></div>
+    <div class="store"><a href="https://coop.no/extra/" target="_blank" rel="noopener">Extra</a></div>
+  </div>
+  <div class="price">
+    <div class="current">60 kr</div>
+    <div class="savings">spar 23 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MellomBar</a></div>
+    <div class="store"><a href="http://spar.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">SPAR</a></div>
+  </div>
+  <div class="price">
+    <div class="current">10 kr</div>
+    <div class="savings">spar 19 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://narbutikken.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Sjokoladeplater</a></div>
+    <div class="store"><a href="https://narbutikken.no" target="_blank" rel="noopener">Nærbutikken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">30 kr</div>
+    <div class="savings">spar 10 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Kaffe</div>
+<div class="card">
+  <div class="info">
+    <div class="name"><a href="https://www.europris.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">FRIELE FILTERMALT</a></div>
+    <div class="store"><a href="https://europris.no" target="_blank" rel="noopener">Europris</a></div>
+  </div>
+  <div class="price">
+    <div class="current">90 kr</div>
+    <div class="savings">spar 49 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">FILTERMALT KJELDSBERG</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">73 kr</div>
+    <div class="savings">spar 32 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">FILTERMALT KJELDSBERG</a></div>
+    <div class="store"><a href="https://www.rema.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">REMA 1000</a></div>
+  </div>
+  <div class="price">
+    <div class="current">38 kr</div>
+    <div class="savings">spar 17 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Drikke</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://coop.no/coop-prix/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COCA-COLA 10 PK BOKSER</a></div>
+    <div class="store"><a href="https://coop.no/coop-prix/" target="_blank" rel="noopener">Coop Prix</a></div>
+  </div>
+  <div class="price">
+    <div class="current">70 kr</div>
+    <div class="savings">spar 40 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://meny.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COCA-COLA ZERO 8PK</a></div>
+    <div class="store"><a href="http://meny.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">MENY</a></div>
+  </div>
+  <div class="price">
+    <div class="current">119 kr</div>
+    <div class="savings">spar 36 kr</div>
+  </div>
+</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">COCA-COLA 10 PK</a></div>
+    <div class="store"><a href="https://www.coop.no/coop-marked-matkroken?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Matkroken</a></div>
+  </div>
+  <div class="price">
+    <div class="current">80 kr</div>
+    <div class="savings">spar 30 kr</div>
+  </div>
+</div>
+<div class="section-title">📦 Dessert/is</div>
+<div class="card">
+  <div class="info">
+    <span class="badge-new">Ny</span> <div class="name"><a href="http://joker.no/?utm_source=tjek&amp;utm_medium=referral" target="_blank" rel="noopener">Sjokoladepudding</a></div>
+    <div class="store"><a href="https://joker.no" target="_blank" rel="noopener">Joker</a></div>
+  </div>
+  <div class="price">
+    <div class="current">25 kr</div>
     <div class="savings">spar 8 kr</div>
   </div>
 </div>
 
 
     <div class="footer">
-      Automatisk generert · <a href="https://github.com/Olewol/tilbudsavis">Olewol/tilbudsavis</a>
+      Automatisk generert · <a href="https://github.com/Olewol/tilbudsavis">Olewol/tilbudsavis</a> · Data: eTilbudsavis
     </div>
   </div>
 </body>
