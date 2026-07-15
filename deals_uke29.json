@@ -1,84 +1,74 @@
 {
   "top_picks": [
     {
-      "name": "NIDAR SJOKOLADE",
+      "name": "NIDAR SJOKOLADE — 4 store plater",
       "store": "Europris",
       "price": "100,-",
       "savings": "spar 119,-",
-      "is_new": false,
-      "desc": "Alle store plater 4 100.- SPAR 119,60 54,90/stk"
+      "is_new": false
     },
     {
-      "name": "YTTERØY KYLLING KJØTTDEIG — 1 pk",
+      "name": "YTTERØY KYLLING KJØTTDEIG — 400 g",
       "store": "Obs",
       "price": "100,-",
       "savings": "spar 101,-",
-      "is_new": false,
-      "desc": "400 g Fra 83,33/kg. 1 pk 67,20"
+      "is_new": false
     },
     {
       "name": "REKER 70/90 — 5 kg",
       "store": "Rema 1000",
       "price": "399,-",
       "savings": "spar 100,-",
-      "is_new": false,
-      "desc": "REMA 1000, 5 kg, 79,80 pr. kg 5KG! FØR 499,00 PR. 5 KG"
+      "is_new": false
     },
     {
       "name": "Laksefilet — 450 g",
       "store": "Spar",
       "price": "109,-",
       "savings": "spar 50,-",
-      "is_new": false,
-      "desc": "Lerøy, m/skinn, 450 g 242,22/kg Førpris: 159,00"
+      "is_new": false
     },
     {
       "name": "FRIELE FILTERMALT — 250 g",
       "store": "Europris",
       "price": "90,-",
       "savings": "spar 49,-",
-      "is_new": false,
-      "desc": "FREDAG-LØRDAG 250 g SPAR 49,80 2 90.- 69,90/stk Max 24 pr. kunde"
+      "is_new": false
     },
     {
       "name": "POLAR REKER — 5 kg",
       "store": "Obs",
       "price": "499,-",
       "savings": "spar 40,-",
-      "is_new": false,
-      "desc": "5 kg. Pr pk Pr kg 99,80"
+      "is_new": false
     },
     {
-      "name": "COCA-COLA 10 PK BOKSER",
+      "name": "COCA-COLA 10 PK BOKSER — 10 x 0,33 l",
       "store": "Extra",
       "price": "69,90",
       "savings": "spar 40,-",
-      "is_new": false,
-      "desc": "Original/uten sukker. 10 x 0,33 l Pr pk. Pr l 21,18. Førpris 109,90 HELE SOMMEREN + PANT"
+      "is_new": false
     },
     {
-      "name": "Laks — 2x110 g",
+      "name": "Laks — einerrøkt, 2x110 g",
       "store": "Spar",
       "price": "99,-",
       "savings": "spar 36,-",
-      "is_new": false,
-      "desc": "Lofoten, einerrøkt, 2x110 g 450,00/kg Førpris: 135,00"
+      "is_new": false
     },
     {
-      "name": "COCA-COLA ZERO 8PK",
+      "name": "COCA-COLA ZERO 8PK — 8X1,5L",
       "store": "Meny",
       "price": "119,-",
       "savings": "spar 36,-",
-      "is_new": false,
-      "desc": "8X1,5L (9,92/L) + PANT ORIGINAL 129,00 (10,75/L) FØRPRIS 155,00 / PK KUN 14,88 PR. FLASKE"
+      "is_new": false
     },
     {
       "name": "KVIKK LUNSJ 6PK — 282 g",
       "store": "Rema 1000",
       "price": "54,90",
       "savings": "spar 34,-",
-      "is_new": false,
-      "desc": "Freia, 282 g, 194,68 pr. kg 54,90 FØR 89,80"
+      "is_new": false
     }
   ],
   "categories": [
@@ -86,127 +76,111 @@
       "name": "Kylling",
       "items": [
         {
-          "name": "YTTERØY KYLLING KJØTTDEIG",
+          "name": "YTTERØY KYLLING KJØTTDEIG — 400 g",
           "store": "Obs",
           "price": "100,-",
           "savings": "spar 101,-",
-          "is_new": false,
-          "desc": "400 g Fra 83,33/kg. 1 pk 67,20"
+          "is_new": false
         },
         {
           "name": "COOP KYLLINGFILET 690 G",
           "store": "Extra",
           "price": "99,90",
           "savings": "spar 30,-",
-          "is_new": false,
-          "desc": "PR. PK Pr kg 144,78. Førpris 129,90"
+          "is_new": false
         },
         {
           "name": "DEN STOLTE HANE LOLLIPOP CHILI BBQ — 700 g",
           "store": "Obs",
           "price": "79,90",
           "savings": "spar 3,-",
-          "is_new": false,
-          "desc": "700 g. Pr pk Pr kg 114,14"
+          "is_new": false
         },
         {
-          "name": "Kyllingfilet grillet & salatkjøtt",
+          "name": "KYLLINGFILET GRILLET OG KYLLING SALATKJØTT SPISEKLAR — 200 g",
           "store": "Bunnpris",
           "price": "59,-",
           "savings": "",
-          "is_new": false,
-          "desc": "200 g Prior pr. pk PRIOR"
+          "is_new": false
         },
         {
           "name": "Coop Kyllingfilet",
           "store": "Extra",
           "price": "95,90 (medlem 80,90)",
           "savings": "",
-          "is_new": false,
-          "desc": "Ikke medlem? 95,90"
+          "is_new": false
         },
         {
           "name": "KYLLING GRILLFILET — 440 g",
           "store": "Kiwi",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "440 g, Korean Style, Folkets, pr. kg 225,00"
+          "is_new": false
         },
         {
           "name": "KYLLINGMINUTTFILET — 200G",
           "store": "Meny",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Rask å tilberede og gir et saftig og smakfullt resultat. Passer perfekt i burger, pita eller wraps. 200G, BLACK GARLIC/ RAMSLØK, LERSTANG GÅRD (249,50"
+          "is_new": false
         },
         {
           "name": "KYLLINGMINUTTFILET — 200G",
           "store": "Obs",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Rask å tilberede og gir et saftig og smakfullt resultat. Passer perfekt i burger, pita eller wraps. FAST SOMMERPRIS 200G, BLACK GARLIC/ RAMSLØK, LERST"
+          "is_new": false
         },
         {
-          "name": "KYLLINGLÅR GRILLET OG FILETMIKS KYLLING BBQ",
+          "name": "KYLLINGLÅR GRILLET OG FILETMIKS KYLLING BBQ — 700 g",
           "store": "Bunnpris",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Fra 700 g Prior pr. pk"
+          "is_new": false
         },
         {
           "name": "MARINERT KYLLINGFILET — 450 g",
           "store": "Rema 1000",
           "price": "89,90",
           "savings": "",
-          "is_new": false,
-          "desc": "89,90 REMA 1000, 450 g, 199,78 pr. kg"
+          "is_new": false
         },
         {
           "name": "PRIOR CRISPY STICKS — 570 g",
           "store": "Obs",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "99,- PARTIKJØP STOR PAKKE 570 g. Pr stk Pr kg 173,68"
+          "is_new": false
         },
         {
           "name": "Billig Middag — 250 g",
           "store": "Bunnpris",
           "price": "40,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Strimlet kyllingfilét 250 gr"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT KYLLINGSPYD GYROS — 300 g",
           "store": "Extra",
           "price": "80,-",
           "savings": "",
-          "is_new": false,
-          "desc": "300 g. Pr pk Pr kg 266,67"
+          "is_new": false
         },
         {
           "name": "CRISPY STICKS — 570 g",
           "store": "Kiwi",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "570 g, kylling, Prior, pr. kg 173,68"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT LÅRFILET — 600 g",
           "store": "Obs",
           "price": "89,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Smokey BBQ. 600 g. Pr pk Pr kg 149,83"
+          "is_new": false
         }
-      ],
-      "_nav": "Kylling"
+      ]
     },
     {
       "name": "Storfe",
@@ -216,123 +190,107 @@
           "store": "Extra",
           "price": "59,90",
           "savings": "spar 28,-",
-          "is_new": false,
-          "desc": "14% fett. 400 g. Pr kg 149,75 Førpris 87,90 SJEKK PRISEN! PR. PK"
+          "is_new": false
         },
         {
           "name": "SKJEGGERØD PEPPERBIFF AV STORFE — 600 g",
           "store": "Obs",
           "price": "179,-",
           "savings": "",
-          "is_new": false,
-          "desc": "PARTIKJØP 600 g. Pr pk Pr kg 298,33"
+          "is_new": false
         },
         {
           "name": "GILDE BACON- OG STORFEBURGER — 2 x 130 g",
           "store": "Bunnpris",
           "price": "39,-",
           "savings": "",
-          "is_new": false,
-          "desc": "2 x 130 g pr. pk 150.00 /KG"
+          "is_new": false
         },
         {
           "name": "ANGUSSNADDER — 250G",
           "store": "Meny",
           "price": "79,90",
           "savings": "",
-          "is_new": false,
-          "desc": "79,90 / PK 250G, JÆREN SMAK (319,60/KG) Fast Sommerpris Fra rogaland"
+          "is_new": false
         },
         {
           "name": "Coop Grill Perfekt Big Beefy Burgers — 360 g",
           "store": "Extra",
           "price": "49,90 (medlem 39,92)",
           "savings": "",
-          "is_new": false,
-          "desc": "Ikke-medlem 49,90 Storfe. 360 g. Pr pk Pr kg 110,89"
+          "is_new": false
         },
         {
-          "name": "LUFTIG BURGER — 2 x 150 g",
+          "name": "LUFTIG BURGER — 150 g",
           "store": "Kiwi",
           "price": "59,90",
           "savings": "",
-          "is_new": false,
-          "desc": "2 x 150 g, storfe, Gilde, pr. kg 199,67"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT GRILLSPYD PEPPERMIKS — 180 g",
           "store": "Extra",
           "price": "89,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Storfe. 180 g. Pr pk Pr kg 499,44"
+          "is_new": false
         },
         {
           "name": "BURGER LUFTIG — 150 g",
           "store": "Bunnpris",
           "price": "69,-",
           "savings": "",
-          "is_new": false,
-          "desc": "150 g x 2 av storfe Gilde pr. pk 230/KG"
+          "is_new": false
         },
         {
           "name": "HAMBURGER BIG SIZE — 160 g",
           "store": "Bunnpris",
           "price": "69,-",
           "savings": "",
-          "is_new": false,
-          "desc": "160 g x 2 Grilstad pr. pk 215,63/KG"
+          "is_new": false
         },
         {
-          "name": "STORE FROSNE REKER — 5KG",
+          "name": "STORE FROSNE REKER (pr. kg)",
           "store": "Meny",
           "price": "129,-",
           "savings": "",
-          "is_new": false,
-          "desc": "129,00 / KG 5KG KARTONG 599,00 (KUN 119,80/KG) Fast Sommerpris"
+          "is_new": false
         },
         {
           "name": "FREIA STORE PLATER OG POSER — 200 g",
           "store": "Extra",
           "price": "90,-",
           "savings": "",
-          "is_new": false,
-          "desc": "HELE SOMMEREN 2 FOR 90 130 - 200 g. Pr kg fra 225,00 1 stk 55,90 - 59,90"
+          "is_new": false
         },
         {
-          "name": "Store reker",
+          "name": "Store reker (pr. kg)",
           "store": "Spar",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "frosne, str. 60/80, pr. kg SOMMER- PRIS! STORE reker!"
+          "is_new": false
         },
         {
-          "name": "STORE FROSNE REKER — 5KG",
+          "name": "STORE FROSNE REKER (pr. kg)",
           "store": "Meny",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS 5KG KARTO"
+          "is_new": false
         },
         {
           "name": "BURGERBRØD STORE M/SESAM — 540 g",
           "store": "Bunnpris",
           "price": "35,-",
           "savings": "",
-          "is_new": false,
-          "desc": "540 g 6 stk Reale pr. pk 64,81/KG"
+          "is_new": false
         },
         {
           "name": "KUTTET FRUKT STORE BEGER — 400G",
           "store": "Meny",
           "price": "44,90",
           "savings": "",
-          "is_new": false,
-          "desc": "370-400G, ANANAS/ MELONMIKS/VANNMELON, CEVITA (112,25-121,35/KG) FaSt SommERPriS"
+          "is_new": false
         }
-      ],
-      "_nav": "Storfe"
+      ]
     },
     {
       "name": "Svin",
@@ -342,123 +300,107 @@
           "store": "Rema 1000",
           "price": "69,90",
           "savings": "",
-          "is_new": false,
-          "desc": "69,90 PR. STK Nordfjord, 400 g, 174,75 pr. kg"
+          "is_new": false
         },
         {
           "name": "Svin indrefilet — 600 g",
           "store": "Bunnpris",
           "price": "199,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Cajun corn 600 g Grilstad."
+          "is_new": false
         },
         {
           "name": "YTREFILET AV SVIN — 180G",
           "store": "Obs",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Håndskåret kjøtt fra utvalgte Jæren Smak svin. Egner seg godt til grill og stekepanne, også perfekt til grillspyd. FAST SOMMERPRIS 180G, JÆREN SMAK, F"
+          "is_new": false
         },
         {
           "name": "YTREFILET AV SVIN — 180G",
           "store": "Meny",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Håndskåret kjøtt fra utvalgte Jæren Smak svin. Egner seg godt til grill og stekepanne, også perfekt til grillspyd. 180G, JÆREN SMAK, FRA FERSKVAREDISK"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT PORK BELLY — 600 g",
           "store": "Obs",
           "price": "179,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Svin. Ca 600 g. Pr kg"
+          "is_new": false
         },
         {
-          "name": "COOP GRILL PERFEKT YTREFILET",
+          "name": "COOP GRILL PERFEKT YTREFILET (pr. kg)",
           "store": "Extra",
           "price": "189,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Av svin. Pr kg"
+          "is_new": false
         },
         {
           "name": "Svin ytrefilet — 600 g",
           "store": "Bunnpris",
           "price": "199,-",
           "savings": "",
-          "is_new": false,
-          "desc": "BBQ 600 g Grilstad."
+          "is_new": false
         },
         {
           "name": "SVIN INDREFILET — 500 g",
           "store": "Bunnpris",
           "price": "119,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Honey&herbs 500 g Leiv Vidar pr. pk 238.00 /KG"
+          "is_new": false
         },
         {
-          "name": "GRILLRIBBE KRYDRET, SVIN INDREFILET OG SVIN INDREFILET KOREAN BBQ",
+          "name": "GRILLRIBBE KRYDRET, SVIN INDREFILET OG SVIN INDREFILET KOREAN BBQ — 600 g",
           "store": "Bunnpris",
           "price": "199,-",
           "savings": "",
-          "is_new": false,
-          "desc": "ca 600 g pr. pk Grilstad, pr. kg"
+          "is_new": false
         },
         {
           "name": "SVIN YTREFILET BBQ — 600 g",
           "store": "Bunnpris",
           "price": "229,-",
           "savings": "",
-          "is_new": false,
-          "desc": "ca 600 g Grilstad pr. kg"
+          "is_new": false
         },
         {
           "name": "SVIN YTREFILET BBQ — 600 g",
           "store": "Bunnpris",
           "price": "239,-",
           "savings": "",
-          "is_new": false,
-          "desc": "ca 600 g Grilstad pr. kg"
+          "is_new": false
         },
         {
-          "name": "FOTBALLBURGER — 4 x 150 g",
+          "name": "FOTBALLBURGER — 150 g",
           "store": "Kiwi",
           "price": "79,90",
           "savings": "",
-          "is_new": false,
-          "desc": "4 x 150 g, Folkets, pr. kg 133,17"
+          "is_new": false
         },
         {
-          "name": "GRILLBURGER — 2x130g",
+          "name": "GRILLBURGER — 130g",
           "store": "Bunnpris",
           "price": "49,-",
           "savings": "",
-          "is_new": false,
-          "desc": "2x130g Grilstad pr. pk"
+          "is_new": false
         },
         {
           "name": "SVIN GRILLRIBBE — 700 g",
           "store": "Kiwi",
           "price": "79,90",
           "savings": "",
-          "is_new": false,
-          "desc": "700 g, krydret, Folkets, pr. kg 114,14"
+          "is_new": false
         },
         {
           "name": "SVIN GRILLFILET — 4 kg",
           "store": "Kiwi",
           "price": "199,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Ca. 1,4 kg, BBQ, Finsbråten, pr. kg 199,00 Pr. kg"
+          "is_new": false
         }
-      ],
-      "_nav": "Svin"
+      ]
     },
     {
       "name": "Laks",
@@ -468,123 +410,107 @@
           "store": "Spar",
           "price": "109,-",
           "savings": "spar 50,-",
-          "is_new": false,
-          "desc": "Lerøy, m/skinn, 450 g 242,22/kg Førpris: 159,00"
+          "is_new": false
         },
         {
-          "name": "Laks — 2x110 g",
+          "name": "Laks — einerrøkt, 2x110 g",
           "store": "Spar",
           "price": "99,-",
           "savings": "spar 36,-",
-          "is_new": false,
-          "desc": "Lofoten, einerrøkt, 2x110 g 450,00/kg Førpris: 135,00"
+          "is_new": false
         },
         {
-          "name": "LAKSEBURGER FRA LERØY — 2X130G",
+          "name": "LAKSEBURGER FRA LERØY — 130G",
           "store": "Meny",
           "price": "44,90",
           "savings": "spar 15,-",
-          "is_new": false,
-          "desc": "Prøv en deilig lakseburger fra Lerøy UKENS TILBUD 2X130G, LERØY (172,69/KG) FØRPRIS 59,90"
+          "is_new": false
         },
         {
-          "name": "LAKSEBURGER — 2X130G",
+          "name": "LAKSEBURGER — 130G",
           "store": "Obs",
           "price": "44,90",
           "savings": "spar 15,-",
-          "is_new": false,
-          "desc": "2X130G, LERØY (172,69/KG) FØRPRIS 59,90"
+          "is_new": false
         },
         {
-          "name": "LOFOTEN LAKSEBURGER — 2 x 130 g",
+          "name": "LOFOTEN LAKSEBURGER — 130 g",
           "store": "Obs",
           "price": "59,90",
           "savings": "spar 13,-",
-          "is_new": false,
-          "desc": "Lakseburger i pitabrød med gresk salat og tzatziki 2 x 130 g. Pr pk Pr kg 230,38"
+          "is_new": false
         },
         {
-          "name": "LAKSEFILET M/LIMEPEPPER — 650 g",
+          "name": "LAKSEFILET M/LIMEPEPPER — 90 G",
           "store": "Rema 1000",
           "price": "159,90",
           "savings": "spar 10,-",
-          "is_new": false,
-          "desc": "FØR 169,90 159,90 Gode hav, 650 g, 246,00 pr. kg"
+          "is_new": false
         },
         {
-          "name": "COOP LAKSEFILET — 4 x 125 g",
+          "name": "COOP LAKSEFILET — 125 g",
           "store": "Extra",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Uten skinn. 4 x 125 g. Pr pk Pr kg 198,00"
+          "is_new": false
         },
         {
           "name": "Coop Laksefilet",
           "store": "Extra",
           "price": "145,90 (medlem 122,90)",
           "savings": "",
-          "is_new": false,
-          "desc": "Ikke medlem? 145,90"
+          "is_new": false
         },
         {
           "name": "LAKSEFILET — 450 g",
           "store": "Kiwi",
           "price": "129,-",
           "savings": "",
-          "is_new": false,
-          "desc": "450 g, bit, m/skinn, Lerøy, pr. kg 286,67"
+          "is_new": false
         },
         {
-          "name": "COOP LAKSEFILET — 2 x 125 g",
+          "name": "COOP LAKSEFILET — 125 g",
           "store": "Extra",
           "price": "58,90",
           "savings": "",
-          "is_new": false,
-          "desc": "LAKS PÅ GRILLEN Med skinn. 2 x 125 g. Pr pk Pr kg 235,60"
+          "is_new": false
         },
         {
           "name": "FERSK LAKSEBURGER MED PURRE & REKER — 150G",
           "store": "Meny",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "39,90 / STK 150G, FRA FISKEDISKEN (266,00/KG) Fast Sommerpris Klar til å grille!"
+          "is_new": false
         },
         {
           "name": "COOP LAKSEFILET — 650 g",
           "store": "Extra",
           "price": "179,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Med skinn. 650 g. Pr pk Pr kg 275,38"
+          "is_new": false
         },
         {
           "name": "COOP LAKSEFILET — 650 g",
           "store": "Obs",
           "price": "169,-",
           "savings": "",
-          "is_new": false,
-          "desc": "2 varianter. 650 g. Pr pk Pr kg 260,00"
+          "is_new": false
         },
         {
           "name": "FERSK LAKSEBURGER MED PURRE & REKER — 150G",
           "store": "Obs",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "150G, FRA FISKEDISKEN (266,00/KG) Klar til å grille! FAST SOMMERPRIS"
+          "is_new": false
         },
         {
           "name": "LAKS OG ØRRET EINERRØKT SKIVET — 220 g",
           "store": "Bunnpris",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "220 g Lofoten pr. pk 450/KG"
+          "is_new": false
         }
-      ],
-      "_nav": "Laks"
+      ]
     },
     {
       "name": "Reker/scampi",
@@ -594,169 +520,119 @@
           "store": "Rema 1000",
           "price": "399,-",
           "savings": "spar 100,-",
-          "is_new": false,
-          "desc": "REMA 1000, 5 kg, 79,80 pr. kg 5KG! FØR 499,00 PR. 5 KG"
+          "is_new": false
         },
         {
           "name": "POLAR REKER — 5 kg",
           "store": "Obs",
           "price": "499,-",
           "savings": "spar 40,-",
-          "is_new": false,
-          "desc": "5 kg. Pr pk Pr kg 99,80"
+          "is_new": false
         },
         {
           "name": "COOP REKER I LAKE XL — 170 g",
           "store": "Obs",
           "price": "59,90",
           "savings": "spar 16,-",
-          "is_new": false,
-          "desc": "170 g. Pr stk Pr kg 352,35 SPAR KR 16,60 FØR 76,50"
+          "is_new": false
         },
         {
           "name": "SCAMPI NATURELL — 270 g",
           "store": "Rema 1000",
           "price": "59,90",
           "savings": "spar 5,-",
-          "is_new": false,
-          "desc": "FØR 64,90 59,90 REMA 1000, 270 g, 221,85 pr. kg"
+          "is_new": false
         },
         {
           "name": "Billig Middag — 150 g",
           "store": "Bunnpris",
           "price": "50,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Kokt Scampi 150 gr"
-        },
-        {
-          "name": "FERSK LAKSEBURGER MED PURRE & REKER — 150G",
-          "store": "Meny",
-          "price": "39,90",
-          "savings": "",
-          "is_new": false,
-          "desc": "39,90 / STK 150G, FRA FISKEDISKEN (266,00/KG) Fast Sommerpris Klar til å grille!"
+          "is_new": false
         },
         {
           "name": "SCAMPI — 150 g",
           "store": "Bunnpris",
           "price": "50,-",
           "savings": "",
-          "is_new": false,
-          "desc": "150 g Billig Middag pr. pk 333.33 /KG"
+          "is_new": false
         },
         {
           "name": "REKER I KARTONG — 5 kg",
           "store": "Kiwi",
           "price": "399,-",
           "savings": "",
-          "is_new": false,
-          "desc": "5 kg Str. 70/90, 5 kg, fryst, pr. kg 79,80"
-        },
-        {
-          "name": "STORE FROSNE REKER — 5KG",
-          "store": "Meny",
-          "price": "129,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "129,00 / KG 5KG KARTONG 599,00 (KUN 119,80/KG) Fast Sommerpris"
+          "is_new": false
         },
         {
           "name": "POLAR REKER 5 KG — 5 kg",
           "store": "Extra",
           "price": "399,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Fryst. Str 70/90. Pr kartong Pr kg 79,80 5 kg"
+          "is_new": false
         },
         {
-          "name": "REKER I LØSVEKT",
+          "name": "REKER I LØSVEKT (pr. kg)",
           "store": "Kiwi",
           "price": "109,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Løsvekt, pr. kg Str. 70/90, fryst, pr. kg"
+          "is_new": false
         },
         {
-          "name": "Store reker",
-          "store": "Spar",
-          "price": "149,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "frosne, str. 60/80, pr. kg SOMMER- PRIS! STORE reker!"
-        },
-        {
-          "name": "REKER FROSNE",
+          "name": "REKER FROSNE (pr. kg)",
           "store": "Bunnpris",
           "price": "199,-",
           "savings": "",
-          "is_new": false,
-          "desc": "80/100 2 kg pr. pk 99,50/KG"
+          "is_new": false
         },
         {
-          "name": "STORE FROSNE REKER — 5KG",
-          "store": "Meny",
-          "price": "149,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS 5KG KARTO"
-        },
-        {
-          "name": "POLAR REKER I LØS VEKT",
+          "name": "POLAR REKER I LØS VEKT (pr. kg)",
           "store": "Extra",
           "price": "109,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Pr kg Fryst. Str 70/90. Pr kg"
+          "is_new": false
         }
-      ],
-      "_nav": "Reker/sc"
+      ]
     },
     {
       "name": "Yoghurt",
       "items": [
         {
-          "name": "Yoghurt 8-pk. — 8x125 g",
+          "name": "Yoghurt 8-pk. — 125 g",
           "store": "Spar",
           "price": "34,90",
           "savings": "spar 13,-",
-          "is_new": false,
-          "desc": "TINE, familiefavoritter, 8x125 g Førpris: 47,90"
+          "is_new": false
         },
         {
-          "name": "Q SKYR MINI — 1 stk",
+          "name": "Q SKYR MINI — 90 g",
           "store": "Extra",
           "price": "25,-",
           "savings": "spar 8,-",
-          "is_new": false,
-          "desc": "Spar kr 8,00 2 for 25,00 Plukk & miks 90 g Fra 138,89/kg. 1 stk 16,50"
+          "is_new": false
         },
         {
           "name": "Yoghurt",
           "store": "Spar",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "Synnøve/Q, et stort utvalg 3 for 2"
+          "is_new": false
         },
         {
           "name": "YOGHURT 8PK — 1 kg",
           "store": "Rema 1000",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "BILLIG PARTIVARE 34 90 Tine, 1 kg, 34,90 pr. kg"
+          "is_new": false
         },
         {
-          "name": "SKYR® PORSJONSYOGHURT — 160g, 3 for 2",
+          "name": "SKYR® PORSJONSYOGHURT — 160g",
           "store": "Meny",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "90-160g, utvalgte varianter FASTE KNALLKJØP PLUKK & MIKS 3 FOR 2 33% RABATT VED KJØP AV 3"
+          "is_new": false
         }
-      ],
-      "_nav": "Yoghurt"
+      ]
     },
     {
       "name": "Egg",
@@ -766,59 +642,51 @@
           "store": "Meny",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "15stk, S/M, Norgården FASTE KNALLKJØP (3,33/STK)"
+          "is_new": false
         },
         {
           "name": "EGG 6PK — 402 g",
           "store": "Rema 1000",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "REMA 1000, 402 g, 74,38 pr. kg 29,90"
+          "is_new": false
         },
         {
-          "name": "GÅRDSEGG — 18 pk",
+          "name": "GÅRDSEGG",
           "store": "Bunnpris",
           "price": "65,-",
           "savings": "",
-          "is_new": false,
-          "desc": "18 pk fra frittgående høner pr. pk 65.00 /STK"
+          "is_new": false
         },
         {
           "name": "Coop Frokostegg",
           "store": "Extra",
           "price": "68,90 (medlem 59,90)",
           "savings": "",
-          "is_new": false,
-          "desc": "Ikke medlem? 68,90"
+          "is_new": false
         },
         {
           "name": "EGG — 15stk",
           "store": "Obs",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "15stk, S/M, Norgården FASTE KNALLKJØP / PK (3,33/STK)"
+          "is_new": false
         },
         {
           "name": "BRIOCHE GOURMET — 500G",
           "store": "Meny",
           "price": "59,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Brioche er en fransk gjærbakst bakt med smør og egg. Dette gir ekstra luftig og smakfull bakst! FAST SOMMERPRIS 59,90 / STK 500G, ORIGINAL/SJOKOLADE,"
+          "is_new": false
         },
         {
           "name": "BRIOCHE GOURMET — 500G",
           "store": "Obs",
           "price": "59,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Brioche er en fransk g jærbakst bakt med smør og egg. Dette gir ekstra luftig og smakfull bakst! FAST SOMMERPRIS 59,90 / STK 500G, ORIGINAL/ SJOKOLADE"
+          "is_new": false
         }
-      ],
-      "_nav": "Egg"
+      ]
     },
     {
       "name": "Ost",
@@ -828,123 +696,107 @@
           "store": "Extra",
           "price": "60,-",
           "savings": "spar 11,-",
-          "is_new": false,
-          "desc": "150 g Fra 200,00/kg. 1 stk 35,90 Spar kr 11,80"
+          "is_new": false
         },
         {
           "name": "Norsk Salatost — 220 g",
           "store": "Spar",
           "price": "26,90",
           "savings": "spar 8,-",
-          "is_new": false,
-          "desc": "TINE, urter og hvitløk, 220 g 122,27/kg Førpris: 34,90"
+          "is_new": false
         },
         {
           "name": "GULOST&CHEDDAR — 170 g",
           "store": "Kiwi",
           "price": "29,90",
           "savings": "spar 7,-",
-          "is_new": false,
-          "desc": "170 g, revet, Synnøve, pr. kg 175,88"
+          "is_new": false
         },
         {
-          "name": "BUFAR",
+          "name": "BUFAR — 320 g",
           "store": "Meny",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Langtidsmodnet ost laget på stølsmelk fra Valdres. Den har en fyldig og rund smak og egner seg spesielt godt revet over pizza, pasta eller å spise som"
+          "is_new": false
         },
         {
-          "name": "BUFAR",
+          "name": "BUFAR — 320 g",
           "store": "Obs",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Langtidsmodnet ost laget på stølsmelk fra Valdres. Den har en fyldig og rund smak og egner seg spesielt godt revet over pizza, pasta eller å spise som"
+          "is_new": false
         },
         {
-          "name": "ET STORT UTVALG TINE SKIVET OST — 3 for 2",
+          "name": "ET STORT UTVALG TINE SKIVET OST — 100 g",
           "store": "Bunnpris",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "Fra 100 g pr. pk 3 for 2 VI SPANDERER DEN BILLIGSTE!"
+          "is_new": false
         },
         {
           "name": "NORSK BURGEROST — 100G",
           "store": "Meny",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Skivet ost som gjør det enkelt å lage en skikkelig digg cheeseburger. FAST SOMMERPRIS 100G, SKIVET, CHEDDAR/ JARLSBERG, TINE (249,00/KG)"
+          "is_new": false
         },
         {
           "name": "ORIGINAL REVET OST — 300 g",
           "store": "Rema 1000",
           "price": "51,40",
           "savings": "",
-          "is_new": false,
-          "desc": "Tine, 300 g, 171,33 pr. kg"
+          "is_new": false
         },
         {
           "name": "CHEDDAR OG RABAGAST TERNET",
           "store": "Bunnpris",
           "price": "29,-",
           "savings": "",
-          "is_new": false,
-          "desc": "80 g pr. pk Synnøve 362,50/KG"
+          "is_new": false
         },
         {
           "name": "COOP MOZZARELLA/MASCARPONE/RICOTTA — 250 g",
           "store": "Obs",
           "price": "74,-",
           "savings": "",
-          "is_new": false,
-          "desc": "100-250 g Fra 00,00/kg. Før fra 44,40 pr pk SPAR FRA KR 14,80 2 FOR 74,- FAST TILBUD"
+          "is_new": false
         },
         {
-          "name": "Skivet ost",
+          "name": "Skivet ost — 3 for 2",
           "store": "Spar",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "Synnøve, et utvalg"
+          "is_new": false
         },
         {
-          "name": "KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA & HAVSALT",
+          "name": "KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA & HAVSALT — 175 g",
           "store": "Bunnpris",
           "price": "50,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Fra 175 g pr. stk"
+          "is_new": false
         },
         {
           "name": "VALDRES BRIE",
           "store": "Meny",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Perfekt til ostefatet, til dessert eller snacks, på lyst brød og usaltet kjeks, med syltetøy eller chutney. God til fritering og steking, passer også"
+          "is_new": false
         },
         {
           "name": "BEGERSALAT — 255 g",
           "store": "Kiwi",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "225-255 g, ost&skinke, taco, kylling, Grønn&Frisk, pr. kg 156,47-177,33"
+          "is_new": false
         },
         {
           "name": "APETINA SOLTØRKETTOMAT — 100 g",
           "store": "Rema 1000",
           "price": "18,90",
           "savings": "",
-          "is_new": false,
-          "desc": "18,90 Apetina, 100 g, 189,00 pr. kg"
+          "is_new": false
         }
-      ],
-      "_nav": "Ost"
+      ]
     },
     {
       "name": "Pålegg",
@@ -954,271 +806,222 @@
           "store": "Extra",
           "price": "39,90",
           "savings": "spar 8,-",
-          "is_new": false,
-          "desc": "500 g. Pr stk. Pr kg 79,80 Førpris 47,90"
+          "is_new": false
         },
         {
-          "name": "Stranda",
+          "name": "Stranda — 3 for 2",
           "store": "Spar",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "et stort utvalg"
+          "is_new": false
         },
         {
-          "name": "TYNNSKÅRET SPEKESKINKE",
+          "name": "TYNNSKÅRET SPEKESKINKE — 80G",
           "store": "Meny",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Topp pizzaen med smaksrike spekeskinker fra Italia, Spania eller Norge. FASTE KNALLKJØP 40-80G, PARMASKINKE/ SERRANOSKINKE/SPEKESKINKE (436,25-872,50/"
+          "is_new": false
         },
         {
           "name": "STRANDASKINKE — 200 g",
           "store": "Rema 1000",
           "price": "99,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Stranda, 200 g, 499,50 pr. kg BILLIG PARTIVARE"
+          "is_new": false
         },
         {
           "name": "STRANDASKINKE MINDRE SALT",
           "store": "Bunnpris",
           "price": "59,-",
           "savings": "",
-          "is_new": false,
-          "desc": "85 g pr. pk 694,12/KG"
+          "is_new": false
         },
         {
-          "name": "TYNNSKÅRET SPEKESKINKE",
+          "name": "TYNNSKÅRET SPEKESKINKE — 80g",
           "store": "Obs",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "40-80g, parmaskinke/ serranoskinke/spekeskinke FASTE KNALLKJØP / PK (436,25-872,50/KG)"
+          "is_new": false
         },
         {
-          "name": "STRANDAMØR SNACKS",
+          "name": "STRANDAMØR SNACKS — 120 g",
           "store": "Bunnpris",
           "price": "39,-",
           "savings": "",
-          "is_new": false,
-          "desc": "120 g pr. pk 325/KG"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT GRILLPOTETSALAT — 400 g",
           "store": "Extra",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "400 g. Pr pk Pr kg 74,75"
+          "is_new": false
         },
         {
           "name": "MILLS KYLLING/REKESALAT — 320 g",
           "store": "Obs",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "200/320 g. Pr pk Pr kg fra 109,06 2 VARIANTER SPAR FRA KR 7,- FØR FRA 41,90"
+          "is_new": false
         },
         {
           "name": "POTETSALAT — 500 g",
           "store": "Kiwi",
           "price": "37,90",
           "savings": "",
-          "is_new": false,
-          "desc": "500 g, klassisk, Mills, pr. kg 75,80"
+          "is_new": false
         },
         {
           "name": "COLESLAW — 130 g",
           "store": "Kiwi",
           "price": "14,90",
           "savings": "",
-          "is_new": false,
-          "desc": "130 g, Eldorado, pr. kg 114,62"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT COLESLAW — 300 g",
           "store": "Obs",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "300 g. Pr stk Pr kg 83,00"
+          "is_new": false
         },
         {
           "name": "COOP GRILL PERFEKT GRILLPOTETSALAT",
           "store": "Obs",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "400. Pr pk Pr kg 62,25"
+          "is_new": false
         },
         {
           "name": "COOP KREPS/SKAGEN — 180 g",
           "store": "Obs",
           "price": "64,-",
           "savings": "",
-          "is_new": false,
-          "desc": "180 g Fra 177,78/kg. 1 stk fra 38,80 2 VARIANTER"
+          "is_new": false
         },
         {
           "name": "Coop Grill Perfekt Tzatziki — 200 g",
           "store": "Extra",
           "price": "15,-",
           "savings": "",
-          "is_new": false,
-          "desc": "200 g. Pr pk. Pr kg 75,00"
+          "is_new": false
         }
-      ],
-      "_nav": "Pålegg"
+      ]
     },
     {
       "name": "Brød",
       "items": [
         {
-          "name": "KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA & HAVSALT",
-          "store": "Bunnpris",
-          "price": "50,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "Fra 175 g pr. stk"
-        },
-        {
-          "name": "WASA SANDWICH",
+          "name": "WASA SANDWICH — 30 g",
           "store": "Bunnpris",
           "price": "10,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Fra 30 g pr. stk"
+          "is_new": false
         }
-      ],
-      "_nav": "Brød"
+      ]
     },
     {
       "name": "Snacks",
       "items": [
         {
-          "name": "NIDAR SJOKOLADE — 4 store plater",
+          "name": "NIDAR SJOKOLADE — 4 store plater (4 for 100,-)",
           "store": "Europris",
           "price": "100,-",
           "savings": "spar 119,-",
-          "is_new": false,
-          "desc": "Alle store plater 4 100.- SPAR 119,60 54,90/stk"
+          "is_new": false
         },
         {
           "name": "KVIKK LUNSJ 6PK — 282 g",
           "store": "Rema 1000",
           "price": "54,90",
           "savings": "spar 34,-",
-          "is_new": false,
-          "desc": "Freia, 282 g, 194,68 pr. kg 54,90 FØR 89,80"
+          "is_new": false
         },
         {
           "name": "Kvikk Lunsj — 141 g",
           "store": "Spar",
           "price": "34,90",
           "savings": "spar 25,-",
-          "is_new": false,
-          "desc": "Freia, et utvalg, 130–141 g"
+          "is_new": false
         },
         {
           "name": "MAARUD POTETGULL — 250 g",
           "store": "Extra",
           "price": "60,-",
           "savings": "spar 23,-",
-          "is_new": false,
-          "desc": "240/250 g Fra 120,00/kg. 1 stk 41,90 2 for 60,00 Spar kr 23,80 Plukk & miks"
+          "is_new": false
         },
         {
           "name": "MellomBar — 138 g",
           "store": "Spar",
           "price": "9,90",
           "savings": "spar 19,-",
-          "is_new": false,
-          "desc": "Eldorado, et utvalg, 126–138 g 144,93–158,73/kg Førpris: 28,90"
+          "is_new": false
         },
         {
           "name": "MELKESJOKOLADE — 150 g",
           "store": "Kiwi",
           "price": "19,90",
           "savings": "",
-          "is_new": false,
-          "desc": "150 g, Freia, pr. kg 132,67"
-        },
-        {
-          "name": "FREIA STORE PLATER OG POSER — 200 g",
-          "store": "Extra",
-          "price": "90,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "HELE SOMMEREN 2 FOR 90 130 - 200 g. Pr kg fra 225,00 1 stk 55,90 - 59,90"
+          "is_new": false
         },
         {
           "name": "SØRLANDSCHIPS — 200 g",
           "store": "Kiwi",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "200 g, spansk paprika, creme fraiche, pr. kg 124,50 EKSTRA PRESSET helt fram til 2. august Før 31,90-34,90 Pr. pose"
+          "is_new": false
         },
         {
-          "name": "KIMS/OLW SMÅ POSER",
+          "name": "KIMS/OLW SMÅ POSER — 80 g",
           "store": "Extra",
           "price": "10,-",
           "savings": "",
-          "is_new": false,
-          "desc": "65/80 g. Pr pose Pr kg 125,00/153,85"
+          "is_new": false
         },
         {
           "name": "MAARUD RIFLA POTETGULL — 370 g",
           "store": "Extra",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Stor pose! 370 g. Pr pose. Pr kg 107,84 Førpris: 42,90/44,90"
+          "is_new": false
         },
         {
           "name": "Pringles",
           "store": "Europris",
           "price": "10,-",
           "savings": "",
-          "is_new": false,
-          "desc": ""
+          "is_new": false
         },
         {
           "name": "Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag",
           "store": "Bunnpris",
           "price": "30,-",
           "savings": "",
-          "is_new": false,
-          "desc": ""
+          "is_new": false
         },
         {
-          "name": "KIMS — 215 g",
+          "name": "KIMS — 90 g",
           "store": "Europris",
           "price": "30,-",
           "savings": "",
-          "is_new": false,
-          "desc": "French fries, salt, 90 g. Ord.pris 40,90 Potetsticks, 215 g. Ord.pris 38,90 Snack chips, 160 g. Ord.pris 48,90"
+          "is_new": false
         },
         {
           "name": "SØRLANDSCHIPS RIFLA — 170 g",
           "store": "Extra",
           "price": "50,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Spar fra kr 7,80 2 for 50,00 Plukk & miks 170 g Fra 147,06/kg. 1 stk 28,90/29,90"
+          "is_new": false
         },
         {
-          "name": "NIDAR POSER",
+          "name": "NIDAR POSER — 120 g",
           "store": "Obs",
           "price": "100,-",
           "savings": "",
-          "is_new": false,
-          "desc": "3 FOR 100,- 9 VARIANTER Fra 120 g Fra 128,21/kg. 1 pk fra 35,50"
+          "is_new": false
         }
-      ],
-      "_nav": "Snacks"
+      ]
     },
     {
       "name": "Kaffe",
@@ -1228,255 +1031,215 @@
           "store": "Europris",
           "price": "90,-",
           "savings": "spar 49,-",
-          "is_new": false,
-          "desc": "FREDAG-LØRDAG 250 g SPAR 49,80 2 90.- 69,90/stk Max 24 pr. kunde"
+          "is_new": false
         },
         {
           "name": "FILTERMALT KJELDSBERG — 500 g",
           "store": "Rema 1000",
           "price": "72,90",
           "savings": "spar 32,-",
-          "is_new": false,
-          "desc": "Kjeldsberg, 500 g, 145,80 pr. kg 72,90 FØR 104,90"
+          "is_new": false
         },
         {
           "name": "FILTERMALT KJELDSBERG — 250 g",
           "store": "Rema 1000",
           "price": "37,90",
           "savings": "spar 17,-",
-          "is_new": false,
-          "desc": "Kjeldsberg, 250 g, 151,60 pr. kg"
+          "is_new": false
         },
         {
           "name": "COOP KAFFE — 250 g",
           "store": "Extra",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "250 g Fra 198,00/kg. 1 stk 56,90/68,90 Spar fra kr 14,80 Plukk & miks"
+          "is_new": false
         },
         {
           "name": "FRYSETØRRET KAFFE — 200 g",
           "store": "Europris",
           "price": "65,-",
           "savings": "",
-          "is_new": false,
-          "desc": "FAST LAVPRIS! 101946 65.- 200 g, Luxus instant"
+          "is_new": false
         },
         {
-          "name": "COFFEE OF THE WORLD — 10pk, 3 for 2",
+          "name": "COFFEE OF THE WORLD — 700g",
           "store": "Meny",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "340-700g, hele bønner/ 10pk kapsler FASTE KNALLKJØP PLUKK & MIKS 33% RABATT VED KJØP AV 3"
+          "is_new": false
         },
         {
-          "name": "COFFEE OF THE WORLD — 10pk, 3 for 2",
+          "name": "COFFEE OF THE WORLD — 700g",
           "store": "Obs",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "340-700g, hele bønner/ 10pk kapsler FASTE KNALLKJØP PLUKK & MIKS 33% RABATT VED KJØP AV 3"
+          "is_new": false
         },
         {
           "name": "Kaffekapsler",
           "store": "Spar",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "et stort utvalg"
+          "is_new": false
         },
         {
-          "name": "TINE ISKAFFE",
+          "name": "TINE ISKAFFE — 330 ml",
           "store": "Obs",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "300ml/1l, alle varianter FASTE KNALLKJØP PLUKK & MIKS 33% RABATT VED KJØP AV 3"
+          "is_new": false
         },
         {
-          "name": "JACOBS UTVALGTE PLUKK & MIKS — 3 for 2",
+          "name": "JACOBS UTVALGTE PLUKK & MIKS",
           "store": "Meny",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "Løft måltidet med JACOBS UTVALGTE Jacobs Utvalgte er et godt valg når du vil gjøre måltidene litt bedre, enten det er frokost, lunsj, middag eller kos"
+          "is_new": false
         }
-      ],
-      "_nav": "Kaffe"
+      ]
     },
     {
       "name": "Drikke",
       "items": [
         {
-          "name": "COCA-COLA 10 PK BOKSER",
+          "name": "COCA-COLA 10 PK BOKSER — 10 x 0,33 l",
           "store": "Extra",
           "price": "69,90",
           "savings": "spar 40,-",
-          "is_new": false,
-          "desc": "Original/uten sukker. 10 x 0,33 l Pr pk. Pr l 21,18. Førpris 109,90 HELE SOMMEREN + PANT"
+          "is_new": false
         },
         {
-          "name": "COCA-COLA ZERO 8PK",
+          "name": "COCA-COLA ZERO 8PK — 8X1,5L",
           "store": "Meny",
           "price": "119,-",
           "savings": "spar 36,-",
-          "is_new": false,
-          "desc": "8X1,5L (9,92/L) + PANT ORIGINAL 129,00 (10,75/L) FØRPRIS 155,00 / PK KUN 14,88 PR. FLASKE"
+          "is_new": false
         },
         {
           "name": "COCA-COLA UTEN SUKKER 1,5 L 4 PK",
           "store": "Extra",
           "price": "84,90",
           "savings": "spar 15,-",
-          "is_new": false,
-          "desc": "HELE SOMMEREN 84,90 + PANT Pr stk. Pr l 14,15 Førpris 99,90"
+          "is_new": false
         },
         {
           "name": "BRUSBRETT — 20 x 330 ml",
           "store": "Obs",
           "price": "109,-",
           "savings": "",
-          "is_new": false,
-          "desc": "109,- + pant PARTIKJØP 6 varianter. 20 x 330 ml. Pr brett Pr l 16,52 KUN 5,45 PR BOKS MAKS 5 BRETT PR HUSSTAND"
+          "is_new": false
         },
         {
-          "name": "Cola/Urge/Fanta/Sprite — boks (plukk & miks)",
+          "name": "COCA-COLA ORIGINAL/COCA-COLA ZERO SUGAR/ URGE/FANTA ZERO SUGAR/SPRITE ZERO SUGAR — 10 x 0,33 l",
           "store": "Extra",
           "price": "69,-",
           "savings": "",
-          "is_new": false,
-          "desc": "10 x 0,33 l. Pr pk Pr 20,91"
+          "is_new": false
         },
         {
-          "name": "PEPSI MAX",
+          "name": "PEPSI MAX — 6 x 1,5 l",
           "store": "Kiwi",
           "price": "89,-",
           "savings": "",
-          "is_new": false,
-          "desc": "6 x 1,5 liter, Ringnes, pr. l 9,89"
+          "is_new": false
         },
         {
-          "name": "PEPSI MAX 8 STK — 8-PK",
+          "name": "PEPSI MAX 8 STK — 3 STK",
           "store": "Obs",
           "price": "119,-",
           "savings": "",
-          "is_new": false,
-          "desc": "8 x 1,5 l. Pr pk Pr l 9,92 PARTIKJØP + pant MAKS 3 STK 8-PK PR HUSSTAND"
+          "is_new": false
         },
         {
-          "name": "COCA-COLA-/ SPRITE-/FANTA ZERO",
+          "name": "COCA-COLA-/ SPRITE-/FANTA ZERO — 20X0,33L",
           "store": "Meny",
           "price": "129,-",
           "savings": "",
-          "is_new": false,
-          "desc": "20X0,33L, ZERO (19,55/L) + PANT ORIGINAL 139,00 (21,06/L) KUN 6,45 PR. BOKS"
+          "is_new": false
         },
         {
-          "name": "PEPSI MAX — 8-PK",
+          "name": "PEPSI MAX — 3 STK",
           "store": "Obs",
           "price": "119,-",
           "savings": "",
-          "is_new": false,
-          "desc": "MAKS 3 STK 8-PK PR HUSSTAND + pant PARTIKJØP"
+          "is_new": false
         },
         {
           "name": "COCA-COLA U/SUKKER",
           "store": "Bunnpris",
           "price": "89,-",
           "savings": "",
-          "is_new": false,
-          "desc": "MEGA VALUE 89,- + pant 1.5 l x 6 fl + pant 9.89 /L"
+          "is_new": false
         },
         {
-          "name": "Brus",
+          "name": "Brus (pr. flaske)",
           "store": "Spar",
           "price": "79,90",
           "savings": "",
-          "is_new": false,
-          "desc": "hele utvalget, 1,5 l + pant, plukk & miks"
+          "is_new": false
         },
         {
-          "name": "Pepsi / Solo — 10 pk",
+          "name": "Pepsi / Solo",
           "store": "Bunnpris",
           "price": "99,-",
           "savings": "",
-          "is_new": false,
-          "desc": "10 pk."
+          "is_new": false
         },
         {
-          "name": "4PK BRUS PÅ BOKS",
+          "name": "4PK BRUS PÅ BOKS — 4x0,33l",
           "store": "Meny",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "4x0,33l, alle varianter + pant FASTE KNALLKJØP PLUKK & MIKS 3 FOR 2 33% RABATT VED KJØP AV 3"
+          "is_new": false
         },
         {
           "name": "COCA COLA, FANTA, URGE OG SPRITE",
           "store": "Bunnpris",
           "price": "25,-",
           "savings": "",
-          "is_new": false,
-          "desc": "1.5 l + pant 16.67 /L"
+          "is_new": false
         },
         {
           "name": "Coca-Cola/Sprite/Fanta",
           "store": "Spar",
           "price": "9,90",
           "savings": "",
-          "is_new": false,
-          "desc": "VÅR FASTE SOMMERPRIS! et utvalg, 0,33 l + pant 30,00/liter"
+          "is_new": false
         }
-      ],
-      "_nav": "Drikke"
+      ]
     },
     {
       "name": "Dessert/is",
       "items": [
         {
-          "name": "TINE RISLUNSJ JORDBÆR — 4 x 150 g",
+          "name": "TINE RISLUNSJ JORDBÆR — 150 g",
           "store": "Obs",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "4 x 150 g. Pr pk Pr kg 66,50 PARTIKJØP"
+          "is_new": false
         },
         {
-          "name": "PAKISTANSK MANGO — 5KG",
+          "name": "PAKISTANSK MANGO",
           "store": "Meny",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Pakistansk mango er enda søtere enn vanlig mango, og passer spesielt godt til dessert. FAST SOMMERPRIS. 149,00 / KG. 1,5KG KASSE 199,00/STK (132,67/KG"
-        },
-        {
-          "name": "VALDRES BRIE",
-          "store": "Meny",
-          "price": "39,90",
-          "savings": "",
-          "is_new": false,
-          "desc": "Perfekt til ostefatet, til dessert eller snacks, på lyst brød og usaltet kjeks, med syltetøy eller chutney. God til fritering og steking, passer også"
+          "is_new": false
         },
         {
           "name": "VALDRES BRIE",
           "store": "Obs",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Perfekt til ostefatet, til dessert eller snacks, på lyst brød og usaltet kjeks, med syltetøy eller chutney. God til fritering og steking, passer også"
+          "is_new": false
         },
         {
-          "name": "PAKISTANSK MANGO — 5KG",
+          "name": "PAKISTANSK MANGO",
           "store": "Obs",
           "price": "149,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Pakistansk mango er enda søtere enn vanlig mango, og passer spesielt godt til dessert. FaSt SommERPriS 1,5KG KASSE 199,00/STK (132,67/KG)"
+          "is_new": false
         }
-      ],
-      "_nav": "Dessert"
+      ]
     },
     {
       "name": "Grønnsaker",
@@ -1486,123 +1249,107 @@
           "store": "Bunnpris",
           "price": "25,-",
           "savings": "",
-          "is_new": false,
-          "desc": "1 kg Gartner pr. pose"
+          "is_new": false
         },
         {
           "name": "SUNNERE SNACKING — 200 g",
           "store": "Kiwi",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "125-200 g, blåbær, agurk, gulrot, paprika, tomat, pr. kg 124,50-199,20"
+          "is_new": false
         },
         {
-          "name": "Blomkål / Brokkoli / Isbergsalat — norsk",
+          "name": "all norsk blomkål, brokkoli og isbergsalat",
           "store": "Extra",
           "price": "14,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Sommerpris på norske grønnsaker Gjelder all norsk blomkål, brokkoli og isbergsalat Pr stk Gjelder t.o.m. 2. august"
+          "is_new": false
         },
         {
-          "name": "Grønn & Frisk salater",
+          "name": "Grønn & Frisk salater — 65 g",
           "store": "Spar",
           "price": "14,90",
           "savings": "",
-          "is_new": false,
-          "desc": "et utvalg, 65 g 229,23/kg"
+          "is_new": false
         },
         {
-          "name": "SALATPOSER",
+          "name": "SALATPOSER — 65 g",
           "store": "Kiwi",
           "price": "16,90",
           "savings": "",
-          "is_new": false,
-          "desc": "65 g, assortert, Grønn&Frisk, pr. kg 260,00 16,90 Pr. pose 15% Trumf-bonus med KIWI PLUSS"
+          "is_new": false
         },
         {
           "name": "GULROT BUNT",
           "store": "Rema 1000",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "BAMA, 29,90 pr. bunt"
+          "is_new": false
         },
         {
           "name": "ISBERGSALAT, BLOMKÅL",
           "store": "Kiwi",
           "price": "14,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Gartner, pr. stk. 15% Trumf-bonus med KIWI PLUSS"
+          "is_new": false
         },
         {
           "name": "Salat — 110 g",
           "store": "Spar",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Onna, Big Butter/Kjekkas Grønn Ekeblad, 110 g 362,73/kg"
+          "is_new": false
         },
         {
-          "name": "SØTPOTETER",
+          "name": "SØTPOTETER (pr. kg)",
           "store": "Kiwi",
           "price": "24,90",
           "savings": "",
-          "is_new": false,
-          "desc": "15% Trumf-bonus med KIWI PLUSS Pr. kg"
+          "is_new": false
         },
         {
           "name": "Smak* Piccolotomater",
           "store": "Extra",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Pr pk"
+          "is_new": false
         },
         {
           "name": "Avokado 2-pk.",
           "store": "Spar",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Season, spisemoden"
+          "is_new": false
         },
         {
           "name": "Årets nypotet — 1 kg",
           "store": "Spar",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Gartner, gule/røde, store, 1 kg"
+          "is_new": false
         },
         {
           "name": "SOMMERSALAT XL — 300 g",
           "store": "Rema 1000",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "BAMA, 300 g, 99,67 pr. kg"
+          "is_new": false
         },
         {
           "name": "GULROT I BUNT",
           "store": "Bunnpris",
           "price": "25,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Norsk pr. bunt 25.00 /KG"
+          "is_new": false
         },
         {
           "name": "NORSKE HVERDAGSTOMATER — 400 g",
           "store": "Obs",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "400 g. Pr pk Pr kg 87,25"
+          "is_new": false
         }
-      ],
-      "_nav": "Grønnsak"
+      ]
     },
     {
       "name": "Frukt",
@@ -1612,123 +1359,93 @@
           "store": "Meny",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "500G (99,80/KG) KAN BLIR SUPPLERT MED IMPORT VED LITEN TILGANG AV NORSK / KURV"
-        },
-        {
-          "name": "SUNNERE SNACKING — 200 g",
-          "store": "Kiwi",
-          "price": "24,90",
-          "savings": "",
-          "is_new": false,
-          "desc": "125-200 g, blåbær, agurk, gulrot, paprika, tomat, pr. kg 124,50-199,20"
+          "is_new": false
         },
         {
           "name": "Blåbær — 400 g",
           "store": "Spar",
           "price": "59,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Cevita, 400 g 149,75/kg"
+          "is_new": false
         },
         {
           "name": "Steinfrukter — 500 g",
           "store": "Spar",
           "price": "29,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Cevita, et stort utvalg, 450–500 g 59,80–66,44/kg Utvalget kan variere"
+          "is_new": false
         },
         {
           "name": "NORSKE JORDBÆR — 500G",
           "store": "Obs",
           "price": "49,90",
           "savings": "",
-          "is_new": false,
-          "desc": "500G (99,80/KG) KAN BLIR SUPPLERT MED IMPORT VED LITEN TILGANG AV NORSK"
-        },
-        {
-          "name": "PAKISTANSK MANGO — 5KG",
-          "store": "Meny",
-          "price": "149,-",
-          "savings": "",
-          "is_new": false,
-          "desc": "1,5KG KASSE 199,00/STK (132,67/KG) FaSt SommERPriS"
+          "is_new": false
         },
         {
           "name": "KIWI GUL 3PK — 325 g",
           "store": "Rema 1000",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "BAMA, 325 g, 107,38 pr. kg"
+          "is_new": false
         },
         {
-          "name": "COOP MORELLER",
+          "name": "COOP MORELLER (pr. kg)",
           "store": "Extra",
           "price": "9,90",
           "savings": "",
-          "is_new": false,
-          "desc": "I carrybag. Pr hg Pr kg 99,00"
+          "is_new": false
         },
         {
-          "name": "Vannmelon",
+          "name": "Vannmelon (pr. kg)",
           "store": "Spar",
           "price": "12,90",
           "savings": "",
-          "is_new": false,
-          "desc": "VÅR KNALL-PRIS! hel, pr. kg"
+          "is_new": false
         },
         {
-          "name": "SITRON",
+          "name": "SITRON (pr. kg)",
           "store": "Rema 1000",
           "price": "39,90",
           "savings": "",
-          "is_new": false,
-          "desc": "PR. KG HUSK TILBEHØRET!"
+          "is_new": false
         },
         {
           "name": "FERSKEN OG NEKTARINER — 500 g",
           "store": "Bunnpris",
           "price": "35,-",
           "savings": "",
-          "is_new": false,
-          "desc": "Fra 500 g Cevita & Ondine pr. pk Utvalget kan variere fra butikk til butikk."
+          "is_new": false
         },
         {
-          "name": "HEL VANNMELON",
+          "name": "HEL VANNMELON (pr. kg)",
           "store": "Kiwi",
           "price": "14,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Pr. kg"
+          "is_new": false
         },
         {
           "name": "NEKTARIN — 1 kg",
           "store": "Rema 1000",
           "price": "34,90",
           "savings": "",
-          "is_new": false,
-          "desc": "BAMA, 1 kg, 34,90 pr. kg"
+          "is_new": false
         },
         {
-          "name": "Coop Moreller",
+          "name": "Coop Moreller (pr. kg)",
           "store": "Extra",
           "price": "9,90",
           "savings": "",
-          "is_new": false,
-          "desc": "Søte og gode! Pr hg"
+          "is_new": false
         },
         {
-          "name": "Sunn Snækk",
+          "name": "Sunn Snækk — 3 for 2",
           "store": "Spar",
           "price": "3 for 2",
           "savings": "",
-          "is_new": false,
-          "desc": "et utvalg"
+          "is_new": false
         }
-      ],
-      "_nav": "Frukt"
+      ]
     }
   ]
 }

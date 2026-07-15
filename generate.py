@@ -122,7 +122,7 @@ def generate_html(deals, output_path="index.html"):
         }
         emoji = emoji_map.get(cat['name'], '📦')
         
-        tbl = '<table>\n<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>\n'
+        tbl = '<table>\n<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>\n'
         for item in items:
             name = escape(item.get("name",""))
             price = escape(item.get("price",""))
