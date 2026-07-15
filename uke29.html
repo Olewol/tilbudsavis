@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ukens Tilbud — Uke 29 (13.–19. juli 2026)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f0eb; color: #2c2420; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+  header { background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 100%); color: white; padding: 40px 20px; border-radius: 16px; margin-bottom: 24px; text-align: center; }
+  header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+  header p { opacity: 0.85; font-size: 0.95rem; }
+  .stores { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .store-tag { background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+  .top10 { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .top10 h2 { font-size: 1.4rem; font-weight: 700; color: #1a3a2a; margin-bottom: 16px; }
+  .top10 ol { list-style: none; counter-reset: top; }
+  .top10 li { counter-increment: top; padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px; }
+  .top10 li:last-child { border-bottom: none; }
+  .top10 li::before { content: counter(top); background: #2d6a4f; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .category { background: #fff; border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .category h3 { font-size: 1.1rem; font-weight: 700; color: #1a3a2a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .category h3 .tag { font-size: 0.7rem; font-weight: 500; color: #666; background: #f0ebe6; padding: 2px 8px; border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th { text-align: left; padding: 8px 8px 8px 0; font-weight: 600; color: #666; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #eee; }
+  td { padding: 8px 8px 8px 0; border-bottom: 1px solid #f0ebe6; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .price { font-weight: 700; color: #2d6a4f; white-space: nowrap; }
+  .savings { font-size: 0.75rem; background: #e8f5e9; color: #2e7d32; padding: 1px 6px; border-radius: 6px; font-weight: 600; white-space: nowrap; }
+  .shop { font-size: 0.8rem; color: #666; }
+  .shop-badge { display: inline-block; background: #f0ebe6; padding: 1px 8px; border-radius: 10px; font-size: 0.75rem; }
+  .meta { font-size: 0.75rem; color: #999; }
+  .recommendation { background: linear-gradient(135deg, #fef3e2 0%, #fff8f0 100%); border: 1px solid #f0dbb8; border-radius: 16px; padding: 24px; margin-bottom: 24px; }
+  .recommendation h2 { font-size: 1.2rem; font-weight: 700; color: #8d6e3f; margin-bottom: 12px; }
+  .recommendation ul { list-style: none; padding: 0; }
+  .recommendation li { padding: 6px 0; padding-left: 20px; position: relative; }
+  .recommendation li::before { content: '→'; position: absolute; left: 0; color: #b8860b; }
+  .meals { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .meals h2 { font-size: 1.2rem; font-weight: 700; color: #1a3a2a; margin-bottom: 16px; }
+  .meal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .meal-card { background: #faf6f2; border-radius: 12px; padding: 16px; }
+  .meal-card h4 { font-weight: 700; color: #2d6a4f; margin-bottom: 6px; }
+  .meal-card p { font-size: 0.85rem; color: #555; }
+  .meal-card .meta { font-size: 0.75rem; color: #999; margin-top: 6px; display: flex; gap: 12px; }
+  .validity { font-size: 0.8rem; color: #888; text-align: center; margin: 8px 0 24px; }
+  footer { text-align: center; padding: 24px; font-size: 0.75rem; color: #999; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>🛒 Ukens beste tilbud</h1>
+  <p>Uke 29 — mandag 13. juli til søndag 19. juli 2026 · Priser hentet 13.07.2026</p>
+  <div class="stores">
+    <span class="store-tag">🟢 Kiwi Mysen</span>
+    <span class="store-tag">🔵 REMA 1000 Mysen</span>
+    <span class="store-tag">🔴 Extra Mysen</span>
+    <span class="store-tag">🟡 Coop Obs! Slitu 🚗</span>
+    <span class="store-tag">🔴 Meny Askim 🚗</span>
+    <span class="store-tag">🟡 Bunnpris Mysen</span>
+    <span class="store-tag">🔴 Spar Mysen</span>
+  </div>
+</header>
+
+<div class="top10">
+  <h2>🏆 Ukas 10 beste kjøp</h2>
+  <ol>
+    <li><span><strong>Reker 5 kg</strong> — kr 399 (79,80/kg) <span class="savings">spar 100,-</span><br><span class="shop">REMA 1000 Mysen</span></span></li>
+    <li><span><strong>Culotte storfe ~1,3 kg</strong> — kr 209/kg (før 269,-)<br><span class="shop">Gigaboks (Obs! Slitu-området)</span></span></li>
+    <li><span><strong>Brokkoli/Blomkål/Isbergsalat</strong> — kr 14,90/stk <span class="savings">sommerpris</span><br><span class="shop">Extra Mysen</span></span></li>
+    <li><span><strong>Friele Filtermalt 2pk</strong> — kr 90,- (spar 49,80) fredag-lørdag<br><span class="shop">Europris Mysen</span></span></li>
+    <li><span><strong>Coop Kyllingfilet 450g</strong> — kr 80,90 (medlem) / 95,90<br><span class="shop">Coop Prix / Extra Mysen</span></span></li>
+    <li><span><strong>Coca-Cola Zero 8×1,5L</strong> — kr 119 (spar 36,-) <span class="savings">9,92/L</span><br><span class="shop">Meny Askim 🚗</span></span></li>
+    <li><span><strong>Norske jordbær 500g</strong> — kr 49,90<br><span class="shop">Meny Askim 🚗</span></span></li>
+    <li><span><strong>Egg frittgående 15-pk</strong> — kr 49,90 (3,33/stk)<br><span class="shop">Meny Askim 🚗</span></span></li>
+    <li><span><strong>Laksi Liguori Pasta 500g</strong> — kr 19,90 <span class="savings">spar fra 17,40</span><br><span class="shop">Coop Obs! Slitu 🚗</span></span></li>
+    <li><span><strong>Scampi naturell 270g</strong> — kr 59,90 (før 64,90)<br><span class="shop">REMA 1000 Mysen</span></span></li>
+  </ol>
+</div>
+
+<div class="category">
+  <h3>🥩 Kylling <span class="tag">kategori 1</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Kyllingfilet grillet 200g Prior</td><td class="price">59,-</td><td><span class="shop-badge">Bunnpris</span></td></tr>
+    <tr><td>Coop Kyllingfilet 450g — <em>medlem</em></td><td class="price">80,90</td><td><span class="shop-badge">Coop Prix/Extra</span></td></tr>
+    <tr><td>Kylling grillfilet Korean 440g</td><td class="price">99,-</td><td><span class="shop-badge">Kiwi Mysen</span></td></tr>
+    <tr><td>Kyllingfilet 450g — <em>ikke medlem</em></td><td class="price">95,90</td><td><span class="shop-badge">Coop Prix/Extra</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🐄 Storfe <span class="tag">kategori 2</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Culotte storfe ~1,3 kg (før 269,-/kg)</td><td class="price">209,-/kg</td><td><span class="shop-badge">Gigaboks (Obs! Slitu)</span></td></tr>
+    <tr><td>Angussnadder 250g — Jæren Smak</td><td class="price">79,90</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+    <tr><td>Coop Big Beefy Burgers 360g — <em>medlem</em></td><td class="price">39,92</td><td><span class="shop-badge">Extra/Coop Prix</span></td></tr>
+    <tr><td>Coop Big Beefy Burgers 360g — <em>ikke medlem</em></td><td class="price">49,90</td><td><span class="shop-badge">Extra/Coop Prix</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🐖 Svin <span class="tag">kategori 3</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Ytrefilet av svin 180g Jæren Smak</td><td class="price">29,90</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+    <tr><td>Svin ytrefilet BBQ 600g Grilstad</td><td class="price">199,-/kg</td><td><span class="shop-badge">Bunnpris</span></td></tr>
+    <tr><td>Svin indrefilet Cajun corn 600g Grilstad</td><td class="price">199,-/kg</td><td><span class="shop-badge">Bunnpris</span></td></tr>
+  </table>
+  <div class="meta">⭐ Bunnpris har faste sommerpriser som gjelder til 2. august — gode priser på Grilstad-produkter</div>
+</div>
+
+<div class="category">
+  <h3>🐟 Fisk & Sjømat <span class="tag">kategori 4+5</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Reker 70/90 5 kg (før 499,-)</td><td class="price">399,-</td><td><span class="shop-badge">REMA 1000 Mysen</span> <span class="savings">spar 100,-</span></td></tr>
+    <tr><td>Laksefilet med skinn — fra ferskdisk</td><td class="price">34,90/125g</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+    <tr><td>Scampi naturell 270g (før 64,90)</td><td class="price">59,90</td><td><span class="shop-badge">REMA 1000 Mysen</span></td></tr>
+    <tr><td>Coop Laksefilet u/skinn 4×125g</td><td class="price">99,-</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+    <tr><td>Coop Laksefilet — <em>medlem</em></td><td class="price">122,90</td><td><span class="shop-badge">Coop Prix/Extra</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🥛 Meieri — Yoghurt, Egg, Ost <span class="tag">kategori 6+7+8</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Egg 6-pk</td><td class="price">29,90</td><td><span class="shop-badge">REMA 1000 Mysen</span></td></tr>
+    <tr><td>Egg frittgående 15-pk</td><td class="price">49,90</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+    <tr><td>Tine Yoghurt 8-pk 1 kg</td><td class="price">34,90</td><td><span class="shop-badge">REMA 1000 Mysen</span></td></tr>
+    <tr><td>Synnøve/Q Yoghurt — Plukk & Miks</td><td class="price">3 for 2</td><td><span class="shop-badge">Spar</span></td></tr>
+    <tr><td>Mozzarella/Parmesan/Cheddar — Plukk & Miks</td><td class="price">3 for 2</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🥪 Pålegg & Stranda <span class="tag">kategori 9+10</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Mills Kylling/Rekesalat 200/320g</td><td class="price">34,90</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+    <tr><td>Potetsalat med vårløk 500g Mills (spar 10,-)</td><td class="price">39,90</td><td><span class="shop-badge">Nærbutikken</span></td></tr>
+    <tr><td>Grillmat & tilbehør — Plukk & Miks</td><td class="price">3 for 2</td><td><span class="shop-badge">Joker</span></td></tr>
+  </table>
+  <div class="meta">⚠️ Fant ingen spesifikke Stranda-produkter på tilbud denne uken hos etilbudsavis</div>
+</div>
+
+<div class="category">
+  <h3>🍞 Brød & Knekkebrød <span class="tag">kategori 11</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Lag din egen pizza — utvalg</td><td class="price">40% rabatt</td><td><span class="shop-badge">Spar</span></td></tr>
+    <tr><td>Grillmat & tilbehør (inkl. brød)</td><td class="price">3 for 2</td><td><span class="shop-badge">Joker</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>☕ Kaffe <span class="tag">kategori 13</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Evergood 250g / Hele bønner</td><td class="price">30% rabatt</td><td><span class="shop-badge">Bunnpris</span></td></tr>
+    <tr><td>Friele Filtermalt 250g — 2-pk (fredag–lørdag)</td><td class="price">90,-</td><td><span class="shop-badge">Europris Mysen</span> <span class="savings">spar 49,80</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🥤 Drikke <span class="tag">kategori 14</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Brusbrett 20×330ml (5,45 pr boks)</td><td class="price">109,-</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+    <tr><td>Coca-Cola Zero 8×1,5L (spar 36,-)</td><td class="price">119,-</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🍿 Snacks <span class="tag">kategori 12</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Nidar Sjokolade — alle store plater 4-pk</td><td class="price">100,-</td><td><span class="shop-badge">Europris Mysen</span> <span class="savings">spar 119,60</span></td></tr>
+    <tr><td>Freia Melkesjokolade 150g</td><td class="price">19,90</td><td><span class="shop-badge">Kiwi Mysen</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🍦 Dessert & Is <span class="tag">kategori 15</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Sjokoladepudding m/vaniljesaus 2-pk (spar 8,-)</td><td class="price">24,90</td><td><span class="shop-badge">Joker</span></td></tr>
+    <tr><td>Tine Rislunsj Jordbær 4×150g</td><td class="price">39,90</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+  </table>
+  <div class="meta">⚠️ Få is-/desserttilbud denne uken — Krone-is og Diplom-Is ikke funnet på etilbudsavis</div>
+</div>
+
+<div class="category">
+  <h3>🥦 Grønnsaker <span class="tag">kategori 16</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Brokkoli / Blomkål / Isbergsalat — norsk</td><td class="price">14,90/stk</td><td><span class="shop-badge">Extra Mysen</span> <span class="savings">sommerpris</span></td></tr>
+    <tr><td>Nypoteter 1 kg</td><td class="price">29,90</td><td><span class="shop-badge">Joker</span></td></tr>
+    <tr><td>Norske sommergrønnsaker (gulrotbunt m.m.)</td><td class="price">sommerpris</td><td><span class="shop-badge">Extra Mysen</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🍎 Frukt & Bær <span class="tag">kategori 17</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Norske jordbær 500g</td><td class="price">49,90</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+    <tr><td>Druer røde/grønne 500g</td><td class="price">29,90</td><td><span class="shop-badge">Joker</span></td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3>🧂 Ingredienser & Tørrvarer <span class="tag">kategori 18</span></h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+    <tr><td>Liguori Pasta 500g — 4 varianter (spar fra 17,40)</td><td class="price">19,90</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+    <tr><td>Coop Pasta 500g — Plukk & Miks (spar 12,80)</td><td class="price">23,90</td><td><span class="shop-badge">Coop Obs! Slitu 🚗</span></td></tr>
+    <tr><td>Jacobs Utvalgte — alle produkter</td><td class="price">3 for 2</td><td><span class="shop-badge">Meny Askim 🚗</span></td></tr>
+  </table>
+  <div class="meta">⚠️ Fant ingen spesifikke tilbud på chiafrø, gresskarkjerner, linfrø, havregryn, quinoa eller olje denne uken</div>
+</div>
+
+<div class="recommendation">
+  <h2>🛍️ Butikkanbefaling for denne uken</h2>
+  <ul>
+    <li><strong>Best på tilbud:</strong> Extra Mysen har sommerpriser på grønnsaker (brokkoli/blomkål 14,90) og gode medlemspriser på kylling/laks/burgere</li>
+    <li><strong>Billigst handlekurv:</strong> REMA 1000 Mysen — med reker 5 kg til 399,-, egg 29,90, yoghurt 34,90 og scampi 59,90</li>
+    <li><strong>Meny Askim 🚗 (10 min):</strong> Verdt turen hvis du handler laks fra ferskdisken (34,90/125g), egg 15-pk 49,90, jordbær 49,90, Coca-Cola Zero 8-pk 119,- og Jacobs 3-for-2</li>
+    <li><strong>Coop Obs! Slitu 🚗:</strong> Best for pasta (Liguori 19,90), brusbrett 109,- og laksefilet 99,-</li>
+    <li><strong>Bunnpris:</strong> Faste sommerpriser på Grilstad-produkter (199,-/kg), kyllingfilet 59,- og Evergood-kaffe med 30% rabatt</li>
+    <li><strong>Kiwi Mysen:</strong> Freia Melkesjokolade 19,90 og kylling grillfilet 99,-</li>
+  </ul>
+</div>
+
+<div class="meals">
+  <h2>🍳 Middagsforslag basert på ukas tilbud</h2>
+  <div class="meal-grid">
+    <div class="meal-card">
+      <h4>Grillet laksebowl</h4>
+      <p>Laks fra Meny ferskdisk (34,90/125g) + brokkoli/blomkål Extra (14,90) + nypoteter (29,90). Raskt, sunt, ~25 min.</p>
+      <div class="meta">~35g protein · 20 min</div>
+    </div>
+    <div class="meal-card">
+      <h4>Scampi- & pastasalat</h4>
+      <p>Scampi REMA (59,90) + Liguori pasta Obs (19,90) + druer + grønnsaker. Perfekt varmmat.</p>
+      <div class="meta">~30g protein · 20 min</div>
+    </div>
+    <div class="meal-card">
+      <h4>Kyllingfilet med sommergrønt</h4>
+      <p>Kyllingfilet Coop (80,90/medlem) + isbergsalat Extra (14,90) + nypoteter. Meal prep-vennlig.</p>
+      <div class="meta">~40g protein · 25 min</div>
+    </div>
+    <div class="meal-card">
+      <h4>Rekesmørbrød & eggerøre</h4>
+      <p>Reker REMA (79,80/kg — bulk but good) + egg REMA (29,90) + godt brød. Luksusfrokost/lunsj.</p>
+      <div class="meta">~25g protein · 10 min</div>
+    </div>
+  </div>
+</div>
+
+<p class="validity">📅 Alle priser er hentet fra eTilbudsavis.no, kupp.vg.no og enhver.no 13. juli 2026. Gyldighetsperioder varierer — sjekk etilbudsavis.no for detaljer. Noen priser er medlemspriser (Coop/Extra).</p>
+
+<footer>
+  Generert av Hermes Agent · Norske Matpriser-skills · uke 29, 2026<br>
+  Data: eTilbudsavis.no · kupp.vg.no · enhver.no
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ukens Tilbud — Uke 28, 2026 | Mysen-området</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f0eb; color: #1a1a1a; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+  header { background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%); color: #fff; padding: 40px 20px; text-align: center; border-radius: 16px; margin-bottom: 24px; }
+  header h1 { font-size: 2em; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
+  header .sub { font-size: 1em; opacity: 0.8; }
+  header .date { font-size: 0.85em; opacity: 0.6; margin-top: 8px; }
+  .stores { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .stores h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #2d3436; }
+  .store-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .store-tag { background: #e8e3dd; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: 600; }
+  .store-tag.local { background: #dfe6e9; }
+  .store-tag.drive { background: #ffeaa7; }
+  .top10 { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e17055; }
+  .top10 h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #e17055; }
+  .top10 ol { padding-left: 20px; }
+  .top10 li { margin-bottom: 8px; font-size: 0.95em; }
+  .top10 li span.price { font-weight: 700; color: #e17055; }
+  .top10 li span.store { font-weight: 600; color: #636e72; }
+  .category { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .category h3 { font-size: 1em; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0ebe6; display: flex; align-items: center; gap: 8px; }
+  .category h3 .emoji { font-size: 1.2em; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+  th { text-align: left; font-weight: 600; color: #636e72; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 8px; border-bottom: 1px solid #f0ebe6; }
+  td { padding: 8px; border-bottom: 1px solid #f5f0eb; }
+  td.price { font-weight: 700; white-space: nowrap; color: #d63031; }
+  td.store { font-weight: 600; white-space: nowrap; }
+  td.valid { font-size: 0.8em; color: #b2bec3; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .recommendation { background: linear-gradient(135deg, #00b894, #00cec9); color: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  .recommendation h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 8px; }
+  .recommendation p { font-size: 0.95em; opacity: 0.95; }
+  .middag { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #6c5ce7; }
+  .middag h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #6c5ce7; }
+  .middag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .middag-grid { grid-template-columns: 1fr; } }
+  .middag-card { background: #f8f6f4; border-radius: 10px; padding: 14px; }
+  .middag-card h4 { font-size: 0.95em; font-weight: 700; margin-bottom: 4px; }
+  .middag-card .meta { font-size: 0.8em; color: #636e72; margin-bottom: 6px; }
+  .middag-card .meta span { margin-right: 12px; }
+  .middag-card p { font-size: 0.85em; color: #2d3436; }
+  .footer { text-align: center; font-size: 0.8em; color: #b2bec3; padding: 20px 0; }
+  .badge { display: inline-block; background: #dfe6e9; font-size: 0.7em; padding: 2px 8px; border-radius: 10px; font-weight: 600; margin-left: 4px; }
+  .badge.kiwi { background: #e17055; color: #fff; }
+  .badge.rema { background: #fdcb6e; color: #2d3436; }
+  .badge.extra { background: #d63031; color: #fff; }
+  .badge.bunnpris { background: #f1c40f; color: #2d3436; }
+  .badge.meny { background: #e84393; color: #fff; }
+  .badge.spar { background: #dc1e21; color: #fff; }
+  .badge.joker { background: #00b894; color: #fff; }
+  .badge.obs { background: #2d3436; color: #fff; }
+  .badge.mega { background: #6c5ce7; color: #fff; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>🛒 Ukens Tilbud — Uke 28</h1>
+  <div class="sub">6. – 12. juli 2026</div>
+  <div class="date">Mysen-området • Sist oppdatert: mandag 6. juli</div>
+</header>
+
+<div class="stores">
+  <h2>🏪 Butikker i Mysen-området</h2>
+  <div class="store-grid">
+    <span class="store-tag local">✅ Kiwi Mysen</span>
+    <span class="store-tag local">✅ Rema 1000 Mysen</span>
+    <span class="store-tag local">✅ Extra Mysen</span>
+    <span class="store-tag local">✅ Bunnpris Mysen</span>
+    <span class="store-tag local">✅ Spar Mysen</span>
+    <span class="store-tag drive">🚗 Coop Obs Slitu</span>
+    <span class="store-tag drive">🚗 Meny Askim (10 min)</span>
+  </div>
+</div>
+
+<div class="top10">
+  <h2>🏆 Ukas 10 beste kjøp</h2>
+  <ol>
+    <li><span class="store">Rema 1000:</span> Kyllingfilet fersk 1 kg — <span class="price">149 kr</span> (14,90 kr/100g)</li>
+    <li><span class="store">Extra:</span> Laksefilet 500 g — <span class="price">99 kr</span></li>
+    <li><span class="store">SPAR:</span> Vannmelon hel — <span class="price">12,90 kr/kg</span></li>
+    <li><span class="store">Kiwi:</span> Pepsi Max 6×1,5l — <span class="price">89 kr</span></li>
+    <li><span class="store">Extra:</span> Coca-Cola 10×0,33l — <span class="price">56,90 kr</span></li>
+    <li><span class="store">Bunnpris:</span> Tine Yoghurt 500g — <span class="price">10 kr</span></li>
+    <li><span class="store">Kiwi:</span> Brokkoli/Isbergsalat/Blomkål — <span class="price">14,90 kr/stk</span></li>
+    <li><span class="store">Kiwi:</span> Reker i løsvekt — <span class="price">109 kr/kg</span></li>
+    <li><span class="store">SPAR:</span> Kjøttdeig storfe 400g — <span class="price">49,90 kr</span></li>
+    <li><span class="store">Kiwi/Extra:</span> Krone-is 6-pk — <span class="price">24,90 kr</span></li>
+  </ol>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥩</span> Storfe</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Kjøttdeig storfe 400g</td><td class="price">49,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Gilde bacon- og storfeburger 2×130g</td><td class="price">39 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Big Beefy burgers 360g (medlem)</td><td class="price">39,92 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Storfe strimler 250g</td><td class="price">70 kr</td><td class="store">Bunnpris</td><td class="valid">tom 02.08</td></tr>
+    <tr><td>Høyrygg 1 kg (maks 3)</td><td class="price">159,90 kr</td><td class="store">Bunnpris</td><td class="valid">3 dager igjen</td></tr>
+    <tr><td>Biff fra ferskvaredisken (tor–lør)</td><td class="price">-30%</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Grillmat & tilbehør — Plukk & miks</td><td class="price">3 for 2</td><td class="store">Joker/Extra</td><td class="valid">hele juli</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🐔</span> Kylling</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Kyllingfilet fersk 1 kg</td><td class="price">149 kr</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Laksefilet 500g</td><td class="price">99 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Kylling og svin — utvalgte varer</td><td class="price">-30%</td><td class="store">Nærbutikken</td><td class="valid">hele juli</td></tr>
+    <tr><td>Nygrilet kyllingklubber</td><td class="price">129 kr/kg</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🐷</span> Svin</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Svin ytrefilet 1 kg</td><td class="price">199 kr</td><td class="store">Bunnpris</td><td class="valid">tom 02.08</td></tr>
+    <tr><td>Nakkekoteletter 3-pk 540g</td><td class="price">69,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Sommerkoteletter ca 1,1 kg Gilde</td><td class="price">99 kr/kg</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Grillribbe skivet 1 kg</td><td class="price">129 kr</td><td class="store">Bunnpris</td><td class="valid">tom 02.08</td></tr>
+    <tr><td>Krydret grillribbe 800g</td><td class="price">99,90 kr</td><td class="store">Nærbutikken</td><td class="valid">hele juli</td></tr>
+    <tr><td>Svin ytrefilet BBQ 1 kg</td><td class="price">239 kr</td><td class="store">Bunnpris</td><td class="valid">tom 02.08</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🐟</span> Fisk & sjømat</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Laksefilet 500g</td><td class="price">99 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Laksefilet bit 450g</td><td class="price">129 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Reker i løsvekt fryst 70/90</td><td class="price">109 kr/kg</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Reker 5 kg kartong fryst</td><td class="price">399 kr</td><td class="store">Kiwi/Rema/Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Reker/Scampi 1000/500g Fiskemannen</td><td class="price">59,90 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Laks og ørret einerøkt skivet 220g</td><td class="price">99 kr</td><td class="store">Bunnpris</td><td class="valid">tom 05.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥛</span> Yoghurt & meieri</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Tine Yoghurt 500g (vanilje/skogsbær)</td><td class="price">10 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Yoghurt Synnøve/Q — stort utvalg</td><td class="price">3 for 2</td><td class="store">SPAR</td><td class="valid">tom 04.07</td></tr>
+    <tr><td>Rislunsj jordbær 4×150g Tine</td><td class="price">39,90 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Gomorgen yoghurt</td><td class="price">10 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Biola 1000g</td><td class="price">29,90 kr</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥚</span> Egg</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Egg 6-pk</td><td class="price">29,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Egg frittgående</td><td class="price">49,90 kr</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Gårdsegg</td><td class="price">65 kr</td><td class="store">Bunnpris</td><td class="valid">tom 05.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🧀</span> Ost</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Gulost & cheddar 170g</td><td class="price">29,90 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Original revet ost 300g</td><td class="price">51,40 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Jarlsberg skivet 120g</td><td class="price">19,90 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥩</span> Stranda spekemat</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Stranda spekeskinke 70–120g</td><td class="price">-30%</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Grilstad/Stranda spekemat</td><td class="price">-30%</td><td class="store">Coop Prix</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Stranda — stort utvalg</td><td class="price">3 for 2</td><td class="store">SPAR</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Stranda fenalår/Westfaer 250/300g</td><td class="price">149 kr</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Stranda 85g</td><td class="price">39,90 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Stranda (Jacobs utvalgte)</td><td class="price">3 for 2</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥪</span> Pålegg</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Jacobs utvalgte Plukk & miks</td><td class="price">3 for 2</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Pålegg 44–440g — 18 varianter</td><td class="price">-40%</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Picnic 325g Stabburet</td><td class="price">39 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Pølsefest — grillpølser</td><td class="price">3 for 2</td><td class="store">Bunnpris</td><td class="valid">hele sommeren</td></tr>
+    <tr><td>Kjøttpølse 900g Gilde</td><td class="price">79,90 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Grillpølse 3×600g Gilde</td><td class="price">94,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🍞</span> Brød & knekkebrød</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Juliusbrød/Norsk Fjellbrød/Hverdagsgrovt 750g</td><td class="price">29,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Kneipp 550–750g</td><td class="price">3 for 2</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Formloff 500g</td><td class="price">24,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Grovbrød med linfrø 750g</td><td class="price">29,90 kr</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Mellomgrovt brød 650g</td><td class="price">30 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Alle kjeks (merkede)</td><td class="price">3 for 2</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Spaghetti Sopps 450–500g</td><td class="price">14,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥤</span> Drikke</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Pepsi Max 6×1,5l</td><td class="price">89 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Coca-Cola 10×0,33l</td><td class="price">56,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Coca-Cola 20×0,33l</td><td class="price">109 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Farris 1,5l — alle varianter (medlem)</td><td class="price">3 for 40 kr</td><td class="store">Extra/Obs</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Brus og Farris 1,5l</td><td class="price">3 for 2</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>YT 6×300/330ml</td><td class="price">89 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Pepsi Max 6×1,5l</td><td class="price">89,90 kr</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Iste/Litago melk 0,5l</td><td class="price">14,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Iskaffe 330ml Tine</td><td class="price">2 for 30 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Red Bull 4×250ml</td><td class="price">40 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Monster 0,5l</td><td class="price">6 for 100 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Xtra vann 1,5l</td><td class="price">5 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">☕</span> Kaffe</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Kjeldsberg kaffe filtermalt 250g</td><td class="price">37,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Kjeldsberg kaffe filtermalt 500g</td><td class="price">72,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Friele kaffe — utvalgte varer</td><td class="price">-30%</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Coop kaffe 4 varianter (medlem)</td><td class="price">-50%</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🍿</span> Snacks & godteri</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Sørlandschips 200g (spansk paprika/creme fraiche)</td><td class="price">24,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Freia Melkesjokolade 150g</td><td class="price">19,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Maarud potetgull 200g</td><td class="price">35 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Kims/OLW snacks 65–80g</td><td class="price">10 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Maarud potetgull 240/250g (plukk & miks)</td><td class="price">60 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Sjokoladeplater Freia 150–200g</td><td class="price">29,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Freia småsjokolader 43–78g (fre–lør)</td><td class="price">3 for 50 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Kvikk Lunsj 6-pk</td><td class="price">54,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Picnic 325g Stabburet</td><td class="price">39 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🍦</span> Dessert & is</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Krone-is 6-pk jordbær/sjokolade</td><td class="price">24,90 kr</td><td class="store">Kiwi/Extra/Rema</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Krone-is 6-pk jordbær/sjokolade Hennig-Olsen</td><td class="price">46,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Krone-is First Price 6-pk</td><td class="price">24,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Diplom-Is boks 1–1,2l</td><td class="price">-30%</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Diplom-Is med tilbehør</td><td class="price">-30%</td><td class="store">Coop Mega</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Krone-is 6-pk Hennig-Olsen</td><td class="price">39 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥦</span> Grønnsaker</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Brokkoli, isbergsalat, blomkål</td><td class="price">14,90 kr</td><td class="store">Kiwi/Extra/Rema</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Årets nypotet 1 kg</td><td class="price">29,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Gulrot i bunt</td><td class="price">25 kr/kg</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Gulrot bunt</td><td class="price">29,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Maiskolber 2-pk</td><td class="price">19,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Norske hverdagstomater 400g</td><td class="price">34,90 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Snack-paprika 300g (medlem)</td><td class="price">19,90 kr</td><td class="store">Extra/Obs</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Vårløk bunt</td><td class="price">24,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Vårløk bunt</td><td class="price">19,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Reddik bunt</td><td class="price">19,90 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Mango</td><td class="price">19,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Norsk blomkål</td><td class="price">14,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Brokkoli</td><td class="price">20 kr</td><td class="store">Bunnpris</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Friske urter</td><td class="price">3 for 2</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Salatposer 65g (ruccula, feldsalat, babyspinat)</td><td class="price">16,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Salatposer Grønn & Frisk 65g</td><td class="price">14,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🍎</span> Frukt & bær</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Vannmelon hel</td><td class="price">12,90 kr/kg</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Vannmelon hel</td><td class="price">14,90 kr/kg</td><td class="store">Kiwi/Rema/Extra/Bunnpris/Meny</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Jordbær norske 500g</td><td class="price">49,90 kr</td><td class="store">Meny</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Ferske jordbær/bringebær/blåbær (medlem)</td><td class="price">-10 kr</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Moreller</td><td class="price">9,90 kr/hg</td><td class="store">Extra</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Moreller</td><td class="price">149 kr/kg</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Druer røde/grønne 500g</td><td class="price">29,90 kr</td><td class="store">Joker</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Avokado 2-pk</td><td class="price">29,90 kr</td><td class="store">Kiwi</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Avokado</td><td class="price">19,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Fersken/Nektariner/Plommer/Aprikoser</td><td class="price">29,90 kr</td><td class="store">Nærbutikken</td><td class="valid">hele juli</td></tr>
+    <tr><td>Mango</td><td class="price">19,90 kr</td><td class="store">Rema 1000</td><td class="valid">06.–11.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🥘</span> Ingredienser & tørrvarer</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Spaghetti Sopps 450–500g</td><td class="price">14,90 kr</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+    <tr><td>Havregryn 550g Änglamark</td><td class="price">19,90 kr</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Pizza Big One (medlem)</td><td class="price">-40%</td><td class="store">Obs</td><td class="valid">06.–11.07</td></tr>
+    <tr><td>Real turmat (pasta bolognese, asian curry, kylling karri) (medlem)</td><td class="price">2 for 149 kr</td><td class="store">Extra/Obs</td><td class="valid">06.–12.07</td></tr>
+  </table>
+</div>
+
+<div class="category">
+  <h3><span class="emoji">🧴</span> Annet (ikke-mat)</h3>
+  <table>
+    <tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Gyldig</th></tr>
+    <tr><td>Brus og Farris (pant)</td><td class="price">3 for 2</td><td class="store">SPAR</td><td class="valid">06.–12.07</td></tr>
+  </table>
+  <p style="font-size:0.85em; color:#636e72; margin-top:8px;">⚠️ Fant ingen spesifikke tilbud på vaskemiddel, toalettpapir eller såpe denne uken fra butikker i Mysen-området.</p>
+</div>
+
+<div class="recommendation">
+  <h2>📊 Butikkanbefaling — hvor bør du handle denne uken?</h2>
+  <p><strong>🥇 Kiwi Mysen</strong> — best totalpakke denne uken. Sommerkoteletter til 99 kr/kg, reker 109 kr/kg, Sørlandschips 24,90 kr, brokkoli/blomkål 14,90 kr, Pepsi Max 89 kr. Enkel å handle hos, du finner alt på ett sted.</p>
+  <p><strong>🥈 Extra Mysen</strong> — laksefilet 99 kr, Coca-Cola 10-pk 56,90 kr, Kims/OLW 10 kr, jordbær -10 kr for medlemmer. Gode medlemskupp.</p>
+  <p><strong>🥉 Rema 1000 Mysen</strong> — vannmelon 14,90 kr/kg, Kjeldsberg kaffe 37,90 kr, avokado 19,90 kr, kjeks 3 for 2. Bra på frukt/grønt og kaffe.</p>
+  <p style="margin-top: 8px;"><strong>🚗 Meny Askim?</strong> — Kyllingfilet 1 kg til 149 kr er et godt kjøp, og Jacobs 3 for 2 er alltid verdt turen. Men samlet sett ikke en egen tur denne uka med mindre du skal ha storhandel av kylling.</p>
+</div>
+
+<div class="middag">
+  <h2>🍳 Middagsforslag — basert på ukas tilbud</h2>
+  <div class="middag-grid">
+    <div class="middag-card">
+      <h4>Laks i folie med nypotet & sommertomat</h4>
+      <div class="meta"><span>⏱ 25 min</span><span>💪 35g protein</span></div>
+      <p>Extra har laksefilet til 99 kr. Pakk i folie med sitron, hvitløk og urter. Server med nypotet (SPAR 29,90 kr) og norske tomater (Obs 34,90 kr).</p>
+    </div>
+    <div class="middag-card">
+      <h4>Sommerkoteletter med maiskolber & salat</h4>
+      <div class="meta"><span>⏱ 20 min</span><span>💪 40g protein</span></div>
+      <p>Kiwi har sommerkoteletter til 99 kr/kg og maiskolber 2-pk 19,90 kr. Grill eller stek raskt, server med salatpose (Kiwi 16,90 kr).</p>
+    </div>
+    <div class="middag-card">
+      <h4>Kyllingfilet med wokblanding</h4>
+      <div class="meta"><span>⏱ 20 min</span><span>💪 45g protein</span></div>
+      <p>Meny har kyllingfilet 1 kg til 149 kr. Stek i wok med brokkoli/blomkål (Kiwi 14,90 kr). Raskt, sunt, proteinrikt — perfekt etter trening.</p>
+    </div>
+    <div class="middag-card">
+      <h4>Kjøttdeig-gryte med grønnsaker</h4>
+      <div class="meta"><span>⏱ 25 min</span><span>💪 35g protein</span></div>
+      <p>SPAR har kjøttdeig storfe 400g til 49,90 kr. Brun med løk, ha i hakkede tomater, paprika, brokkoli. Server med ris eller pasta.</p>
+    </div>
+    <div class="middag-card">
+      <h4>Reke-sandwich med avokado</h4>
+      <div class="meta"><span>⏱ 10 min</span><span>💪 25g protein</span></div>
+      <p>Kiwi har reker til 109 kr/kg og avokado 2-pk 29,90 kr. Grovt brød (Coop Mega 29,90 kr), reker, avokado, sitron — lunsj eller lett middag.</p>
+    </div>
+    <div class="middag-card">
+      <h4>Eggerøre med grønnsaker & yoghurt</h4>
+      <div class="meta"><span>⏱ 10 min</span><span>💪 20g protein</span></div>
+      <p>Rema 1000 har egg 6-pk 29,90 kr og avokado 19,90 kr. Bunnpris har Tine Yoghurt til 10 kr. Rask frokost/lunsj med godt proteininnhold.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Kilder: eTilbudsavis.no, Gjerrigknark.com, kupp.vg.no • Data hentet 06.07.2026</p>
+  <p>⚠️ Priser kan variere mellom butikker. Ta forbehold om utsolgte varer.Trykk her for oppskrifter!</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,522 @@
+{
+  "top_picks": [
+    {
+      "name": "NIDAR SJOKOLADE",
+      "store": "Europris",
+      "price": "100 kr",
+      "savings": "spar 119 kr",
+      "url": "https://www.europris.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": "https://europris.no"
+    },
+    {
+      "name": "YTTERØY KYLLING KJØTTDEIG",
+      "store": "Obs",
+      "price": "100 kr",
+      "savings": "spar 101 kr",
+      "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+      "store_url": "https://coop.no/obs/"
+    },
+    {
+      "name": "REKER 70/90",
+      "store": "Rema 1000",
+      "price": "399 kr",
+      "savings": "spar 100 kr",
+      "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": ""
+    },
+    {
+      "name": "Reker 40/60. 5 kg kartong",
+      "store": "Obs",
+      "price": "899 kr",
+      "savings": "spar 100 kr",
+      "url": "https://gigaboks.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": "https://gigaboks.no"
+    },
+    {
+      "name": "Culotte storfe ca. 1,3 kg",
+      "store": "Obs",
+      "price": "209 kr",
+      "savings": "spar 60 kr",
+      "url": "https://gigaboks.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": "https://gigaboks.no"
+    },
+    {
+      "name": "Laksefilet",
+      "store": "Spar",
+      "price": "109 kr",
+      "savings": "spar 50 kr",
+      "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": ""
+    },
+    {
+      "name": "FRIELE FILTERMALT",
+      "store": "Europris",
+      "price": "90 kr",
+      "savings": "spar 49 kr",
+      "url": "https://www.europris.no/?utm_source=tjek&utm_medium=referral",
+      "store_url": "https://europris.no"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Kylling",
+      "items": [
+        {
+          "name": "YTTERØY KYLLING KJØTTDEIG",
+          "store": "Obs",
+          "price": "100 kr",
+          "savings": "spar 101 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "400 g Fra 83,33/kg. 1 pk 67,20",
+          "store_url": "https://coop.no/obs/"
+        },
+        {
+          "name": "GRILL PERFEKT LÅRFILET",
+          "store": "Extra",
+          "price": "80 kr",
+          "savings": "spar 40 kr",
+          "is_new": true,
+          "url": "http://coop.no/mega?utm_source=tjek&utm_medium=referral",
+          "desc": "TILBUD 79,90 Kylling. Smokey BBQ . 600 g. Pr pk. Pr kg 133,17. Førpris 119,90 SPAR 33%",
+          "store_url": "https://coop.no/coop-mega/"
+        },
+        {
+          "name": "COOP KYLLINGFILET 690 G",
+          "store": "Extra",
+          "price": "100 kr",
+          "savings": "spar 30 kr",
+          "is_new": true,
+          "url": "http://coop.no/coop-prix/?utm_source=tjek&utm_medium=referral",
+          "desc": "PR. PK Pr kg 144,78. Førpris 129,90",
+          "store_url": "https://coop.no/coop-prix/"
+        },
+        {
+          "name": "NYGRILLET KYLLINGLÅR",
+          "store": "Extra",
+          "price": "20 kr",
+          "savings": "spar 13 kr",
+          "is_new": true,
+          "url": "http://coop.no/mega?utm_source=tjek&utm_medium=referral",
+          "desc": "TILBUD Krydret. Ca. 221 g. Pr stk Førpris 32,90. Spar 40%",
+          "store_url": "https://coop.no/coop-mega/"
+        },
+        {
+          "name": "DEN STOLTE HANE LOLLIPOP CHILI BBQ",
+          "store": "Obs",
+          "price": "80 kr",
+          "savings": "spar 3 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "700 g. Pr pk Pr kg 114,14",
+          "store_url": "https://coop.no/obs/"
+        }
+      ]
+    },
+    {
+      "name": "Storfe",
+      "items": [
+        {
+          "name": "Culotte storfe ca. 1,3 kg",
+          "store": "Obs",
+          "price": "209 kr",
+          "savings": "spar 60 kr",
+          "is_new": true,
+          "url": "https://gigaboks.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Perfekt på grillen!\n209 /kg\nGIGA kupp\nFersk, norsk, Strøm-Larsen Førpris 269,00/kg",
+          "store_url": "https://gigaboks.no"
+        },
+        {
+          "name": "COOP KJØTTDEIG",
+          "store": "Extra",
+          "price": "60 kr",
+          "savings": "spar 28 kr",
+          "is_new": true,
+          "url": "http://coop.no/coop-prix/?utm_source=tjek&utm_medium=referral",
+          "desc": "14% fett. 400 g. Pr kg 149,75 Førpris 87,90 SJEKK PRISEN! PR. PK",
+          "store_url": "https://coop.no/coop-prix/"
+        }
+      ]
+    },
+    {
+      "name": "Svin",
+      "items": [
+        {
+          "name": "GILDE GRILLFILET SVIN",
+          "store": "Extra",
+          "price": "199 kr",
+          "savings": "spar 18 kr",
+          "is_new": true,
+          "url": "http://coop.no/mega?utm_source=tjek&utm_medium=referral",
+          "desc": "TILBUD 199 2 varianter. Pr kg. Førpris 217,90. Spar 8%",
+          "store_url": "https://coop.no/coop-mega/"
+        }
+      ]
+    },
+    {
+      "name": "Laks",
+      "items": [
+        {
+          "name": "Laksefilet",
+          "store": "Spar",
+          "price": "109 kr",
+          "savings": "spar 50 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Lerøy, m/skinn, 450 g 242,22/kg Førpris: 159,00",
+          "store_url": ""
+        },
+        {
+          "name": "Laks",
+          "store": "Spar",
+          "price": "99 kr",
+          "savings": "spar 36 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Lofoten, einerrøkt, 2x110 g 450,00/kg Førpris: 135,00",
+          "store_url": ""
+        },
+        {
+          "name": "LAKSEBURGER FRA LERØY",
+          "store": "Meny",
+          "price": "45 kr",
+          "savings": "spar 15 kr",
+          "is_new": true,
+          "url": "http://meny.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Prøv en deilig lakseburger fra Lerøy UKENS TILBUD 2X130G, LERØY (172,69/KG) FØRPRIS 59,90",
+          "store_url": ""
+        },
+        {
+          "name": "LAKSEBURGER",
+          "store": "Meny",
+          "price": "45 kr",
+          "savings": "spar 15 kr",
+          "is_new": true,
+          "url": "https://jacobs.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "2X130G, LERØY (172,69/KG) FØRPRIS 59,90",
+          "store_url": ""
+        },
+        {
+          "name": "LOFOTEN LAKSEBURGER",
+          "store": "Obs",
+          "price": "60 kr",
+          "savings": "spar 13 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "Lakseburger i pitabrød med gresk salat og tzatziki 2 x 130 g. Pr pk Pr kg 230,38",
+          "store_url": "https://coop.no/obs/"
+        },
+        {
+          "name": "LAKSEFILET M/LIMEPEPPER",
+          "store": "Rema 1000",
+          "price": "160 kr",
+          "savings": "spar 10 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "FØR 169,90\n159,90\nGode hav, 650 g, 246,00 pr. kg",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Reker/scampi",
+      "items": [
+        {
+          "name": "REKER 70/90",
+          "store": "Rema 1000",
+          "price": "399 kr",
+          "savings": "spar 100 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "REMA 1000, 5 kg, 79,80 pr. kg 5KG! FØR 499,00 PR. 5 KG",
+          "store_url": ""
+        },
+        {
+          "name": "Reker 40/60. 5 kg kartong",
+          "store": "Obs",
+          "price": "899 kr",
+          "savings": "spar 100 kr",
+          "is_new": true,
+          "url": "https://gigaboks.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Våre største reker!\n5 kg!\n179,80/kg\nFrysevare. Førpris 999,00\nSommer kupp\n40/60 50/70 70/90\nGjelder t.o.m. 01.08.2026",
+          "store_url": "https://gigaboks.no"
+        },
+        {
+          "name": "POLAR REKER",
+          "store": "Obs",
+          "price": "499 kr",
+          "savings": "spar 40 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "5 kg. Pr pk Pr kg 99,80",
+          "store_url": "https://coop.no/obs/"
+        },
+        {
+          "name": "COOP REKER I LAKE XL",
+          "store": "Obs",
+          "price": "60 kr",
+          "savings": "spar 16 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "170 g. Pr stk Pr kg 352,35 SPAR KR 16,60 FØR 76,50",
+          "store_url": "https://coop.no/obs/"
+        },
+        {
+          "name": "SCAMPI NATURELL",
+          "store": "Rema 1000",
+          "price": "60 kr",
+          "savings": "spar 5 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "FØR 64,90\n59,90\nREMA 1000, 270 g, 221,85 pr. kg",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Yoghurt",
+      "items": [
+        {
+          "name": "Yoghurt 8-pk.",
+          "store": "Spar",
+          "price": "35 kr",
+          "savings": "spar 13 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "TINE, familiefavoritter, 8x125 g Førpris: 47,90",
+          "store_url": ""
+        },
+        {
+          "name": "Q SKYR MINI",
+          "store": "Extra",
+          "price": "25 kr",
+          "savings": "spar 8 kr",
+          "is_new": true,
+          "url": "http://coop.no/extra/?utm_source=tjek&utm_medium=referral",
+          "desc": "Spar kr 8,00 2 for 25,00 Plukk & miks 90 g Fra 138,89/kg. 1 stk 16,50",
+          "store_url": "https://coop.no/extra/"
+        }
+      ]
+    },
+    {
+      "name": "Ost",
+      "items": [
+        {
+          "name": "COOP GREEK FETA BLOCK",
+          "store": "Extra",
+          "price": "60 kr",
+          "savings": "spar 11 kr",
+          "is_new": true,
+          "url": "http://coop.no/extra/?utm_source=tjek&utm_medium=referral",
+          "desc": "150 g Fra 200,00/kg. 1 stk 35,90 Spar kr 11,80",
+          "store_url": "https://coop.no/extra/"
+        },
+        {
+          "name": "GULOST&CHEDDAR",
+          "store": "Kiwi",
+          "price": "30 kr",
+          "savings": "spar 7 kr",
+          "is_new": true,
+          "url": "http://kiwi.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "170 g, revet, Synnøve, pr. kg 175,88",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Annet pålegg",
+      "items": [
+        {
+          "name": "SERRANO GRAN RESERVA",
+          "store": "Rema 1000",
+          "price": "80 kr",
+          "savings": "spar 15 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Lsf, 140 g, 570,71 pr. kg\nFØR 95,50",
+          "store_url": ""
+        },
+        {
+          "name": "MILLS KLASSISK POTETSALAT",
+          "store": "Extra",
+          "price": "40 kr",
+          "savings": "spar 8 kr",
+          "is_new": true,
+          "url": "http://coop.no/coop-prix/?utm_source=tjek&utm_medium=referral",
+          "desc": "500 g. Pr stk. Pr kg 79,80 Førpris 47,90",
+          "store_url": "https://coop.no/coop-prix/"
+        }
+      ]
+    },
+    {
+      "name": "Brød",
+      "items": [
+        {
+          "name": "COOP KONGEBRØD",
+          "store": "Extra",
+          "price": "30 kr",
+          "savings": "spar 27 kr",
+          "is_new": true,
+          "url": "http://coop.no/coop-prix/?utm_source=tjek&utm_medium=referral",
+          "desc": "FAST TILBUD\n900 g. Pr stk. Pr kg 33,22\nFørpris 56,90",
+          "store_url": "https://coop.no/coop-prix/"
+        },
+        {
+          "name": "PIZZABUNN SURDEIG PRIME",
+          "store": "Kiwi",
+          "price": "60 kr",
+          "savings": "spar 10 kr",
+          "is_new": true,
+          "url": "http://kiwi.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "500 g, 2-pk. Quelli, pr. kg 119,80",
+          "store_url": ""
+        },
+        {
+          "name": "POLARBRØD SOMMERLYKKE",
+          "store": "Obs",
+          "price": "35 kr",
+          "savings": "spar 6 kr",
+          "is_new": false,
+          "url": "https://coop.no/obs/?utm_source=tjek&utm_medium=referral",
+          "desc": "SPAR KR 6,50 34,90 FØR 41,40 FAST SOMMERPRIS 400 g. Pr pk Pr kg 87,25",
+          "store_url": "https://coop.no/obs/"
+        },
+        {
+          "name": "POLAR-LEVAIN HVETE",
+          "store": "Rema 1000",
+          "price": "45 kr",
+          "savings": "spar 4 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "FØR 49,80 44,90 Polarbrød, 440 g, 102,05 pr. kg",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "items": [
+        {
+          "name": "NIDAR SJOKOLADE",
+          "store": "Europris",
+          "price": "100 kr",
+          "savings": "spar 119 kr",
+          "is_new": true,
+          "url": "https://www.europris.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Alle store plater 4 100.- SPAR 119,60 54,90/stk",
+          "store_url": "https://europris.no"
+        },
+        {
+          "name": "KVIKK LUNSJ 6PK",
+          "store": "Rema 1000",
+          "price": "55 kr",
+          "savings": "spar 34 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Freia, 282 g, 194,68 pr. kg 54,90 FØR 89,80",
+          "store_url": ""
+        },
+        {
+          "name": "Beef Jerky",
+          "store": "Spar",
+          "price": "30 kr",
+          "savings": "spar 30 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Jack Link's, original, 25 g Førpris: 59,90",
+          "store_url": ""
+        },
+        {
+          "name": "Kvikk Lunsj",
+          "store": "Spar",
+          "price": "35 kr",
+          "savings": "spar 25 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Freia, et utvalg, 130–141 g",
+          "store_url": ""
+        },
+        {
+          "name": "MAARUD POTETGULL",
+          "store": "Extra",
+          "price": "60 kr",
+          "savings": "spar 23 kr",
+          "is_new": true,
+          "url": "http://coop.no/extra/?utm_source=tjek&utm_medium=referral",
+          "desc": "240/250 g Fra 120,00/kg. 1 stk 41,90 2 for 60,00 Spar kr 23,80 Plukk & miks",
+          "store_url": "https://coop.no/extra/"
+        },
+        {
+          "name": "MellomBar",
+          "store": "Spar",
+          "price": "10 kr",
+          "savings": "spar 19 kr",
+          "is_new": true,
+          "url": "http://spar.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Eldorado, et utvalg, 126–138 g 144,93–158,73/kg Førpris: 28,90",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Kaffe",
+      "items": [
+        {
+          "name": "FRIELE FILTERMALT",
+          "store": "Europris",
+          "price": "90 kr",
+          "savings": "spar 49 kr",
+          "is_new": false,
+          "url": "https://www.europris.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "FREDAG-LØRDAG 250 g SPAR 49,80 2 90.- 69,90/stk Max 24 pr. kunde",
+          "store_url": "https://europris.no"
+        },
+        {
+          "name": "FILTERMALT KJELDSBERG",
+          "store": "Rema 1000",
+          "price": "73 kr",
+          "savings": "spar 32 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Kjeldsberg, 500 g, 145,80 pr. kg 72,90 FØR 104,90",
+          "store_url": ""
+        },
+        {
+          "name": "FILTERMALT KJELDSBERG",
+          "store": "Rema 1000",
+          "price": "38 kr",
+          "savings": "spar 17 kr",
+          "is_new": true,
+          "url": "https://www.rema.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "Kjeldsberg, 250 g, 151,60 pr. kg",
+          "store_url": ""
+        }
+      ]
+    },
+    {
+      "name": "Drikke",
+      "items": [
+        {
+          "name": "COCA-COLA 10 PK BOKSER",
+          "store": "Extra",
+          "price": "70 kr",
+          "savings": "spar 40 kr",
+          "is_new": true,
+          "url": "http://coop.no/coop-prix/?utm_source=tjek&utm_medium=referral",
+          "desc": "Original/uten sukker. 10 x 0,33 l. Pr pk Pr l 21,18. Førpris 109,90",
+          "store_url": "https://coop.no/coop-prix/"
+        },
+        {
+          "name": "COCA-COLA ZERO 8PK",
+          "store": "Meny",
+          "price": "119 kr",
+          "savings": "spar 36 kr",
+          "is_new": true,
+          "url": "http://meny.no/?utm_source=tjek&utm_medium=referral",
+          "desc": "8X1,5L (9,92/L) + PANT ORIGINAL 129,00 (10,75/L) FØRPRIS 155,00 / PK KUN 14,88 PR. FLASKE",
+          "store_url": ""
+        }
+      ]
+    }
+  ]
+}

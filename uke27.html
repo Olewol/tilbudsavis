@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ukens beste tilbud — Uke 27 (29.06–05.07.2026)</title>
+<style>
+  :root { --bg: #f5f3e8; --card: #fff; --accent: #2d5a27; --accent2: #8b4513; --border: #d4c9a8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Courier New', Courier, monospace; background: var(--bg); color: #222; padding: 20px; max-width: 1100px; margin: auto; }
+  h1 { font-size: 1.6em; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 20px; color: var(--accent); }
+  h2 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; background: var(--accent); color: #fff; padding: 8px 14px; margin: 30px 0 15px; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 15px; background: var(--card); border: 1px solid var(--border); }
+  th { background: var(--accent); color: #fff; text-align: left; padding: 6px 10px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 5px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  tr:hover { background: #efede0; }
+  .price { font-weight: bold; white-space: nowrap; color: var(--accent2); }
+  .store { white-space: nowrap; font-size: 0.85em; }
+  .store-badge { display: inline-block; padding: 1px 6px; border: 1px solid var(--border); font-size: 0.78em; margin: 1px; cursor: pointer; }
+  .store-badge.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .store-badge.filter-inactive { opacity: 0.3; }
+  .desc { color: #666; font-size: 0.82em; }
+  .winner { background: #e8f5e0; }
+  .winner td { border-bottom: 1px solid #c8e6b0; }
+  .winner .price { color: #1b5e20; font-size: 1.05em; }
+  .summary { background: var(--card); border: 2px solid var(--accent); padding: 16px; margin: 20px 0; }
+  .summary ol { margin-left: 20px; }
+  .summary li { margin-bottom: 6px; cursor: pointer; }
+  .summary li:hover { text-decoration: underline; }
+  .store-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+  .store-badge { border: 1px solid var(--border); padding: 4px 12px; font-size: 0.85em; background: var(--card); cursor: pointer; user-select: none; }
+  .store-badge:hover, .store-badge.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .last-updated { text-align: right; font-size: 0.8em; color: #888; margin-bottom: 20px; }
+  .active-filter { background: var(--accent); color: #fff; padding: 3px 10px; display: inline-block; margin-bottom: 10px; font-size: 0.85em; cursor: pointer; }
+  .hidden { display: none !important; }
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 15px 0; }
+  .shop-card { border: 1px solid var(--border); padding: 10px; background: var(--card); cursor: pointer; }
+  .shop-card:hover { background: #efede0; }
+  .shop-card h4 { font-size: 0.9em; margin-bottom: 4px; }
+  .shop-card p { font-size: 0.8em; color: #555; }
+  .tag { display: inline-block; background: #e0dcc0; padding: 1px 6px; font-size: 0.7em; margin-left: 4px; }
+  .cat-nav { margin: 12px 0; display: flex; flex-wrap: wrap; gap: 4px; }
+  .cat-nav a { font-size: 0.75em; padding: 2px 8px; border: 1px solid var(--border); text-decoration: none; color: #222; }
+  .cat-nav a:hover { background: var(--accent); color: #fff; }
+  @media (max-width: 600px) { body { padding: 10px; } table { font-size: 0.8em; } }
+</style>
+</head>
+<body>
+
+<h1>🛒 Ukens beste tilbud — Uke 27</h1>
+<p style="margin-bottom:5px"><strong>Periode:</strong> 29. juni – 5. juli 2026 | <strong>Område:</strong> Mysen (Indre Østfold)</p>
+<p class="last-updated">Sist oppdatert: 30. juni 2026 | Kilde: eTilbudsavis, Gjerrigknark, Enhver.no</p>
+
+<p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å vise bare tilbudene der:</p>
+<div class="store-list" id="store-filters">
+  <span class="store-badge active" data-store="all" onclick="filterStore('all')">🌐 Alle</span>
+  <span class="store-badge" data-store="rema" onclick="filterStore('rema')">Rema 1000 Mysen</span>
+  <span class="store-badge" data-store="kiwi" onclick="filterStore('kiwi')">Kiwi Mysen</span>
+  <span class="store-badge" data-store="extra" onclick="filterStore('extra')">Extra Mysen</span>
+  <span class="store-badge" data-store="bunnpris" onclick="filterStore('bunnpris')">Bunnpris</span>
+  <span class="store-badge" data-store="spar" onclick="filterStore('spar')">Spar</span>
+  <span class="store-badge" data-store="obs" onclick="filterStore('obs')">Coop Obs Slitu</span>
+  <span class="store-badge" data-store="meny" onclick="filterStore('meny')">Meny Askim</span>
+</div>
+<p style="font-size:0.8em;color:#888;margin-bottom:10px;">🚗 = nærmeste butikk finnes i Slitu/Askim (Obs Slitu, Meny Askim)</p>
+
+<div class="cat-nav">
+  <a href="#kjott">Kjøtt</a><a href="#fisk">Fisk</a><a href="#palegg">Pålegg</a><a href="#meieri">Meieri</a>
+  <a href="#gront">Grønt</a><a href="#snacks">Snacks</a><a href="#drikke">Drikke</a><a href="#ingredienser">Ingredienser</a>
+  <a href="#torrvarer">Tørrvarer</a><a href="#annet">Annet</a>
+</div>
+
+<div class="summary">
+<h3>🏆 Topp 10 beste kjøp denne uka</h3>
+<ol>
+  <li data-store-filter="extra"><strong>Extra Mysen</strong> — Kyllingfilet 1kg <strong>99,–</strong> (fast lavpris ⭐)</li>
+  <li data-store-filter="extra"><strong>Extra Mysen</strong> — Laksefilet 500g <strong>99,–</strong></li>
+  <li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — Stranda spekemat/spekeskinke <strong>-30%</strong></li>
+  <li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — Q Yoghurt 11,90 + Gårdsegg 15pk 59,90</li>
+  <li data-store-filter="bunnpris"><strong>Bunnpris</strong> — Storfeburger 39,– + sommerkoteletter 49/kg</li>
+  <li data-store-filter="extra"><strong>Extra Mysen</strong> — Squash 12,– + Brokkoli 14,90 + Cola 15pk 75,–</li>
+  <li data-store-filter="kiwi"><strong>Kiwi Mysen</strong> — Grandiosa 39,90 + Freia 19,90 + Pizzamel 24,90</li>
+  <li data-store-filter="obs"><strong>Coop Obs Slitu 🚗</strong> — Ytrefilet storfe 89,– + Omo Color 99,90 + Pasta 29,90</li>
+  <li data-store-filter="meny"><strong>Meny Askim 🚗</strong> — Grillribbe 99,– + Makrell 109/kg + Jacobs 3 for 2</li>
+  <li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — Diplom-Is -40% + Friele 79,90 + Toalettpapir 49,90</li>
+</ol>
+</div>
+
+<!-- ================ Kategorier ================ -->
+
+<h2 id="kjott">🥩 Kjøtt & Storfe</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="extra"><td>Kyllingfilet 1kg</td><td class="price">99,–</td><td>Extra Mysen</td><td class="desc">Fast lavpris ⭐</td></tr>
+<tr data-store="kiwi"><td>Kylling grillfilet Korean Style 440g</td><td class="price">99,–</td><td>Kiwi Mysen</td><td class="desc">225,-/kg</td></tr>
+<tr data-store="meny"><td>Kyllingminutfilet Black Garlic 200g</td><td class="price">49,90</td><td>Meny Askim 🚗</td><td class="desc">Fast sommerpris</td></tr>
+<tr class="winner" data-store="bunnpris"><td>Gilde bacon- og storfeburger 2x130g</td><td class="price">39,–</td><td>Bunnpris</td><td class="desc">150,-/kg ⭐</td></tr>
+<tr data-store="obs"><td>Prime Cut Ytrefilet storfe 240g</td><td class="price">89,–</td><td>Coop Obs Slitu 🚗</td><td class="desc">Partikjøp</td></tr>
+<tr data-store="kiwi"><td>Sommerkoteletter ca 1,1kg Gilde</td><td class="price">99,–/kg</td><td>Kiwi Mysen</td><td></td></tr>
+<tr class="winner" data-store="bunnpris"><td>Sommerkoteletter 1kg First Price fryst</td><td class="price">49,–/kg</td><td>Bunnpris</td><td class="desc">⭐</td></tr>
+<tr data-store="rema"><td>Ytrefilet av svin</td><td class="price">69,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="meny"><td>Krydret grillribbe 700g</td><td class="price">99,–</td><td>Meny Askim 🚗</td><td class="desc">⬇33% (før 149)</td></tr>
+<tr data-store="meny"><td>Hamburger 8x100g Grilstad</td><td class="price">99,–</td><td>Meny Askim 🚗</td><td class="desc">⬇36% (før 155)</td></tr>
+<tr data-store="spar"><td>Nakkekoteletter trøffelmarinert</td><td class="price">99,–/kg</td><td>Spar</td><td></td></tr>
+<tr data-store="bunnpris"><td>Gilde grillpølse 2x600g</td><td class="price">49,–</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="bunnpris"><td>Prior grillpølser</td><td class="price">49,–</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="bunnpris"><td>Hamburger big size</td><td class="price">69,–</td><td>Bunnpris</td><td></td></tr>
+</table>
+
+<h2 id="fisk">🐟 Fisk & Sjømat</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="extra"><td>Laksefilet u/skinn 4x125g</td><td class="price">99,–</td><td>Extra Mysen</td><td class="desc">198,-/kg ⭐</td></tr>
+<tr data-store="extra"><td>Laksefilet m/skinn 2x125g</td><td class="price">59,–</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="meny"><td>Laksefilet m/skinn 125g (fiskedisken)</td><td class="price">34,90</td><td>Meny Askim 🚗</td><td class="desc">Fast sommerpris t.o.m 8.aug</td></tr>
+<tr data-store="kiwi"><td>Laksefilet bit m/skinn 450g</td><td class="price">129,–</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="meny"><td>Makrell fersk</td><td class="price">109,–/kg</td><td>Meny Askim 🚗</td><td class="desc">⬇39% (før 179)</td></tr>
+<tr class="winner" data-store="rema"><td>Reker 70/90 Royal Greenland 5kg</td><td class="price">399,–</td><td>Rema 1000 Mysen</td><td class="desc">79,80/kg ⭐</td></tr>
+<tr data-store="rema"><td>Scampi naturell 270g</td><td class="price">59,90</td><td>Rema 1000 Mysen</td><td class="desc">Før 64,90</td></tr>
+<tr data-store="meny"><td>Store frosne reker 1kg (60/80)</td><td class="price">129,–</td><td>Meny Askim 🚗</td><td class="desc">5kg: 599 (119,80/kg)</td></tr>
+<tr data-store="bunnpris"><td>Scampi 150g (Billig Middag)</td><td class="price">50,–</td><td>Bunnpris</td><td></td></tr>
+</table>
+
+<h2 id="palegg">🧀 Pålegg & Stranda</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="rema"><td>Stranda spekemat 70-120g</td><td class="price">-30%</td><td>Rema 1000 Mysen</td><td>✅</td></tr>
+<tr class="winner" data-store="rema"><td>Stranda spekeskinke 70-120g</td><td class="price">-30%</td><td>Rema 1000 Mysen</td><td>✅</td></tr>
+<tr data-store="spar"><td>Stranda (stort utvalg)</td><td class="price">3 for 2</td><td>Spar</td><td class="desc">Kun 29.06–01.07</td></tr>
+<tr data-store="meny"><td>Jacobs utvalgte plukk & miks</td><td class="price">3 for 2</td><td>Meny Askim 🚗</td><td class="desc">Pålegg, brød, juice, sjømat</td></tr>
+<tr data-store="spar"><td>Norvegia 2x ca 1kg</td><td class="price">99,–/kg</td><td>Spar</td><td></td></tr>
+<tr data-store="rema"><td>Kongsgård ost 450g Synnøve</td><td class="price">69,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Fløtemysost/Gudbrandsdalsost 1kg</td><td class="price">99,–</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="rema"><td>Mills grill potetsalat 500g</td><td class="price">34,90</td><td>Rema 1000 Mysen</td><td class="desc">Før 43,90</td></tr>
+</table>
+
+<h2 id="meieri">🥛 Meieri, Yoghurt & Egg</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="rema"><td>Q Yoghurt blåbær 125g</td><td class="price">11,90</td><td>Rema 1000 Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="extra"><td>Tine Yoghurt 4 smaker 8x125g</td><td class="price">34,90</td><td>Extra Mysen</td><td class="desc">Partivare</td></tr>
+<tr data-store="spar"><td>Yoghurt Synnøve/Q utvalg</td><td class="price">3 for 2</td><td>Spar</td><td class="desc">Kun 29.06–01.07</td></tr>
+<tr data-store="extra"><td>Biola 1kg</td><td class="price">29,90</td><td>Extra Mysen</td><td></td></tr>
+<tr class="winner" data-store="rema"><td>Gårdsegg 15 Prior</td><td class="price">59,90</td><td>Rema 1000 Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="meny"><td>Egg frittgående 15stk</td><td class="price">49,90</td><td>Meny Askim 🚗</td><td></td></tr>
+<tr data-store="bunnpris"><td>Gårdsegg 18pk frittgående</td><td class="price">65,–</td><td>Bunnpris</td><td></td></tr>
+</table>
+
+<h2 id="gront">🥦 Grønnsaker & Frukt</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="extra"><td>Brokkoli</td><td class="price">14,90</td><td>Extra Mysen</td><td class="desc">Med medlem</td></tr>
+<tr data-store="extra"><td>Blomkål</td><td class="price">14,90</td><td>Extra Mysen</td><td class="desc">Med medlem</td></tr>
+<tr data-store="extra"><td>Isbergsalat</td><td class="price">14,90</td><td>Extra Mysen</td><td class="desc">Med medlem</td></tr>
+<tr class="winner" data-store="extra"><td>Squash</td><td class="price">12,–/stk</td><td>Extra Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="spar"><td>Vannmelon hel</td><td class="price">12,90/kg</td><td>Spar</td><td class="desc">Billigst</td></tr>
+<tr data-store="rema"><td>Vannmelon hel</td><td class="price">14,90/kg</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Nektariner 1kg kurv</td><td class="price">34,90</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="kiwi"><td>Avokado 2-pk</td><td class="price">29,90</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="spar"><td>Salatposer 65g</td><td class="price">14,90</td><td>Spar</td><td></td></tr>
+<tr data-store="kiwi"><td>Salatposer 65g</td><td class="price">16,90</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="rema"><td>Nypotet løsvekt</td><td class="price">39,90/kg</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Nykål</td><td class="price">19,90/kg</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="bunnpris"><td>Gulrot bunt</td><td class="price">25,–</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="rema"><td>Brokkoli</td><td class="price">19,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+</table>
+
+<h2 id="snacks">🍫 Snacks, Is & Godteri</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="kiwi"><td>Freia Melkesjokolade 150g</td><td class="price">19,90</td><td>Kiwi Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="kiwi"><td>Sørlandschips 190g/200g</td><td class="price">24,90</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Krone-is jordbær/sjokolade 6-pk</td><td class="price">24,90</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="obs"><td>Krone-is jordbær/sjokolade 6-pk</td><td class="price">24,90</td><td>Coop Obs Slitu 🚗</td><td></td></tr>
+<tr class="winner" data-store="rema"><td>Diplom-Is flerpakninger</td><td class="price">-40%</td><td>Rema 1000 Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="rema"><td>Mjølkeruta 190g</td><td class="price">29,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="rema"><td>Sandwich 6pk</td><td class="price">34,10</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr class="winner" data-store="kiwi"><td>Grandiosa 490-575g</td><td class="price">39,90</td><td>Kiwi Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="obs"><td>Peppes Pizza 550-570g</td><td class="price">59,90</td><td>Coop Obs Slitu 🚗</td><td></td></tr>
+<tr data-store="extra"><td>Kims/OLW snacks 65-80g</td><td class="price">10,–</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="obs"><td>Maarud snacks</td><td class="price">-40%</td><td>Coop Obs Slitu 🚗</td><td></td></tr>
+<tr data-store="bunnpris"><td>Krone-is 6-pk</td><td class="price">39,–</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="kiwi"><td>Monster Ultra White 0,5l</td><td class="price">27,90</td><td>Kiwi Mysen</td><td></td></tr>
+</table>
+
+<h2 id="drikke">☕ Drikke & Kaffe</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="kiwi"><td>Brus 10x0,33l (Coca/Pepsi/Solo/Urge)</td><td class="price">56,90</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="rema"><td>Brus på boks 10x0,33l</td><td class="price">56,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr class="winner" data-store="extra"><td>Coca-Cola/Fanta/Sprite/Urge 15x0,33l</td><td class="price">75,–</td><td>Extra Mysen</td><td class="desc">Medlemskupp ⭐ 5,-/boks</td></tr>
+<tr data-store="extra"><td>Pepsi Max 6x1,5l</td><td class="price">89,–</td><td>Extra Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Farris 1,5l</td><td class="price">3 for 40</td><td>Extra Mysen</td><td class="desc">Medlemskupp</td></tr>
+<tr class="winner" data-store="rema"><td>Friele instant 200g</td><td class="price">79,90</td><td>Rema 1000 Mysen</td><td class="desc">⭐</td></tr>
+<tr data-store="bunnpris"><td>Red Bull 4x250ml</td><td class="price">40,–</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="kiwi"><td>Fun Light 0,8l</td><td class="price">24,90</td><td>Kiwi Mysen</td><td></td></tr>
+</table>
+
+<h2 id="ingredienser">🧂 Ingredienser</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr data-store="kiwi"><td>Pizzamel Tipo 00 1kg Regal</td><td class="price">24,90</td><td>Kiwi Mysen</td><td class="desc">Ekstra presset t.o.m 2. aug</td></tr>
+<tr data-store="kiwi"><td>Pizzamel 1kg Regal</td><td class="price">24,90</td><td>Kiwi Mysen</td><td class="desc">Før 27,40</td></tr>
+<tr data-store="rema"><td>Pommes noisettes 600g Hoff</td><td class="price">34,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="spar"><td>Barilla stort utvalg (pasta)</td><td class="price">-30%</td><td>Spar</td><td class="desc">Før 30,90–44,90</td></tr>
+<tr data-store="bunnpris"><td>Sopps-produkter (pasta) 450g</td><td class="price">-30%</td><td>Bunnpris</td><td></td></tr>
+<tr data-store="obs"><td>De Cecco Gnocchi di Patate 500g</td><td class="price">29,90</td><td>Coop Obs Slitu 🚗</td><td class="desc">Før 34,90, spar 5,-</td></tr>
+<tr data-store="obs"><td>Gallo Arborio Risottoris 500g</td><td class="price">59,90</td><td>Coop Obs Slitu 🚗</td><td class="desc">Før 81,00, spar 21,10</td></tr>
+<tr data-store="bunnpris"><td>Super Mønsj-produkter</td><td class="price">-40%</td><td>Bunnpris</td><td class="desc">Tor-lør</td></tr>
+<tr data-store="kiwi"><td>Vårløk bunt</td><td class="price">24,90</td><td>Kiwi Mysen</td><td></td></tr>
+<tr data-store="bunnpris"><td>Evergood 250g og hele bønner</td><td class="price">-30%</td><td>Bunnpris</td><td></td></tr>
+</table>
+
+<h2 id="torrvarer">📦 Tørrvarer & Holdbart</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr data-store="spar"><td>Barilla pasta stort utvalg</td><td class="price">-30%</td><td>Spar</td><td></td></tr>
+<tr data-store="spar"><td>Fri for-produkter</td><td class="price">3 for 2</td><td>Spar</td><td></td></tr>
+<tr data-store="obs"><td>Speltbrød 700g</td><td class="price">39,90</td><td>Coop Obs Slitu 🚗</td><td></td></tr>
+<tr data-store="obs"><td>Wasa knekkebrød</td><td class="price">-30%</td><td>Coop Obs Slitu 🚗</td><td></td></tr>
+</table>
+
+<h2 id="annet">🧹 Annet (vaskemiddel, papir, klor mm)</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
+<tr class="winner" data-store="obs"><td>Omo Color/Hvitt 3,7kg (104 vask)</td><td class="price">99,90</td><td>Coop Obs Slitu 🚗</td><td class="desc">Medlem ⭐ Spar fra 154,-!</td></tr>
+<tr data-store="rema"><td>Toalettpapir Renova</td><td class="price">49,90</td><td>Rema 1000 Mysen</td><td></td></tr>
+<tr data-store="extra"><td>Klor 750ml Coop</td><td class="price">14,90</td><td>Extra Mysen</td><td></td></tr>
+</table>
+
+<!-- ================ Butikkanbefaling ================ -->
+<h2>📍 Butikkanbefaling Mysen</h2>
+<div class="shop-grid">
+  <div class="shop-card" onclick="filterStore('extra')"><h4>🥇 Extra Mysen</h4><p><strong>Protein & grønt:</strong> Kyllingfilet 99,–, laks 99/59,–, squash 12,–, brokkoli/blomkål/salat 14,90. Medlemskupp: Farris 3/40, Cola 15pk 75,–. Klor 14,90.</p></div>
+  <div class="shop-card" onclick="filterStore('rema')"><h4>🥇 Rema 1000 Mysen</h4><p><strong>Breedest:</strong> Stranda -30%, Q yoghurt 11,90, egg 59,90, Diplom-Is -40%, Friele 79,90, toalettpapir 49,90, reker 399/5kg.</p></div>
+  <div class="shop-card" onclick="filterStore('kiwi')"><h4>🥈 Kiwi Mysen</h4><p><strong>Snacks & mel:</strong> Grandiosa 39,90, Freia 19,90, Pizzamel 24,90, chips 24,90, sommerkoteletter 99/kg.</p></div>
+  <div class="shop-card" onclick="filterStore('bunnpris')"><h4>🥉 Bunnpris</h4><p><strong>Kjøttkupp:</strong> Storfeburger 39,–, sommerkoteletter 49/kg, Red Bull 40,–, grillpølser 49,–, egg 18pk 65,–.</p></div>
+  <div class="shop-card" onclick="filterStore('meny')"><h4>🚗 Meny Askim</h4><p><strong>Verdt turen:</strong> Grillribbe 99,–, makrell 109/kg, Jacobs 3-for-2, kyllingminutfilet 49,90, egg 49,90.</p></div>
+  <div class="shop-card" onclick="filterStore('obs')"><h4>🚗 Coop Obs Slitu</h4><p><strong>Storhandel:</strong> Omo Color 99,90 (spar 154!), ytrefilet 89,–, Pasta 29,90, Risotto 59,90, Krone-is 24,90.</p></div>
+</div>
+
+<div class="summary">
+<h3>📊 Oppsummering uke 27</h3>
+<p><strong>Rema 1000 Mysen</strong> har den rimeligste handlekurven og bredest dekning. <strong>Extra Mysen</strong> best på protein og grønnsaker til faste lavpriser. <strong>Kiwi Mysen</strong> snacks & frossenmat. <strong>Coop Obs Slitu 🚗</strong> storhandel (Omo 99,90 er ukas beste ikke-mat-tilbud).</p>
+<p style="margin-top:10px;font-size:0.85em;color:#666;">Priser fra eTilbudsavis, Gjerrigknark, Enhver.no. Oppdatert 30.06.2026. Klikk på butikknavn for å filtrere.</p>
+</div>
+
+<script>
+function filterStore(store) {
+  document.querySelectorAll('#store-filters .store-badge').forEach(b => b.classList.remove('active', 'filter-inactive'));
+  if (store === 'all') {
+    document.querySelector('[data-store="all"]').classList.add('active');
+  } else {
+    document.querySelector('[data-store="' + store + '"]').classList.add('active');
+    document.querySelector('[data-store="all"]').classList.add('filter-inactive');
+  }
+  document.querySelectorAll('[data-store]').forEach(el => {
+    if (el.tagName === 'SPAN' && el.closest('#store-filters')) return;
+    const s = el.getAttribute('data-store');
+    if (store === 'all') el.classList.remove('hidden');
+    else if (s === store) el.classList.remove('hidden');
+    else el.classList.add('hidden');
+  });
+  document.querySelectorAll('[data-store-filter]').forEach(li => {
+    if (store === 'all') li.classList.remove('hidden');
+    else li.getAttribute('data-store-filter') === store ? li.classList.remove('hidden') : li.classList.add('hidden');
+  });
+}
+</script>
+</body>
+</html>
