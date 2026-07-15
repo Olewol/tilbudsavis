@@ -205,7 +205,8 @@
           "is_new": false,
           "desc": "Smokey BBQ. 600 g. Pr pk Pr kg 149,83"
         }
-      ]
+      ],
+      "_nav": "Kylling"
     },
     {
       "name": "Storfe",
@@ -330,7 +331,8 @@
           "is_new": false,
           "desc": "370-400G, ANANAS/ MELONMIKS/VANNMELON, CEVITA (112,25-121,35/KG) FaSt SommERPriS"
         }
-      ]
+      ],
+      "_nav": "Storfe"
     },
     {
       "name": "Svin",
@@ -455,7 +457,8 @@
           "is_new": false,
           "desc": "Ca. 1,4 kg, BBQ, Finsbråten, pr. kg 199,00 Pr. kg"
         }
-      ]
+      ],
+      "_nav": "Svin"
     },
     {
       "name": "Laks",
@@ -580,7 +583,8 @@
           "is_new": false,
           "desc": "220 g Lofoten pr. pk 450/KG"
         }
-      ]
+      ],
+      "_nav": "Laks"
     },
     {
       "name": "Reker/scampi",
@@ -705,7 +709,8 @@
           "is_new": false,
           "desc": "Pr kg Fryst. Str 70/90. Pr kg"
         }
-      ]
+      ],
+      "_nav": "Reker/sc"
     },
     {
       "name": "Yoghurt",
@@ -750,7 +755,8 @@
           "is_new": false,
           "desc": "90-160g, utvalgte varianter FASTE KNALLKJØP PLUKK & MIKS 3 FOR 2 33% RABATT VED KJØP AV 3"
         }
-      ]
+      ],
+      "_nav": "Yoghurt"
     },
     {
       "name": "Egg",
@@ -811,7 +817,8 @@
           "is_new": false,
           "desc": "Brioche er en fransk g jærbakst bakt med smør og egg. Dette gir ekstra luftig og smakfull bakst! FAST SOMMERPRIS 59,90 / STK 500G, ORIGINAL/ SJOKOLADE"
         }
-      ]
+      ],
+      "_nav": "Egg"
     },
     {
       "name": "Ost",
@@ -936,7 +943,8 @@
           "is_new": false,
           "desc": "18,90 Apetina, 100 g, 189,00 pr. kg"
         }
-      ]
+      ],
+      "_nav": "Ost"
     },
     {
       "name": "Pålegg",
@@ -1061,7 +1069,8 @@
           "is_new": false,
           "desc": "200 g. Pr pk. Pr kg 75,00"
         }
-      ]
+      ],
+      "_nav": "Pålegg"
     },
     {
       "name": "Brød",
@@ -1082,7 +1091,8 @@
           "is_new": false,
           "desc": "Fra 30 g pr. stk"
         }
-      ]
+      ],
+      "_nav": "Brød"
     },
     {
       "name": "Snacks",
@@ -1207,7 +1217,8 @@
           "is_new": false,
           "desc": "3 FOR 100,- 9 VARIANTER Fra 120 g Fra 128,21/kg. 1 pk fra 35,50"
         }
-      ]
+      ],
+      "_nav": "Snacks"
     },
     {
       "name": "Kaffe",
@@ -1292,7 +1303,8 @@
           "is_new": false,
           "desc": "Løft måltidet med JACOBS UTVALGTE Jacobs Utvalgte er et godt valg når du vil gjøre måltidene litt bedre, enten det er frokost, lunsj, middag eller kos"
         }
-      ]
+      ],
+      "_nav": "Kaffe"
     },
     {
       "name": "Drikke",
@@ -1417,7 +1429,8 @@
           "is_new": false,
           "desc": "VÅR FASTE SOMMERPRIS! et utvalg, 0,33 l + pant 30,00/liter"
         }
-      ]
+      ],
+      "_nav": "Drikke"
     },
     {
       "name": "Dessert/is",
@@ -1462,7 +1475,8 @@
           "is_new": false,
           "desc": "Pakistansk mango er enda søtere enn vanlig mango, og passer spesielt godt til dessert. FaSt SommERPriS 1,5KG KASSE 199,00/STK (132,67/KG)"
         }
-      ]
+      ],
+      "_nav": "Dessert"
     },
     {
       "name": "Grønnsaker",
@@ -1587,7 +1601,8 @@
           "is_new": false,
           "desc": "400 g. Pr pk Pr kg 87,25"
         }
-      ]
+      ],
+      "_nav": "Grønnsak"
     },
     {
       "name": "Frukt",
@@ -1712,7 +1727,8 @@
           "is_new": false,
           "desc": "et utvalg"
         }
-      ]
+      ],
+      "_nav": "Frukt"
     }
   ]
 }

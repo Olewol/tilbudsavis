@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Generate filterable tilbudsavis page with store pills — localized for Mysen."""
-
+"""Generate tilbudsavis HTML — uke 27 retro design."""
 import json, os, sys
 from datetime import datetime
 from html import escape
 
-STORE_COLORS = {
-    'Kiwi': '#e17055', 'Rema 1000': '#fdcb6e', 'Rema': '#fdcb6e',
-    'Extra': '#d63031', 'Coop': '#d63031', 'Coop Prix': '#d63031',
-    'Coop Mega': '#6c5ce7', 'Coop Obs': '#2d3436', 'Obs': '#2d3436',
-    'Meny': '#e84393', 'MENY': '#e84393', 'Bunnpris': '#f1c40f',
-    'Spar': '#dc1e21', 'SPAR': '#dc1e21', 'Eurospar': '#dc1e21',
-    'Joker': '#00b894', 'Nærbutikken': '#636e72', 'Matkroken': '#636e72',
-    'Gigaboks': '#2d3436',
+STORE_KEY = {
+    'Kiwi': 'kiwi', 'Rema 1000': 'rema', 'Extra': 'extra',
+    'Bunnpris': 'bunnpris', 'Spar': 'spar', 'Obs': 'obs', 'Meny': 'meny',
+    'Europris': 'europris',
+}
+
+STORE_LABEL = {
+    'Kiwi': 'Kiwi Mysen', 'Rema 1000': 'Rema 1000 Mysen',
+    'Extra': 'Extra Mysen', 'Bunnpris': 'Bunnpris',
+    'Spar': 'Spar', 'Obs': 'Coop Obs Slitu 🚗',
+    'Meny': 'Meny Askim 🚗', 'Europris': 'Europris Mysen',
 }
 
 STORE_ALIASES = {
@@ -24,16 +26,18 @@ STORE_ALIASES = {
     'KIWI': 'Kiwi', 'Kiwi': 'Kiwi',
 }
 
-# Butikker som IKKE finnes i Mysen-området — skal filtreres bort
 BLOCKED_STORES = {'Joker', 'Coop Mega', 'Nærbutikken', 'Matkroken', 'Mega'}
+GROCERY_KW = ['kiwi','rema','coop','extra','bunnpris','spar','obs','meny','europris']
 
-def is_allowed_store(store_name):
-    """Return True if the store exists in Mysen area."""
-    name = store_name.strip().lower()
-    for blocked in BLOCKED_STORES:
-        if blocked.lower() in name:
+def is_allowed_store(name):
+    n = name.strip().lower()
+    for b in BLOCKED_STORES:
+        if b.lower() in n:
             return False
     return True
+
+def is_grocery(store):
+    return any(kw in store.lower() for kw in GROCERY_KW)
 
 def normalize_store(name):
     name = name.strip()
@@ -42,223 +46,226 @@ def normalize_store(name):
             return canonical
     return name
 
-HTML_TEMPLATE = """<!DOCTYPE html>
-<html lang="nb">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ukens Tilbud — {week_label} | Mysen</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-  body {{ font-family: 'Inter', -apple-system, sans-serif; background: #f5f0eb; color: #1a1a1a; line-height: 1.6; }}
-  .container {{ max-width: 960px; margin: 0 auto; padding: 20px; }}
-  
-  header {{ background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%); color: #fff; padding: 40px 20px; text-align: center; border-radius: 16px; margin-bottom: 24px; }}
-  header h1 {{ font-size: 2em; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }}
-  header .sub {{ font-size: 1em; opacity: 0.8; }}
-  header .date {{ font-size: 0.85em; opacity: 0.6; margin-top: 8px; }}
-  
-  .stores {{ background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }}
-  .stores h2 {{ font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #2d3436; }}
-  .store-grid {{ display: flex; flex-wrap: wrap; gap: 8px; }}
-  .store-pill {{ padding: 8px 16px; border-radius: 20px; font-size: 0.85em; font-weight: 600; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; user-select: none; }}
-  .store-pill:hover {{ transform: scale(1.05); }}
-  .store-pill.active {{ border-color: #2d3436; box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor; }}
-  .store-pill.all-pill {{ background: #2d3436; color: #fff; }}
-  .store-pill.all-pill.active {{ border-color: #e17055; }}
-  
-  .top10 {{ background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e17055; }}
-  .top10 h2 {{ font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #e17055; }}
-  .top10 ol {{ padding-left: 20px; }}
-  .top10 li {{ margin-bottom: 8px; font-size: 0.95em; }}
-  .top10 li span.price {{ font-weight: 700; color: #e17055; }}
-  .top10 li span.sname {{ font-weight: 600; color: #636e72; }}
-  
-  .category {{ background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }}
-  .category h3 {{ font-size: 1em; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0ebe6; }}
-  table {{ width: 100%; border-collapse: collapse; font-size: 0.9em; }}
-  th {{ text-align: left; font-weight: 600; color: #636e72; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 8px; border-bottom: 1px solid #f0ebe6; }}
-  td {{ padding: 8px; border-bottom: 1px solid #f5f0eb; }}
-  td.price {{ font-weight: 700; white-space: nowrap; color: #d63031; }}
-  td.savings {{ font-size: 0.8em; color: #27ae60; font-weight: 600; white-space: nowrap; }}
-  .badge {{ display: inline-block; font-size: 0.7em; padding: 2px 8px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }}
-  .badge:hover {{ opacity: 0.8; }}
-  .store-row {{ transition: all 0.2s; }}
-  .store-row.hidden {{ display: none; }}
-  .store-row.fade {{ opacity: 0.3; }}
-  
-  .recommendation {{ background: linear-gradient(135deg, #00b894, #00cec9); color: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }}
-  .recommendation h2 {{ font-size: 1.1em; font-weight: 700; margin-bottom: 8px; }}
-  .recommendation p {{ font-size: 0.95em; opacity: 0.95; }}
-  
-  .footer {{ text-align: center; font-size: 0.8em; color: #b2bec3; padding: 20px 0; }}
-  
-  .count-bar {{ text-align: center; font-size: 0.85em; color: #636e72; margin-bottom: 16px; padding: 8px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }}
-  
-  @media (max-width: 600px) {{ .container {{ padding: 10px; }} header {{ padding: 24px 16px; }} header h1 {{ font-size: 1.5em; }} .category {{ padding: 12px; }} table {{ font-size: 0.8em; }} td.price {{ font-size: 0.85em; }} }}
-</style>
-</head>
-<body>
-<div class="container">
-
-<header>
-  <h1>🛒 Ukens Tilbud — {week_label}</h1>
-  <div class="sub">{week_sub}</div>
-  <div class="date">Mysen-området • Oppdatert {generated_at}</div>
-</header>
-
-<div class="stores">
-  <h2>🏪 Velg butikk</h2>
-  <div class="store-grid">
-    <span class="store-pill all-pill active" onclick="filterStore('all')" data-store="all">📋 Alle butikker</span>
-    {store_pills}
-  </div>
-</div>
-
-<div class="count-bar" id="countBar">Viser alle tilbud</div>
-
-<div class="top10">
-  <h2>🏆 Ukas 10 beste kjøp</h2>
-  <ol>
-    {top10_items}
-  </ol>
-</div>
-
-{categories_html}
-
-<div class="footer">
-  Generert av Hermes Agent • Data: eTilbudsavis • <a href="https://github.com/Olewol/tilbudsavis" style="color:#b2bec3;">Olewol/tilbudsavis</a>
-</div>
-
-</div>
-
-<script>
-function filterStore(store) {{
-  document.querySelectorAll('.store-pill').forEach(p => p.classList.remove('active'));
-  document.querySelector(`.store-pill[data-store="${{store}}"]`).classList.add('active');
-  
-  let visible = 0;
-  document.querySelectorAll('.store-row').forEach(row => {{
-    const stores = row.dataset.stores.split('|');
-    if (store === 'all' || stores.some(s => s.toLowerCase().includes(store.toLowerCase()))) {{
-      row.classList.remove('hidden');
-      row.classList.remove('fade');
-      visible++;
-    }} else {{
-      row.classList.add('hidden');
-    }}
-  }});
-  
-  // Also filter top10 items
-  document.querySelectorAll('.top10-item').forEach(item => {{
-    const stores = item.dataset.stores.split('|');
-    if (store === 'all' || stores.some(s => s.toLowerCase().includes(store.toLowerCase()))) {{
-      item.style.display = '';
-    }} else {{
-      item.style.display = 'none';
-    }}
-  }});
-  
-  const name = store === 'all' ? 'alle butikker' : store;
-  document.getElementById('countBar').textContent = `Viser ${{visible}} varer — ${{name}}`;
-}}
-</script>
-</body>
-</html>"""
-
 def generate_html(deals, output_path="index.html"):
     now = datetime.now()
     iso = now.isocalendar()
     week_label = f"Uke {iso[1]}"
-    week_sub = f"{now.strftime('%d. %B %Y')}"
-    generated_at = now.strftime("%d.%m.%Y kl %H:%M")
-    
-    # Collect unique stores (filtered for Mysen area)
+    period = now.strftime("%d.%m.%Y")
+    generated = now.strftime("%d.%m.%Y kl %H:%M")
+
+    # Collect stores from deals
     all_stores = set()
     for cat in deals.get("categories", []):
-        items = []
+        kept = []
         for item in cat.get("items", []):
             store_raw = item.get("store", "")
             if not is_allowed_store(store_raw):
-                continue  # filter out non-Mysen stores
-            items.append(item)
+                continue
+            kept.append(item)
             all_stores.add(normalize_store(store_raw))
-        cat["items"] = items
+        cat["items"] = kept
     for p in list(deals.get("top_picks", [])):
         if not is_allowed_store(p.get("store", "")):
             deals["top_picks"].remove(p)
             continue
         for s in p.get("store", "").split("/"):
             all_stores.add(normalize_store(s.strip()))
-    
-    # Mysen store order
-    store_order = ["Kiwi", "Rema 1000", "Extra", "Bunnpris", "Spar", "Obs", "Meny"]
+
+    store_order = ["Kiwi","Rema 1000","Extra","Bunnpris","Spar","Obs","Meny","Europris"]
     sorted_stores = sorted(all_stores, key=lambda s: store_order.index(s) if s in store_order else 99)
-    
-    # Store pills
-    pills = ""
+
+    # Build store pills
+    pills = '<span class="store-badge active" data-store="all" onclick="filterStore(\'all\')">🌐 Alle</span>\n'
     for s in sorted_stores:
-        color = STORE_COLORS.get(s, "#636e72")
-        is_drive = s in ["Obs", "Meny"]
-        emoji = "🚗 " if is_drive else ""
-        pills += f'<span class="store-pill" onclick="filterStore(\'{s}\')" data-store="{s}" style="background:{color};color:#fff;">{emoji}{s}</span>\n    '
-    
+        key = STORE_KEY.get(s, s.lower().replace(' ',''))
+        label = STORE_LABEL.get(s, s)
+        pills += f'  <span class="store-badge" data-store="{key}" onclick="filterStore(\'{key}\')">{label}</span>\n'
+
+    # Cat nav with short names
+    cat_nav = ''
+    SHORT_NAMES = {
+        'Kylling':'Kylling','Storfe':'Storfe','Svin':'Svin',
+        'Laks':'Laks','Reker/scampi':'Reker','Yoghurt':'Yoghurt',
+        'Egg':'Egg','Ost':'Ost','Pålegg':'Pålegg','Brød':'Brød',
+        'Snacks':'Snacks','Kaffe':'Kaffe','Drikke':'Drikke',
+        'Dessert/is':'Is/Des','Grønnsaker':'Grønt','Frukt':'Frukt',
+        'Ingredienser':'Tørrvarer',
+    }
+    for ci, cat in enumerate(deals.get("categories", [])):
+        cid = f"cat{ci}"
+        short = SHORT_NAMES.get(cat['name'], cat['name'][:8])
+        cat_nav += f'<a href="#{cid}">{short}</a>'
+
     # Top 10
-    top10 = ""
+    top10 = ''
     for p in deals.get("top_picks", [])[:10]:
-        name = escape(p["name"])
-        price = escape(p["price"])
-        savings = escape(p.get("savings", ""))
-        stores = "|".join([normalize_store(s.strip()) for s in p.get("store", "").split("/")])
-        store_display = escape(p["store"])
-        
-        sv_html = f' <span class="sav">{savings}</span>' if savings else ""
-        top10 += f'<li class="top10-item" data-stores="{stores}"><span class="sname">{store_display}:</span> {name} — <span class="price">{price}</span>{sv_html}</li>\n    '
-    
+        name = escape(p.get("name",""))
+        price = escape(p.get("price",""))
+        sv = escape(p.get("savings",""))
+        sv_html = f' <span class="sv">{sv}</span>' if sv else ''
+        store = normalize_store(p.get("store",""))
+        skey = STORE_KEY.get(store, store.lower().replace(' ',''))
+        top10 += f'<li data-store-filter="{skey}"><strong>{store}</strong> — {name} <strong class="price">{price}</strong>{sv_html}</li>\n'
+
     # Categories
-    cats_html = ""
-    for cat in deals.get("categories", []):
+    cats_html = ''
+    for ci, cat in enumerate(deals.get("categories", [])):
         items = cat.get("items", [])
         if not items:
             continue
+        cid = f"cat{ci}"
+        emoji_map = {
+            'Kylling':'🐔','Storfe':'🥩','Svin':'🐷','Laks':'🐟','Reker/scampi':'🦐',
+            'Yoghurt':'🥛','Egg':'🥚','Ost':'🧀','Pålegg':'🥪','Brød':'🍞',
+            'Snacks':'🍫','Kaffe':'☕','Drikke':'🥤','Dessert/is':'🍦',
+            'Grønnsaker':'🥦','Frukt':'🍎','Ingredienser':'🧂',
+        }
+        emoji = emoji_map.get(cat['name'], '📦')
         
-        cat_html = f'<div class="category"><h3>{escape(cat["name"])}</h3><table>\n'
-        cat_html += '<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>\n'
-        
+        tbl = '<table>\n<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>\n'
         for item in items:
-            name = escape(item["name"])
-            price = escape(item["price"])
-            savings = escape(item.get("savings", ""))
-            store = normalize_store(item.get("store", ""))
-            store_display = escape(item.get("store", ""))
-            color = STORE_COLORS.get(store, "#636e72")
-            badge = f'<span class="badge" style="background:{color};color:#fff;" onclick="filterStore(\'{store}\')">{store_display}</span>'
+            name = escape(item.get("name",""))
+            price = escape(item.get("price",""))
+            sv = escape(item.get("savings",""))
+            store = normalize_store(item.get("store",""))
+            skey = STORE_KEY.get(store, store.lower().replace(' ',''))
             
-            row_class = ' class="store-row"'
-            data_stores = f' data-stores="{store}"'
-            if "/" in store_display:
-                stores_multi = "|".join([normalize_store(s.strip()) for s in store_display.split("/")])
-                data_stores = f' data-stores="{stores_multi}"'
+            is_winner = bool(sv)
+            cls = ' class="winner"' if is_winner else ''
+            price_cls = ' class="price"' if is_winner else ''
             
-            sv = f'<td class="savings">{savings}</td>' if savings else '<td class="savings"></td>'
-            cat_html += f'<tr{row_class}{data_stores}><td>{name}</td><td class="price">{price}</td>{sv}<td>{badge}</td></tr>\n'
+            sv_cell = f'<td class="desc">{sv}</td>' if sv else '<td class="desc"></td>'
+            
+            tbl += f'<tr{cls} data-store="{skey}"><td>{name}</td><td{price_cls}>{price}</td>{sv_cell}<td class="store">{store}</td></tr>\n'
         
-        cat_html += '</table></div>\n'
-        cats_html += cat_html
-    
-    html = HTML_TEMPLATE.format(
-        week_label=escape(week_label),
-        week_sub=escape(week_sub),
-        generated_at=escape(generated_at),
-        store_pills=pills,
-        top10_items=top10 if top10 else "<li>Ingen topp-tilbud denne uken</li>",
-        categories_html=cats_html if cats_html else "<p>Ingen kategorier med tilbud denne uken.</p>"
-    )
-    
+        tbl += '</table>'
+        cats_html += f'\n<h2 id="{cid}">{emoji} {escape(cat["name"])}</h2>\n{tbl}\n'
+
+    # Store recommendation cards
+    recs = {
+        'Kiwi': 'Kiwi Mysen', 'Rema 1000': 'Rema 1000 Mysen',
+        'Extra': 'Extra Mysen', 'Bunnpris': 'Bunnpris',
+        'Spar': 'Spar', 'Obs': 'Coop Obs Slitu 🚗',
+        'Meny': 'Meny Askim 🚗',
+    }
+    shop_cards = ''
+    for s in sorted_stores:
+        if s in recs:
+            skey = STORE_KEY.get(s, '')
+            label = recs[s]
+            # Count items for this store
+            count = sum(1 for c in deals.get("categories",[]) for i in c.get("items",[]) if normalize_store(i.get("store","")) == s)
+            shop_cards += f'  <div class="shop-card" onclick="filterStore(\'{skey}\')"><h4>{label}</h4><p>{count} tilbud denne uken</p></div>\n'
+
+    html = f"""<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ukens beste tilbud — {week_label}</title>
+<style>
+  :root {{ --bg: #f5f3e8; --card: #fff; --accent: #2d5a27; --accent2: #8b4513; --border: #d4c9a8; }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{ font-family: 'Courier New', Courier, monospace; background: var(--bg); color: #222; padding: 20px; max-width: 1100px; margin: auto; }}
+  h1 {{ font-size: 1.6em; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 20px; color: var(--accent); }}
+  h2 {{ font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; background: var(--accent); color: #fff; padding: 8px 14px; margin: 30px 0 15px; display: inline-block; }}
+  table {{ width: 100%; border-collapse: collapse; margin-bottom: 15px; background: var(--card); border: 1px solid var(--border); }}
+  th {{ background: var(--accent); color: #fff; text-align: left; padding: 6px 10px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; }}
+  td {{ padding: 5px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; }}
+  tr:hover {{ background: #efede0; }}
+  .price {{ font-weight: bold; white-space: nowrap; color: var(--accent2); }}
+  .store {{ white-space: nowrap; font-size: 0.85em; }}
+  .store-badge {{ display: inline-block; padding: 1px 6px; border: 1px solid var(--border); font-size: 0.78em; margin: 1px; cursor: pointer; }}
+  .store-badge.active {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
+  .store-badge.filter-inactive {{ opacity: 0.3; }}
+  .desc {{ color: #666; font-size: 0.82em; }}
+  .winner {{ background: #e8f5e0; }}
+  .winner td {{ border-bottom: 1px solid #c8e6b0; }}
+  .winner .price {{ color: #1b5e20; font-size: 1.05em; }}
+  .summary {{ background: var(--card); border: 2px solid var(--accent); padding: 16px; margin: 20px 0; }}
+  .summary ol {{ margin-left: 20px; }}
+  .summary li {{ margin-bottom: 6px; cursor: pointer; }}
+  .summary li:hover {{ text-decoration: underline; }}
+  .store-list {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }}
+  .store-badge {{ border: 1px solid var(--border); padding: 4px 12px; font-size: 0.85em; background: var(--card); cursor: pointer; user-select: none; }}
+  .store-badge:hover, .store-badge.active {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
+  .last-updated {{ text-align: right; font-size: 0.8em; color: #888; margin-bottom: 20px; }}
+  .active-filter {{ background: var(--accent); color: #fff; padding: 3px 10px; display: inline-block; margin-bottom: 10px; font-size: 0.85em; cursor: pointer; }}
+  .hidden {{ display: none !important; }}
+  .shop-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 15px 0; }}
+  .shop-card {{ border: 1px solid var(--border); padding: 10px; background: var(--card); cursor: pointer; }}
+  .shop-card:hover {{ background: #efede0; }}
+  .shop-card h4 {{ font-size: 0.9em; margin-bottom: 4px; }}
+  .shop-card p {{ font-size: 0.8em; color: #555; }}
+  .tag {{ display: inline-block; background: #e0dcc0; padding: 1px 6px; font-size: 0.7em; margin-left: 4px; }}
+  .cat-nav {{ margin: 12px 0; display: flex; flex-wrap: wrap; gap: 4px; }}
+  .cat-nav a {{ font-size: 0.75em; padding: 2px 8px; border: 1px solid var(--border); text-decoration: none; color: #222; }}
+  .cat-nav a:hover {{ background: var(--accent); color: #fff; }}
+  .sv {{ font-size: 0.85em; color: var(--accent2); }}
+  @media (max-width: 600px) {{ body {{ padding: 10px; }} table {{ font-size: 0.8em; }} }}
+</style>
+</head>
+<body>
+
+<h1>🛒 Ukens beste tilbud — {week_label}</h1>
+<p style="margin-bottom:5px"><strong>Periode:</strong> uke {week_label} | <strong>Område:</strong> Mysen (Indre Østfold)</p>
+<p class="last-updated">Oppdatert {generated} | Kilde: eTilbudsavis, Enhver.no</p>
+
+<p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å filtrere:</p>
+<div class="store-list" id="store-filters">
+{pills}</div>
+<p style="font-size:0.8em;color:#888;margin-bottom:10px;">🚗 = kjøretur (Slitu/Askim)</p>
+
+<div class="cat-nav">
+{cat_nav}</div>
+
+<div class="summary">
+<h3>🏆 Topp 10 beste kjøp denne uka</h3>
+<ol>
+{top10}</ol>
+</div>
+
+{cats_html}
+
+<h2>📍 Butikker i Mysen-området</h2>
+<div class="shop-grid">
+{shop_cards}</div>
+
+<div class="summary">
+<h3>📊 Oppsummering</h3>
+<p>Priser fra eTilbudsavis, Enhver.no — oppdatert {generated}. Klikk på butikknavn for å filtrere.</p>
+</div>
+
+<script>
+function filterStore(store) {{
+  document.querySelectorAll('#store-filters .store-badge').forEach(b => b.classList.remove('active', 'filter-inactive'));
+  if (store === 'all') {{
+    document.querySelector('[data-store="all"]').classList.add('active');
+  }} else {{
+    document.querySelector('[data-store="' + store + '"]').classList.add('active');
+    document.querySelector('[data-store="all"]').classList.add('filter-inactive');
+  }}
+  document.querySelectorAll('[data-store]').forEach(el => {{
+    if (el.tagName === 'SPAN' && el.closest('#store-filters')) return;
+    const s = el.getAttribute('data-store');
+    if (store === 'all') el.classList.remove('hidden');
+    else if (s === store) el.classList.remove('hidden');
+    else el.classList.add('hidden');
+  }});
+  document.querySelectorAll('[data-store-filter]').forEach(li => {{
+    if (store === 'all') li.classList.remove('hidden');
+    else li.getAttribute('data-store-filter') === store ? li.classList.remove('hidden') : li.classList.add('hidden');
+  }});
+}}
+</script>
+</body>
+</html>"""
+
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"✅ {output_path} ({len(html)} bytes, {len(sorted_stores)} butikker, {sum(len(c.get('items',[])) for c in deals.get('categories',[]))} varer)")
+    
+    total = sum(len(c.get("items",[])) for c in deals.get("categories",[]))
+    print(f"✅ {output_path} ({len(html)} bytes, {len(sorted_stores)} butikker, {total} varer)")
 
 
 def push_to_github(repo_dir):
@@ -273,12 +280,11 @@ def push_to_github(repo_dir):
 
 
 if __name__ == "__main__":
-    import os as _os
-    _os.chdir(_os.path.dirname(_os.path.abspath(__file__)))
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     if len(sys.argv) > 1:
         path = sys.argv[1]
-        if not _os.path.isabs(path):
-            path = _os.path.join(_os.getcwd(), path)
+        if not os.path.isabs(path):
+            path = os.path.join(os.getcwd(), path)
         with open(path) as f:
             deals = json.load(f)
     else:
@@ -288,4 +294,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 2:
         push_to_github(sys.argv[2])
     elif "PUSH" in os.environ:
-        push_to_github(_os.path.dirname(_os.path.abspath(__file__)))
+        push_to_github(os.path.dirname(os.path.abspath(__file__)))

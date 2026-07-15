@@ -3,381 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ukens Tilbud — Uke 29 | Mysen</title>
+<title>Ukens beste tilbud — Uke 29</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f0eb; color: #1a1a1a; line-height: 1.6; }
-  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
-  
-  header { background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%); color: #fff; padding: 40px 20px; text-align: center; border-radius: 16px; margin-bottom: 24px; }
-  header h1 { font-size: 2em; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
-  header .sub { font-size: 1em; opacity: 0.8; }
-  header .date { font-size: 0.85em; opacity: 0.6; margin-top: 8px; }
-  
-  .stores { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .stores h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #2d3436; }
-  .store-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-  .store-pill { padding: 8px 16px; border-radius: 20px; font-size: 0.85em; font-weight: 600; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; user-select: none; }
-  .store-pill:hover { transform: scale(1.05); }
-  .store-pill.active { border-color: #2d3436; box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor; }
-  .store-pill.all-pill { background: #2d3436; color: #fff; }
-  .store-pill.all-pill.active { border-color: #e17055; }
-  
-  .top10 { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e17055; }
-  .top10 h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 12px; color: #e17055; }
-  .top10 ol { padding-left: 20px; }
-  .top10 li { margin-bottom: 8px; font-size: 0.95em; }
-  .top10 li span.price { font-weight: 700; color: #e17055; }
-  .top10 li span.sname { font-weight: 600; color: #636e72; }
-  
-  .category { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .category h3 { font-size: 1em; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0ebe6; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-  th { text-align: left; font-weight: 600; color: #636e72; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 8px; border-bottom: 1px solid #f0ebe6; }
-  td { padding: 8px; border-bottom: 1px solid #f5f0eb; }
-  td.price { font-weight: 700; white-space: nowrap; color: #d63031; }
-  td.savings { font-size: 0.8em; color: #27ae60; font-weight: 600; white-space: nowrap; }
-  .badge { display: inline-block; font-size: 0.7em; padding: 2px 8px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
-  .badge:hover { opacity: 0.8; }
-  .store-row { transition: all 0.2s; }
-  .store-row.hidden { display: none; }
-  .store-row.fade { opacity: 0.3; }
-  
-  .recommendation { background: linear-gradient(135deg, #00b894, #00cec9); color: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-  .recommendation h2 { font-size: 1.1em; font-weight: 700; margin-bottom: 8px; }
-  .recommendation p { font-size: 0.95em; opacity: 0.95; }
-  
-  .footer { text-align: center; font-size: 0.8em; color: #b2bec3; padding: 20px 0; }
-  
-  .count-bar { text-align: center; font-size: 0.85em; color: #636e72; margin-bottom: 16px; padding: 8px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-  
-  @media (max-width: 600px) { .container { padding: 10px; } header { padding: 24px 16px; } header h1 { font-size: 1.5em; } .category { padding: 12px; } table { font-size: 0.8em; } td.price { font-size: 0.85em; } }
+  :root { --bg: #f5f3e8; --card: #fff; --accent: #2d5a27; --accent2: #8b4513; --border: #d4c9a8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Courier New', Courier, monospace; background: var(--bg); color: #222; padding: 20px; max-width: 1100px; margin: auto; }
+  h1 { font-size: 1.6em; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 20px; color: var(--accent); }
+  h2 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; background: var(--accent); color: #fff; padding: 8px 14px; margin: 30px 0 15px; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 15px; background: var(--card); border: 1px solid var(--border); }
+  th { background: var(--accent); color: #fff; text-align: left; padding: 6px 10px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 5px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  tr:hover { background: #efede0; }
+  .price { font-weight: bold; white-space: nowrap; color: var(--accent2); }
+  .store { white-space: nowrap; font-size: 0.85em; }
+  .store-badge { display: inline-block; padding: 1px 6px; border: 1px solid var(--border); font-size: 0.78em; margin: 1px; cursor: pointer; }
+  .store-badge.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .store-badge.filter-inactive { opacity: 0.3; }
+  .desc { color: #666; font-size: 0.82em; }
+  .winner { background: #e8f5e0; }
+  .winner td { border-bottom: 1px solid #c8e6b0; }
+  .winner .price { color: #1b5e20; font-size: 1.05em; }
+  .summary { background: var(--card); border: 2px solid var(--accent); padding: 16px; margin: 20px 0; }
+  .summary ol { margin-left: 20px; }
+  .summary li { margin-bottom: 6px; cursor: pointer; }
+  .summary li:hover { text-decoration: underline; }
+  .store-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+  .store-badge { border: 1px solid var(--border); padding: 4px 12px; font-size: 0.85em; background: var(--card); cursor: pointer; user-select: none; }
+  .store-badge:hover, .store-badge.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .last-updated { text-align: right; font-size: 0.8em; color: #888; margin-bottom: 20px; }
+  .active-filter { background: var(--accent); color: #fff; padding: 3px 10px; display: inline-block; margin-bottom: 10px; font-size: 0.85em; cursor: pointer; }
+  .hidden { display: none !important; }
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 15px 0; }
+  .shop-card { border: 1px solid var(--border); padding: 10px; background: var(--card); cursor: pointer; }
+  .shop-card:hover { background: #efede0; }
+  .shop-card h4 { font-size: 0.9em; margin-bottom: 4px; }
+  .shop-card p { font-size: 0.8em; color: #555; }
+  .tag { display: inline-block; background: #e0dcc0; padding: 1px 6px; font-size: 0.7em; margin-left: 4px; }
+  .cat-nav { margin: 12px 0; display: flex; flex-wrap: wrap; gap: 4px; }
+  .cat-nav a { font-size: 0.75em; padding: 2px 8px; border: 1px solid var(--border); text-decoration: none; color: #222; }
+  .cat-nav a:hover { background: var(--accent); color: #fff; }
+  .sv { font-size: 0.85em; color: var(--accent2); }
+  @media (max-width: 600px) { body { padding: 10px; } table { font-size: 0.8em; } }
 </style>
 </head>
 <body>
-<div class="container">
 
-<header>
-  <h1>🛒 Ukens Tilbud — Uke 29</h1>
-  <div class="sub">15. July 2026</div>
-  <div class="date">Mysen-området • Oppdatert 15.07.2026 kl 18:52</div>
-</header>
+<h1>🛒 Ukens beste tilbud — Uke 29</h1>
+<p style="margin-bottom:5px"><strong>Periode:</strong> uke Uke 29 | <strong>Område:</strong> Mysen (Indre Østfold)</p>
+<p class="last-updated">Oppdatert 15.07.2026 kl 18:59 | Kilde: eTilbudsavis, Enhver.no</p>
 
-<div class="stores">
-  <h2>🏪 Velg butikk</h2>
-  <div class="store-grid">
-    <span class="store-pill all-pill active" onclick="filterStore('all')" data-store="all">📋 Alle butikker</span>
-    <span class="store-pill" onclick="filterStore('Kiwi')" data-store="Kiwi" style="background:#e17055;color:#fff;">Kiwi</span>
-    <span class="store-pill" onclick="filterStore('Rema 1000')" data-store="Rema 1000" style="background:#fdcb6e;color:#fff;">Rema 1000</span>
-    <span class="store-pill" onclick="filterStore('Extra')" data-store="Extra" style="background:#d63031;color:#fff;">Extra</span>
-    <span class="store-pill" onclick="filterStore('Bunnpris')" data-store="Bunnpris" style="background:#f1c40f;color:#fff;">Bunnpris</span>
-    <span class="store-pill" onclick="filterStore('Spar')" data-store="Spar" style="background:#dc1e21;color:#fff;">Spar</span>
-    <span class="store-pill" onclick="filterStore('Obs')" data-store="Obs" style="background:#2d3436;color:#fff;">🚗 Obs</span>
-    <span class="store-pill" onclick="filterStore('Meny')" data-store="Meny" style="background:#e84393;color:#fff;">🚗 Meny</span>
-    <span class="store-pill" onclick="filterStore('Europris')" data-store="Europris" style="background:#636e72;color:#fff;">Europris</span>
-    
-  </div>
+<p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å filtrere:</p>
+<div class="store-list" id="store-filters">
+<span class="store-badge active" data-store="all" onclick="filterStore('all')">🌐 Alle</span>
+  <span class="store-badge" data-store="kiwi" onclick="filterStore('kiwi')">Kiwi Mysen</span>
+  <span class="store-badge" data-store="rema" onclick="filterStore('rema')">Rema 1000 Mysen</span>
+  <span class="store-badge" data-store="extra" onclick="filterStore('extra')">Extra Mysen</span>
+  <span class="store-badge" data-store="bunnpris" onclick="filterStore('bunnpris')">Bunnpris</span>
+  <span class="store-badge" data-store="spar" onclick="filterStore('spar')">Spar</span>
+  <span class="store-badge" data-store="obs" onclick="filterStore('obs')">Coop Obs Slitu 🚗</span>
+  <span class="store-badge" data-store="meny" onclick="filterStore('meny')">Meny Askim 🚗</span>
+  <span class="store-badge" data-store="europris" onclick="filterStore('europris')">Europris Mysen</span>
+</div>
+<p style="font-size:0.8em;color:#888;margin-bottom:10px;">🚗 = kjøretur (Slitu/Askim)</p>
+
+<div class="cat-nav">
+<a href="#cat0">Kylling</a><a href="#cat1">Storfe</a><a href="#cat2">Svin</a><a href="#cat3">Laks</a><a href="#cat4">Reker</a><a href="#cat5">Yoghurt</a><a href="#cat6">Egg</a><a href="#cat7">Ost</a><a href="#cat8">Pålegg</a><a href="#cat9">Brød</a><a href="#cat10">Snacks</a><a href="#cat11">Kaffe</a><a href="#cat12">Drikke</a><a href="#cat13">Is/Des</a><a href="#cat14">Grønt</a><a href="#cat15">Frukt</a></div>
+
+<div class="summary">
+<h3>🏆 Topp 10 beste kjøp denne uka</h3>
+<ol>
+<li data-store-filter="europris"><strong>Europris</strong> — NIDAR SJOKOLADE <strong class="price">100,-</strong> <span class="sv">spar 119,-</span></li>
+<li data-store-filter="obs"><strong>Obs</strong> — YTTERØY KYLLING KJØTTDEIG — 1 pk <strong class="price">100,-</strong> <span class="sv">spar 101,-</span></li>
+<li data-store-filter="rema"><strong>Rema 1000</strong> — REKER 70/90 — 5 kg <strong class="price">399,-</strong> <span class="sv">spar 100,-</span></li>
+<li data-store-filter="spar"><strong>Spar</strong> — Laksefilet — 450 g <strong class="price">109,-</strong> <span class="sv">spar 50,-</span></li>
+<li data-store-filter="europris"><strong>Europris</strong> — FRIELE FILTERMALT — 250 g <strong class="price">90,-</strong> <span class="sv">spar 49,-</span></li>
+<li data-store-filter="obs"><strong>Obs</strong> — POLAR REKER — 5 kg <strong class="price">499,-</strong> <span class="sv">spar 40,-</span></li>
+<li data-store-filter="extra"><strong>Extra</strong> — COCA-COLA 10 PK BOKSER <strong class="price">69,90</strong> <span class="sv">spar 40,-</span></li>
+<li data-store-filter="spar"><strong>Spar</strong> — Laks — 2x110 g <strong class="price">99,-</strong> <span class="sv">spar 36,-</span></li>
+<li data-store-filter="meny"><strong>Meny</strong> — COCA-COLA ZERO 8PK <strong class="price">119,-</strong> <span class="sv">spar 36,-</span></li>
+<li data-store-filter="rema"><strong>Rema 1000</strong> — KVIKK LUNSJ 6PK — 282 g <strong class="price">54,90</strong> <span class="sv">spar 34,-</span></li>
+</ol>
 </div>
 
-<div class="count-bar" id="countBar">Viser alle tilbud</div>
 
-<div class="top10">
-  <h2>🏆 Ukas 10 beste kjøp</h2>
-  <ol>
-    <li class="top10-item" data-stores="Europris"><span class="sname">Europris:</span> NIDAR SJOKOLADE — <span class="price">100,-</span> <span class="sav">spar 119,-</span></li>
-    <li class="top10-item" data-stores="Obs"><span class="sname">Obs:</span> YTTERØY KYLLING KJØTTDEIG — 1 pk — <span class="price">100,-</span> <span class="sav">spar 101,-</span></li>
-    <li class="top10-item" data-stores="Rema 1000"><span class="sname">Rema 1000:</span> REKER 70/90 — 5 kg — <span class="price">399,-</span> <span class="sav">spar 100,-</span></li>
-    <li class="top10-item" data-stores="Spar"><span class="sname">Spar:</span> Laksefilet — 450 g — <span class="price">109,-</span> <span class="sav">spar 50,-</span></li>
-    <li class="top10-item" data-stores="Europris"><span class="sname">Europris:</span> FRIELE FILTERMALT — 250 g — <span class="price">90,-</span> <span class="sav">spar 49,-</span></li>
-    <li class="top10-item" data-stores="Obs"><span class="sname">Obs:</span> POLAR REKER — 5 kg — <span class="price">499,-</span> <span class="sav">spar 40,-</span></li>
-    <li class="top10-item" data-stores="Extra"><span class="sname">Extra:</span> COCA-COLA 10 PK BOKSER — <span class="price">69,90</span> <span class="sav">spar 40,-</span></li>
-    <li class="top10-item" data-stores="Spar"><span class="sname">Spar:</span> Laks — 2x110 g — <span class="price">99,-</span> <span class="sav">spar 36,-</span></li>
-    <li class="top10-item" data-stores="Meny"><span class="sname">Meny:</span> COCA-COLA ZERO 8PK — <span class="price">119,-</span> <span class="sav">spar 36,-</span></li>
-    <li class="top10-item" data-stores="Rema 1000"><span class="sname">Rema 1000:</span> KVIKK LUNSJ 6PK — 282 g — <span class="price">54,90</span> <span class="sav">spar 34,-</span></li>
-    
-  </ol>
+<h2 id="cat0">🐔 Kylling</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="obs"><td>YTTERØY KYLLING KJØTTDEIG</td><td class="price">100,-</td><td class="desc">spar 101,-</td><td class="store">Obs</td></tr>
+<tr class="winner" data-store="extra"><td>COOP KYLLINGFILET 690 G</td><td class="price">99,90</td><td class="desc">spar 30,-</td><td class="store">Extra</td></tr>
+<tr class="winner" data-store="obs"><td>DEN STOLTE HANE LOLLIPOP CHILI BBQ — 700 g</td><td class="price">79,90</td><td class="desc">spar 3,-</td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>Kyllingfilet grillet &amp; salatkjøtt</td><td>59,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="extra"><td>Coop Kyllingfilet</td><td>95,90 (medlem 80,90)</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>KYLLING GRILLFILET — 440 g</td><td>99,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="meny"><td>KYLLINGMINUTTFILET — 200G</td><td>49,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>KYLLINGMINUTTFILET — 200G</td><td>49,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>KYLLINGLÅR GRILLET OG FILETMIKS KYLLING BBQ</td><td>149,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="rema"><td>MARINERT KYLLINGFILET — 450 g</td><td>89,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="obs"><td>PRIOR CRISPY STICKS — 570 g</td><td>99,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>Billig Middag — 250 g</td><td>40,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT KYLLINGSPYD GYROS — 300 g</td><td>80,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>CRISPY STICKS — 570 g</td><td>99,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT LÅRFILET — 600 g</td><td>89,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+</table>
+
+<h2 id="cat1">🥩 Storfe</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="extra"><td>COOP KJØTTDEIG — 400 g</td><td class="price">59,90</td><td class="desc">spar 28,-</td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>SKJEGGERØD PEPPERBIFF AV STORFE — 600 g</td><td>179,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>GILDE BACON- OG STORFEBURGER — 2 x 130 g</td><td>39,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>ANGUSSNADDER — 250G</td><td>79,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt Big Beefy Burgers — 360 g</td><td>49,90 (medlem 39,92)</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>LUFTIG BURGER — 2 x 150 g</td><td>59,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT GRILLSPYD PEPPERMIKS — 180 g</td><td>89,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="bunnpris"><td>BURGER LUFTIG — 150 g</td><td>69,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>HAMBURGER BIG SIZE — 160 g</td><td>69,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>STORE FROSNE REKER — 5KG</td><td>129,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="extra"><td>FREIA STORE PLATER OG POSER — 200 g</td><td>90,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Store reker</td><td>149,-</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="meny"><td>STORE FROSNE REKER — 5KG</td><td>149,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="bunnpris"><td>BURGERBRØD STORE M/SESAM — 540 g</td><td>35,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>KUTTET FRUKT STORE BEGER — 400G</td><td>44,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+</table>
+
+<h2 id="cat2">🐷 Svin</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="rema"><td>YTREFILET AV SVIN — 400 g</td><td>69,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>Svin indrefilet — 600 g</td><td>199,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="obs"><td>YTREFILET AV SVIN — 180G</td><td>29,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>YTREFILET AV SVIN — 180G</td><td>29,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT PORK BELLY — 600 g</td><td>179,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT YTREFILET</td><td>189,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="bunnpris"><td>Svin ytrefilet — 600 g</td><td>199,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>SVIN INDREFILET — 500 g</td><td>119,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>GRILLRIBBE KRYDRET, SVIN INDREFILET OG SVIN INDREFILET KOREAN BBQ</td><td>199,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>SVIN YTREFILET BBQ — 600 g</td><td>229,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>SVIN YTREFILET BBQ — 600 g</td><td>239,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="kiwi"><td>FOTBALLBURGER — 4 x 150 g</td><td>79,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="bunnpris"><td>GRILLBURGER — 2x130g</td><td>49,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="kiwi"><td>SVIN GRILLRIBBE — 700 g</td><td>79,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="kiwi"><td>SVIN GRILLFILET — 4 kg</td><td>199,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+</table>
+
+<h2 id="cat3">🐟 Laks</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="spar"><td>Laksefilet — 450 g</td><td class="price">109,-</td><td class="desc">spar 50,-</td><td class="store">Spar</td></tr>
+<tr class="winner" data-store="spar"><td>Laks — 2x110 g</td><td class="price">99,-</td><td class="desc">spar 36,-</td><td class="store">Spar</td></tr>
+<tr class="winner" data-store="meny"><td>LAKSEBURGER FRA LERØY — 2X130G</td><td class="price">44,90</td><td class="desc">spar 15,-</td><td class="store">Meny</td></tr>
+<tr class="winner" data-store="obs"><td>LAKSEBURGER — 2X130G</td><td class="price">44,90</td><td class="desc">spar 15,-</td><td class="store">Obs</td></tr>
+<tr class="winner" data-store="obs"><td>LOFOTEN LAKSEBURGER — 2 x 130 g</td><td class="price">59,90</td><td class="desc">spar 13,-</td><td class="store">Obs</td></tr>
+<tr class="winner" data-store="rema"><td>LAKSEFILET M/LIMEPEPPER — 650 g</td><td class="price">159,90</td><td class="desc">spar 10,-</td><td class="store">Rema 1000</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET — 4 x 125 g</td><td>99,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="extra"><td>Coop Laksefilet</td><td>145,90 (medlem 122,90)</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>LAKSEFILET — 450 g</td><td>129,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET — 2 x 125 g</td><td>58,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td>39,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET — 650 g</td><td>179,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>COOP LAKSEFILET — 650 g</td><td>169,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="obs"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td>39,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>LAKS OG ØRRET EINERRØKT SKIVET — 220 g</td><td>99,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+</table>
+
+<h2 id="cat4">🦐 Reker/scampi</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="rema"><td>REKER 70/90 — 5 kg</td><td class="price">399,-</td><td class="desc">spar 100,-</td><td class="store">Rema 1000</td></tr>
+<tr class="winner" data-store="obs"><td>POLAR REKER — 5 kg</td><td class="price">499,-</td><td class="desc">spar 40,-</td><td class="store">Obs</td></tr>
+<tr class="winner" data-store="obs"><td>COOP REKER I LAKE XL — 170 g</td><td class="price">59,90</td><td class="desc">spar 16,-</td><td class="store">Obs</td></tr>
+<tr class="winner" data-store="rema"><td>SCAMPI NATURELL — 270 g</td><td class="price">59,90</td><td class="desc">spar 5,-</td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>Billig Middag — 150 g</td><td>50,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td>39,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="bunnpris"><td>SCAMPI — 150 g</td><td>50,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="kiwi"><td>REKER I KARTONG — 5 kg</td><td>399,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="meny"><td>STORE FROSNE REKER — 5KG</td><td>129,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="extra"><td>POLAR REKER 5 KG — 5 kg</td><td>399,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>REKER I LØSVEKT</td><td>109,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="spar"><td>Store reker</td><td>149,-</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="bunnpris"><td>REKER FROSNE</td><td>199,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>STORE FROSNE REKER — 5KG</td><td>149,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="extra"><td>POLAR REKER I LØS VEKT</td><td>109,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+</table>
+
+<h2 id="cat5">🥛 Yoghurt</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="spar"><td>Yoghurt 8-pk. — 8x125 g</td><td class="price">34,90</td><td class="desc">spar 13,-</td><td class="store">Spar</td></tr>
+<tr class="winner" data-store="extra"><td>Q SKYR MINI — 1 stk</td><td class="price">25,-</td><td class="desc">spar 8,-</td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Yoghurt</td><td>3 for 2</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="rema"><td>YOGHURT 8PK — 1 kg</td><td>34,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="meny"><td>SKYR® PORSJONSYOGHURT — 160g, 3 for 2</td><td>3 for 2</td><td class="desc"></td><td class="store">Meny</td></tr>
+</table>
+
+<h2 id="cat6">🥚 Egg</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="meny"><td>EGG FRITTGÅENDE — 15stk</td><td>49,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="rema"><td>EGG 6PK — 402 g</td><td>29,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>GÅRDSEGG — 18 pk</td><td>65,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="extra"><td>Coop Frokostegg</td><td>68,90 (medlem 59,90)</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>EGG — 15stk</td><td>49,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>BRIOCHE GOURMET — 500G</td><td>59,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>BRIOCHE GOURMET — 500G</td><td>59,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+</table>
+
+<h2 id="cat7">🧀 Ost</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="extra"><td>COOP GREEK FETA BLOCK — 150 g</td><td class="price">60,-</td><td class="desc">spar 11,-</td><td class="store">Extra</td></tr>
+<tr class="winner" data-store="spar"><td>Norsk Salatost — 220 g</td><td class="price">26,90</td><td class="desc">spar 8,-</td><td class="store">Spar</td></tr>
+<tr class="winner" data-store="kiwi"><td>GULOST&amp;CHEDDAR — 170 g</td><td class="price">29,90</td><td class="desc">spar 7,-</td><td class="store">Kiwi</td></tr>
+<tr data-store="meny"><td>BUFAR</td><td>149,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>BUFAR</td><td>149,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>ET STORT UTVALG TINE SKIVET OST — 3 for 2</td><td>3 for 2</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>NORSK BURGEROST — 100G</td><td>24,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="rema"><td>ORIGINAL REVET OST — 300 g</td><td>51,40</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>CHEDDAR OG RABAGAST TERNET</td><td>29,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="obs"><td>COOP MOZZARELLA/MASCARPONE/RICOTTA — 250 g</td><td>74,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="spar"><td>Skivet ost</td><td>3 for 2</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="bunnpris"><td>KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA &amp; HAVSALT</td><td>50,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>VALDRES BRIE</td><td>39,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="kiwi"><td>BEGERSALAT — 255 g</td><td>39,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="rema"><td>APETINA SOLTØRKETTOMAT — 100 g</td><td>18,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+</table>
+
+<h2 id="cat8">🥪 Pålegg</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="extra"><td>MILLS KLASSISK POTETSALAT — 500 g</td><td class="price">39,90</td><td class="desc">spar 8,-</td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Stranda</td><td>3 for 2</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="meny"><td>TYNNSKÅRET SPEKESKINKE</td><td>34,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="rema"><td>STRANDASKINKE — 200 g</td><td>99,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>STRANDASKINKE MINDRE SALT</td><td>59,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="obs"><td>TYNNSKÅRET SPEKESKINKE</td><td>34,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>STRANDAMØR SNACKS</td><td>39,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT GRILLPOTETSALAT — 400 g</td><td>29,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>MILLS KYLLING/REKESALAT — 320 g</td><td>34,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="kiwi"><td>POTETSALAT — 500 g</td><td>37,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="kiwi"><td>COLESLAW — 130 g</td><td>14,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT COLESLAW — 300 g</td><td>24,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT GRILLPOTETSALAT</td><td>24,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="obs"><td>COOP KREPS/SKAGEN — 180 g</td><td>64,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt Tzatziki — 200 g</td><td>15,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+</table>
+
+<h2 id="cat9">🍞 Brød</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="bunnpris"><td>KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA &amp; HAVSALT</td><td>50,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="bunnpris"><td>WASA SANDWICH</td><td>10,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+</table>
+
+<h2 id="cat10">🍫 Snacks</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="europris"><td>NIDAR SJOKOLADE — 4 store plater</td><td class="price">100,-</td><td class="desc">spar 119,-</td><td class="store">Europris</td></tr>
+<tr class="winner" data-store="rema"><td>KVIKK LUNSJ 6PK — 282 g</td><td class="price">54,90</td><td class="desc">spar 34,-</td><td class="store">Rema 1000</td></tr>
+<tr class="winner" data-store="spar"><td>Kvikk Lunsj — 141 g</td><td class="price">34,90</td><td class="desc">spar 25,-</td><td class="store">Spar</td></tr>
+<tr class="winner" data-store="extra"><td>MAARUD POTETGULL — 250 g</td><td class="price">60,-</td><td class="desc">spar 23,-</td><td class="store">Extra</td></tr>
+<tr class="winner" data-store="spar"><td>MellomBar — 138 g</td><td class="price">9,90</td><td class="desc">spar 19,-</td><td class="store">Spar</td></tr>
+<tr data-store="kiwi"><td>MELKESJOKOLADE — 150 g</td><td>19,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>FREIA STORE PLATER OG POSER — 200 g</td><td>90,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>SØRLANDSCHIPS — 200 g</td><td>24,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>KIMS/OLW SMÅ POSER</td><td>10,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="extra"><td>MAARUD RIFLA POTETGULL — 370 g</td><td>39,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="europris"><td>Pringles</td><td>10,-</td><td class="desc"></td><td class="store">Europris</td></tr>
+<tr data-store="bunnpris"><td>Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag</td><td>30,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="europris"><td>KIMS — 215 g</td><td>30,-</td><td class="desc"></td><td class="store">Europris</td></tr>
+<tr data-store="extra"><td>SØRLANDSCHIPS RIFLA — 170 g</td><td>50,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>NIDAR POSER</td><td>100,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+</table>
+
+<h2 id="cat11">☕ Kaffe</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="europris"><td>FRIELE FILTERMALT — 250 g</td><td class="price">90,-</td><td class="desc">spar 49,-</td><td class="store">Europris</td></tr>
+<tr class="winner" data-store="rema"><td>FILTERMALT KJELDSBERG — 500 g</td><td class="price">72,90</td><td class="desc">spar 32,-</td><td class="store">Rema 1000</td></tr>
+<tr class="winner" data-store="rema"><td>FILTERMALT KJELDSBERG — 250 g</td><td class="price">37,90</td><td class="desc">spar 17,-</td><td class="store">Rema 1000</td></tr>
+<tr data-store="extra"><td>COOP KAFFE — 250 g</td><td>99,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="europris"><td>FRYSETØRRET KAFFE — 200 g</td><td>65,-</td><td class="desc"></td><td class="store">Europris</td></tr>
+<tr data-store="meny"><td>COFFEE OF THE WORLD — 10pk, 3 for 2</td><td>3 for 2</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>COFFEE OF THE WORLD — 10pk, 3 for 2</td><td>3 for 2</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="spar"><td>Kaffekapsler</td><td>3 for 2</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="obs"><td>TINE ISKAFFE</td><td>3 for 2</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>JACOBS UTVALGTE PLUKK &amp; MIKS — 3 for 2</td><td>3 for 2</td><td class="desc"></td><td class="store">Meny</td></tr>
+</table>
+
+<h2 id="cat12">🥤 Drikke</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr class="winner" data-store="extra"><td>COCA-COLA 10 PK BOKSER</td><td class="price">69,90</td><td class="desc">spar 40,-</td><td class="store">Extra</td></tr>
+<tr class="winner" data-store="meny"><td>COCA-COLA ZERO 8PK</td><td class="price">119,-</td><td class="desc">spar 36,-</td><td class="store">Meny</td></tr>
+<tr class="winner" data-store="extra"><td>COCA-COLA UTEN SUKKER 1,5 L 4 PK</td><td class="price">84,90</td><td class="desc">spar 15,-</td><td class="store">Extra</td></tr>
+<tr data-store="obs"><td>BRUSBRETT — 20 x 330 ml</td><td>109,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="extra"><td>Cola/Urge/Fanta/Sprite — boks (plukk &amp; miks)</td><td>69,-</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="kiwi"><td>PEPSI MAX</td><td>89,-</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="obs"><td>PEPSI MAX 8 STK — 8-PK</td><td>119,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>COCA-COLA-/ SPRITE-/FANTA ZERO</td><td>129,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>PEPSI MAX — 8-PK</td><td>119,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="bunnpris"><td>COCA-COLA U/SUKKER</td><td>89,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="spar"><td>Brus</td><td>79,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="bunnpris"><td>Pepsi / Solo — 10 pk</td><td>99,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="meny"><td>4PK BRUS PÅ BOKS</td><td>3 for 2</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="bunnpris"><td>COCA COLA, FANTA, URGE OG SPRITE</td><td>25,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="spar"><td>Coca-Cola/Sprite/Fanta</td><td>9,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+</table>
+
+<h2 id="cat13">🍦 Dessert/is</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="obs"><td>TINE RISLUNSJ JORDBÆR — 4 x 150 g</td><td>39,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>PAKISTANSK MANGO — 5KG</td><td>149,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="meny"><td>VALDRES BRIE</td><td>39,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="obs"><td>VALDRES BRIE</td><td>39,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="obs"><td>PAKISTANSK MANGO — 5KG</td><td>149,-</td><td class="desc"></td><td class="store">Obs</td></tr>
+</table>
+
+<h2 id="cat14">🥦 Grønnsaker</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="bunnpris"><td>NYPOTET GULE OG RØDE — 1 kg</td><td>25,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="kiwi"><td>SUNNERE SNACKING — 200 g</td><td>24,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>Blomkål / Brokkoli / Isbergsalat — norsk</td><td>14,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Grønn &amp; Frisk salater</td><td>14,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="kiwi"><td>SALATPOSER</td><td>16,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="rema"><td>GULROT BUNT</td><td>29,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="kiwi"><td>ISBERGSALAT, BLOMKÅL</td><td>14,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="spar"><td>Salat — 110 g</td><td>39,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="kiwi"><td>SØTPOTETER</td><td>24,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="extra"><td>Smak* Piccolotomater</td><td>49,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Avokado 2-pk.</td><td>29,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="spar"><td>Årets nypotet — 1 kg</td><td>29,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="rema"><td>SOMMERSALAT XL — 300 g</td><td>29,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>GULROT I BUNT</td><td>25,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="obs"><td>NORSKE HVERDAGSTOMATER — 400 g</td><td>34,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+</table>
+
+<h2 id="cat15">🍎 Frukt</h2>
+<table>
+<tr><th>Vare</th><th>Pris</th><th>Butikk</th></tr>
+<tr data-store="meny"><td>NORSKE JORDBÆR — 500G</td><td>49,90</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="kiwi"><td>SUNNERE SNACKING — 200 g</td><td>24,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="spar"><td>Blåbær — 400 g</td><td>59,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="spar"><td>Steinfrukter — 500 g</td><td>29,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="obs"><td>NORSKE JORDBÆR — 500G</td><td>49,90</td><td class="desc"></td><td class="store">Obs</td></tr>
+<tr data-store="meny"><td>PAKISTANSK MANGO — 5KG</td><td>149,-</td><td class="desc"></td><td class="store">Meny</td></tr>
+<tr data-store="rema"><td>KIWI GUL 3PK — 325 g</td><td>34,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="extra"><td>COOP MORELLER</td><td>9,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Vannmelon</td><td>12,90</td><td class="desc"></td><td class="store">Spar</td></tr>
+<tr data-store="rema"><td>SITRON</td><td>39,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="bunnpris"><td>FERSKEN OG NEKTARINER — 500 g</td><td>35,-</td><td class="desc"></td><td class="store">Bunnpris</td></tr>
+<tr data-store="kiwi"><td>HEL VANNMELON</td><td>14,90</td><td class="desc"></td><td class="store">Kiwi</td></tr>
+<tr data-store="rema"><td>NEKTARIN — 1 kg</td><td>34,90</td><td class="desc"></td><td class="store">Rema 1000</td></tr>
+<tr data-store="extra"><td>Coop Moreller</td><td>9,90</td><td class="desc"></td><td class="store">Extra</td></tr>
+<tr data-store="spar"><td>Sunn Snækk</td><td>3 for 2</td><td class="desc"></td><td class="store">Spar</td></tr>
+</table>
+
+
+<h2>📍 Butikker i Mysen-området</h2>
+<div class="shop-grid">
+  <div class="shop-card" onclick="filterStore('kiwi')"><h4>Kiwi Mysen</h4><p>22 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('rema')"><h4>Rema 1000 Mysen</h4><p>18 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('extra')"><h4>Extra Mysen</h4><p>33 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('bunnpris')"><h4>Bunnpris</h4><p>33 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('spar')"><h4>Spar</h4><p>22 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('obs')"><h4>Coop Obs Slitu 🚗</h4><p>34 tilbud denne uken</p></div>
+  <div class="shop-card" onclick="filterStore('meny')"><h4>Meny Askim 🚗</h4><p>27 tilbud denne uken</p></div>
 </div>
 
-<div class="category"><h3>Kylling</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Obs"><td>YTTERØY KYLLING KJØTTDEIG</td><td class="price">100,-</td><td class="savings">spar 101,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP KYLLINGFILET 690 G</td><td class="price">99,90</td><td class="savings">spar 30,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>DEN STOLTE HANE LOLLIPOP CHILI BBQ — 700 g</td><td class="price">79,90</td><td class="savings">spar 3,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Kyllingfilet grillet &amp; salatkjøtt</td><td class="price">59,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Kyllingfilet</td><td class="price">95,90 (medlem 80,90)</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>KYLLING GRILLFILET — 440 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>KYLLINGMINUTTFILET — 200G</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>KYLLINGMINUTTFILET — 200G</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>KYLLINGLÅR GRILLET OG FILETMIKS KYLLING BBQ</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>MARINERT KYLLINGFILET — 450 g</td><td class="price">89,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>PRIOR CRISPY STICKS — 570 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Billig Middag — 250 g</td><td class="price">40,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP GRILL PERFEKT KYLLINGSPYD GYROS — 300 g</td><td class="price">80,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>CRISPY STICKS — 570 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP GRILL PERFEKT LÅRFILET — 600 g</td><td class="price">89,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-</table></div>
-<div class="category"><h3>Storfe</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP KJØTTDEIG — 400 g</td><td class="price">59,90</td><td class="savings">spar 28,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>SKJEGGERØD PEPPERBIFF AV STORFE — 600 g</td><td class="price">179,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>GILDE BACON- OG STORFEBURGER — 2 x 130 g</td><td class="price">39,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>ANGUSSNADDER — 250G</td><td class="price">79,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Grill Perfekt Big Beefy Burgers — 360 g</td><td class="price">49,90 (medlem 39,92)</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>LUFTIG BURGER — 2 x 150 g</td><td class="price">59,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP GRILL PERFEKT GRILLSPYD PEPPERMIKS — 180 g</td><td class="price">89,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>BURGER LUFTIG — 150 g</td><td class="price">69,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>HAMBURGER BIG SIZE — 160 g</td><td class="price">69,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>STORE FROSNE REKER — 5KG</td><td class="price">129,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>FREIA STORE PLATER OG POSER — 200 g</td><td class="price">90,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Store reker</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>STORE FROSNE REKER — 5KG</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>BURGERBRØD STORE M/SESAM — 540 g</td><td class="price">35,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>KUTTET FRUKT STORE BEGER — 400G</td><td class="price">44,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-</table></div>
-<div class="category"><h3>Svin</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>YTREFILET AV SVIN — 400 g</td><td class="price">69,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Svin indrefilet — 600 g</td><td class="price">199,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>YTREFILET AV SVIN — 180G</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>YTREFILET AV SVIN — 180G</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP GRILL PERFEKT PORK BELLY — 600 g</td><td class="price">179,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP GRILL PERFEKT YTREFILET</td><td class="price">189,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Svin ytrefilet — 600 g</td><td class="price">199,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>SVIN INDREFILET — 500 g</td><td class="price">119,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>GRILLRIBBE KRYDRET, SVIN INDREFILET OG SVIN INDREFILET KOREAN BBQ</td><td class="price">199,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>SVIN YTREFILET BBQ — 600 g</td><td class="price">229,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>SVIN YTREFILET BBQ — 600 g</td><td class="price">239,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>FOTBALLBURGER — 4 x 150 g</td><td class="price">79,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>GRILLBURGER — 2x130g</td><td class="price">49,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SVIN GRILLRIBBE — 700 g</td><td class="price">79,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SVIN GRILLFILET — 4 kg</td><td class="price">199,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-</table></div>
-<div class="category"><h3>Laks</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Spar"><td>Laksefilet — 450 g</td><td class="price">109,-</td><td class="savings">spar 50,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Laks — 2x110 g</td><td class="price">99,-</td><td class="savings">spar 36,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>LAKSEBURGER FRA LERØY — 2X130G</td><td class="price">44,90</td><td class="savings">spar 15,-</td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>LAKSEBURGER — 2X130G</td><td class="price">44,90</td><td class="savings">spar 15,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>LOFOTEN LAKSEBURGER — 2 x 130 g</td><td class="price">59,90</td><td class="savings">spar 13,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>LAKSEFILET M/LIMEPEPPER — 650 g</td><td class="price">159,90</td><td class="savings">spar 10,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP LAKSEFILET — 4 x 125 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Laksefilet</td><td class="price">145,90 (medlem 122,90)</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>LAKSEFILET — 450 g</td><td class="price">129,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP LAKSEFILET — 2 x 125 g</td><td class="price">58,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP LAKSEFILET — 650 g</td><td class="price">179,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP LAKSEFILET — 650 g</td><td class="price">169,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>LAKS OG ØRRET EINERRØKT SKIVET — 220 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-</table></div>
-<div class="category"><h3>Reker/scampi</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>REKER 70/90 — 5 kg</td><td class="price">399,-</td><td class="savings">spar 100,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>POLAR REKER — 5 kg</td><td class="price">499,-</td><td class="savings">spar 40,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP REKER I LAKE XL — 170 g</td><td class="price">59,90</td><td class="savings">spar 16,-</td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>SCAMPI NATURELL — 270 g</td><td class="price">59,90</td><td class="savings">spar 5,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Billig Middag — 150 g</td><td class="price">50,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER — 150G</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>SCAMPI — 150 g</td><td class="price">50,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>REKER I KARTONG — 5 kg</td><td class="price">399,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>STORE FROSNE REKER — 5KG</td><td class="price">129,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>POLAR REKER 5 KG — 5 kg</td><td class="price">399,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>REKER I LØSVEKT</td><td class="price">109,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Store reker</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>REKER FROSNE</td><td class="price">199,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>STORE FROSNE REKER — 5KG</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>POLAR REKER I LØS VEKT</td><td class="price">109,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-</table></div>
-<div class="category"><h3>Yoghurt</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Spar"><td>Yoghurt 8-pk. — 8x125 g</td><td class="price">34,90</td><td class="savings">spar 13,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Q SKYR MINI — 1 stk</td><td class="price">25,-</td><td class="savings">spar 8,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Yoghurt</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>YOGHURT 8PK — 1 kg</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>SKYR® PORSJONSYOGHURT — 160g, 3 for 2</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-</table></div>
-<div class="category"><h3>Egg</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Meny"><td>EGG FRITTGÅENDE — 15stk</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>EGG 6PK — 402 g</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>GÅRDSEGG — 18 pk</td><td class="price">65,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Frokostegg</td><td class="price">68,90 (medlem 59,90)</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>EGG — 15stk</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>BRIOCHE GOURMET — 500G</td><td class="price">59,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>BRIOCHE GOURMET — 500G</td><td class="price">59,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-</table></div>
-<div class="category"><h3>Ost</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP GREEK FETA BLOCK — 150 g</td><td class="price">60,-</td><td class="savings">spar 11,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Norsk Salatost — 220 g</td><td class="price">26,90</td><td class="savings">spar 8,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>GULOST&amp;CHEDDAR — 170 g</td><td class="price">29,90</td><td class="savings">spar 7,-</td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>BUFAR</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>BUFAR</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>ET STORT UTVALG TINE SKIVET OST — 3 for 2</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>NORSK BURGEROST — 100G</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>ORIGINAL REVET OST — 300 g</td><td class="price">51,40</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>CHEDDAR OG RABAGAST TERNET</td><td class="price">29,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP MOZZARELLA/MASCARPONE/RICOTTA — 250 g</td><td class="price">74,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Skivet ost</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA &amp; HAVSALT</td><td class="price">50,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>VALDRES BRIE</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>BEGERSALAT — 255 g</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>APETINA SOLTØRKETTOMAT — 100 g</td><td class="price">18,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-</table></div>
-<div class="category"><h3>Pålegg</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Extra"><td>MILLS KLASSISK POTETSALAT — 500 g</td><td class="price">39,90</td><td class="savings">spar 8,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Stranda</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>TYNNSKÅRET SPEKESKINKE</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>STRANDASKINKE — 200 g</td><td class="price">99,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>STRANDASKINKE MINDRE SALT</td><td class="price">59,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>TYNNSKÅRET SPEKESKINKE</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>STRANDAMØR SNACKS</td><td class="price">39,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP GRILL PERFEKT GRILLPOTETSALAT — 400 g</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>MILLS KYLLING/REKESALAT — 320 g</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>POTETSALAT — 500 g</td><td class="price">37,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>COLESLAW — 130 g</td><td class="price">14,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP GRILL PERFEKT COLESLAW — 300 g</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP GRILL PERFEKT GRILLPOTETSALAT</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COOP KREPS/SKAGEN — 180 g</td><td class="price">64,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Grill Perfekt Tzatziki — 200 g</td><td class="price">15,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-</table></div>
-<div class="category"><h3>Brød</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA &amp; HAVSALT</td><td class="price">50,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>WASA SANDWICH</td><td class="price">10,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-</table></div>
-<div class="category"><h3>Snacks</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Europris"><td>NIDAR SJOKOLADE — 4 store plater</td><td class="price">100,-</td><td class="savings">spar 119,-</td><td><span class="badge" style="background:#636e72;color:#fff;" onclick="filterStore('Europris')">Europris</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>KVIKK LUNSJ 6PK — 282 g</td><td class="price">54,90</td><td class="savings">spar 34,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Kvikk Lunsj — 141 g</td><td class="price">34,90</td><td class="savings">spar 25,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>MAARUD POTETGULL — 250 g</td><td class="price">60,-</td><td class="savings">spar 23,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>MellomBar — 138 g</td><td class="price">9,90</td><td class="savings">spar 19,-</td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>MELKESJOKOLADE — 150 g</td><td class="price">19,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>FREIA STORE PLATER OG POSER — 200 g</td><td class="price">90,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SØRLANDSCHIPS — 200 g</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>KIMS/OLW SMÅ POSER</td><td class="price">10,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>MAARUD RIFLA POTETGULL — 370 g</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Europris"><td>Pringles</td><td class="price">10,-</td><td class="savings"></td><td><span class="badge" style="background:#636e72;color:#fff;" onclick="filterStore('Europris')">Europris</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag</td><td class="price">30,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Europris"><td>KIMS — 215 g</td><td class="price">30,-</td><td class="savings"></td><td><span class="badge" style="background:#636e72;color:#fff;" onclick="filterStore('Europris')">Europris</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>SØRLANDSCHIPS RIFLA — 170 g</td><td class="price">50,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>NIDAR POSER</td><td class="price">100,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-</table></div>
-<div class="category"><h3>Kaffe</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Europris"><td>FRIELE FILTERMALT — 250 g</td><td class="price">90,-</td><td class="savings">spar 49,-</td><td><span class="badge" style="background:#636e72;color:#fff;" onclick="filterStore('Europris')">Europris</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>FILTERMALT KJELDSBERG — 500 g</td><td class="price">72,90</td><td class="savings">spar 32,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>FILTERMALT KJELDSBERG — 250 g</td><td class="price">37,90</td><td class="savings">spar 17,-</td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP KAFFE — 250 g</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Europris"><td>FRYSETØRRET KAFFE — 200 g</td><td class="price">65,-</td><td class="savings"></td><td><span class="badge" style="background:#636e72;color:#fff;" onclick="filterStore('Europris')">Europris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>COFFEE OF THE WORLD — 10pk, 3 for 2</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>COFFEE OF THE WORLD — 10pk, 3 for 2</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Kaffekapsler</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>TINE ISKAFFE</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>JACOBS UTVALGTE PLUKK &amp; MIKS — 3 for 2</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-</table></div>
-<div class="category"><h3>Drikke</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Extra"><td>COCA-COLA 10 PK BOKSER</td><td class="price">69,90</td><td class="savings">spar 40,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>COCA-COLA ZERO 8PK</td><td class="price">119,-</td><td class="savings">spar 36,-</td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COCA-COLA UTEN SUKKER 1,5 L 4 PK</td><td class="price">84,90</td><td class="savings">spar 15,-</td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>BRUSBRETT — 20 x 330 ml</td><td class="price">109,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Cola/Urge/Fanta/Sprite — boks (plukk &amp; miks)</td><td class="price">69,-</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>PEPSI MAX</td><td class="price">89,-</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>PEPSI MAX 8 STK — 8-PK</td><td class="price">119,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>COCA-COLA-/ SPRITE-/FANTA ZERO</td><td class="price">129,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>PEPSI MAX — 8-PK</td><td class="price">119,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>COCA-COLA U/SUKKER</td><td class="price">89,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Brus</td><td class="price">79,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>Pepsi / Solo — 10 pk</td><td class="price">99,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>4PK BRUS PÅ BOKS</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>COCA COLA, FANTA, URGE OG SPRITE</td><td class="price">25,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Coca-Cola/Sprite/Fanta</td><td class="price">9,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-</table></div>
-<div class="category"><h3>Dessert/is</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Obs"><td>TINE RISLUNSJ JORDBÆR — 4 x 150 g</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>PAKISTANSK MANGO — 5KG</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>VALDRES BRIE</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>VALDRES BRIE</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>PAKISTANSK MANGO — 5KG</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-</table></div>
-<div class="category"><h3>Grønnsaker</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>NYPOTET GULE OG RØDE — 1 kg</td><td class="price">25,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SUNNERE SNACKING — 200 g</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Blomkål / Brokkoli / Isbergsalat — norsk</td><td class="price">14,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Grønn &amp; Frisk salater</td><td class="price">14,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SALATPOSER</td><td class="price">16,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>GULROT BUNT</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>ISBERGSALAT, BLOMKÅL</td><td class="price">14,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Salat — 110 g</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SØTPOTETER</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Smak* Piccolotomater</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Avokado 2-pk.</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Årets nypotet — 1 kg</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>SOMMERSALAT XL — 300 g</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>GULROT I BUNT</td><td class="price">25,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>NORSKE HVERDAGSTOMATER — 400 g</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-</table></div>
-<div class="category"><h3>Frukt</h3><table>
-<tr><th>Vare</th><th>Pris</th><th>Rabatt</th><th>Butikk</th></tr>
-<tr class="store-row" data-stores="Meny"><td>NORSKE JORDBÆR — 500G</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>SUNNERE SNACKING — 200 g</td><td class="price">24,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Blåbær — 400 g</td><td class="price">59,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Steinfrukter — 500 g</td><td class="price">29,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Obs"><td>NORSKE JORDBÆR — 500G</td><td class="price">49,90</td><td class="savings"></td><td><span class="badge" style="background:#2d3436;color:#fff;" onclick="filterStore('Obs')">Obs</span></td></tr>
-<tr class="store-row" data-stores="Meny"><td>PAKISTANSK MANGO — 5KG</td><td class="price">149,-</td><td class="savings"></td><td><span class="badge" style="background:#e84393;color:#fff;" onclick="filterStore('Meny')">Meny</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>KIWI GUL 3PK — 325 g</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>COOP MORELLER</td><td class="price">9,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Vannmelon</td><td class="price">12,90</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>SITRON</td><td class="price">39,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Bunnpris"><td>FERSKEN OG NEKTARINER — 500 g</td><td class="price">35,-</td><td class="savings"></td><td><span class="badge" style="background:#f1c40f;color:#fff;" onclick="filterStore('Bunnpris')">Bunnpris</span></td></tr>
-<tr class="store-row" data-stores="Kiwi"><td>HEL VANNMELON</td><td class="price">14,90</td><td class="savings"></td><td><span class="badge" style="background:#e17055;color:#fff;" onclick="filterStore('Kiwi')">Kiwi</span></td></tr>
-<tr class="store-row" data-stores="Rema 1000"><td>NEKTARIN — 1 kg</td><td class="price">34,90</td><td class="savings"></td><td><span class="badge" style="background:#fdcb6e;color:#fff;" onclick="filterStore('Rema 1000')">Rema 1000</span></td></tr>
-<tr class="store-row" data-stores="Extra"><td>Coop Moreller</td><td class="price">9,90</td><td class="savings"></td><td><span class="badge" style="background:#d63031;color:#fff;" onclick="filterStore('Extra')">Extra</span></td></tr>
-<tr class="store-row" data-stores="Spar"><td>Sunn Snækk</td><td class="price">3 for 2</td><td class="savings"></td><td><span class="badge" style="background:#dc1e21;color:#fff;" onclick="filterStore('Spar')">Spar</span></td></tr>
-</table></div>
-
-
-<div class="footer">
-  Generert av Hermes Agent • Data: eTilbudsavis • <a href="https://github.com/Olewol/tilbudsavis" style="color:#b2bec3;">Olewol/tilbudsavis</a>
-</div>
-
+<div class="summary">
+<h3>📊 Oppsummering</h3>
+<p>Priser fra eTilbudsavis, Enhver.no — oppdatert 15.07.2026 kl 18:59. Klikk på butikknavn for å filtrere.</p>
 </div>
 
 <script>
 function filterStore(store) {
-  document.querySelectorAll('.store-pill').forEach(p => p.classList.remove('active'));
-  document.querySelector(`.store-pill[data-store="${store}"]`).classList.add('active');
-  
-  let visible = 0;
-  document.querySelectorAll('.store-row').forEach(row => {
-    const stores = row.dataset.stores.split('|');
-    if (store === 'all' || stores.some(s => s.toLowerCase().includes(store.toLowerCase()))) {
-      row.classList.remove('hidden');
-      row.classList.remove('fade');
-      visible++;
-    } else {
-      row.classList.add('hidden');
-    }
+  document.querySelectorAll('#store-filters .store-badge').forEach(b => b.classList.remove('active', 'filter-inactive'));
+  if (store === 'all') {
+    document.querySelector('[data-store="all"]').classList.add('active');
+  } else {
+    document.querySelector('[data-store="' + store + '"]').classList.add('active');
+    document.querySelector('[data-store="all"]').classList.add('filter-inactive');
+  }
+  document.querySelectorAll('[data-store]').forEach(el => {
+    if (el.tagName === 'SPAN' && el.closest('#store-filters')) return;
+    const s = el.getAttribute('data-store');
+    if (store === 'all') el.classList.remove('hidden');
+    else if (s === store) el.classList.remove('hidden');
+    else el.classList.add('hidden');
   });
-  
-  // Also filter top10 items
-  document.querySelectorAll('.top10-item').forEach(item => {
-    const stores = item.dataset.stores.split('|');
-    if (store === 'all' || stores.some(s => s.toLowerCase().includes(store.toLowerCase()))) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
+  document.querySelectorAll('[data-store-filter]').forEach(li => {
+    if (store === 'all') li.classList.remove('hidden');
+    else li.getAttribute('data-store-filter') === store ? li.classList.remove('hidden') : li.classList.add('hidden');
   });
-  
-  const name = store === 'all' ? 'alle butikker' : store;
-  document.getElementById('countBar').textContent = `Viser ${visible} varer — ${name}`;
 }
 </script>
 </body>
