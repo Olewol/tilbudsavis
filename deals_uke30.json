@@ -1,0 +1,154 @@
+{
+  "top_picks": [
+    {"name": "NORVEGIA DUO", "mengde": "2x1 kg", "price": "119,-", "store": "Coop Prix", "merknad": "spar 36,90 · 119,-/kg"},
+    {"name": "NORVEGIA 2 PK", "mengde": "2x1 kg", "price": "119,-", "store": "Coop Prix", "merknad": "spar 46,90 · 119,-/kg"},
+    {"name": "KYLLINGMINUTTFILET", "mengde": "200 g", "price": "49,90", "store": "Meny", "merknad": "249,50/kg · fast sommerpris"},
+    {"name": "SVINEKJØTTDEIG 9%", "mengde": "400 g", "price": "49,90", "store": "Rema 1000", "merknad": "spar 20,- · 124,75/kg"},
+    {"name": "SYNNØVE KONGSGÅRD", "mengde": "480 g", "price": "69,90", "store": "Obs", "merknad": "spar 28,- · før 97,90"},
+    {"name": "SYNNØVE GÅRDSOST", "mengde": "800 g", "price": "109,90", "store": "Obs", "merknad": "spar 29,60 · før 139,50"},
+    {"name": "KYLLING GRILLFILET", "mengde": "440 g", "price": "99,-", "store": "KIWI", "merknad": "Korean Style · 225,-/kg"},
+    {"name": "COOP LAKSEFILET", "mengde": "4x125 g", "price": "99,-", "store": "Extra", "merknad": "uten skinn · 198,-/kg"},
+    {"name": "GILDE BACON- OG STORFEBURGER", "mengde": "2x130 g", "price": "39,-", "store": "Bunnpris", "merknad": "150,-/kg"},
+    {"name": "GÅRDSEGG", "mengde": "18 pk", "price": "65,-", "store": "Bunnpris", "merknad": "3,61/stk · frittgående"}
+  ],
+  "categories": [
+    {
+      "name": "Kylling",
+      "items": [
+        {"name": "KYLLINGFILET GRILLET OG KYLLING SALATKJØTT SPISEKLAR", "mengde": "200 g", "price": "59,-", "store": "Bunnpris", "merknad": "295,-/kg · Prior"},
+        {"name": "Kyllingfilet", "mengde": "450 g", "price": "95,90 (medlem 80,90)", "store": "Coop Prix", "merknad": "Coop av saktevoskende kylling"},
+        {"name": "KYLLING GRILLFILET", "mengde": "440 g", "price": "99,-", "store": "KIWI", "merknad": "Korean Style · 225,-/kg"},
+        {"name": "KYLLINGMINUTTFILET", "mengde": "200 g", "price": "49,90", "store": "Meny", "merknad": "249,50/kg · fast sommerpris"},
+        {"name": "KYLLINGMINUTTFILET", "mengde": "200 g", "price": "49,90", "store": "Jacobs (Meny)", "merknad": "249,50/kg · fast sommerpris"}
+      ]
+    },
+    {
+      "name": "Storfe",
+      "items": [
+        {"name": "LUFTIG BURGER", "mengde": "2x150 g", "price": "59,90", "store": "KIWI", "merknad": "storfe · Gilde · 199,67/kg"},
+        {"name": "Karbonadedeig", "mengde": "400 g", "price": "102,90 (medlem 88,90)", "store": "Coop Prix", "merknad": "Norsk storfe 5% fett"},
+        {"name": "Coop Grill Perfekt Big Beefy Burgers", "mengde": "360 g", "price": "49,90 (medlem 39,92)", "store": "Extra", "merknad": "storfe · 138,61/kg"},
+        {"name": "SKJEGGERØD PEPPERBIFF", "mengde": "600 g", "price": "179,-", "store": "Obs", "merknad": "storfe · 298,33/kg · partikjøp"},
+        {"name": "GILDE BACON- OG STORFEBURGER", "mengde": "2x130 g", "price": "39,-", "store": "Bunnpris", "merknad": "150,-/kg"}
+      ]
+    },
+    {
+      "name": "Svin",
+      "items": [
+        {"name": "SVINEKJØTTDEIG 9%", "mengde": "400 g", "price": "49,90", "store": "Rema 1000", "merknad": "spar 20,- · før 69,90 · 124,75/kg"},
+        {"name": "COOP YTREFILET", "mengde": "pr. kg", "price": "169,-", "store": "Obs", "merknad": "svin · ca 450 g"},
+        {"name": "YTREFILET AV SVIN", "mengde": "180 g", "price": "29,90", "store": "Meny", "merknad": "Jæren Smak · 166,11/kg"},
+        {"name": "SVIN INDREFILET", "mengde": "ca 600 g", "price": "199,-/kg", "store": "Bunnpris", "merknad": "Grilstad"},
+        {"name": "COOP GRILL PERFEKT YTREFILET", "mengde": "pr. kg", "price": "189,-", "store": "Extra", "merknad": "av svin"}
+      ]
+    },
+    {
+      "name": "Laks",
+      "items": [
+        {"name": "COOP LAKSEFILET", "mengde": "4x125 g", "price": "99,-", "store": "Extra", "merknad": "uten skinn · 198,-/kg"},
+        {"name": "LAKSEFILET M/LIMEPEPPER", "mengde": "650 g", "price": "159,90", "store": "Rema 1000", "merknad": "Gode hav · 246,-/kg"},
+        {"name": "FERSK LAKSEBURGER MED PURRE & REKER", "mengde": "150 g", "price": "39,90", "store": "Meny", "merknad": "266,-/kg · fast sommerpris"},
+        {"name": "LAKSEFILET MED SKINN", "mengde": "ca 125 g", "price": "fra 34,90", "store": "Meny", "merknad": "279,20/kg · marinert 36,90/fylt 38,90"}
+      ]
+    },
+    {
+      "name": "Reker/scampi",
+      "items": [
+        {"name": "REKER 5 kg", "mengde": "5 kg", "price": "399,-", "store": "Rema 1000", "merknad": "79,80/kg · spar 100,- · før 499,-"}
+      ]
+    },
+    {
+      "name": "Yoghurt",
+      "items": [
+        {"name": "Yoghurt Synnøve/Q", "mengde": "3 for 2", "price": "3 for 2", "store": "SPAR", "merknad": "Plukk & Miks · et stort utvalg"},
+        {"name": "PROTEINDEAL", "mengde": "3 for 2", "price": "3 for 2", "store": "Bunnpris", "merknad": "3 for 2 · vi spanderer den billigste"},
+        {"name": "ACTIMEL DRIKKEYOGHURT JORDBÆR", "mengde": "12x100 g", "price": "54,90", "store": "Obs", "merknad": "45,75/kg · partikjøp"},
+        {"name": "YOGHURT 8PK", "mengde": "1 kg", "price": "34,90", "store": "Rema 1000", "merknad": "8x125 g · spar 13,-"}
+      ]
+    },
+    {
+      "name": "Egg",
+      "items": [
+        {"name": "DEN STOLTE HANE EGG", "mengde": "12 stk", "price": "80,- (2 for 80)", "store": "Obs", "merknad": "49,02/kg · partikjøp"},
+        {"name": "GÅRDSEGG", "mengde": "18 pk", "price": "65,-", "store": "Bunnpris", "merknad": "frittgående · 3,61/stk"},
+        {"name": "EGG FRITTGÅENDE", "mengde": "15 stk", "price": "49,90", "store": "Meny", "merknad": "3,33/stk · fast knallkjøp"},
+        {"name": "FROKOSTEGG", "mengde": "12 stk", "price": "68,90 (medlem 59,90)", "store": "Coop Prix", "merknad": "Prior frittgående"}
+      ]
+    },
+    {
+      "name": "Ost",
+      "items": [
+        {"name": "NORVEGIA DUO", "mengde": "2x1 kg", "price": "119,-", "store": "Coop Prix", "merknad": "spar 36,90 · før 155,90 · maks 3 stk"},
+        {"name": "SYNNØVE KONGSGÅRD", "mengde": "480 g", "price": "69,90", "store": "Obs", "merknad": "spar 28,- · før 97,90"},
+        {"name": "SYNNØVE GÅRDSOST", "mengde": "800 g", "price": "109,90", "store": "Obs", "merknad": "spar 29,60 · før 139,50"}
+      ]
+    },
+    {
+      "name": "Pålegg",
+      "items": [
+        {"name": "3 FOR 2 TAPAS", "mengde": "3 for 2", "price": "3 for 2", "store": "Rema 1000", "merknad": "fjelltørket spekeskinke"},
+        {"name": "GOD FROKOST MED JACOBS UTVALGTE", "mengde": "3 for 2", "price": "3 for 2", "store": "Meny", "merknad": "pålegg, skinker, egg, bacon, juice"}
+      ]
+    },
+    {
+      "name": "Brød",
+      "items": [
+        {"name": "GROVT & GODT BRØD", "mengde": "620-740 g", "price": "44,90", "store": "Rema 1000", "merknad": "spar 4,90 · før 49,80"},
+        {"name": "NYSTEKT NORSK GROVBRØD", "mengde": "650 g", "price": "35,-", "store": "Meny", "merknad": "spar 12,90 · fra bakeriet · 53,85/kg"},
+        {"name": "ALL KJEKS", "mengde": "120-400 g", "price": "3 for 2", "store": "Rema 1000", "merknad": "3 for 2 · også glutenfritt"},
+        {"name": "PØLSEBRØD/HAMBURGERBRØD", "mengde": "-", "price": "19,90", "store": "Obs", "merknad": ""}
+      ]
+    },
+    {
+      "name": "Drikke",
+      "items": [
+        {"name": "PEPSI MAX/COCA-COLA", "mengde": "6x1,5l", "price": "109,-", "store": "Obs", "merknad": "16,52/l · kun 5,45 pr boks"}
+      ]
+    },
+    {
+      "name": "Snacks",
+      "items": [
+        {"name": "MELKESJOKOLADE kjeks", "mengde": "-", "price": "40,-", "store": "Europris", "merknad": "spar 39,80 · 2-pk"}, 
+        {"name": "MAARUD SNACKS", "mengde": "2x140 g", "price": "50,-", "store": "Obs", "merknad": "178,57/kg"},
+        {"name": "MAARUD DIPMIX HOLIDAY", "mengde": "22 g", "price": "15,90", "store": "Obs", "merknad": ""},
+        {"name": "ET STORT UTVALG PEPPES-PRODUKTER", "mengde": "-", "price": "-30%", "store": "Bunnpris", "merknad": "-30%"},
+        {"name": "NIDAR SJOKOLADE", "mengde": "4 store plater", "price": "100,-", "store": "Europris", "merknad": "spar 119,-"}
+      ]
+    },
+    {
+      "name": "Kaffe",
+      "items": [
+        {"name": "FRIELE/ EVERGOOD KAFFE", "mengde": "-", "price": "Sjekk butikk", "store": "Alle", "merknad": "sjekk din lokale butikk for priser"}
+      ]
+    },
+    {
+      "name": "Dessert/is",
+      "items": [
+        {"name": "KRONE-IS", "mengde": "-", "price": "Sjekk butikk", "store": "Alle", "merknad": "sjekk din lokale butikk for priser i sommer"}
+      ]
+    },
+    {
+      "name": "Grønnsaker",
+      "items": [
+        {"name": "NORSK BLOMKÅL, BROKKOLI OG ISBERGSALAT", "mengde": "pr stk", "price": "14,90", "store": "Extra", "merknad": "sommerpris · gjelder t.o.m. 2. august"},
+        {"name": "NYPOTET GULE OG RØDE", "mengde": "1 kg", "price": "25,-", "store": "Bunnpris", "merknad": "Gartner"},
+        {"name": "SNACKPAPRIKA", "mengde": "300 g", "price": "19,90", "store": "Extra", "merknad": "medlemspris"},
+        {"name": "NORSKE SOMMERGRØNNSAKER", "mengde": "3 for 2", "price": "3 for 2", "store": "Obs", "merknad": "blomkål, brokkoli, gulrot bunt og isberg"}
+      ]
+    },
+    {
+      "name": "Frukt",
+      "items": [
+        {"name": "VANNMELON", "mengde": "pr stk", "price": "Sjekk butikk", "store": "Alle", "merknad": "sommerpriser i de fleste butikker"},
+        {"name": "JORDBÆR", "mengde": "-", "price": "Sjekk butikk", "store": "Alle", "merknad": "norske jordbær i sesong"}
+      ]
+    },
+    {
+      "name": "Ingredienser",
+      "items": [
+        {"name": "ALL KJEKS", "mengde": "120-400 g", "price": "3 for 2", "store": "Rema 1000", "merknad": "3 for 2 · også glutenfritt"},
+        {"name": "EKSTRA JOMFRU OLIVENOLJE", "mengde": "-", "price": "Sjekk butikk", "store": "Alle", "merknad": ""}
+      ]
+    }
+  ]
+}
