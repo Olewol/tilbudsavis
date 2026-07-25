@@ -137,32 +137,114 @@ def generate_html(deals, output_path="index.html"):
         md = f' {mengde}' if mengde else ''
         top10 += f'<li data-store-filter="{skey}"><strong>{label}</strong> — {name}{md} <strong class="price">{price}</strong>{mn}</li>\n'
 
-    # ── Categories ───────────────────────────────────────────────────────
+    # ── Categories med anbefalt butikk ────────────────────────────────────
     cats_html = ''
+    cat_store_winners = {}
+    
+    def _render_item(tbl, item, is_rec=False):
+        """Hjelpefunksjon for å rendere en tabell-rad."""
+        name = escape(item.get("name",""))
+        mengde = escape(item.get("mengde","") or '')
+        price = escape(item.get("price",""))
+        merknad = escape(item.get("merknad",""))
+        store = normalize_store(item.get("store",""))
+        skey = STORE_KEY.get(store, store.lower().replace(' ',''))
+        label = STORE_LABEL.get(store, store)
+        is_winner = bool(merknad) and ('spar' in merknad.lower() or 'før' in merknad.lower())
+        cls = ' class="rec"' if is_rec else (' class="winner"' if is_winner else ' class="other-store"')
+        return tbl + f'<tr{cls} data-store="{skey}"><td>{name}</td><td class="mengde">{mengde}</td><td class="price">{price}</td><td class="store">{label}</td><td class="desc">{merknad}</td></tr>\n'
+    
     for ci, cat in enumerate(deals.get("categories", [])):
         items = cat.get("items", [])
         if not items:
             continue
         cid = f"cat{ci}"
         emoji = CAT_EMOJI.get(cat['name'], '📦')
-
-        tbl = '<table>\n<tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>\n'
+        
+        # Score hver butikk i kategorien
+        store_score = {}
         for item in items:
-            name = escape(item.get("name",""))
-            mengde = escape(item.get("mengde","") or '')
-            price = escape(item.get("price",""))
-            merknad = escape(item.get("merknad",""))
             store = normalize_store(item.get("store",""))
-            skey = STORE_KEY.get(store, store.lower().replace(' ',''))
-            label = STORE_LABEL.get(store, store)
-
-            is_winner = bool(merknad) and ('spar' in merknad.lower() or 'før' in merknad.lower())
-            cls = ' class="winner"' if is_winner else ''
-
-            tbl += f'<tr{cls} data-store="{skey}"><td>{name}</td><td class="mengde">{mengde}</td><td class="price">{price}</td><td class="store">{label}</td><td class="desc">{merknad}</td></tr>\n'
-
+            if store not in store_score:
+                store_score[store] = {'count': 0, 'with_savings': 0, 'total_savings': 0}
+            store_score[store]['count'] += 1
+            mn = item.get("merknad","")
+            if mn and ('spar' in mn.lower() or 'før' in mn.lower()):
+                store_score[store]['with_savings'] += 1
+                # Estimér spart beløp fra merknad
+                import re as _re
+                m = _re.search(r'spar\s+(\d+)', mn.lower())
+                if m:
+                    store_score[store]['total_savings'] += int(m.group(1))
+        
+        # Finn beste butikk for denne kategorien
+        best_store = None
+        best_score = -1
+        for store, sc in store_score.items():
+            # Vekt: deals med rabatt (x3) + antall deals (x1) + spart beløp (x2)
+            score = sc['with_savings'] * 3 + sc['count'] * 1 + (sc['total_savings'] // 10)
+            if score > best_score:
+                best_score = score
+                best_store = store
+        
+        cat_store_winners[cat['name']] = best_store
+        best_label = STORE_LABEL.get(best_store, best_store) if best_store else ''
+        best_key = STORE_KEY.get(best_store, '') if best_store else ''
+        
+        # Sorter: anbefalt butikk først, så andre butikker
+        rec_items = [it for it in items if normalize_store(it.get("store","")) == best_store]
+        other_items = [it for it in items if normalize_store(it.get("store","")) != best_store]
+        
+        tbl = '<table>\n<tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>\n'
+        
+        # Anbefalt butikks varer først (med highlight)
+        for item in rec_items:
+            tbl = _render_item(tbl, item, is_rec=True)
+        
+        # Andre butikkers varer (dempet)
+        if other_items:
+            for item in other_items:
+                tbl = _render_item(tbl, item, is_rec=False)
+        
         tbl += '</table>'
-        cats_html += f'\n<h2 id="{cid}">{emoji} {escape(cat["name"])}</h2>\n{tbl}\n'
+        
+        # Kategori-header med anbefalt butikk
+        best_tag = f' <span class="best-store">🏪 {best_label}</span>' if best_label else ''
+        cats_html += f'\n<h2 id="{cid}">{emoji} {escape(cat["name"])}{best_tag}</h2>\n{tbl}\n'
+    
+    # ── Handleplan-seksjon ──────────────────────────────────────────────
+    handleplan = ''
+    if cat_store_winners:
+        from collections import Counter
+        winner_counts = Counter(cat_store_winners.values())
+        top_stores = winner_counts.most_common(3)
+        
+        handleplan = '<div class="handleplan">\n'
+        handleplan += '<h3>🛒 Anbefalt handleplan</h3>\n'
+        handleplan += '<p>Basert på ukas tilbud, her er butikkene som dekker mest:</p>\n'
+        handleplan += '<div class="handleplan-grid">\n'
+        
+        for store, count in top_stores:
+            if store and store in STORE_LABEL:
+                label = STORE_LABEL[store]
+                skey = STORE_KEY.get(store, '')
+                # Finn hvilke kategorier denne butikken vinner
+                cats_won = [c for c, s in cat_store_winners.items() if s == store]
+                cat_emojis = ' '.join(CAT_EMOJI.get(c, '📦') for c in cats_won[:5])
+                handleplan += f'  <div class="handleplan-card" onclick="filterStore(\'{skey}\')">'
+                handleplan += f'<h4>🥇 {label}</h4>'
+                handleplan += f'<p class="handleplan-cats">Best i {count} kategorier</p>'
+                handleplan += f'<p class="handleplan-emojis">{cat_emojis}</p>'
+                # Vis de beste kjøpene hos denne butikken
+                best_items = []
+                for p in deals.get("top_picks", []):
+                    if normalize_store(p.get("store","")) == store and len(best_items) < 2:
+                        best_items.append(f'{escape(p["name"])} {escape(p["price"])}')
+                if best_items:
+                    handleplan += f'<p class="handleplan-items">{" · ".join(best_items)}</p>'
+                handleplan += '</div>\n'
+        
+        handleplan += '</div>\n</div>\n'
 
     # ── Missing categories warning ──────────────────────────────────────
     missing_html = ''
@@ -241,6 +323,22 @@ def generate_html(deals, output_path="index.html"):
   .missing-cats {{ background: #fff3e0; border: 1px solid #ffe0b2; padding: 12px 16px; margin: 15px 0; font-size: 0.9em; }}
   .missing-cats h3 {{ color: #e65100; font-size: 1em; margin-bottom: 4px; }}
   .missing-cats .hint {{ color: #888; font-size: 0.85em; margin-top: 4px; }}
+  .rec {{ background: #e8f5e0; border-left: 3px solid var(--accent); }}
+  .rec td {{ border-bottom: 1px solid #c8e6b0; }}
+  .rec .price {{ color: #1b5e20; font-size: 1.05em; }}
+  .other-store {{ opacity: 0.6; }}
+  .other-store:hover {{ opacity: 1; }}
+  .best-store {{ font-size: 0.65em; background: #fff; color: var(--accent); padding: 2px 8px; margin-left: 8px; border: 1px solid var(--accent); vertical-align: middle; }}
+  .handleplan {{ background: var(--card); border: 2px solid var(--accent); padding: 16px; margin: 20px 0; }}
+  .handleplan h3 {{ font-size: 1.1em; color: var(--accent); margin-bottom: 8px; }}
+  .handleplan p {{ font-size: 0.85em; color: #555; margin-bottom: 10px; }}
+  .handleplan-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }}
+  .handleplan-card {{ border: 1px solid var(--border); padding: 12px; background: #fff; cursor: pointer; transition: all 0.15s; }}
+  .handleplan-card:hover {{ background: #efede0; border-color: var(--accent); }}
+  .handleplan-card h4 {{ font-size: 0.95em; color: var(--accent); margin-bottom: 4px; }}
+  .handleplan-cats {{ font-size: 0.8em; color: #888; }}
+  .handleplan-emojis {{ font-size: 1.4em; margin: 4px 0; }}
+  .handleplan-items {{ font-size: 0.78em; color: #666; margin-top: 6px; }}
   @media (max-width: 600px) {{ body {{ padding: 10px; }} table {{ font-size: 0.8em; }} td {{ padding: 3px 5px; }} }}
 </style>
 </head>
@@ -252,6 +350,8 @@ def generate_html(deals, output_path="index.html"):
 
 {quality_html}
 {missing_html}
+
+{handleplan}
 
 <p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å filtrere:</p>
 <div class="store-list" id="store-filters">
