@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-07-25T17:43:31.259539",
+    "generated": "2026-07-25T17:44:32.886563",
     "week": 30,
     "quality_score": 82.3,
-    "total_products": 291
+    "total_products": 290
   },
   "products": [
     {
@@ -428,16 +428,6 @@
     },
     {
       "category": "Storfe",
-      "name": "BURGERBRØD STORE M/SESAM",
-      "mengde": "6 stk",
-      "price": "35,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "64,81/kilogram"
-    },
-    {
-      "category": "Storfe",
       "name": "GRILLBURGER",
       "mengde": "2x130 g",
       "price": "49,-",
@@ -505,16 +495,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "109,72/kilogram"
-    },
-    {
-      "category": "Storfe",
-      "name": "COOP PRIME TIME BURGERBRØD",
-      "mengde": "480 g",
-      "price": "25,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "53,96/kilogram"
     },
     {
       "category": "Svin",
@@ -835,16 +815,6 @@
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
       "merknad": "495,-/kilogram"
-    },
-    {
-      "category": "Laks",
-      "name": "KATTEPATÈ LAKS",
-      "mengde": "100 g",
-      "price": "9,90",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "99,-/kilogram"
     },
     {
       "category": "Laks",
@@ -1188,16 +1158,6 @@
     },
     {
       "category": "Ost",
-      "name": "KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA & HAVSALT",
-      "mengde": "175 g",
-      "price": "50,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "285,71/kilogram"
-    },
-    {
-      "category": "Ost",
       "name": "Skivet ost",
       "mengde": "",
       "price": "3 for 2",
@@ -1498,6 +1458,26 @@
     },
     {
       "category": "Brød",
+      "name": "BURGERBRØD STORE M/SESAM",
+      "mengde": "6 stk",
+      "price": "35,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "64,81/kilogram"
+    },
+    {
+      "category": "Brød",
+      "name": "KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA & HAVSALT",
+      "mengde": "175 g",
+      "price": "50,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "285,71/kilogram"
+    },
+    {
+      "category": "Brød",
       "name": "ALL KJEKS",
       "mengde": "400 g",
       "price": "3 for 2",
@@ -1575,6 +1555,16 @@
       "store_label": "Coop Obs Slitu 🚗",
       "store_key": "obs",
       "merknad": "62,25/kilogram"
+    },
+    {
+      "category": "Brød",
+      "name": "COOP PRIME TIME BURGERBRØD",
+      "mengde": "480 g",
+      "price": "25,90",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "53,96/kilogram"
     },
     {
       "category": "Brød",
