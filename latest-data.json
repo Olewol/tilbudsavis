@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-07-25T16:58:05.036275",
+    "generated": "2026-07-25T17:15:01.809493",
     "week": 30,
-    "quality_score": 81.4,
-    "total_products": 315
+    "quality_score": 82.2,
+    "total_products": 295
   },
   "products": [
     {
@@ -184,16 +184,6 @@
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
-      "merknad": "249,50/kilogram"
-    },
-    {
-      "category": "Kylling",
-      "name": "KYLLINGMINUTTFILET",
-      "mengde": "200 g",
-      "price": "49,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
       "merknad": "249,50/kilogram"
     },
     {
@@ -458,16 +448,6 @@
     },
     {
       "category": "Storfe",
-      "name": "ANGUSSNADDER",
-      "mengde": "250 g",
-      "price": "79,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "319,60/kilogram"
-    },
-    {
-      "category": "Storfe",
       "name": "HUNDEPATÈ STORFE",
       "mengde": "300 g",
       "price": "24,90",
@@ -505,16 +485,6 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "149,-/kilogram"
-    },
-    {
-      "category": "Storfe",
-      "name": "STORE FROSNE REKER",
-      "mengde": "Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS STR. 40/60 (ANTALL PR. KG)",
-      "price": "229,-",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "229,-/kilogram"
     },
     {
       "category": "Storfe",
@@ -625,16 +595,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "199,-/kilogram"
-    },
-    {
-      "category": "Svin",
-      "name": "YTREFILET AV SVIN",
-      "mengde": "180 g",
-      "price": "29,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "166,11/kilogram"
     },
     {
       "category": "Svin",
@@ -848,16 +808,6 @@
     },
     {
       "category": "Laks",
-      "name": "FERSK LAKSEBURGER MED PURRE & REKER",
-      "mengde": "150 g",
-      "price": "39,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "266,-/kilogram"
-    },
-    {
-      "category": "Laks",
       "name": "SJØMAT FRA JACOBS UTVALGTE",
       "mengde": "",
       "price": "3 for 2",
@@ -895,16 +845,6 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "99,-/kilogram"
-    },
-    {
-      "category": "Laks",
-      "name": "RØKT LAKS/ØRRET",
-      "mengde": "100 g",
-      "price": "99,-",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "495,-/kilogram"
     },
     {
       "category": "Laks",
@@ -965,16 +905,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "333,33/kilogram"
-    },
-    {
-      "category": "Reker/scampi",
-      "name": "SJØMAT FRA JACOBS UTVALGTE",
-      "mengde": "",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
     },
     {
       "category": "Reker/scampi",
@@ -1087,16 +1017,6 @@
       "merknad": ""
     },
     {
-      "category": "Yoghurt",
-      "name": "SKYR® PORSJONSYOGHURT",
-      "mengde": "160 g",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
-    },
-    {
       "category": "Egg",
       "name": "DEN STOLTE HANE EGG",
       "mengde": "12 stk",
@@ -1138,32 +1058,12 @@
     },
     {
       "category": "Egg",
-      "name": "EGG",
-      "mengde": "15 stk",
-      "price": "49,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "3,33/piece"
-    },
-    {
-      "category": "Egg",
       "name": "BRIOCHE GOURMET",
       "mengde": "500 g",
       "price": "59,90",
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
-      "merknad": "119,80/kilogram"
-    },
-    {
-      "category": "Egg",
-      "name": "BRIOCHE GOURMET",
-      "mengde": "500 g",
-      "price": "59,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
       "merknad": "119,80/kilogram"
     },
     {
@@ -1234,16 +1134,6 @@
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
-      "merknad": "465,62/kilogram"
-    },
-    {
-      "category": "Ost",
-      "name": "BUFAR",
-      "mengde": "320 g",
-      "price": "149,-",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
       "merknad": "465,62/kilogram"
     },
     {
@@ -1451,16 +1341,6 @@
       "name": "TYNNSKÅRET SPEKESKINKE",
       "mengde": "80 g",
       "price": "34,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "872,50/kilogram"
-    },
-    {
-      "category": "Pålegg",
-      "name": "TYNNSKÅRET SPEKESKINKE",
-      "mengde": "80 g",
-      "price": "34,90",
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
@@ -1555,16 +1435,6 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "99,50/kilogram"
-    },
-    {
-      "category": "Pålegg",
-      "name": "BROKKOLISALAT MED BACON",
-      "mengde": "",
-      "price": "19,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "199,00/kilogram"
     },
     {
       "category": "Pålegg",
@@ -2128,16 +1998,6 @@
     },
     {
       "category": "Snacks",
-      "name": "YT® PRODUKTER",
-      "mengde": "",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
-    },
-    {
-      "category": "Snacks",
       "name": "Protein-/energibar",
       "mengde": "",
       "price": "3 for 2",
@@ -2208,16 +2068,6 @@
     },
     {
       "category": "Kaffe",
-      "name": "COFFEE OF THE WORLD",
-      "mengde": "10-pk",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
-    },
-    {
-      "category": "Kaffe",
       "name": "Kaffekapsler",
       "mengde": "",
       "price": "3 for 2",
@@ -2239,32 +2089,12 @@
     {
       "category": "Kaffe",
       "name": "TINE ISKAFFE",
-      "mengde": "300 ml",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
-    },
-    {
-      "category": "Kaffe",
-      "name": "TINE ISKAFFE",
       "mengde": "1 l",
       "price": "39,90",
       "store": "Obs",
       "store_label": "Coop Obs Slitu 🚗",
       "store_key": "obs",
       "merknad": "39,90/liter"
-    },
-    {
-      "category": "Kaffe",
-      "name": "JACOBS UTVALGTE PLUKK & MIKS",
-      "mengde": "",
-      "price": "3 for 2",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": ""
     },
     {
       "category": "Drikke",
@@ -2285,16 +2115,6 @@
       "store_label": "Europris Mysen",
       "store_key": "europris",
       "merknad": "20,20/liter · spar 39,-"
-    },
-    {
-      "category": "Drikke",
-      "name": "COCA-COLA-/ SPRITE-/FANTA ZERO",
-      "mengde": "20x0.33 L",
-      "price": "129,-",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "19,55/liter · spar 10,-"
     },
     {
       "category": "Drikke",
@@ -2624,26 +2444,6 @@
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
-      "merknad": "149,-/kilogram"
-    },
-    {
-      "category": "Dessert/is",
-      "name": "VALDRES BRIE",
-      "mengde": "",
-      "price": "39,90",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
-      "merknad": "399,00/kilogram"
-    },
-    {
-      "category": "Dessert/is",
-      "name": "PAKISTANSK MANGO",
-      "mengde": "1.5 kg",
-      "price": "149,-",
-      "store": "Jacobs",
-      "store_label": "Jacobs",
-      "store_key": "jacobs",
       "merknad": "149,-/kilogram"
     },
     {
