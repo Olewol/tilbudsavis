@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-25T16:11:14.742722",
+    "generated": "2026-07-25T16:58:05.036275",
     "week": 30,
     "quality_score": 81.4,
     "total_products": 315
@@ -509,7 +509,7 @@
     {
       "category": "Storfe",
       "name": "STORE FROSNE REKER",
-      "mengde": "STR. 40/60 (ANTALL PR. KG) FaSt SommERPriS",
+      "mengde": "Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS STR. 40/60 (ANTALL PR. KG)",
       "price": "229,-",
       "store": "Jacobs",
       "store_label": "Jacobs",
@@ -669,7 +669,7 @@
     {
       "category": "Svin",
       "name": "GRILLBURGER",
-      "mengde": "2x130 g",
+      "mengde": "130 g",
       "price": "49,-",
       "store": "Bunnpris",
       "store_label": "Bunnpris",
@@ -2028,16 +2028,6 @@
     },
     {
       "category": "Snacks",
-      "name": "Utvalgt snacks til knallpris!",
-      "mengde": "100 g",
-      "price": "10,-",
-      "store": "Europris",
-      "store_label": "Europris Mysen",
-      "store_key": "europris",
-      "merknad": "133,33/kilogram"
-    },
-    {
-      "category": "Snacks",
       "name": "SØRLANDSCHIPS RIFLA",
       "mengde": "1 stk",
       "price": "50,-",
@@ -2045,6 +2035,16 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "147,06/kilogram"
+    },
+    {
+      "category": "Snacks",
+      "name": "Utvalgt snacks til knallpris!",
+      "mengde": "100 g",
+      "price": "10,-",
+      "store": "Europris",
+      "store_label": "Europris Mysen",
+      "store_key": "europris",
+      "merknad": "133,33/kilogram"
     },
     {
       "category": "Snacks",
@@ -2398,13 +2398,13 @@
     },
     {
       "category": "Drikke",
-      "name": "COCA-COLA ORIGINAL",
-      "mengde": "4x1.5 l",
-      "price": "97,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "16,32/liter"
+      "name": "FARRIS BRIS",
+      "mengde": "20x0.33 l",
+      "price": "129,-",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "19,55/liter"
     },
     {
       "category": "Drikke",
@@ -2418,13 +2418,13 @@
     },
     {
       "category": "Drikke",
-      "name": "FARRIS BRIS",
-      "mengde": "20x0.33 l",
-      "price": "129,-",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "19,55/liter"
+      "name": "COCA-COLA ORIGINAL",
+      "mengde": "4x1.5 l",
+      "price": "97,90",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "16,32/liter"
     },
     {
       "category": "Drikke",
@@ -2844,7 +2844,7 @@
       "store": "Bunnpris",
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
-      "merknad": "25,-/kilogram"
+      "merknad": "25,-/piece"
     },
     {
       "category": "Grønnsaker",
@@ -2878,16 +2878,6 @@
     },
     {
       "category": "Grønnsaker",
-      "name": "NORSK GULROT",
-      "mengde": "750 g",
-      "price": "24,90",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "33,20/kilogram"
-    },
-    {
-      "category": "Grønnsaker",
       "name": "TOMAT JUANITAS",
       "mengde": "300 g",
       "price": "35,-",
@@ -2895,6 +2885,16 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "116,67/kilogram"
+    },
+    {
+      "category": "Grønnsaker",
+      "name": "NORSK GULROT",
+      "mengde": "750 g",
+      "price": "24,90",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "33,20/kilogram"
     },
     {
       "category": "Grønnsaker",
