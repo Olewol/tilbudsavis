@@ -65,7 +65,7 @@
     },
     {
       "name": "NORVEGIA DUO",
-      "mengde": "3 stk",
+      "mengde": "2x1 kg",
       "price": "119,-",
       "store": "Coop Prix",
       "store_label": "Coop Prix ⚠️",
@@ -969,7 +969,7 @@
       "items": [
         {
           "name": "NORVEGIA DUO",
-          "mengde": "3 stk",
+          "mengde": "2x1 kg",
           "price": "119,-",
           "store": "Coop Prix",
           "store_label": "Coop Prix ⚠️",
@@ -2712,7 +2712,7 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T19:56:27.495323",
+    "generated": "2026-07-25T19:57:01.149265",
     "quality_score": 81.7,
     "total_products": 282
   }
