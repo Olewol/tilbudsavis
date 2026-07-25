@@ -351,6 +351,15 @@
           "store_label": "Extra Mysen",
           "store_key": "extra",
           "merknad": "499,44/kilogram"
+        },
+        {
+          "name": "COOP GRILL PERFEKT BURGERDRESSING/COLESLAW",
+          "mengde": "410 g",
+          "price": "24,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "83,00/kilogram"
         }
       ]
     },
@@ -786,6 +795,15 @@
           "store_label": "Kiwi Mysen",
           "store_key": "kiwi",
           "merknad": "175,88/kilogram · spar 7,-"
+        },
+        {
+          "name": "BUFAR",
+          "mengde": "320 g",
+          "price": "149,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "465,62/kilogram"
         },
         {
           "name": "ET STORT UTVALG TINE SKIVET OST",
@@ -1289,6 +1307,24 @@
           "merknad": "178,57/kilogram"
         },
         {
+          "name": "KiMs",
+          "mengde": "",
+          "price": "30,-",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "30,-/piece"
+        },
+        {
+          "name": "Polly",
+          "mengde": "",
+          "price": "25,-",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "25,-/piece"
+        },
+        {
           "name": "Utvalgt snacks til knallpris!",
           "mengde": "100 g",
           "price": "10,-",
@@ -1442,6 +1478,15 @@
     {
       "name": "Drikke",
       "items": [
+        {
+          "name": "Brus",
+          "mengde": "1.5 l",
+          "price": "79,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "13,32/liter"
+        },
         {
           "name": "Brus fra Coca-Cola/Farris/Frus/Bris/Imsdal naturell",
           "mengde": "0.5 l",
@@ -1852,8 +1897,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T21:36:38.339633",
-    "quality_score": 80.4,
-    "total_products": 187
+    "generated": "2026-07-25T21:37:12.976467",
+    "quality_score": 80.3,
+    "total_products": 192
   }
 }

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-07-25T21:36:38.337601",
+    "generated": "2026-07-25T21:37:12.974024",
     "week": 30,
-    "quality_score": 80.4,
-    "total_products": 197
+    "quality_score": 80.3,
+    "total_products": 202
   },
   "products": [
     {
@@ -385,6 +385,16 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "499,44/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "COOP GRILL PERFEKT BURGERDRESSING/COLESLAW",
+      "mengde": "410 g",
+      "price": "24,90",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "83,00/kilogram"
     },
     {
       "category": "Svin",
@@ -835,6 +845,16 @@
       "store_label": "Kiwi Mysen",
       "store_key": "kiwi",
       "merknad": "175,88/kilogram · spar 7,-"
+    },
+    {
+      "category": "Ost",
+      "name": "BUFAR",
+      "mengde": "320 g",
+      "price": "149,-",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "465,62/kilogram"
     },
     {
       "category": "Ost",
@@ -1378,6 +1398,26 @@
     },
     {
       "category": "Snacks",
+      "name": "KiMs",
+      "mengde": "",
+      "price": "30,-",
+      "store": "Europris",
+      "store_label": "Europris Mysen",
+      "store_key": "europris",
+      "merknad": "30,-/piece"
+    },
+    {
+      "category": "Snacks",
+      "name": "Polly",
+      "mengde": "",
+      "price": "25,-",
+      "store": "Europris",
+      "store_label": "Europris Mysen",
+      "store_key": "europris",
+      "merknad": "25,-/piece"
+    },
+    {
+      "category": "Snacks",
       "name": "Utvalgt snacks til knallpris!",
       "mengde": "100 g",
       "price": "10,-",
@@ -1535,6 +1575,16 @@
       "store_label": "Coop Obs Slitu 🚗",
       "store_key": "obs",
       "merknad": "39,90/liter"
+    },
+    {
+      "category": "Drikke",
+      "name": "Brus",
+      "mengde": "1.5 l",
+      "price": "79,90",
+      "store": "Spar",
+      "store_label": "Spar",
+      "store_key": "spar",
+      "merknad": "13,32/liter"
     },
     {
       "category": "Drikke",
