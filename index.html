@@ -17,9 +17,6 @@
   .price { font-weight: bold; white-space: nowrap; color: var(--accent2); }
   .mengde { white-space: nowrap; font-size: 0.85em; color: #555; }
   .store { white-space: nowrap; font-size: 0.85em; }
-  .store-badge { display: inline-block; padding: 1px 6px; border: 1px solid var(--border); font-size: 0.78em; margin: 1px; cursor: pointer; }
-  .store-badge.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .store-badge.filter-inactive { opacity: 0.3; }
   .desc { color: #666; font-size: 0.82em; }
   .winner { background: #e8f5e0; }
   .winner td { border-bottom: 1px solid #c8e6b0; }
@@ -42,7 +39,10 @@
   .cat-nav { margin: 12px 0; display: flex; flex-wrap: wrap; gap: 4px; }
   .cat-nav a { font-size: 0.75em; padding: 2px 8px; border: 1px solid var(--border); text-decoration: none; color: #222; }
   .cat-nav a:hover { background: var(--accent); color: #fff; }
-  .sv { font-size: 0.85em; color: var(--accent2); }
+  .quality-badge { background: var(--card); padding: 10px 14px; margin-bottom: 15px; font-size: 0.85em; }
+  .missing-cats { background: #fff3e0; border: 1px solid #ffe0b2; padding: 12px 16px; margin: 15px 0; font-size: 0.9em; }
+  .missing-cats h3 { color: #e65100; font-size: 1em; margin-bottom: 4px; }
+  .missing-cats .hint { color: #888; font-size: 0.85em; margin-top: 4px; }
   @media (max-width: 600px) { body { padding: 10px; } table { font-size: 0.8em; } td { padding: 3px 5px; } }
 </style>
 </head>
@@ -50,7 +50,10 @@
 
 <h1>🛒 Ukens beste tilbud — Uke 30</h1>
 <p style="margin-bottom:5px"><strong>Periode:</strong> uke Uke 30 | <strong>Område:</strong> Mysen (Indre Østfold)</p>
-<p class="last-updated">Oppdatert 20.07.2026 kl 08:10 | Kilde: eTilbudsavis, Enhver.no</p>
+<p class="last-updated">Oppdatert 25.07.2026 kl 15:50 | Kilde: eTilbudsavis, Enhver.no</p>
+
+<div class="quality-badge" style="border-left:4px solid #2d5a27">📊 Datakvalitet: <strong>81.4/100</strong> · 305 varer</div>
+<div class="missing-cats"><h3>⚠️ Mangler data for:</h3><p>Ingredienser</p><p class="hint">Pipeline har ikke funnet gode tilbud i disse kategoriene denne uken.</p></div>
 
 <p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å filtrere:</p>
 <div class="store-list" id="store-filters">
@@ -63,26 +66,26 @@
   <span class="store-badge" data-store="obs" onclick="filterStore('obs')">Coop Obs Slitu 🚗</span>
   <span class="store-badge" data-store="meny" onclick="filterStore('meny')">Meny Askim 🚗</span>
   <span class="store-badge" data-store="europris" onclick="filterStore('europris')">Europris Mysen</span>
-  <span class="store-badge" data-store="alle" onclick="filterStore('alle')">Alle</span>
+  <span class="store-badge" data-store="jacobs" onclick="filterStore('jacobs')">Jacobs</span>
 </div>
 <p style="font-size:0.8em;color:#888;margin-bottom:10px;">🚗 = kjøretur (Slitu/Askim)</p>
 
 <div class="cat-nav">
-<a href="#cat0">Kylling</a><a href="#cat1">Storfe</a><a href="#cat2">Svin</a><a href="#cat3">Laks</a><a href="#cat4">Reker</a><a href="#cat5">Yoghurt</a><a href="#cat6">Egg</a><a href="#cat7">Ost</a><a href="#cat8">Pålegg</a><a href="#cat9">Brød</a><a href="#cat10">Drikke</a><a href="#cat11">Snacks</a><a href="#cat12">Kaffe</a><a href="#cat13">Is/Des</a><a href="#cat14">Grønt</a><a href="#cat15">Frukt</a><a href="#cat16">Tørrvarer</a></div>
+<a href="#cat0">Kylling</a><a href="#cat1">Storfe</a><a href="#cat2">Svin</a><a href="#cat3">Laks</a><a href="#cat4">Reker</a><a href="#cat5">Yoghurt</a><a href="#cat6">Egg</a><a href="#cat7">Ost</a><a href="#cat8">Pålegg</a><a href="#cat9">Brød</a><a href="#cat10">Snacks</a><a href="#cat11">Kaffe</a><a href="#cat12">Drikke</a><a href="#cat13">Is/Des</a><a href="#cat14">Grønt</a><a href="#cat15">Frukt</a></div>
 
 <div class="summary">
 <h3>🏆 Topp 10 beste kjøp denne uka</h3>
 <ol>
-<li data-store-filter="extra"><strong>Extra Mysen</strong> — NORVEGIA DUO 2x1 kg <strong class="price">119,-</strong> (spar 36,90 · 119,-/kg)</li>
-<li data-store-filter="extra"><strong>Extra Mysen</strong> — NORVEGIA 2 PK 2x1 kg <strong class="price">119,-</strong> (spar 46,90 · 119,-/kg)</li>
-<li data-store-filter="meny"><strong>Meny Askim 🚗</strong> — KYLLINGMINUTTFILET 200 g <strong class="price">49,90</strong> (249,50/kg · fast sommerpris)</li>
-<li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — SVINEKJØTTDEIG 9% 400 g <strong class="price">49,90</strong> (spar 20,- · 124,75/kg)</li>
-<li data-store-filter="obs"><strong>Coop Obs Slitu 🚗</strong> — SYNNØVE KONGSGÅRD 480 g <strong class="price">69,90</strong> (spar 28,- · før 97,90)</li>
-<li data-store-filter="obs"><strong>Coop Obs Slitu 🚗</strong> — SYNNØVE GÅRDSOST 800 g <strong class="price">109,90</strong> (spar 29,60 · før 139,50)</li>
-<li data-store-filter="kiwi"><strong>Kiwi Mysen</strong> — KYLLING GRILLFILET 440 g <strong class="price">99,-</strong> (Korean Style · 225,-/kg)</li>
-<li data-store-filter="extra"><strong>Extra Mysen</strong> — COOP LAKSEFILET 4x125 g <strong class="price">99,-</strong> (uten skinn · 198,-/kg)</li>
-<li data-store-filter="bunnpris"><strong>Bunnpris</strong> — GILDE BACON- OG STORFEBURGER 2x130 g <strong class="price">39,-</strong> (150,-/kg)</li>
-<li data-store-filter="bunnpris"><strong>Bunnpris</strong> — GÅRDSEGG 18 pk <strong class="price">65,-</strong> (3,61/stk · frittgående)</li>
+<li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — REKER 70/90 5 kg <strong class="price">399,-</strong> (79,80/kilogram · før 499,00,- · spar 100,-)</li>
+<li data-store-filter="spar"><strong>Spar</strong> — Indrefilet Folkets, svin, urte-/ trøffelmarinert, pr. kg <strong class="price">119,-</strong> (119,-/kilogram · spar 90,-)</li>
+<li data-store-filter="spar"><strong>Spar</strong> — BADEPONCHO TIL BARN <strong class="price">74,95</strong> (74,95/piece · før 149,90,- · spar 74,-)</li>
+<li data-store-filter="obs"><strong>Coop Obs Slitu 🚗</strong> — POLAR REKER 5 kg <strong class="price">499,-</strong> (99,80/kilogram · før 539,90,- · spar 40,-)</li>
+<li data-store-filter="europris"><strong>Europris Mysen</strong> — SJOKOLADE MINIS 333 g <strong class="price">59,90</strong> (179,88/kilogram · spar 40,-)</li>
+<li data-store-filter="extra"><strong>Extra Mysen</strong> — COCA-COLA 10 PK BOKSER 10x0.33 l <strong class="price">69,90</strong> (21,18/liter · spar 40,-)</li>
+<li data-store-filter="europris"><strong>Europris Mysen</strong> — MELKESJOKOLADE kjeks <strong class="price">40,-</strong> (20,-/piece · spar 39,-)</li>
+<li data-store-filter="europris"><strong>Europris Mysen</strong> — 15-PK BRUS 0,33 LITER <strong class="price">100,-</strong> (20,20/liter · spar 39,-)</li>
+<li data-store-filter="extra"><strong>Extra Mysen</strong> — NORVEGIA DUO 3 stk <strong class="price">119,-</strong> (119,-/kilogram · spar 36,-)</li>
+<li data-store-filter="rema"><strong>Rema 1000 Mysen</strong> — ROYAL VANILJE 0.9 l <strong class="price">50,90</strong> (56,56/liter · før 84,90,- · spar 34,-)</li>
 </ol>
 </div>
 
@@ -90,157 +93,407 @@
 <h2 id="cat0">🐔 Kylling</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="bunnpris"><td>KYLLINGFILET GRILLET OG KYLLING SALATKJØTT SPISEKLAR</td><td class="mengde">200 g</td><td class="price">59,-</td><td class="store">Bunnpris</td><td class="desc">295,-/kg · Prior</td></tr>
-<tr class="winner" data-store="extra"><td>Kyllingfilet</td><td class="mengde">450 g</td><td class="price">95,90 (medlem 80,90)</td><td class="store">Extra Mysen</td><td class="desc">Coop av saktevoskende kylling</td></tr>
-<tr class="winner" data-store="kiwi"><td>KYLLING GRILLFILET</td><td class="mengde">440 g</td><td class="price">99,-</td><td class="store">Kiwi Mysen</td><td class="desc">Korean Style · 225,-/kg</td></tr>
-<tr class="winner" data-store="meny"><td>KYLLINGMINUTTFILET</td><td class="mengde">200 g</td><td class="price">49,90</td><td class="store">Meny Askim 🚗</td><td class="desc">249,50/kg · fast sommerpris</td></tr>
-<tr class="winner" data-store="meny"><td>KYLLINGMINUTTFILET</td><td class="mengde">200 g</td><td class="price">49,90</td><td class="store">Meny Askim 🚗</td><td class="desc">249,50/kg · fast sommerpris</td></tr>
+<tr class="winner" data-store="spar"><td>Kyllingvinger</td><td class="mengde">500 g</td><td class="price">49,90</td><td class="store">Spar</td><td class="desc">99,80/kilogram · spar 20,-</td></tr>
+<tr class="winner" data-store="obs"><td>DEN STOLTE HANE LOLLIPOP KYLLINGVINGER</td><td class="mengde">700 g</td><td class="price">79,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">114,14/kilogram · før 91,50,- · spar 11,-</td></tr>
+<tr data-store="bunnpris"><td>ET STORT UTVALG PEPPES-PRODUKTER</td><td class="mengde">50 g</td><td class="price"></td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
+<tr data-store="extra"><td>GRILL PERFEKT PØLSER/BURGERE</td><td class="mengde">240 g</td><td class="price"></td><td class="store">Extra Mysen</td><td class="desc">-25%</td></tr>
+<tr data-store="bunnpris"><td>KYLLINGFILET GRILLET OG KYLLING SALATKJØTT SPISEKLAR</td><td class="mengde">200 g</td><td class="price">59,-</td><td class="store">Bunnpris</td><td class="desc">295,-/kilogram</td></tr>
+<tr data-store="extra"><td>Kyllingfilet</td><td class="mengde">450 g</td><td class="price">95,90 (medlem 80,90)</td><td class="store">Extra Mysen</td><td class="desc">213,11/kilogram</td></tr>
+<tr data-store="kiwi"><td>KYLLING GRILLFILET</td><td class="mengde">440 g</td><td class="price">99,-</td><td class="store">Kiwi Mysen</td><td class="desc">225,-/kilogram</td></tr>
+<tr data-store="meny"><td>KYLLINGMINUTTFILET</td><td class="mengde">200 g</td><td class="price">49,90</td><td class="store">Meny Askim 🚗</td><td class="desc">249,50/kilogram</td></tr>
+<tr data-store="jacobs"><td>KYLLINGMINUTTFILET</td><td class="mengde">200 g</td><td class="price">49,90</td><td class="store">Jacobs</td><td class="desc">249,50/kilogram</td></tr>
+<tr data-store="bunnpris"><td>KYLLINGLÅR GRILLET OG FILETMIKS KYLLING BBQ</td><td class="mengde">700 g</td><td class="price">149,-</td><td class="store">Bunnpris</td><td class="desc">212,86/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Billig Middag</td><td class="mengde"></td><td class="price">40,-</td><td class="store">Bunnpris</td><td class="desc">160,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT KYLLINGSPYD GYROS</td><td class="mengde">300 g</td><td class="price">80,-</td><td class="store">Extra Mysen</td><td class="desc">266,67/kilogram</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt kyllingspyd gyros</td><td class="mengde">300 g</td><td class="price">80,-</td><td class="store">Extra Mysen</td><td class="desc">266,67/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT LÅRFILET</td><td class="mengde">600 g</td><td class="price">89,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">149,83/kilogram</td></tr>
+<tr data-store="meny"><td>Nygrillet kyllingklubber</td><td class="mengde"></td><td class="price">12,90</td><td class="store">Meny Askim 🚗</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT HOT WINGS</td><td class="mengde">700 g</td><td class="price">69,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">98,57/kilogram</td></tr>
+<tr data-store="bunnpris"><td>PRIOR KYLLINGVINGER GRILLET</td><td class="mengde">500 g</td><td class="price">50,-</td><td class="store">Bunnpris</td><td class="desc">100,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT KYLLINGSPYD AV LÅRFILET</td><td class="mengde">440 g</td><td class="price">99,90</td><td class="store">Extra Mysen</td><td class="desc">227,05/kilogram</td></tr>
+<tr data-store="meny"><td>NYGRILLET KYLLINGKLUBBER</td><td class="mengde">390 g</td><td class="price">12,90</td><td class="store">Meny Askim 🚗</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT CRISPY KYLLINGBURGER MED OST</td><td class="mengde">400 g</td><td class="price">64,90 (medlem 51,92)</td><td class="store">Extra Mysen</td><td class="desc">162,25/kilogram</td></tr>
+<tr data-store="bunnpris"><td>CRISPY BURGER</td><td class="mengde">180 g</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">216,67/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT KYLLINGSPYD</td><td class="mengde">440 g</td><td class="price">89,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">202,27/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT CRISPY KYLLINGBURGER</td><td class="mengde">250 g</td><td class="price">43,10 (medlem 34,48)</td><td class="store">Extra Mysen</td><td class="desc">172,40/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT KYLLINGSPYD</td><td class="mengde">300 g</td><td class="price">79,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">263,33/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT KYLLINGSPYD THAI LIME</td><td class="mengde">300 g</td><td class="price">89,-</td><td class="store">Extra Mysen</td><td class="desc">296,67/kilogram</td></tr>
 </table>
 
 <h2 id="cat1">🥩 Storfe</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="kiwi"><td>LUFTIG BURGER</td><td class="mengde">2x150 g</td><td class="price">59,90</td><td class="store">Kiwi Mysen</td><td class="desc">storfe · Gilde · 199,67/kg</td></tr>
-<tr class="winner" data-store="extra"><td>Karbonadedeig</td><td class="mengde">400 g</td><td class="price">102,90 (medlem 88,90)</td><td class="store">Extra Mysen</td><td class="desc">Norsk storfe 5% fett</td></tr>
-<tr class="winner" data-store="extra"><td>Coop Grill Perfekt Big Beefy Burgers</td><td class="mengde">360 g</td><td class="price">49,90 (medlem 39,92)</td><td class="store">Extra Mysen</td><td class="desc">storfe · 138,61/kg</td></tr>
-<tr class="winner" data-store="obs"><td>SKJEGGERØD PEPPERBIFF</td><td class="mengde">600 g</td><td class="price">179,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">storfe · 298,33/kg · partikjøp</td></tr>
-<tr class="winner" data-store="bunnpris"><td>GILDE BACON- OG STORFEBURGER</td><td class="mengde">2x130 g</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">150,-/kg</td></tr>
+<tr data-store="extra"><td>Karbonadedeig</td><td class="mengde">400 g</td><td class="price">102,90 (medlem 88,90)</td><td class="store">Extra Mysen</td><td class="desc">257,25/kilogram</td></tr>
+<tr data-store="obs"><td>SKJEGGERØD PEPPERBIFF</td><td class="mengde">600 g</td><td class="price">179,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">298,33/kilogram</td></tr>
+<tr data-store="kiwi"><td>LUFTIG BURGER</td><td class="mengde">2x150 g</td><td class="price">59,90</td><td class="store">Kiwi Mysen</td><td class="desc">199,67/kilogram</td></tr>
+<tr data-store="meny"><td>ANGUSSNADDER</td><td class="mengde">250 g</td><td class="price">79,90</td><td class="store">Meny Askim 🚗</td><td class="desc">319,60/kilogram</td></tr>
+<tr data-store="bunnpris"><td>GILDE BACON- OG STORFEBURGER</td><td class="mengde">2x130 g</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">150,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>HAMBURGER</td><td class="mengde">4x100 g</td><td class="price">79,90</td><td class="store">Kiwi Mysen</td><td class="desc">199,75/kilogram</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt Big Beefy Burgers</td><td class="mengde">360 g</td><td class="price">49,90 (medlem 39,92)</td><td class="store">Extra Mysen</td><td class="desc">138,61/kilogram</td></tr>
+<tr data-store="obs"><td>SKJEGGERØD PEPPERBIFF AV STORFE</td><td class="mengde">600 g</td><td class="price">179,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">298,33/kilogram</td></tr>
+<tr data-store="bunnpris"><td>BURGER LUFTIG</td><td class="mengde">150 g</td><td class="price">69,-</td><td class="store">Bunnpris</td><td class="desc">230,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT GRILLSPYD PEPPERMIKS</td><td class="mengde">180 g</td><td class="price">89,90</td><td class="store">Extra Mysen</td><td class="desc">499,44/kilogram</td></tr>
+<tr data-store="jacobs"><td>ANGUSSNADDER</td><td class="mengde">250 g</td><td class="price">79,90</td><td class="store">Jacobs</td><td class="desc">319,60/kilogram</td></tr>
+<tr data-store="rema"><td>HUNDEPATÈ STORFE</td><td class="mengde">300 g</td><td class="price">24,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">83,00/kilogram</td></tr>
+<tr data-store="meny"><td>STORE FROSNE REKER</td><td class="mengde">5 kg</td><td class="price">129,-</td><td class="store">Meny Askim 🚗</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="extra"><td>FREIA STORE PLATER OG POSER</td><td class="mengde">1 stk</td><td class="price">90,-</td><td class="store">Extra Mysen</td><td class="desc">346,15/kilogram</td></tr>
+<tr data-store="spar"><td>Store reker</td><td class="mengde">frosne, str. 60/80, pr. kg SOMMER-PRIS!</td><td class="price">149,-</td><td class="store">Spar</td><td class="desc">149,-/kilogram</td></tr>
+<tr data-store="jacobs"><td>STORE FROSNE REKER</td><td class="mengde">Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS STR. 40/60 (ANTALL PR. KG)</td><td class="price">229,-</td><td class="store">Jacobs</td><td class="desc">229,-/kilogram</td></tr>
+<tr data-store="meny"><td>KUTTET FRUKT STORE BEGER</td><td class="mengde">400 g</td><td class="price">44,90</td><td class="store">Meny Askim 🚗</td><td class="desc">121,35/kilogram</td></tr>
+<tr data-store="bunnpris"><td>BURGERBRØD STORE M/SESAM</td><td class="mengde">6 stk</td><td class="price">35,-</td><td class="store">Bunnpris</td><td class="desc">64,81/kilogram</td></tr>
 </table>
 
 <h2 id="cat2">🐷 Svin</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="rema"><td>SVINEKJØTTDEIG 9%</td><td class="mengde">400 g</td><td class="price">49,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">spar 20,- · før 69,90 · 124,75/kg</td></tr>
-<tr class="winner" data-store="obs"><td>COOP YTREFILET</td><td class="mengde">pr. kg</td><td class="price">169,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">svin · ca 450 g</td></tr>
-<tr class="winner" data-store="meny"><td>YTREFILET AV SVIN</td><td class="mengde">180 g</td><td class="price">29,90</td><td class="store">Meny Askim 🚗</td><td class="desc">Jæren Smak · 166,11/kg</td></tr>
-<tr class="winner" data-store="bunnpris"><td>SVIN INDREFILET</td><td class="mengde">ca 600 g</td><td class="price">199,-/kg</td><td class="store">Bunnpris</td><td class="desc">Grilstad</td></tr>
-<tr class="winner" data-store="extra"><td>COOP GRILL PERFEKT YTREFILET</td><td class="mengde">pr. kg</td><td class="price">189,-</td><td class="store">Extra Mysen</td><td class="desc">av svin</td></tr>
+<tr class="winner" data-store="spar"><td>Indrefilet</td><td class="mengde">Folkets, svin, urte-/ trøffelmarinert, pr. kg</td><td class="price">119,-</td><td class="store">Spar</td><td class="desc">119,-/kilogram · spar 90,-</td></tr>
+<tr class="winner" data-store="rema"><td>SVINEKJØTTDEIG 9%</td><td class="mengde">400 g</td><td class="price">49,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">124,75/kilogram · før 69,90,- · spar 20,-</td></tr>
+<tr data-store="obs"><td>COOP YTREFILET</td><td class="mengde">450 g</td><td class="price">169,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">169,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN INDREFILET</td><td class="mengde">600 g</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN INDREFILET</td><td class="mengde">500 g</td><td class="price">119,-</td><td class="store">Bunnpris</td><td class="desc">238,00/kilogram</td></tr>
+<tr data-store="meny"><td>YTREFILET AV SVIN</td><td class="mengde">180 g</td><td class="price">29,90</td><td class="store">Meny Askim 🚗</td><td class="desc">166,11/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Svin indrefilet</td><td class="mengde">600 g</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT YTREFILET</td><td class="mengde">Av svin. Pr kg</td><td class="price">189,-</td><td class="store">Extra Mysen</td><td class="desc">189,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Svin ytrefilet</td><td class="mengde">600 g</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="jacobs"><td>YTREFILET AV SVIN</td><td class="mengde">180 g</td><td class="price">29,90</td><td class="store">Jacobs</td><td class="desc">166,11/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN INDREFILET CAJUN CORN</td><td class="mengde">600 g</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN YTREFILET BBQ</td><td class="mengde">600 g</td><td class="price">229,-</td><td class="store">Bunnpris</td><td class="desc">229,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN YTREFILET BBQ</td><td class="mengde">600 g</td><td class="price">239,-</td><td class="store">Bunnpris</td><td class="desc">239,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>GRILLBURGER</td><td class="mengde">2x130 g</td><td class="price">49,-</td><td class="store">Bunnpris</td><td class="desc">188,46/kilogram</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt indrefilet av svin</td><td class="mengde">Pr kg</td><td class="price">130,-</td><td class="store">Extra Mysen</td><td class="desc">130,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>GRILLRIBBE KRYDRET, SVIN INDREFILET OG SVIN INDREFILET KOREAN BBQ</td><td class="mengde">600 g</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>SVIN GRILLRIBBE</td><td class="mengde">700 g</td><td class="price">79,90</td><td class="store">Kiwi Mysen</td><td class="desc">114,14/kilogram</td></tr>
+<tr data-store="bunnpris"><td>SVIN GRILLFILET HVITLØKSMARINERT</td><td class="mengde">1.2 kg</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>SVIN GRILLFILET</td><td class="mengde">1.4 kg</td><td class="price">199,-</td><td class="store">Kiwi Mysen</td><td class="desc">199,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT BØKERØKTE SOMMERKOTELETTER</td><td class="mengde">1.6 kg</td><td class="price">89,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">89,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>NAKKEKOTELETT</td><td class="mengde">960 g</td><td class="price">129,-</td><td class="store">Kiwi Mysen</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT BØKERØKTE SOMMERKOTELETTER</td><td class="mengde">Pr kg Av svin. Pr kg</td><td class="price">95,-</td><td class="store">Extra Mysen</td><td class="desc">95,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT BØKERØKTE GRILLKOTELETTER</td><td class="mengde">600 g</td><td class="price">90,-</td><td class="store">Extra Mysen</td><td class="desc">150,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT WILMASTEK</td><td class="mengde">500 g</td><td class="price">129,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">129,-/kilogram</td></tr>
 </table>
 
 <h2 id="cat3">🐟 Laks</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="extra"><td>COOP LAKSEFILET</td><td class="mengde">4x125 g</td><td class="price">99,-</td><td class="store">Extra Mysen</td><td class="desc">uten skinn · 198,-/kg</td></tr>
-<tr class="winner" data-store="rema"><td>LAKSEFILET M/LIMEPEPPER</td><td class="mengde">650 g</td><td class="price">159,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">Gode hav · 246,-/kg</td></tr>
-<tr class="winner" data-store="meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER</td><td class="mengde">150 g</td><td class="price">39,90</td><td class="store">Meny Askim 🚗</td><td class="desc">266,-/kg · fast sommerpris</td></tr>
-<tr class="winner" data-store="meny"><td>LAKSEFILET MED SKINN</td><td class="mengde">ca 125 g</td><td class="price">fra 34,90</td><td class="store">Meny Askim 🚗</td><td class="desc">279,20/kg · marinert 36,90/fylt 38,90</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET</td><td class="mengde">4x125 g</td><td class="price">99,-</td><td class="store">Extra Mysen</td><td class="desc">198,-/kilogram</td></tr>
+<tr data-store="rema"><td>LAKSEFILET M/LIMEPEPPER</td><td class="mengde">650 g</td><td class="price">159,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">246,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET</td><td class="mengde">2x125 g</td><td class="price">58,90</td><td class="store">Extra Mysen</td><td class="desc">235,60/kilogram</td></tr>
+<tr data-store="meny"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER</td><td class="mengde">150 g</td><td class="price">39,90</td><td class="store">Meny Askim 🚗</td><td class="desc">266,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP LAKSEFILET</td><td class="mengde">650 g</td><td class="price">169,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">260,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP LAKSEFILET</td><td class="mengde">650 g</td><td class="price">179,-</td><td class="store">Extra Mysen</td><td class="desc">275,38/kilogram</td></tr>
+<tr data-store="extra"><td>Laksefilet</td><td class="mengde">500 g</td><td class="price">145,90 (medlem 122,90)</td><td class="store">Extra Mysen</td><td class="desc">291,80/kilogram</td></tr>
+<tr data-store="jacobs"><td>FERSK LAKSEBURGER MED PURRE &amp; REKER</td><td class="mengde">150 g</td><td class="price">39,90</td><td class="store">Jacobs</td><td class="desc">266,-/kilogram</td></tr>
+<tr data-store="meny"><td>SJØMAT FRA JACOBS UTVALGTE</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="bunnpris"><td>LAKS OG ØRRET EINERRØKT SKIVET</td><td class="mengde">220 g</td><td class="price">99,-</td><td class="store">Bunnpris</td><td class="desc">450,-/kilogram</td></tr>
+<tr data-store="meny"><td>RØKT LAKS/ØRRET</td><td class="mengde">100 g</td><td class="price">99,-</td><td class="store">Meny Askim 🚗</td><td class="desc">495,-/kilogram</td></tr>
+<tr data-store="rema"><td>KATTEPATÈ LAKS</td><td class="mengde">100 g</td><td class="price">9,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">99,-/kilogram</td></tr>
+<tr data-store="jacobs"><td>RØKT LAKS/ØRRET</td><td class="mengde">100 g</td><td class="price">99,-</td><td class="store">Jacobs</td><td class="desc">495,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP LAKS TILBEHØR</td><td class="mengde">1 stk</td><td class="price">25,-</td><td class="store">Extra Mysen</td><td class="desc">178,57/kilogram</td></tr>
 </table>
 
 <h2 id="cat4">🦐 Reker/scampi</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="rema"><td>REKER 5 kg</td><td class="mengde">5 kg</td><td class="price">399,-</td><td class="store">Rema 1000 Mysen</td><td class="desc">79,80/kg · spar 100,- · før 499,-</td></tr>
+<tr class="winner" data-store="rema"><td>REKER 70/90</td><td class="mengde">5 kg</td><td class="price">399,-</td><td class="store">Rema 1000 Mysen</td><td class="desc">79,80/kilogram · før 499,00,- · spar 100,-</td></tr>
+<tr class="winner" data-store="obs"><td>POLAR REKER</td><td class="mengde">5 kg</td><td class="price">499,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">99,80/kilogram · før 539,90,- · spar 40,-</td></tr>
+<tr class="winner" data-store="obs"><td>COOP SCAMPI HVITLØK OG URTER</td><td class="mengde">170 g</td><td class="price">59,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">352,35/kilogram · før 69,50,- · spar 9,-</td></tr>
+<tr data-store="rema"><td>SCAMPI NATURELL</td><td class="mengde">270 g</td><td class="price">59,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">221,85/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Billig Middag</td><td class="mengde"></td><td class="price">50,-</td><td class="store">Bunnpris</td><td class="desc">333,33/kilogram</td></tr>
+<tr data-store="jacobs"><td>SJØMAT FRA JACOBS UTVALGTE</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
+<tr data-store="bunnpris"><td>SCAMPI</td><td class="mengde">150 g</td><td class="price">50,-</td><td class="store">Bunnpris</td><td class="desc">333,33/kilogram</td></tr>
+<tr data-store="kiwi"><td>REKER I KARTONG</td><td class="mengde">5 kg</td><td class="price">399,-</td><td class="store">Kiwi Mysen</td><td class="desc">79,80/kilogram</td></tr>
+<tr data-store="extra"><td>POLAR REKER 5 KG</td><td class="mengde">5 kg</td><td class="price">399,-</td><td class="store">Extra Mysen</td><td class="desc">79,80/kilogram</td></tr>
+<tr data-store="kiwi"><td>REKER I LØSVEKT</td><td class="mengde">Str. 70/90, fryst, pr. kg Løsvekt, pr. kg</td><td class="price">109,-</td><td class="store">Kiwi Mysen</td><td class="desc">109,-/kilogram</td></tr>
+<tr data-store="extra"><td>POLAR REKER I LØS VEKT</td><td class="mengde">PR KG Fryst. Str 70/90. Pr kg</td><td class="price">109,-</td><td class="store">Extra Mysen</td><td class="desc">109,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>REKER FROSNE</td><td class="mengde">2 kg</td><td class="price">199,-</td><td class="store">Bunnpris</td><td class="desc">99,50/kilogram</td></tr>
 </table>
 
 <h2 id="cat5">🥛 Yoghurt</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="spar"><td>Yoghurt Synnøve/Q</td><td class="mengde">3 for 2</td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc">Plukk &amp; Miks · et stort utvalg</td></tr>
-<tr class="winner" data-store="bunnpris"><td>PROTEINDEAL</td><td class="mengde">3 for 2</td><td class="price">3 for 2</td><td class="store">Bunnpris</td><td class="desc">3 for 2 · vi spanderer den billigste</td></tr>
-<tr class="winner" data-store="obs"><td>ACTIMEL DRIKKEYOGHURT JORDBÆR</td><td class="mengde">12x100 g</td><td class="price">54,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">45,75/kg · partikjøp</td></tr>
-<tr class="winner" data-store="rema"><td>YOGHURT 8PK</td><td class="mengde">1 kg</td><td class="price">34,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">8x125 g · spar 13,-</td></tr>
+<tr data-store="spar"><td>Smaken av Norge</td><td class="mengde"></td><td class="price"></td><td class="store">Spar</td><td class="desc">-30%</td></tr>
+<tr data-store="spar"><td>Yoghurt</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="bunnpris"><td>PROTEINDEAL</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Bunnpris</td><td class="desc"></td></tr>
+<tr data-store="obs"><td>ACTIMEL DRIKKEYOGHURT JORDBÆR</td><td class="mengde">12x100 g</td><td class="price">54,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">45,75/kilogram</td></tr>
+<tr data-store="meny"><td>SKYR® PORSJONSYOGHURT</td><td class="mengde">160 g</td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="jacobs"><td>SKYR® PORSJONSYOGHURT</td><td class="mengde">160 g</td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
 </table>
 
 <h2 id="cat6">🥚 Egg</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="obs"><td>DEN STOLTE HANE EGG</td><td class="mengde">12 stk</td><td class="price">80,- (2 for 80)</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">49,02/kg · partikjøp</td></tr>
-<tr class="winner" data-store="bunnpris"><td>GÅRDSEGG</td><td class="mengde">18 pk</td><td class="price">65,-</td><td class="store">Bunnpris</td><td class="desc">frittgående · 3,61/stk</td></tr>
-<tr class="winner" data-store="meny"><td>EGG FRITTGÅENDE</td><td class="mengde">15 stk</td><td class="price">49,90</td><td class="store">Meny Askim 🚗</td><td class="desc">3,33/stk · fast knallkjøp</td></tr>
-<tr class="winner" data-store="extra"><td>FROKOSTEGG</td><td class="mengde">12 stk</td><td class="price">68,90 (medlem 59,90)</td><td class="store">Extra Mysen</td><td class="desc">Prior frittgående</td></tr>
+<tr data-store="obs"><td>DEN STOLTE HANE EGG</td><td class="mengde">12 stk</td><td class="price">80,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">3,33/piece</td></tr>
+<tr data-store="meny"><td>EGG FRITTGÅENDE</td><td class="mengde">15 stk</td><td class="price">49,90</td><td class="store">Meny Askim 🚗</td><td class="desc">3,33/piece</td></tr>
+<tr data-store="bunnpris"><td>GÅRDSEGG</td><td class="mengde">18-pk</td><td class="price">65,-</td><td class="store">Bunnpris</td><td class="desc">3,61/piece</td></tr>
+<tr data-store="extra"><td>FROKOSTEGG</td><td class="mengde"></td><td class="price">68,90 (medlem 59,90)</td><td class="store">Extra Mysen</td><td class="desc">5,74/piece</td></tr>
+<tr data-store="jacobs"><td>EGG</td><td class="mengde">15 stk</td><td class="price">49,90</td><td class="store">Jacobs</td><td class="desc">3,33/piece</td></tr>
+<tr data-store="meny"><td>BRIOCHE GOURMET</td><td class="mengde">500 g</td><td class="price">59,90</td><td class="store">Meny Askim 🚗</td><td class="desc">119,80/kilogram</td></tr>
+<tr data-store="jacobs"><td>BRIOCHE GOURMET</td><td class="mengde">500 g</td><td class="price">59,90</td><td class="store">Jacobs</td><td class="desc">119,80/kilogram</td></tr>
 </table>
 
 <h2 id="cat7">🧀 Ost</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="extra"><td>NORVEGIA DUO</td><td class="mengde">2x1 kg</td><td class="price">119,-</td><td class="store">Extra Mysen</td><td class="desc">spar 36,90 · før 155,90 · maks 3 stk</td></tr>
-<tr class="winner" data-store="obs"><td>SYNNØVE KONGSGÅRD</td><td class="mengde">480 g</td><td class="price">69,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">spar 28,- · før 97,90</td></tr>
-<tr class="winner" data-store="obs"><td>SYNNØVE GÅRDSOST</td><td class="mengde">800 g</td><td class="price">109,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">spar 29,60 · før 139,50</td></tr>
+<tr class="winner" data-store="extra"><td>NORVEGIA DUO</td><td class="mengde">3 stk</td><td class="price">119,-</td><td class="store">Extra Mysen</td><td class="desc">119,-/kilogram · spar 36,-</td></tr>
+<tr class="winner" data-store="obs"><td>SYNNØVE GÅRDSOST</td><td class="mengde">800 g</td><td class="price">109,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">137,38/kilogram · før 139,50,- · spar 29,-</td></tr>
+<tr class="winner" data-store="obs"><td>SYNNØVE KONGSGÅRD</td><td class="mengde">480 g</td><td class="price">69,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">145,62/kilogram · før 97,90,- · spar 28,-</td></tr>
+<tr class="winner" data-store="spar"><td>Apetina</td><td class="mengde">200 g</td><td class="price">29,90</td><td class="store">Spar</td><td class="desc">149,50/kilogram · spar 14,-</td></tr>
+<tr class="winner" data-store="extra"><td>COOP GREEK FETA BLOCK</td><td class="mengde">1 stk</td><td class="price">60,-</td><td class="store">Extra Mysen</td><td class="desc">200,-/kilogram · spar 11,-</td></tr>
+<tr class="winner" data-store="kiwi"><td>GULOST&amp;CHEDDAR</td><td class="mengde">170 g</td><td class="price">29,90</td><td class="store">Kiwi Mysen</td><td class="desc">175,88/kilogram · spar 7,-</td></tr>
+<tr data-store="meny"><td>BUFAR</td><td class="mengde">320 g</td><td class="price">149,-</td><td class="store">Meny Askim 🚗</td><td class="desc">465,62/kilogram</td></tr>
+<tr data-store="jacobs"><td>BUFAR</td><td class="mengde">320 g</td><td class="price">149,-</td><td class="store">Jacobs</td><td class="desc">465,62/kilogram</td></tr>
+<tr data-store="bunnpris"><td>ET STORT UTVALG TINE SKIVET OST</td><td class="mengde">100 g</td><td class="price">3 for 2</td><td class="store">Bunnpris</td><td class="desc"></td></tr>
+<tr data-store="meny"><td>NORSK BURGEROST</td><td class="mengde">100 g</td><td class="price">24,90</td><td class="store">Meny Askim 🚗</td><td class="desc">249,-/kilogram</td></tr>
+<tr data-store="meny"><td>JACOBS UTVALGTE PLUKK &amp; MIKS</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="obs"><td>COOP MOZZARELLA/MASCARPONE/RICOTTA</td><td class="mengde">250 g</td><td class="price">74,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">370,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>CHEDDAR OG RABAGAST TERNET</td><td class="mengde">80 g</td><td class="price">29,-</td><td class="store">Bunnpris</td><td class="desc">362,50/kilogram</td></tr>
+<tr data-store="bunnpris"><td>KAVLI MAGEROST SKINKE OG WASA KNEKKEBRØD FALU CHIA &amp; HAVSALT</td><td class="mengde">175 g</td><td class="price">50,-</td><td class="store">Bunnpris</td><td class="desc">285,71/kilogram</td></tr>
+<tr data-store="spar"><td>Skivet ost</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="europris"><td>Maarud Sombreros</td><td class="mengde"></td><td class="price">15,-</td><td class="store">Europris Mysen</td><td class="desc">15,-/piece</td></tr>
+<tr data-store="rema"><td>APETINA SOLTØRKET TOMAT</td><td class="mengde">100 g</td><td class="price">18,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">189,00/kilogram</td></tr>
+<tr data-store="meny"><td>NORSK SALATOST</td><td class="mengde">230 g</td><td class="price">29,90</td><td class="store">Meny Askim 🚗</td><td class="desc">135,91/kilogram</td></tr>
+<tr data-store="meny"><td>STEIKE OST AV HALLOUMI-TYPE</td><td class="mengde">200 g</td><td class="price">89,-</td><td class="store">Meny Askim 🚗</td><td class="desc">445,-/kilogram</td></tr>
+<tr data-store="meny"><td>VALDRES BRIE</td><td class="mengde"></td><td class="price">39,90</td><td class="store">Meny Askim 🚗</td><td class="desc">399,00/kilogram</td></tr>
 </table>
 
 <h2 id="cat8">🥪 Pålegg</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="rema"><td>3 FOR 2 TAPAS</td><td class="mengde">3 for 2</td><td class="price">3 for 2</td><td class="store">Rema 1000 Mysen</td><td class="desc">fjelltørket spekeskinke</td></tr>
-<tr class="winner" data-store="meny"><td>GOD FROKOST MED JACOBS UTVALGTE</td><td class="mengde">3 for 2</td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc">pålegg, skinker, egg, bacon, juice</td></tr>
+<tr class="winner" data-store="spar"><td>BADEPONCHO TIL BARN</td><td class="mengde"></td><td class="price">74,95</td><td class="store">Spar</td><td class="desc">74,95/piece · før 149,90,- · spar 74,-</td></tr>
+<tr class="winner" data-store="extra"><td>STABBURET LEVERPOSTEI</td><td class="mengde">100 g</td><td class="price">9,90</td><td class="store">Extra Mysen</td><td class="desc">99,-/kilogram · spar 7,-</td></tr>
+<tr data-store="bunnpris"><td>MILLS GRILLPOTETSALAT ORIGINAL OG KLASSISK</td><td class="mengde">500 g</td><td class="price"></td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
+<tr data-store="obs"><td>LOFOTEN</td><td class="mengde">550 g</td><td class="price"></td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">-30%</td></tr>
+<tr data-store="obs"><td>STRANDA WESTFALER/FENALÅR</td><td class="mengde">300 g</td><td class="price">119,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">476,00/kilogram</td></tr>
+<tr data-store="spar"><td>Stranda</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="rema"><td>STRANDASKINKE</td><td class="mengde">200 g</td><td class="price">99,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">499,50/kilogram</td></tr>
+<tr data-store="bunnpris"><td>STRANDASKINKE MINDRE SALT</td><td class="mengde">85 g</td><td class="price">59,-</td><td class="store">Bunnpris</td><td class="desc">694,12/kilogram</td></tr>
+<tr data-store="jacobs"><td>TYNNSKÅRET SPEKESKINKE</td><td class="mengde">80 g</td><td class="price">34,90</td><td class="store">Jacobs</td><td class="desc">872,50/kilogram</td></tr>
+<tr data-store="meny"><td>TYNNSKÅRET SPEKESKINKE</td><td class="mengde">80 g</td><td class="price">34,90</td><td class="store">Meny Askim 🚗</td><td class="desc">872,50/kilogram</td></tr>
+<tr data-store="bunnpris"><td>STRANDAMØR SNACKS</td><td class="mengde">120 g</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">325,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>POTETSALAT</td><td class="mengde">500 g</td><td class="price">37,90</td><td class="store">Kiwi Mysen</td><td class="desc">75,80/kilogram</td></tr>
+<tr data-store="kiwi"><td>COLESLAW</td><td class="mengde">130 g</td><td class="price">14,90</td><td class="store">Kiwi Mysen</td><td class="desc">114,62/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT GRILLPOTETSALAT</td><td class="mengde">400 g</td><td class="price">29,90</td><td class="store">Extra Mysen</td><td class="desc">74,75/kilogram</td></tr>
+<tr data-store="extra"><td>Coop Grill Perfekt Tzatziki</td><td class="mengde">200 g</td><td class="price">15,-</td><td class="store">Extra Mysen</td><td class="desc">75,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT COLESLAW</td><td class="mengde">300 g</td><td class="price">24,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">83,00/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT GRILLPOTETSALAT</td><td class="mengde">400. Pr pk Pr kg 62,25
+Husk tilbehøret!</td><td class="price">24,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">62,25/kilogram</td></tr>
+<tr data-store="extra"><td>COOP GRILL PERFEKT COLESLAW</td><td class="mengde">300 g</td><td class="price">34,90</td><td class="store">Extra Mysen</td><td class="desc">116,33/kilogram</td></tr>
+<tr data-store="rema"><td>HAMBURGERSALAT</td><td class="mengde">200 g</td><td class="price">19,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">99,50/kilogram</td></tr>
+<tr data-store="jacobs"><td>BROKKOLISALAT MED BACON</td><td class="mengde"></td><td class="price">19,90</td><td class="store">Jacobs</td><td class="desc">199,00/kilogram</td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT BURGERDRESSING/COLESLAW</td><td class="mengde">410 g</td><td class="price">24,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">83,00/kilogram</td></tr>
+<tr data-store="bunnpris"><td>OLIVIAS POTETSALAT</td><td class="mengde">400 g</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">97,50/kilogram</td></tr>
+<tr data-store="rema"><td>UTVALGTE BURGERE</td><td class="mengde">440 g</td><td class="price">49,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">207,92/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Billig Middag.</td><td class="mengde"></td><td class="price">40,-</td><td class="store">Bunnpris</td><td class="desc">160,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>GILDE KJØTTKAKER, SVENSKE KJØTTBOLLER OG KARBONADER</td><td class="mengde">720 g</td><td class="price">79,-</td><td class="store">Bunnpris</td><td class="desc">109,72/kilogram</td></tr>
+<tr data-store="rema"><td>3 FOR 2 TAPAS</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Rema 1000 Mysen</td><td class="desc"></td></tr>
+<tr data-store="kiwi"><td>SPEKESKINKE</td><td class="mengde">190 g</td><td class="price">89,-</td><td class="store">Kiwi Mysen</td><td class="desc">468,42/kilogram</td></tr>
+<tr data-store="rema"><td>SKINKE XXL</td><td class="mengde">220 g</td><td class="price">34,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">158,64/kilogram</td></tr>
+<tr data-store="meny"><td>JACOBS UTVALGTE</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
 </table>
 
 <h2 id="cat9">🍞 Brød</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="rema"><td>GROVT &amp; GODT BRØD</td><td class="mengde">620-740 g</td><td class="price">44,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">spar 4,90 · før 49,80</td></tr>
-<tr class="winner" data-store="meny"><td>NYSTEKT NORSK GROVBRØD</td><td class="mengde">650 g</td><td class="price">35,-</td><td class="store">Meny Askim 🚗</td><td class="desc">spar 12,90 · fra bakeriet · 53,85/kg</td></tr>
-<tr class="winner" data-store="rema"><td>ALL KJEKS</td><td class="mengde">120-400 g</td><td class="price">3 for 2</td><td class="store">Rema 1000 Mysen</td><td class="desc">3 for 2 · også glutenfritt</td></tr>
-<tr data-store="obs"><td>PØLSEBRØD/HAMBURGERBRØD</td><td class="mengde">-</td><td class="price">19,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc"></td></tr>
+<tr class="winner" data-store="europris"><td>MELKESJOKOLADE kjeks</td><td class="mengde"></td><td class="price">40,-</td><td class="store">Europris Mysen</td><td class="desc">20,-/piece · spar 39,-</td></tr>
+<tr class="winner" data-store="extra"><td>HATTING HAVREBRØD BJØRN</td><td class="mengde">1 stk</td><td class="price">60,-</td><td class="store">Extra Mysen</td><td class="desc">42,86/kilogram · spar 25,-</td></tr>
+<tr class="winner" data-store="extra"><td>SANTA MARIA TORTILLA EXTRA THIN MEDIUM</td><td class="mengde">1 stk</td><td class="price">40,-</td><td class="store">Extra Mysen</td><td class="desc">81,97/kilogram · spar 23,-</td></tr>
+<tr class="winner" data-store="extra"><td>COOP MORGENSTYKKER 8 PK</td><td class="mengde">1 stk</td><td class="price">60,-</td><td class="store">Extra Mysen</td><td class="desc">53,57/kilogram · spar 13,-</td></tr>
+<tr class="winner" data-store="rema"><td>SJOKOLADEBOLLER</td><td class="mengde">288 g</td><td class="price">19,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">69,10/kilogram · spar 13,-</td></tr>
+<tr class="winner" data-store="meny"><td>NYSTEKT NORSK GROVBRØD</td><td class="mengde">650 g</td><td class="price">35,-</td><td class="store">Meny Askim 🚗</td><td class="desc">53,85/kilogram · spar 12,-</td></tr>
+<tr class="winner" data-store="rema"><td>SMØRLOFF</td><td class="mengde">650 g</td><td class="price">29,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">46,-/kilogram · før 41,90,- · spar 12,-</td></tr>
+<tr class="winner" data-store="kiwi"><td>PIZZABUNN SURDEIG PRIME</td><td class="mengde">500 g</td><td class="price">59,90</td><td class="store">Kiwi Mysen</td><td class="desc">119,80/kilogram · spar 10,-</td></tr>
+<tr class="winner" data-store="kiwi"><td>PIZZABUNN</td><td class="mengde">370 g</td><td class="price">29,90</td><td class="store">Kiwi Mysen</td><td class="desc">80,81/kilogram · før 36,90,- · spar 7,-</td></tr>
+<tr class="winner" data-store="rema"><td>POLAR-LEVAIN HVETE</td><td class="mengde">440 g</td><td class="price">44,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">102,05/kilogram · før 49,80,- · spar 4,-</td></tr>
+<tr data-store="bunnpris"><td>UTVALGTE OREO-KJEKS</td><td class="mengde">154 g</td><td class="price"></td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
+<tr data-store="extra"><td>ALL SÆTRE KJEKS</td><td class="mengde">400 g</td><td class="price"></td><td class="store">Extra Mysen</td><td class="desc">-30%</td></tr>
+<tr data-store="obs"><td>RYVITA KNEKKEBRØD/ MÜSLI CRUNCH</td><td class="mengde">400 g</td><td class="price"></td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">-30%</td></tr>
+<tr data-store="rema"><td>ALL KJEKS</td><td class="mengde">400 g</td><td class="price">3 for 2</td><td class="store">Rema 1000 Mysen</td><td class="desc"></td></tr>
+<tr data-store="obs"><td>COOP GRILL PERFEKT SLIDERSBRØD</td><td class="mengde">6 stk</td><td class="price">19,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">3,32/piece</td></tr>
+<tr data-store="spar"><td>Julius Favorittbrød/Norsk Fjellbrød/Hverdagsgrovt</td><td class="mengde">750 g</td><td class="price">29,90</td><td class="store">Spar</td><td class="desc">39,87/kilogram</td></tr>
+<tr data-store="bunnpris"><td>PØLSEFEST!</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Bunnpris</td><td class="desc"></td></tr>
+<tr data-store="extra"><td>SANTA MARIA TORTILLA</td><td class="mengde">8 stk</td><td class="price">40,-</td><td class="store">Extra Mysen</td><td class="desc">3,33/piece</td></tr>
+<tr data-store="rema"><td>FOCACCIA HAVSALT</td><td class="mengde">430 g</td><td class="price">49,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">116,05/kilogram</td></tr>
+<tr data-store="bunnpris"><td>HÅNDVERKSLOFF</td><td class="mengde">500 g</td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">50,-/kilogram</td></tr>
+<tr data-store="obs"><td>COOP PRIME PØLSEBRØD</td><td class="mengde">400 g</td><td class="price">24,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">62,25/kilogram</td></tr>
+<tr data-store="europris"><td>Sætre Ballerina</td><td class="mengde">205 g</td><td class="price">25,-</td><td class="store">Europris Mysen</td><td class="desc">131,58/kilogram</td></tr>
+<tr data-store="bunnpris"><td>WASA SANDWICH</td><td class="mengde">30 g</td><td class="price">10,-</td><td class="store">Bunnpris</td><td class="desc">333,33/kilogram</td></tr>
 </table>
 
-<h2 id="cat10">🥤 Drikke</h2>
+<h2 id="cat10">🍫 Snacks</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="obs"><td>PEPSI MAX/COCA-COLA</td><td class="mengde">6x1,5l</td><td class="price">109,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">16,52/l · kun 5,45 pr boks</td></tr>
+<tr class="winner" data-store="europris"><td>SJOKOLADE MINIS</td><td class="mengde">333 g</td><td class="price">59,90</td><td class="store">Europris Mysen</td><td class="desc">179,88/kilogram · spar 40,-</td></tr>
+<tr class="winner" data-store="extra"><td>FREIA SJOKOLADEPLATER</td><td class="mengde">200 g</td><td class="price">29,90</td><td class="store">Extra Mysen</td><td class="desc">199,33/kilogram · spar 20,-</td></tr>
+<tr class="winner" data-store="rema"><td>NIDAR STORPLATER</td><td class="mengde">185 g</td><td class="price">29,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">199,33/kilogram · spar 17,-</td></tr>
+<tr data-store="europris"><td>Sjokolade</td><td class="mengde"></td><td class="price">20,-</td><td class="store">Europris Mysen</td><td class="desc">20,-/piece</td></tr>
+<tr data-store="obs"><td>KIMS POTETCHIPS</td><td class="mengde">1-pk</td><td class="price">60,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">111,11/kilogram</td></tr>
+<tr data-store="bunnpris"><td>MAARUD POTETGULL</td><td class="mengde">200 g</td><td class="price">35,-</td><td class="store">Bunnpris</td><td class="desc">175,00/kilogram</td></tr>
+<tr data-store="spar"><td>KIMS CHIPS</td><td class="mengde"></td><td class="price">100,-</td><td class="store">Spar</td><td class="desc">100,-/kilogram</td></tr>
+<tr class="winner" data-store="kiwi"><td>SØRLANDSCHIPS</td><td class="mengde">200 g</td><td class="price">24,90</td><td class="store">Kiwi Mysen</td><td class="desc">124,50/kilogram · før 31,90,-</td></tr>
+<tr data-store="rema"><td>MJØLKERUTA</td><td class="mengde">190 g</td><td class="price">29,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">157,37/kilogram</td></tr>
+<tr data-store="europris"><td>KiMs</td><td class="mengde"></td><td class="price">30,-</td><td class="store">Europris Mysen</td><td class="desc">30,-/piece</td></tr>
+<tr data-store="obs"><td>MAARUD SNACKS</td><td class="mengde">1 stk</td><td class="price">50,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">178,57/kilogram</td></tr>
+<tr data-store="bunnpris"><td>Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag</td><td class="mengde"></td><td class="price">30,-</td><td class="store">Bunnpris</td><td class="desc">30,-/piece</td></tr>
+<tr data-store="europris"><td>Polly</td><td class="mengde"></td><td class="price">25,-</td><td class="store">Europris Mysen</td><td class="desc">25,-/piece</td></tr>
+<tr data-store="europris"><td>Maarud Super Chips / Super Mix</td><td class="mengde"></td><td class="price">25,-</td><td class="store">Europris Mysen</td><td class="desc">25,-/piece</td></tr>
+<tr data-store="europris"><td>Utvalgt snacks til knallpris!</td><td class="mengde">100 g</td><td class="price">10,-</td><td class="store">Europris Mysen</td><td class="desc">133,33/kilogram</td></tr>
+<tr data-store="extra"><td>SØRLANDSCHIPS RIFLA</td><td class="mengde">1 stk</td><td class="price">50,-</td><td class="store">Extra Mysen</td><td class="desc">147,06/kilogram</td></tr>
+<tr data-store="europris"><td>Pringles</td><td class="mengde"></td><td class="price">10,-</td><td class="store">Europris Mysen</td><td class="desc">10,-/piece</td></tr>
+<tr data-store="europris"><td>Snickers / Twix</td><td class="mengde"></td><td class="price">15,-</td><td class="store">Europris Mysen</td><td class="desc">15,-/piece</td></tr>
+<tr data-store="spar"><td>Nøtter fra Den Lille Nøttefabrikken</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="europris"><td>Crispy Bacon</td><td class="mengde"></td><td class="price">25,-</td><td class="store">Europris Mysen</td><td class="desc">25,-/piece</td></tr>
+<tr data-store="extra"><td>COOP NACHOS/TORTILLA CHIPS</td><td class="mengde">500 g</td><td class="price">34,90</td><td class="store">Extra Mysen</td><td class="desc">69,80/kilogram</td></tr>
+<tr data-store="extra"><td>DAVE &amp; JON’S DADLER</td><td class="mengde">125 g</td><td class="price">39,90</td><td class="store">Extra Mysen</td><td class="desc">319,20/kilogram</td></tr>
+<tr data-store="meny"><td>YT® PRODUKTER</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="bunnpris"><td>PROTEINBAR</td><td class="mengde">55 g</td><td class="price">20,-</td><td class="store">Bunnpris</td><td class="desc">363,64/kilogram</td></tr>
+<tr data-store="jacobs"><td>YT® PRODUKTER</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
+<tr data-store="spar"><td>Protein-/energibar</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
 </table>
 
-<h2 id="cat11">🍫 Snacks</h2>
+<h2 id="cat11">☕ Kaffe</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="europris"><td>MELKESJOKOLADE kjeks</td><td class="mengde">-</td><td class="price">40,-</td><td class="store">Europris Mysen</td><td class="desc">spar 39,80 · 2-pk</td></tr>
-<tr class="winner" data-store="obs"><td>MAARUD SNACKS</td><td class="mengde">2x140 g</td><td class="price">50,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">178,57/kg</td></tr>
-<tr data-store="obs"><td>MAARUD DIPMIX HOLIDAY</td><td class="mengde">22 g</td><td class="price">15,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc"></td></tr>
-<tr class="winner" data-store="bunnpris"><td>ET STORT UTVALG PEPPES-PRODUKTER</td><td class="mengde">-</td><td class="price">-30%</td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
-<tr class="winner" data-store="europris"><td>NIDAR SJOKOLADE</td><td class="mengde">4 store plater</td><td class="price">100,-</td><td class="store">Europris Mysen</td><td class="desc">spar 119,-</td></tr>
+<tr class="winner" data-store="rema"><td>FILTERMALT KJELDSBERG</td><td class="mengde">500 g</td><td class="price">73,40</td><td class="store">Rema 1000 Mysen</td><td class="desc">146,80/kilogram · spar 31,-</td></tr>
+<tr class="winner" data-store="extra"><td>FRIELE LUNGO 6 20 STK</td><td class="mengde">Pr pk. Pr stk 2,50 Førpris 76,90</td><td class="price">49,90</td><td class="store">Extra Mysen</td><td class="desc">2,50/piece · spar 27,-</td></tr>
+<tr class="winner" data-store="extra"><td>FRIELE GULL INSTANT REFILL</td><td class="mengde">100 g</td><td class="price">39,90</td><td class="store">Extra Mysen</td><td class="desc">399,00/kilogram · spar 20,-</td></tr>
+<tr class="winner" data-store="rema"><td>FILTERMALT KJELDSBERG</td><td class="mengde">250 g</td><td class="price">37,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">151,60/kilogram · spar 17,-</td></tr>
+<tr data-store="obs"><td>NESCAFÉ</td><td class="mengde"></td><td class="price"></td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">-30%</td></tr>
+<tr data-store="meny"><td>COFFEE OF THE WORLD</td><td class="mengde">10-pk</td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="jacobs"><td>COFFEE OF THE WORLD</td><td class="mengde">10-pk</td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
+<tr data-store="spar"><td>Kaffekapsler</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="europris"><td>Löfbergs ICE</td><td class="mengde">230 ml</td><td class="price">20,-</td><td class="store">Europris Mysen</td><td class="desc">86,96/liter</td></tr>
+<tr data-store="jacobs"><td>TINE ISKAFFE</td><td class="mengde">300 ml</td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
+<tr data-store="obs"><td>TINE ISKAFFE</td><td class="mengde">1 l</td><td class="price">39,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">39,90/liter</td></tr>
+<tr data-store="jacobs"><td>JACOBS UTVALGTE PLUKK &amp; MIKS</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Jacobs</td><td class="desc"></td></tr>
 </table>
 
-<h2 id="cat12">☕ Kaffe</h2>
+<h2 id="cat12">🥤 Drikke</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="alle"><td>FRIELE/ EVERGOOD KAFFE</td><td class="mengde">-</td><td class="price">Sjekk butikk</td><td class="store">Alle</td><td class="desc">sjekk din lokale butikk for priser</td></tr>
+<tr class="winner" data-store="extra"><td>COCA-COLA 10 PK BOKSER</td><td class="mengde">10x0.33 l</td><td class="price">69,90</td><td class="store">Extra Mysen</td><td class="desc">21,18/liter · spar 40,-</td></tr>
+<tr class="winner" data-store="europris"><td>15-PK BRUS 0,33 LITER</td><td class="mengde"></td><td class="price">100,-</td><td class="store">Europris Mysen</td><td class="desc">20,20/liter · spar 39,-</td></tr>
+<tr class="winner" data-store="jacobs"><td>COCA-COLA-/ SPRITE-/FANTA ZERO</td><td class="mengde">20x0.33 L</td><td class="price">129,-</td><td class="store">Jacobs</td><td class="desc">19,55/liter · spar 10,-</td></tr>
+<tr data-store="extra"><td>COCA-COLA ORIGINAL/COCA-COLA ZERO SUGAR/ URGE/FANTA ZERO SUGAR/SPRITE ZERO SUGAR</td><td class="mengde">10x0.33 l</td><td class="price">69,-</td><td class="store">Extra Mysen</td><td class="desc">20,91/liter</td></tr>
+<tr data-store="kiwi"><td>PEPSI MAX</td><td class="mengde">6x1.5 l</td><td class="price">89,-</td><td class="store">Kiwi Mysen</td><td class="desc">9,89/liter</td></tr>
+<tr data-store="obs"><td>BRUSBRETT</td><td class="mengde">20x0.33 l</td><td class="price">119,-</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">18,03/liter</td></tr>
+<tr data-store="meny"><td>COCA-COLA-/ SPRITE-/FANTA ZERO</td><td class="mengde">20x0.33 L</td><td class="price">129,-</td><td class="store">Meny Askim 🚗</td><td class="desc">19,55/liter</td></tr>
+<tr data-store="bunnpris"><td>COCA-COLA U/SUKKER</td><td class="mengde">6-pk</td><td class="price">89,-</td><td class="store">Bunnpris</td><td class="desc">9,89/liter</td></tr>
+<tr data-store="bunnpris"><td>Pepsi / Solo</td><td class="mengde">10-pk</td><td class="price">99,-</td><td class="store">Bunnpris</td><td class="desc">9,90/piece</td></tr>
+<tr data-store="meny"><td>4PK BRUS PÅ BOKS</td><td class="mengde">4x0.33 l</td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="extra"><td>COCA-COLA ZERO SUGAR</td><td class="mengde">4x1.5 l</td><td class="price">82,90</td><td class="store">Extra Mysen</td><td class="desc">13,82/liter</td></tr>
+<tr data-store="spar"><td>Brus</td><td class="mengde">1.5 l</td><td class="price">79,90</td><td class="store">Spar</td><td class="desc">13,32/liter</td></tr>
+<tr data-store="spar"><td>Fever-Tree</td><td class="mengde">0.5 l</td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="extra"><td>COCA-COLA ORIGINAL</td><td class="mengde">4x1.5 l</td><td class="price">97,90</td><td class="store">Extra Mysen</td><td class="desc">16,32/liter</td></tr>
+<tr data-store="bunnpris"><td>Coca-Cola Zero</td><td class="mengde">4-pk</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">9,75/piece</td></tr>
+<tr data-store="meny"><td>FARRIS BRIS</td><td class="mengde">20x0.33 l</td><td class="price">129,-</td><td class="store">Meny Askim 🚗</td><td class="desc">19,55/liter</td></tr>
+<tr data-store="bunnpris"><td>Alle single 1,5L flasker fra Coca-Cola</td><td class="mengde"></td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">16,67/liter</td></tr>
+<tr data-store="bunnpris"><td>FAXE KONDI ORIGINAL, APPELSIN OG PINK LEMONADE</td><td class="mengde">0.33 l</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">19,70/liter</td></tr>
+<tr data-store="bunnpris"><td>Coca-cola</td><td class="mengde">4-pk</td><td class="price">39,90</td><td class="store">Bunnpris</td><td class="desc">9,97/piece</td></tr>
+<tr data-store="bunnpris"><td>IMSDAL OG IMSDAL LIMONADE</td><td class="mengde">0.65 l</td><td class="price">15,-</td><td class="store">Bunnpris</td><td class="desc">30,-/liter</td></tr>
+<tr data-store="spar"><td>Brus fra Coca-Cola/Farris/Frus/Bris/Imsdal naturell</td><td class="mengde">0.5 l</td><td class="price">19,90</td><td class="store">Spar</td><td class="desc">39,80/liter</td></tr>
+<tr data-store="bunnpris"><td>COCA-COLA, FANTA, URGE OG SPRITE</td><td class="mengde">1.5 l</td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">16,67/liter</td></tr>
 </table>
 
 <h2 id="cat13">🍦 Dessert/is</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="alle"><td>KRONE-IS</td><td class="mengde">-</td><td class="price">Sjekk butikk</td><td class="store">Alle</td><td class="desc">sjekk din lokale butikk for priser i sommer</td></tr>
+<tr class="winner" data-store="rema"><td>ROYAL VANILJE</td><td class="mengde">0.9 l</td><td class="price">50,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">56,56/liter · før 84,90,- · spar 34,-</td></tr>
+<tr class="winner" data-store="rema"><td>DREAM JORDBÆR</td><td class="mengde">640 ml</td><td class="price">47,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">74,84/liter · før 79,90,- · spar 32,-</td></tr>
+<tr class="winner" data-store="rema"><td>GULLPINNE</td><td class="mengde">1 l</td><td class="price">41,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">41,90/liter · før 69,90,- · spar 28,-</td></tr>
+<tr class="winner" data-store="rema"><td>LOLLIPOP</td><td class="mengde">1.2 l</td><td class="price">38,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">32,42/liter · før 64,90,- · spar 26,-</td></tr>
+<tr class="winner" data-store="rema"><td>FLØTEIS TRESS</td><td class="mengde">2 l</td><td class="price">32,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">16,45/liter · før 54,90,- · spar 22,-</td></tr>
+<tr class="winner" data-store="rema"><td>FLØTEIS VANILJE</td><td class="mengde">2 l</td><td class="price">32,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">16,45/liter · før 54,90,- · spar 22,-</td></tr>
+<tr class="winner" data-store="spar"><td>Soft Shake</td><td class="mengde">210 ml</td><td class="price">19,90</td><td class="store">Spar</td><td class="desc">94,76/liter · spar 17,-</td></tr>
+<tr data-store="rema"><td>ALL LITER-IS FRA DIPLOM-IS</td><td class="mengde">2 l</td><td class="price"></td><td class="store">Rema 1000 Mysen</td><td class="desc">-40%</td></tr>
+<tr data-store="spar"><td>Multipack is Hennig-Olsen</td><td class="mengde"></td><td class="price"></td><td class="store">Spar</td><td class="desc">-40%</td></tr>
+<tr data-store="spar"><td>Multipack is</td><td class="mengde"></td><td class="price"></td><td class="store">Spar</td><td class="desc">-40%</td></tr>
+<tr data-store="bunnpris"><td>ET STORT UTVALG BEN &amp; JERRY`S</td><td class="mengde">465 ml</td><td class="price"></td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
+<tr data-store="obs"><td>DIPLOM-IS ROYAL</td><td class="mengde"></td><td class="price"></td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">-30%</td></tr>
+<tr data-store="bunnpris"><td>PREMIUM FLØTEIS</td><td class="mengde">0.8 l</td><td class="price"></td><td class="store">Bunnpris</td><td class="desc">-30%</td></tr>
+<tr data-store="meny"><td>PAKISTANSK MANGO</td><td class="mengde">1.5 kg</td><td class="price">149,-</td><td class="store">Meny Askim 🚗</td><td class="desc">149,-/kilogram</td></tr>
+<tr data-store="jacobs"><td>VALDRES BRIE</td><td class="mengde"></td><td class="price">39,90</td><td class="store">Jacobs</td><td class="desc">399,00/kilogram</td></tr>
+<tr data-store="jacobs"><td>PAKISTANSK MANGO</td><td class="mengde">1.5 kg</td><td class="price">149,-</td><td class="store">Jacobs</td><td class="desc">149,-/kilogram</td></tr>
+<tr data-store="bunnpris"><td>KRONE-IS JORDBÆR OG SJOKOLADE</td><td class="mengde">6-pk</td><td class="price">39,-</td><td class="store">Bunnpris</td><td class="desc">6,50/piece</td></tr>
+<tr data-store="kiwi"><td>KRONE-IS</td><td class="mengde">6 stk</td><td class="price">46,90</td><td class="store">Kiwi Mysen</td><td class="desc">7,82/piece</td></tr>
+<tr data-store="extra"><td>COOP KRONE-IS 6 PK JORDBÆR/SJOKOLADE</td><td class="mengde">6 stk</td><td class="price">24,90</td><td class="store">Extra Mysen</td><td class="desc">4,15/piece</td></tr>
+<tr data-store="kiwi"><td>KRONE-IS HEIA NORGE</td><td class="mengde">10 stk</td><td class="price">79,90</td><td class="store">Kiwi Mysen</td><td class="desc">7,99/piece</td></tr>
+<tr data-store="kiwi"><td>KRONE-IS</td><td class="mengde">6 stk</td><td class="price">24,90</td><td class="store">Kiwi Mysen</td><td class="desc">4,15/piece</td></tr>
+<tr data-store="extra"><td>COOP KRONE-IS 6 PK</td><td class="mengde">714 g</td><td class="price">24,90</td><td class="store">Extra Mysen</td><td class="desc">35,47/kilogram</td></tr>
+<tr data-store="obs"><td>COOP KRONE-IS</td><td class="mengde"></td><td class="price">24,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">4,15/piece</td></tr>
+<tr data-store="extra"><td>DIPLOM-IS MULTIPAKKER</td><td class="mengde">12-pk</td><td class="price">100,-</td><td class="store">Extra Mysen</td><td class="desc">8,33/piece</td></tr>
+<tr data-store="bunnpris"><td>SANDWICH</td><td class="mengde">6 stk</td><td class="price">49,-</td><td class="store">Bunnpris</td><td class="desc">8,17/piece</td></tr>
 </table>
 
 <h2 id="cat14">🥦 Grønnsaker</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="extra"><td>NORSK BLOMKÅL, BROKKOLI OG ISBERGSALAT</td><td class="mengde">pr stk</td><td class="price">14,90</td><td class="store">Extra Mysen</td><td class="desc">sommerpris · gjelder t.o.m. 2. august</td></tr>
-<tr class="winner" data-store="bunnpris"><td>NYPOTET GULE OG RØDE</td><td class="mengde">1 kg</td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">Gartner</td></tr>
-<tr class="winner" data-store="extra"><td>SNACKPAPRIKA</td><td class="mengde">300 g</td><td class="price">19,90</td><td class="store">Extra Mysen</td><td class="desc">medlemspris</td></tr>
-<tr class="winner" data-store="obs"><td>NORSKE SOMMERGRØNNSAKER</td><td class="mengde">3 for 2</td><td class="price">3 for 2</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">blomkål, brokkoli, gulrot bunt og isberg</td></tr>
+<tr data-store="rema"><td>NYPOTET LØSVEKT</td><td class="mengde">BAMA, 19,90 pr. kg</td><td class="price">19,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">19,90/kilogram</td></tr>
+<tr data-store="extra"><td>all norsk blomkål, brokkoli og isbergsalat</td><td class="mengde">Sommerpris på norske grønnsaker Gjelder all norsk blomkål, brokkoli og isbergsalat Pr stk Gjelder t.o.m. 2. august</td><td class="price">14,90</td><td class="store">Extra Mysen</td><td class="desc">14,90/piece</td></tr>
+<tr data-store="spar"><td>Avokado 2-pk.</td><td class="mengde"></td><td class="price">29,90</td><td class="store">Spar</td><td class="desc">14,95/piece</td></tr>
+<tr data-store="kiwi"><td>GULROT</td><td class="mengde"></td><td class="price">29,90</td><td class="store">Kiwi Mysen</td><td class="desc">29,90/piece</td></tr>
+<tr data-store="spar"><td>Sunn Snækk</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
+<tr data-store="bunnpris"><td>NYPOTET GULE OG RØDE</td><td class="mengde">1 kg</td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">25,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>SPISSKÅL</td><td class="mengde">Grønn, rød, Gartner, pr. stk. 19,90 Pr. stk. 15% Trumf-bonus med KIWI PLUSS</td><td class="price">19,90</td><td class="store">Kiwi Mysen</td><td class="desc">19,90/piece</td></tr>
+<tr data-store="kiwi"><td>SALATPOSER</td><td class="mengde">65 g</td><td class="price">16,90</td><td class="store">Kiwi Mysen</td><td class="desc">260,00/kilogram</td></tr>
+<tr data-store="extra"><td>Smak* Piccolotomater</td><td class="mengde"></td><td class="price">49,90</td><td class="store">Extra Mysen</td><td class="desc">49,90/piece</td></tr>
+<tr data-store="rema"><td>KLASETOMAT</td><td class="mengde">500 g</td><td class="price">29,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">59,80/kilogram</td></tr>
+<tr data-store="bunnpris"><td>GULROT I BUNT</td><td class="mengde"></td><td class="price">25,-</td><td class="store">Bunnpris</td><td class="desc">25,-/piece</td></tr>
+<tr data-store="kiwi"><td>NYPOTET</td><td class="mengde">900 g</td><td class="price">34,90</td><td class="store">Kiwi Mysen</td><td class="desc">38,78/kilogram</td></tr>
+<tr data-store="spar"><td>Juanitas-/klasetomater</td><td class="mengde">300 g</td><td class="price">49,90</td><td class="store">Spar</td><td class="desc">166,33/kilogram</td></tr>
+<tr data-store="kiwi"><td>ISBERGSALAT</td><td class="mengde">Gartner, pr. stk. 15% Trumf-bonus med KIWI PLUSS 14,90 Pr. stk.</td><td class="price">14,90</td><td class="store">Kiwi Mysen</td><td class="desc">14,90/piece</td></tr>
+<tr data-store="meny"><td>NORSK GULROT</td><td class="mengde">750 g</td><td class="price">24,90</td><td class="store">Meny Askim 🚗</td><td class="desc">33,20/kilogram</td></tr>
+<tr data-store="bunnpris"><td>TOMAT JUANITAS</td><td class="mengde">300 g</td><td class="price">35,-</td><td class="store">Bunnpris</td><td class="desc">116,67/kilogram</td></tr>
+<tr data-store="kiwi"><td>SØTPOTETER</td><td class="mengde">Pr. kg</td><td class="price">24,90</td><td class="store">Kiwi Mysen</td><td class="desc">24,90/kilogram</td></tr>
+<tr data-store="kiwi"><td>SMÅPOTETER</td><td class="mengde">350 g</td><td class="price">49,90</td><td class="store">Kiwi Mysen</td><td class="desc">142,57/kilogram</td></tr>
+<tr data-store="rema"><td>SOMMERSALAT XL</td><td class="mengde">300 g</td><td class="price">29,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">99,67/kilogram</td></tr>
+<tr data-store="meny"><td>NORSKE REGNBUETOMATER</td><td class="mengde"></td><td class="price">12,90</td><td class="store">Meny Askim 🚗</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="kiwi"><td>BROKKOLI</td><td class="mengde">Gartner, pr. stk.
+15% Trumf-bonus med KIWI PLUSS</td><td class="price">14,90</td><td class="store">Kiwi Mysen</td><td class="desc">14,90/piece</td></tr>
+<tr data-store="obs"><td>COOP AVOKADO I NETT</td><td class="mengde">800 g</td><td class="price">49,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">62,38/kilogram</td></tr>
+<tr data-store="kiwi"><td>ISBERGSALAT, BLOMKÅL</td><td class="mengde">Gartner, pr. stk. 14,90 Pr. stk. 15% Trumf-bonus med KIWI PLUSS</td><td class="price">14,90</td><td class="store">Kiwi Mysen</td><td class="desc">14,90/piece</td></tr>
+<tr data-store="meny"><td>FRISKE URTER</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Meny Askim 🚗</td><td class="desc"></td></tr>
+<tr data-store="obs"><td>COOP NORSKE HVERDAGSTOMATER</td><td class="mengde">400 g</td><td class="price">34,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">87,25/kilogram</td></tr>
 </table>
 
 <h2 id="cat15">🍎 Frukt</h2>
 <table>
 <tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="alle"><td>VANNMELON</td><td class="mengde">pr stk</td><td class="price">Sjekk butikk</td><td class="store">Alle</td><td class="desc">sommerpriser i de fleste butikker</td></tr>
-<tr class="winner" data-store="alle"><td>JORDBÆR</td><td class="mengde">-</td><td class="price">Sjekk butikk</td><td class="store">Alle</td><td class="desc">norske jordbær i sesong</td></tr>
-</table>
-
-<h2 id="cat16">🧂 Ingredienser</h2>
-<table>
-<tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>
-<tr class="winner" data-store="rema"><td>ALL KJEKS</td><td class="mengde">120-400 g</td><td class="price">3 for 2</td><td class="store">Rema 1000 Mysen</td><td class="desc">3 for 2 · også glutenfritt</td></tr>
-<tr data-store="alle"><td>EKSTRA JOMFRU OLIVENOLJE</td><td class="mengde">-</td><td class="price">Sjekk butikk</td><td class="store">Alle</td><td class="desc"></td></tr>
+<tr data-store="kiwi"><td>BLÅBÆR</td><td class="mengde">400 g</td><td class="price">59,90</td><td class="store">Kiwi Mysen</td><td class="desc">149,75/kilogram</td></tr>
+<tr data-store="extra"><td>COOP MORELLER</td><td class="mengde">I carrybag. Pr hg Pr kg 99,00</td><td class="price">9,90</td><td class="store">Extra Mysen</td><td class="desc">99,-/kilogram</td></tr>
+<tr data-store="obs"><td>GRØNNE DRUER</td><td class="mengde">Løsvekt. Pr kg</td><td class="price">39,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">39,90/kilogram</td></tr>
+<tr data-store="spar"><td>Norske moreller</td><td class="mengde">Gartner, pr. hg 129,00/kg</td><td class="price">12,90</td><td class="store">Spar</td><td class="desc">129,-/kilogram</td></tr>
+<tr data-store="extra"><td>COOP RØDE/GRØNNE DRUER</td><td class="mengde">500 g</td><td class="price">29,90</td><td class="store">Extra Mysen</td><td class="desc">59,80/kilogram</td></tr>
+<tr data-store="rema"><td>KIWI GUL 3PK</td><td class="mengde">325 g</td><td class="price">34,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">107,38/kilogram</td></tr>
+<tr data-store="spar"><td>Steinfrukter</td><td class="mengde">500 g</td><td class="price">29,90</td><td class="store">Spar</td><td class="desc">99,67/kilogram</td></tr>
+<tr data-store="extra"><td>Coop Moreller</td><td class="mengde">Søte og gode! Pr hg</td><td class="price">9,90</td><td class="store">Extra Mysen</td><td class="desc">99,-/kilogram</td></tr>
+<tr data-store="extra"><td>Honningmelon</td><td class="mengde">Forfriskende! Pr kg</td><td class="price">19,90</td><td class="store">Extra Mysen</td><td class="desc">19,90/kilogram</td></tr>
+<tr data-store="spar"><td>Sukkermeloner</td><td class="mengde">Cevita, hele, pr. kg Utvalget kan variere</td><td class="price">34,90</td><td class="store">Spar</td><td class="desc">34,90/kilogram</td></tr>
+<tr data-store="obs"><td>VANNMELON</td><td class="mengde">Hel. Pr kg</td><td class="price">14,90</td><td class="store">Coop Obs Slitu 🚗</td><td class="desc">14,90/kilogram</td></tr>
+<tr data-store="rema"><td>Citroner</td><td class="mengde">PR. KG</td><td class="price">39,90</td><td class="store">Rema 1000 Mysen</td><td class="desc">39,90/kilogram</td></tr>
+<tr data-store="kiwi"><td>NEKTARIN</td><td class="mengde">1 kg</td><td class="price">34,90</td><td class="store">Kiwi Mysen</td><td class="desc">34,90/kilogram</td></tr>
+<tr data-store="meny"><td>CEVITA STENFRUKTER</td><td class="mengde">600 g</td><td class="price">34,90</td><td class="store">Meny Askim 🚗</td><td class="desc">87,25/kilogram</td></tr>
+<tr data-store="bunnpris"><td>FERSKEN, NEKTARINER OG APRIKOSER</td><td class="mengde">400 g</td><td class="price">35,-</td><td class="store">Bunnpris</td><td class="desc">87,50/kilogram</td></tr>
+<tr data-store="kiwi"><td>HEL VANNMELON</td><td class="mengde">Pr. kg
+15% Trumf-bonus med KIWI PLUSS</td><td class="price">14,90</td><td class="store">Kiwi Mysen</td><td class="desc">14,90/kilogram</td></tr>
+<tr data-store="spar"><td>Kuttet frukt</td><td class="mengde"></td><td class="price">3 for 2</td><td class="store">Spar</td><td class="desc"></td></tr>
 </table>
 
 
 <h2>📍 Butikker i Mysen-området</h2>
 <div class="shop-grid">
-  <div class="shop-card" onclick="filterStore('kiwi')"><h4>Kiwi Mysen</h4><p>2 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('rema')"><h4>Rema 1000 Mysen</h4><p>8 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('extra')"><h4>Extra Mysen</h4><p>9 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('bunnpris')"><h4>Bunnpris</h4><p>7 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('spar')"><h4>Spar</h4><p>1 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('obs')"><h4>Coop Obs Slitu 🚗</h4><p>11 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('meny')"><h4>Meny Askim 🚗</h4><p>8 tilbud</p></div>
-  <div class="shop-card" onclick="filterStore('europris')"><h4>Europris Mysen</h4><p>2 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('kiwi')"><h4>Kiwi Mysen</h4><p>31 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('rema')"><h4>Rema 1000 Mysen</h4><p>33 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('extra')"><h4>Extra Mysen</h4><p>54 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('bunnpris')"><h4>Bunnpris</h4><p>57 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('spar')"><h4>Spar</h4><p>27 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('obs')"><h4>Coop Obs Slitu 🚗</h4><p>37 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('meny')"><h4>Meny Askim 🚗</h4><p>32 tilbud</p></div>
+  <div class="shop-card" onclick="filterStore('europris')"><h4>Europris Mysen</h4><p>14 tilbud</p></div>
 </div>
 
 <div class="summary">
 <h3>📊 Oppsummering</h3>
-<p>Priser fra eTilbudsavis og Enhver.no — oppdatert 20.07.2026 kl 08:10. Klikk på butikknavn for å filtrere varer. Grønn bakgrunn = med rabatt.</p>
+<p>Priser fra eTilbudsavis og Enhver.no — oppdatert 25.07.2026 kl 15:50. Klikk på butikknavn for å filtrere varer. Grønn bakgrunn = med rabatt.</p>
 </div>
 
 <script>
