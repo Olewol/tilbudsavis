@@ -38,7 +38,7 @@ def is_allowed_store(name):
     return True
 
 def is_grocery(store):
-    return any(kw in store.lower() for kw in ['kiwi','rema','coop','extra','bunnpris','spar','obs','meny','europris'])
+    return any(kw in store.lower().split() for kw in ['kiwi','rema','coop','extra','bunnpris','spar','obs','meny','europris'])
 
 def normalize_store(name):
     name = name.strip()
