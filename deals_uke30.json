@@ -493,15 +493,6 @@
           "merknad": "166,11/kilogram"
         },
         {
-          "name": "Svin indrefilet",
-          "mengde": "600 g",
-          "price": "199,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "199,-/kilogram"
-        },
-        {
           "name": "COOP GRILL PERFEKT YTREFILET",
           "mengde": "Av svin. Pr kg",
           "price": "189,-",
@@ -509,15 +500,6 @@
           "store_label": "Extra Mysen",
           "store_key": "extra",
           "merknad": "189,-/kilogram"
-        },
-        {
-          "name": "Svin ytrefilet",
-          "mengde": "600 g",
-          "price": "199,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "199,-/kilogram"
         },
         {
           "name": "SVIN INDREFILET CAJUN CORN",
@@ -1153,15 +1135,6 @@
           "merknad": "116,33/kilogram"
         },
         {
-          "name": "3 FOR 2 TAPAS",
-          "mengde": "",
-          "price": "3 for 2",
-          "store": "Rema 1000",
-          "store_label": "Rema 1000 Mysen",
-          "store_key": "rema",
-          "merknad": ""
-        },
-        {
           "name": "SPEKESKINKE",
           "mengde": "190 g",
           "price": "89,-",
@@ -1327,15 +1300,6 @@
           "store_label": "Spar",
           "store_key": "spar",
           "merknad": "39,87/kilogram"
-        },
-        {
-          "name": "PØLSEFEST!",
-          "mengde": "",
-          "price": "3 for 2",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": ""
         },
         {
           "name": "FOCACCIA HAVSALT",
@@ -1530,15 +1494,6 @@
           "store_label": "Europris Mysen",
           "store_key": "europris",
           "merknad": "25,-/piece"
-        },
-        {
-          "name": "Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag",
-          "mengde": "",
-          "price": "30,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "30,-/piece"
         },
         {
           "name": "Utvalgt snacks til knallpris!",
@@ -1785,15 +1740,6 @@
           "merknad": "9,89/liter"
         },
         {
-          "name": "Pepsi / Solo",
-          "mengde": "10-pk",
-          "price": "99,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "9,90/piece"
-        },
-        {
           "name": "4PK BRUS PÅ BOKS",
           "mengde": "4x0.33 l",
           "price": "3 for 2",
@@ -1848,15 +1794,6 @@
           "merknad": "16,67/liter"
         },
         {
-          "name": "Coca-Cola Zero",
-          "mengde": "4-pk",
-          "price": "39,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "9,75/piece"
-        },
-        {
           "name": "FARRIS BRIS",
           "mengde": "20x0.33 l",
           "price": "129,-",
@@ -1882,15 +1819,6 @@
           "store_label": "Spar",
           "store_key": "spar",
           "merknad": "39,80/liter"
-        },
-        {
-          "name": "Coca-cola",
-          "mengde": "4-pk",
-          "price": "39,90",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "9,97/piece"
         },
         {
           "name": "IMSDAL OG IMSDAL LIMONADE",
@@ -2164,15 +2092,6 @@
           "merknad": "19,90/kilogram"
         },
         {
-          "name": "all norsk blomkål, brokkoli og isbergsalat",
-          "mengde": "Sommerpris på norske grønnsaker Gjelder all norsk blomkål, brokkoli og isbergsalat Pr stk Gjelder t.o.m. 2. august",
-          "price": "14,90",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "14,90/piece"
-        },
-        {
           "name": "GULROT",
           "mengde": "",
           "price": "29,90",
@@ -2216,15 +2135,6 @@
           "store_label": "Kiwi Mysen",
           "store_key": "kiwi",
           "merknad": "260,00/kilogram"
-        },
-        {
-          "name": "Smak* Piccolotomater",
-          "mengde": "",
-          "price": "49,90",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "49,90/piece"
         },
         {
           "name": "KLASETOMAT",
@@ -2475,15 +2385,6 @@
           "merknad": "107,38/kilogram"
         },
         {
-          "name": "Coop Moreller",
-          "mengde": "Søte og gode! Pr hg",
-          "price": "9,90",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "99,-/kilogram"
-        },
-        {
           "name": "Steinfrukter",
           "mengde": "500 g",
           "price": "29,90",
@@ -2491,15 +2392,6 @@
           "store_label": "Spar",
           "store_key": "spar",
           "merknad": "99,67/kilogram"
-        },
-        {
-          "name": "Honningmelon",
-          "mengde": "Forfriskende! Pr kg",
-          "price": "19,90",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "19,90/kilogram"
         },
         {
           "name": "VANNMELON",
@@ -2577,8 +2469,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T20:06:18.298460",
-    "quality_score": 82.0,
-    "total_products": 267
+    "generated": "2026-07-25T20:11:35.862360",
+    "quality_score": 82.2,
+    "total_products": 255
   }
 }

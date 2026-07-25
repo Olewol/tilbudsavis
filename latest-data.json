@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-07-25T20:06:18.295870",
+    "generated": "2026-07-25T20:11:35.860135",
     "week": 30,
-    "quality_score": 82.0,
-    "total_products": 277
+    "quality_score": 82.2,
+    "total_products": 265
   },
   "products": [
     {
@@ -538,16 +538,6 @@
     },
     {
       "category": "Svin",
-      "name": "Svin indrefilet",
-      "mengde": "600 g",
-      "price": "199,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "199,-/kilogram"
-    },
-    {
-      "category": "Svin",
       "name": "COOP GRILL PERFEKT YTREFILET",
       "mengde": "Av svin. Pr kg",
       "price": "189,-",
@@ -555,16 +545,6 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "189,-/kilogram"
-    },
-    {
-      "category": "Svin",
-      "name": "Svin ytrefilet",
-      "mengde": "600 g",
-      "price": "199,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "199,-/kilogram"
     },
     {
       "category": "Svin",
@@ -1238,16 +1218,6 @@
     },
     {
       "category": "Pålegg",
-      "name": "3 FOR 2 TAPAS",
-      "mengde": "",
-      "price": "3 for 2",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": ""
-    },
-    {
-      "category": "Pålegg",
       "name": "SPEKESKINKE",
       "mengde": "190 g",
       "price": "89,-",
@@ -1425,16 +1395,6 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "39,87/kilogram"
-    },
-    {
-      "category": "Brød",
-      "name": "PØLSEFEST!",
-      "mengde": "",
-      "price": "3 for 2",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": ""
     },
     {
       "category": "Brød",
@@ -1645,16 +1605,6 @@
       "store_label": "Europris Mysen",
       "store_key": "europris",
       "merknad": "25,-/piece"
-    },
-    {
-      "category": "Snacks",
-      "name": "Sørlandschips God Sommer Havsalt/ Grillchips Oppdrag Middag",
-      "mengde": "",
-      "price": "30,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "30,-/piece"
     },
     {
       "category": "Snacks",
@@ -1918,16 +1868,6 @@
     },
     {
       "category": "Drikke",
-      "name": "Pepsi / Solo",
-      "mengde": "10-pk",
-      "price": "99,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "9,90/piece"
-    },
-    {
-      "category": "Drikke",
       "name": "4PK BRUS PÅ BOKS",
       "mengde": "4x0.33 l",
       "price": "3 for 2",
@@ -1988,16 +1928,6 @@
     },
     {
       "category": "Drikke",
-      "name": "Coca-Cola Zero",
-      "mengde": "4-pk",
-      "price": "39,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "9,75/piece"
-    },
-    {
-      "category": "Drikke",
       "name": "FARRIS BRIS",
       "mengde": "20x0.33 l",
       "price": "129,-",
@@ -2025,16 +1955,6 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "39,80/liter"
-    },
-    {
-      "category": "Drikke",
-      "name": "Coca-cola",
-      "mengde": "4-pk",
-      "price": "39,90",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "9,97/piece"
     },
     {
       "category": "Drikke",
@@ -2328,16 +2248,6 @@
     },
     {
       "category": "Grønnsaker",
-      "name": "all norsk blomkål, brokkoli og isbergsalat",
-      "mengde": "Sommerpris på norske grønnsaker Gjelder all norsk blomkål, brokkoli og isbergsalat Pr stk Gjelder t.o.m. 2. august",
-      "price": "14,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "14,90/piece"
-    },
-    {
-      "category": "Grønnsaker",
       "name": "GULROT",
       "mengde": "",
       "price": "29,90",
@@ -2385,16 +2295,6 @@
       "store_label": "Kiwi Mysen",
       "store_key": "kiwi",
       "merknad": "260,00/kilogram"
-    },
-    {
-      "category": "Grønnsaker",
-      "name": "Smak* Piccolotomater",
-      "mengde": "",
-      "price": "49,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "49,90/piece"
     },
     {
       "category": "Grønnsaker",
@@ -2668,16 +2568,6 @@
     },
     {
       "category": "Frukt",
-      "name": "Coop Moreller",
-      "mengde": "Søte og gode! Pr hg",
-      "price": "9,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "99,-/kilogram"
-    },
-    {
-      "category": "Frukt",
       "name": "Steinfrukter",
       "mengde": "500 g",
       "price": "29,90",
@@ -2685,16 +2575,6 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "99,67/kilogram"
-    },
-    {
-      "category": "Frukt",
-      "name": "Honningmelon",
-      "mengde": "Forfriskende! Pr kg",
-      "price": "19,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "19,90/kilogram"
     },
     {
       "category": "Frukt",
