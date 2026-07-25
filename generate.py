@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate tilbudsavis HTML — uke 27 retro design + Mengde + Merknad."""
+"""Generate tilbudsavis HTML — retro/monospace design med kvalitetsinfo."""
 import json, os, sys
 from datetime import datetime
 from html import escape
-import re as _re
+
+# ── Butikk-konstanter (synkronisert med pipeline) ───────────────────────────
 
 STORE_KEY = {
     'Kiwi': 'kiwi', 'Rema 1000': 'rema', 'Extra': 'extra',
@@ -62,13 +63,32 @@ CAT_EMOJI = {
     'Grønnsaker':'🥦','Frukt':'🍎','Ingredienser':'🧂',
 }
 
+ALL_CATEGORIES = {
+    'Kylling', 'Storfe', 'Svin', 'Laks', 'Fisk', 'Reker/scampi',
+    'Yoghurt', 'Egg', 'Ost', 'Pålegg', 'Brød',
+    'Snacks', 'Kaffe', 'Drikke', 'Dessert/is',
+    'Grønnsaker', 'Frukt', 'Ingredienser',
+}
+
+
 def generate_html(deals, output_path="index.html"):
     now = datetime.now()
     iso = now.isocalendar()
     week_label = f"Uke {iso[1]}"
     generated = now.strftime("%d.%m.%Y kl %H:%M")
 
-    # Filter and collect stores
+    # ── Metadata ──────────────────────────────────────────────────────────
+    meta = deals.get('_meta', {})
+    quality_score = meta.get('quality_score')
+    total_products = meta.get('total_products')
+    total_products = total_products or sum(len(c.get("items",[])) for c in deals.get("categories",[]))
+
+    # Missing categories
+    found_cats = set(c['name'] for c in deals.get("categories",[]))
+    missing_cats = ALL_CATEGORIES - found_cats
+    missing_cats.discard('Fisk')  # supplerende kategori
+
+    # ── Filter and collect stores ────────────────────────────────────────
     all_stores = set()
     for cat in deals.get("categories", []):
         kept = []
@@ -89,21 +109,21 @@ def generate_html(deals, output_path="index.html"):
     store_order = ["Kiwi","Rema 1000","Extra","Bunnpris","Spar","Obs","Meny","Europris"]
     sorted_stores = sorted(all_stores, key=lambda s: store_order.index(s) if s in store_order else 99)
 
-    # Store pills
+    # ── Store pills ──────────────────────────────────────────────────────
     pills = '<span class="store-badge active" data-store="all" onclick="filterStore(\'all\')">🌐 Alle</span>\n'
     for s in sorted_stores:
         key = STORE_KEY.get(s, s.lower().replace(' ',''))
         label = STORE_LABEL.get(s, s)
         pills += f'  <span class="store-badge" data-store="{key}" onclick="filterStore(\'{key}\')">{label}</span>\n'
 
-    # Cat nav
+    # ── Cat nav ──────────────────────────────────────────────────────────
     cat_nav = ''
     for ci, cat in enumerate(deals.get("categories", [])):
         cid = f"cat{ci}"
         short = CAT_NAV.get(cat['name'], cat['name'][:8])
         cat_nav += f'<a href="#{cid}">{short}</a>'
 
-    # Top 10
+    # ── Top 10 ───────────────────────────────────────────────────────────
     top10 = ''
     for p in deals.get("top_picks", [])[:10]:
         name = escape(p.get("name",""))
@@ -117,7 +137,7 @@ def generate_html(deals, output_path="index.html"):
         md = f' {mengde}' if mengde else ''
         top10 += f'<li data-store-filter="{skey}"><strong>{label}</strong> — {name}{md} <strong class="price">{price}</strong>{mn}</li>\n'
 
-    # Categories
+    # ── Categories ───────────────────────────────────────────────────────
     cats_html = ''
     for ci, cat in enumerate(deals.get("categories", [])):
         items = cat.get("items", [])
@@ -125,7 +145,7 @@ def generate_html(deals, output_path="index.html"):
             continue
         cid = f"cat{ci}"
         emoji = CAT_EMOJI.get(cat['name'], '📦')
-        
+
         tbl = '<table>\n<tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>\n'
         for item in items:
             name = escape(item.get("name",""))
@@ -135,16 +155,33 @@ def generate_html(deals, output_path="index.html"):
             store = normalize_store(item.get("store",""))
             skey = STORE_KEY.get(store, store.lower().replace(' ',''))
             label = STORE_LABEL.get(store, store)
-            
-            is_winner = bool(merknad)
+
+            is_winner = bool(merknad) and ('spar' in merknad.lower() or 'før' in merknad.lower())
             cls = ' class="winner"' if is_winner else ''
-            
+
             tbl += f'<tr{cls} data-store="{skey}"><td>{name}</td><td class="mengde">{mengde}</td><td class="price">{price}</td><td class="store">{label}</td><td class="desc">{merknad}</td></tr>\n'
-        
+
         tbl += '</table>'
         cats_html += f'\n<h2 id="{cid}">{emoji} {escape(cat["name"])}</h2>\n{tbl}\n'
 
-    # Shop cards
+    # ── Missing categories warning ──────────────────────────────────────
+    missing_html = ''
+    if missing_cats:
+        missing_html = '<div class="missing-cats"><h3>⚠️ Mangler data for:</h3><p>'
+        missing_html += ', '.join(sorted(missing_cats))
+        missing_html += '</p><p class="hint">Pipeline har ikke funnet gode tilbud i disse kategoriene denne uken.</p></div>'
+
+    # ── Quality badge ────────────────────────────────────────────────────
+    quality_html = ''
+    if quality_score is not None:
+        color = '#2d5a27' if quality_score >= 80 else '#8b4513' if quality_score >= 60 else '#c0392b'
+        quality_html = f'<div class="quality-badge" style="border-left:4px solid {color}">'
+        quality_html += f'📊 Datakvalitet: <strong>{quality_score}/100</strong>'
+        if total_products:
+            quality_html += f' · {total_products} varer'
+        quality_html += '</div>'
+
+    # ── Shop cards ───────────────────────────────────────────────────────
     shop_cards = ''
     store_counts = {}
     for c in deals.get("categories", []):
@@ -158,6 +195,7 @@ def generate_html(deals, output_path="index.html"):
             count = store_counts.get(s, 0)
             shop_cards += f'  <div class="shop-card" onclick="filterStore(\'{skey}\')"><h4>{label}</h4><p>{count} tilbud</p></div>\n'
 
+    # ── HTML template ────────────────────────────────────────────────────
     html = f"""<!DOCTYPE html>
 <html lang="nb">
 <head>
@@ -177,9 +215,6 @@ def generate_html(deals, output_path="index.html"):
   .price {{ font-weight: bold; white-space: nowrap; color: var(--accent2); }}
   .mengde {{ white-space: nowrap; font-size: 0.85em; color: #555; }}
   .store {{ white-space: nowrap; font-size: 0.85em; }}
-  .store-badge {{ display: inline-block; padding: 1px 6px; border: 1px solid var(--border); font-size: 0.78em; margin: 1px; cursor: pointer; }}
-  .store-badge.active {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
-  .store-badge.filter-inactive {{ opacity: 0.3; }}
   .desc {{ color: #666; font-size: 0.82em; }}
   .winner {{ background: #e8f5e0; }}
   .winner td {{ border-bottom: 1px solid #c8e6b0; }}
@@ -202,7 +237,10 @@ def generate_html(deals, output_path="index.html"):
   .cat-nav {{ margin: 12px 0; display: flex; flex-wrap: wrap; gap: 4px; }}
   .cat-nav a {{ font-size: 0.75em; padding: 2px 8px; border: 1px solid var(--border); text-decoration: none; color: #222; }}
   .cat-nav a:hover {{ background: var(--accent); color: #fff; }}
-  .sv {{ font-size: 0.85em; color: var(--accent2); }}
+  .quality-badge {{ background: var(--card); padding: 10px 14px; margin-bottom: 15px; font-size: 0.85em; }}
+  .missing-cats {{ background: #fff3e0; border: 1px solid #ffe0b2; padding: 12px 16px; margin: 15px 0; font-size: 0.9em; }}
+  .missing-cats h3 {{ color: #e65100; font-size: 1em; margin-bottom: 4px; }}
+  .missing-cats .hint {{ color: #888; font-size: 0.85em; margin-top: 4px; }}
   @media (max-width: 600px) {{ body {{ padding: 10px; }} table {{ font-size: 0.8em; }} td {{ padding: 3px 5px; }} }}
 </style>
 </head>
@@ -211,6 +249,9 @@ def generate_html(deals, output_path="index.html"):
 <h1>🛒 Ukens beste tilbud — {week_label}</h1>
 <p style="margin-bottom:5px"><strong>Periode:</strong> uke {week_label} | <strong>Område:</strong> Mysen (Indre Østfold)</p>
 <p class="last-updated">Oppdatert {generated} | Kilde: eTilbudsavis, Enhver.no</p>
+
+{quality_html}
+{missing_html}
 
 <p style="margin-bottom:8px;font-size:0.9em;"><strong>🔍 Trykk på en butikk</strong> for å filtrere:</p>
 <div class="store-list" id="store-filters">
@@ -258,13 +299,44 @@ function filterStore(store) {{
     else li.getAttribute('data-store-filter') === store ? li.classList.remove('hidden') : li.classList.add('hidden');
   }});
 }}
+
+// Dynamisk datalasting fra JSON (latest-data.json)
+// Hvis JSON-en oppdateres, vil siden vise nye data uten å måtte generere HTML på nytt.
+const DATA_URL = 'latest-data.json';
+async function loadDynamicData() {{
+  try {{
+    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!resp.ok) return; // ingen dynamisk data = bruk statisk HTML
+    const data = await resp.json();
+    if (!data.products || !data.meta) return;
+    
+    // Oppdater kvalitets-badge
+    const qb = document.querySelector('.quality-badge');
+    if (qb && data.meta.quality_score) {{
+      const score = data.meta.quality_score;
+      const color = score >= 80 ? '#2d5a27' : score >= 60 ? '#8b4513' : '#c0392b';
+      qb.style.borderLeftColor = color;
+      qb.innerHTML = '📊 Datakvalitet: <strong>' + score + '/100</strong> · ' + data.meta.total_products + ' varer';
+    }}
+    
+    // Oppdater sist-oppdatert
+    const upd = document.querySelector('.last-updated');
+    if (upd && data.meta.generated) {{
+      const dt = new Date(data.meta.generated).toLocaleString('nb-NO', {{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}});
+      upd.textContent = 'Oppdatert ' + dt + ' | Kilde: eTilbudsavis, Enhver.no (dynamisk)';
+    }}
+  }} catch(e) {{
+    // stille — bruk statisk HTML som fallback
+  }}
+}}
+loadDynamicData();
 </script>
 </body>
 </html>"""
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
-    
+
     total = sum(len(c.get("items",[])) for c in deals.get("categories",[]))
     print(f"✅ {output_path} ({len(html)} bytes, {len(sorted_stores)} butikker, {total} varer)")
 
