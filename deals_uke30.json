@@ -2289,7 +2289,7 @@
           "merknad": "39,80/liter"
         },
         {
-          "name": "COCA-COLA, FANTA, URGE OG SPRITE",
+          "name": "COCA COLA, FANTA, URGE OG SPRITE",
           "mengde": "1.5 l",
           "price": "25,-",
           "store": "Bunnpris",
@@ -2919,7 +2919,7 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T15:53:02.163550",
+    "generated": "2026-07-25T15:53:47.356392",
     "quality_score": 81.4,
     "total_products": 305
   }
