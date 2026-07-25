@@ -390,7 +390,7 @@
         },
         {
           "name": "GRILLBURGER",
-          "mengde": "2x130 g",
+          "mengde": "130 g",
           "price": "49,-",
           "store": "Bunnpris",
           "store_label": "Bunnpris",
@@ -2010,7 +2010,7 @@
           "merknad": "39,80/liter"
         },
         {
-          "name": "COCA-COLA, FANTA, URGE OG SPRITE",
+          "name": "COCA COLA, FANTA, URGE OG SPRITE",
           "mengde": "1.5 l",
           "price": "25,-",
           "store": "Bunnpris",
@@ -2694,7 +2694,7 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T17:49:49.900483",
+    "generated": "2026-07-25T17:50:54.143510",
     "quality_score": 82.3,
     "total_products": 280
   }
