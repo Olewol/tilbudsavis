@@ -462,7 +462,7 @@
         },
         {
           "name": "STORE FROSNE REKER",
-          "mengde": "Frosne reker er et godt alternativ til ferske reker. Siden rekene blir singelfryst, bevares den gode smaken og konsistensen. FAST SOMMERPRIS STR. 40/60 (ANTALL PR. KG)",
+          "mengde": "STR. 40/60 (ANTALL PR. KG) FaSt SommERPriS",
           "price": "229,-",
           "store": "Jacobs",
           "store_label": "Jacobs",
@@ -869,7 +869,7 @@
           "store": "Obs",
           "store_label": "Coop Obs Slitu 🚗",
           "store_key": "obs",
-          "merknad": "352,35/kilogram · før 69,50,- · spar 9,-"
+          "merknad": "352,35/kilogram · før 66,00,- · spar 6,-"
         },
         {
           "name": "SCAMPI NATURELL",
@@ -1415,7 +1415,7 @@
         },
         {
           "name": "COOP GRILL PERFEKT GRILLPOTETSALAT",
-          "mengde": "400. Pr pk Pr kg 62,25\nHusk tilbehøret!",
+          "mengde": "400. Pr pk Pr kg 62,25",
           "price": "24,90",
           "store": "Obs",
           "store_label": "Coop Obs Slitu 🚗",
@@ -2629,7 +2629,7 @@
           "store": "Bunnpris",
           "store_label": "Bunnpris",
           "store_key": "bunnpris",
-          "merknad": "25,-/piece"
+          "merknad": "25,-/kilogram"
         },
         {
           "name": "NYPOTET",
@@ -2919,7 +2919,7 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T15:50:23.558506",
+    "generated": "2026-07-25T15:53:02.163550",
     "quality_score": 81.4,
     "total_products": 305
   }
