@@ -14,9 +14,10 @@ STORE_KEY = {
 
 STORE_LABEL = {
     'Kiwi': 'Kiwi Mysen', 'Rema 1000': 'Rema 1000 Mysen',
-    'Extra': 'Extra Mysen', 'Bunnpris': 'Bunnpris',
-    'Spar': 'Spar', 'Obs': 'Coop Obs Slitu 🚗',
-    'Meny': 'Meny Askim 🚗', 'Europris': 'Europris Mysen',
+    'Extra': 'Extra Mysen', 'Coop Prix': 'Coop Prix ⚠️',
+    'Bunnpris': 'Bunnpris', 'Spar': 'Spar',
+    'Obs': 'Coop Obs Slitu 🚗', 'Meny': 'Meny Askim 🚗',
+    'Europris': 'Europris Mysen',
 }
 
 STORE_ALIASES = {
