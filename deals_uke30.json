@@ -105,6 +105,15 @@
           "merknad": "99,80/kilogram · spar 20,-"
         },
         {
+          "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
+          "mengde": "700 g",
+          "price": "79,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
+        },
+        {
           "name": "ET STORT UTVALG PEPPES-PRODUKTER",
           "mengde": "50 g",
           "price": "",
@@ -1848,15 +1857,6 @@
           "merknad": "32,42/liter · før 64,90,- · spar 26,-"
         },
         {
-          "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
-          "mengde": "700 g",
-          "price": "79,90",
-          "store": "Obs",
-          "store_label": "Coop Obs Slitu 🚗",
-          "store_key": "obs",
-          "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
-        },
-        {
           "name": "COCA-COLA ORIGINAL/COCA-COLA ZERO SUGAR/ URGE/FANTA ZERO SUGAR/SPRITE ZERO SUGAR",
           "mengde": "10x0.33 l",
           "price": "69,-",
@@ -2703,7 +2703,7 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T17:42:55.055280",
+    "generated": "2026-07-25T17:43:31.262256",
     "quality_score": 82.3,
     "total_products": 281
   }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-25T17:42:55.052848",
+    "generated": "2026-07-25T17:43:31.259539",
     "week": 30,
     "quality_score": 82.3,
     "total_products": 291
@@ -115,6 +115,16 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "99,80/kilogram · spar 20,-"
+    },
+    {
+      "category": "Kylling",
+      "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
+      "mengde": "700 g",
+      "price": "79,90",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
     },
     {
       "category": "Kylling",
@@ -1985,16 +1995,6 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "32,42/liter · før 64,90,- · spar 26,-"
-    },
-    {
-      "category": "Drikke",
-      "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
-      "mengde": "700 g",
-      "price": "79,90",
-      "store": "Obs",
-      "store_label": "Coop Obs Slitu 🚗",
-      "store_key": "obs",
-      "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
     },
     {
       "category": "Drikke",
