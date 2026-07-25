@@ -37,15 +37,6 @@
       "merknad": "179,88/kilogram · spar 40,-"
     },
     {
-      "name": "COCA-COLA 10 PK BOKSER",
-      "mengde": "10x0.33 l",
-      "price": "69,90",
-      "store": "Coop Prix",
-      "store_label": "Coop Prix ⚠️",
-      "store_key": "coop-prix",
-      "merknad": "21,18/liter · spar 40,-"
-    },
-    {
       "name": "MELKESJOKOLADE kjeks",
       "mengde": "",
       "price": "40,-",
@@ -64,15 +55,6 @@
       "merknad": "20,20/liter · spar 39,-"
     },
     {
-      "name": "NORVEGIA DUO",
-      "mengde": "2x1 kg",
-      "price": "119,-",
-      "store": "Coop Prix",
-      "store_label": "Coop Prix ⚠️",
-      "store_key": "coop-prix",
-      "merknad": "59,50/kilogram · spar 36,-"
-    },
-    {
       "name": "ROYAL VANILJE",
       "mengde": "0.9 l",
       "price": "50,90",
@@ -89,6 +71,24 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "74,84/liter · før 79,90,- · spar 32,-"
+    },
+    {
+      "name": "FILTERMALT KJELDSBERG",
+      "mengde": "500 g",
+      "price": "73,40",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "146,80/kilogram · spar 31,-"
+    },
+    {
+      "name": "SYNNØVE GÅRDSOST",
+      "mengde": "800 g",
+      "price": "109,90",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "137,38/kilogram · før 139,50,- · spar 29,-"
     }
   ],
   "categories": [
@@ -130,15 +130,6 @@
           "store_label": "Bunnpris",
           "store_key": "bunnpris",
           "merknad": "295,-/kilogram"
-        },
-        {
-          "name": "Kyllingfilet",
-          "mengde": "450 g",
-          "price": "95,90 (medlem 80,90)",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "213,11/kilogram"
         },
         {
           "name": "KYLLINGMINUTTFILET",
@@ -281,15 +272,6 @@
       "name": "Storfe",
       "items": [
         {
-          "name": "GRILL PERFEKT PØLSER/BURGERE",
-          "mengde": "240 g",
-          "price": "",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "-25%"
-        },
-        {
           "name": "CRISPY BURGER",
           "mengde": "180 g",
           "price": "39,-",
@@ -297,15 +279,6 @@
           "store_label": "Bunnpris",
           "store_key": "bunnpris",
           "merknad": "216,67/kilogram"
-        },
-        {
-          "name": "Karbonadedeig",
-          "mengde": "400 g",
-          "price": "102,90 (medlem 88,90)",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "257,25/kilogram"
         },
         {
           "name": "SKJEGGERØD PEPPERBIFF",
@@ -714,15 +687,6 @@
           "merknad": "275,38/kilogram"
         },
         {
-          "name": "Laksefilet",
-          "mengde": "500 g",
-          "price": "145,90 (medlem 122,90)",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "291,80/kilogram"
-        },
-        {
           "name": "SJØMAT FRA JACOBS UTVALGTE",
           "mengde": "",
           "price": "3 for 2",
@@ -945,15 +909,6 @@
           "merknad": "3,61/piece"
         },
         {
-          "name": "FROKOSTEGG",
-          "mengde": "",
-          "price": "68,90 (medlem 59,90)",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "5,74/piece"
-        },
-        {
           "name": "BRIOCHE GOURMET",
           "mengde": "500 g",
           "price": "59,90",
@@ -967,15 +922,6 @@
     {
       "name": "Ost",
       "items": [
-        {
-          "name": "NORVEGIA DUO",
-          "mengde": "2x1 kg",
-          "price": "119,-",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "59,50/kilogram · spar 36,-"
-        },
         {
           "name": "SYNNØVE GÅRDSOST",
           "mengde": "800 g",
@@ -1011,15 +957,6 @@
           "store_label": "Extra Mysen",
           "store_key": "extra",
           "merknad": "200,-/kilogram · spar 11,-"
-        },
-        {
-          "name": "STABBURET LEVERPOSTEI",
-          "mengde": "100 g",
-          "price": "9,90",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "99,-/kilogram · spar 7,-"
         },
         {
           "name": "GULOST&CHEDDAR",
@@ -1338,15 +1275,6 @@
           "merknad": "-30%"
         },
         {
-          "name": "ALL SÆTRE KJEKS",
-          "mengde": "400 g",
-          "price": "",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "-30%"
-        },
-        {
           "name": "RYVITA KNEKKEBRØD/ MÜSLI CRUNCH",
           "mengde": "400 g",
           "price": "",
@@ -1408,15 +1336,6 @@
           "store_label": "Bunnpris",
           "store_key": "bunnpris",
           "merknad": ""
-        },
-        {
-          "name": "SANTA MARIA TORTILLA",
-          "mengde": "8 stk",
-          "price": "40,-",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "3,33/piece"
         },
         {
           "name": "FOCACCIA HAVSALT",
@@ -1530,15 +1449,6 @@
           "store_label": "Rema 1000 Mysen",
           "store_key": "rema",
           "merknad": "69,10/kilogram · spar 13,-"
-        },
-        {
-          "name": "FREIA STORE PLATER OG POSER",
-          "mengde": "1 stk",
-          "price": "90,-",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "346,15/kilogram"
         },
         {
           "name": "Maarud Sombreros",
@@ -1753,24 +1663,6 @@
           "merknad": "146,80/kilogram · spar 31,-"
         },
         {
-          "name": "FRIELE LUNGO 6 20 STK",
-          "mengde": "Pr pk. Pr stk 2,50 Førpris 76,90",
-          "price": "49,90",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "2,50/piece · spar 27,-"
-        },
-        {
-          "name": "FRIELE GULL INSTANT REFILL",
-          "mengde": "100 g",
-          "price": "39,90",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "399,00/kilogram · spar 20,-"
-        },
-        {
           "name": "FILTERMALT KJELDSBERG",
           "mengde": "250 g",
           "price": "37,90",
@@ -1829,15 +1721,6 @@
     {
       "name": "Drikke",
       "items": [
-        {
-          "name": "COCA-COLA 10 PK BOKSER",
-          "mengde": "10x0.33 l",
-          "price": "69,90",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "21,18/liter · spar 40,-"
-        },
         {
           "name": "15-PK BRUS 0,33 LITER",
           "mengde": "",
@@ -2202,15 +2085,6 @@
           "store_label": "Coop Obs Slitu 🚗",
           "store_key": "obs",
           "merknad": "4,15/piece"
-        },
-        {
-          "name": "DIPLOM-IS MULTIPAKKER",
-          "mengde": "12-pk",
-          "price": "100,-",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "8,33/piece"
         },
         {
           "name": "SANDWICH",
@@ -2583,15 +2457,6 @@
           "merknad": "39,90/kilogram"
         },
         {
-          "name": "COOP RØDE/GRØNNE DRUER",
-          "mengde": "500 g",
-          "price": "29,90",
-          "store": "Coop Prix",
-          "store_label": "Coop Prix ⚠️",
-          "store_key": "coop-prix",
-          "merknad": "59,80/kilogram"
-        },
-        {
           "name": "Norske moreller",
           "mengde": "Gartner, pr. hg 129,00/kg",
           "price": "12,90",
@@ -2712,8 +2577,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-07-25T19:57:01.149265",
-    "quality_score": 81.7,
-    "total_products": 282
+    "generated": "2026-07-25T20:06:18.298460",
+    "quality_score": 82.0,
+    "total_products": 267
   }
 }
