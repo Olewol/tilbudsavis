@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-25T17:39:54.392395",
+    "generated": "2026-07-25T17:42:55.052848",
     "week": 30,
     "quality_score": 82.3,
     "total_products": 291
@@ -108,16 +108,6 @@
     },
     {
       "category": "Kylling",
-      "name": "LOLLIPOP",
-      "mengde": "1.2 l",
-      "price": "38,90",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "32,42/liter · før 64,90,- · spar 26,-"
-    },
-    {
-      "category": "Kylling",
       "name": "Kyllingvinger",
       "mengde": "500 g",
       "price": "49,90",
@@ -128,16 +118,6 @@
     },
     {
       "category": "Kylling",
-      "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
-      "mengde": "700 g",
-      "price": "79,90",
-      "store": "Obs",
-      "store_label": "Coop Obs Slitu 🚗",
-      "store_key": "obs",
-      "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
-    },
-    {
-      "category": "Kylling",
       "name": "ET STORT UTVALG PEPPES-PRODUKTER",
       "mengde": "50 g",
       "price": "",
@@ -145,16 +125,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "-30%"
-    },
-    {
-      "category": "Kylling",
-      "name": "GRILL PERFEKT PØLSER/BURGERE",
-      "mengde": "240 g",
-      "price": "",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "-25%"
     },
     {
       "category": "Kylling",
@@ -175,16 +145,6 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "213,11/kilogram"
-    },
-    {
-      "category": "Kylling",
-      "name": "KYLLING GRILLFILET",
-      "mengde": "440 g",
-      "price": "99,-",
-      "store": "Kiwi",
-      "store_label": "Kiwi Mysen",
-      "store_key": "kiwi",
-      "merknad": "225,-/kilogram"
     },
     {
       "category": "Kylling",
@@ -298,16 +258,6 @@
     },
     {
       "category": "Kylling",
-      "name": "CRISPY BURGER",
-      "mengde": "180 g",
-      "price": "39,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "216,67/kilogram"
-    },
-    {
-      "category": "Kylling",
       "name": "COOP GRILL PERFEKT KYLLINGSPYD",
       "mengde": "440 g",
       "price": "89,-",
@@ -348,13 +298,23 @@
     },
     {
       "category": "Storfe",
-      "name": "SVINEKJØTTDEIG 9%",
-      "mengde": "400 g",
-      "price": "49,90",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "124,75/kilogram · før 69,90,- · spar 20,-"
+      "name": "GRILL PERFEKT PØLSER/BURGERE",
+      "mengde": "240 g",
+      "price": "",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "-25%"
+    },
+    {
+      "category": "Storfe",
+      "name": "CRISPY BURGER",
+      "mengde": "180 g",
+      "price": "39,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "216,67/kilogram"
     },
     {
       "category": "Storfe",
@@ -458,13 +418,73 @@
     },
     {
       "category": "Storfe",
-      "name": "KUTTET FRUKT STORE BEGER",
-      "mengde": "400 g",
-      "price": "44,90",
+      "name": "BURGERBRØD STORE M/SESAM",
+      "mengde": "6 stk",
+      "price": "35,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "64,81/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "GRILLBURGER",
+      "mengde": "2x130 g",
+      "price": "49,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "188,46/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "FERSK LAKSEBURGER MED PURRE & REKER",
+      "mengde": "150 g",
+      "price": "39,90",
       "store": "Meny",
       "store_label": "Meny Askim 🚗",
       "store_key": "meny",
-      "merknad": "121,35/kilogram"
+      "merknad": "266,-/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "NORSK BURGEROST",
+      "mengde": "100 g",
+      "price": "24,90",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "249,-/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "HAMBURGERSALAT",
+      "mengde": "200 g",
+      "price": "19,90",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "99,50/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "COOP GRILL PERFEKT BURGERDRESSING/COLESLAW",
+      "mengde": "410 g",
+      "price": "24,90",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "83,00/kilogram"
+    },
+    {
+      "category": "Storfe",
+      "name": "UTVALGTE BURGERE",
+      "mengde": "440 g",
+      "price": "49,90",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "207,92/kilogram"
     },
     {
       "category": "Storfe",
@@ -477,6 +497,16 @@
       "merknad": "109,72/kilogram"
     },
     {
+      "category": "Storfe",
+      "name": "COOP PRIME TIME BURGERBRØD",
+      "mengde": "480 g",
+      "price": "25,90",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "53,96/kilogram"
+    },
+    {
       "category": "Svin",
       "name": "Indrefilet",
       "mengde": "Folkets, svin, urte-/ trøffelmarinert, pr. kg",
@@ -485,6 +515,26 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "119,-/kilogram · spar 90,-"
+    },
+    {
+      "category": "Svin",
+      "name": "SVINEKJØTTDEIG 9%",
+      "mengde": "400 g",
+      "price": "49,90",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "124,75/kilogram · før 69,90,- · spar 20,-"
+    },
+    {
+      "category": "Svin",
+      "name": "KYLLING GRILLFILET",
+      "mengde": "440 g",
+      "price": "99,-",
+      "store": "Kiwi",
+      "store_label": "Kiwi Mysen",
+      "store_key": "kiwi",
+      "merknad": "225,-/kilogram"
     },
     {
       "category": "Svin",
@@ -585,16 +635,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "239,-/kilogram"
-    },
-    {
-      "category": "Svin",
-      "name": "GRILLBURGER",
-      "mengde": "2x130 g",
-      "price": "49,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "188,46/kilogram"
     },
     {
       "category": "Svin",
@@ -725,16 +765,6 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "235,60/kilogram"
-    },
-    {
-      "category": "Laks",
-      "name": "FERSK LAKSEBURGER MED PURRE & REKER",
-      "mengde": "150 g",
-      "price": "39,90",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "266,-/kilogram"
     },
     {
       "category": "Laks",
@@ -1118,16 +1148,6 @@
     },
     {
       "category": "Ost",
-      "name": "NORSK BURGEROST",
-      "mengde": "100 g",
-      "price": "24,90",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "249,-/kilogram"
-    },
-    {
-      "category": "Ost",
       "name": "JACOBS UTVALGTE PLUKK & MIKS",
       "mengde": "",
       "price": "3 for 2",
@@ -1318,26 +1338,6 @@
     },
     {
       "category": "Pålegg",
-      "name": "COOP GRILL PERFEKT BURGERDRESSING/COLESLAW",
-      "mengde": "410 g",
-      "price": "24,90",
-      "store": "Obs",
-      "store_label": "Coop Obs Slitu 🚗",
-      "store_key": "obs",
-      "merknad": "83,00/kilogram"
-    },
-    {
-      "category": "Pålegg",
-      "name": "UTVALGTE BURGERE",
-      "mengde": "440 g",
-      "price": "49,90",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "207,92/kilogram"
-    },
-    {
-      "category": "Pålegg",
       "name": "3 FOR 2 TAPAS",
       "mengde": "",
       "price": "3 for 2",
@@ -1488,16 +1488,6 @@
     },
     {
       "category": "Brød",
-      "name": "BURGERBRØD STORE M/SESAM",
-      "mengde": "6 stk",
-      "price": "35,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "64,81/kilogram"
-    },
-    {
-      "category": "Brød",
       "name": "ALL KJEKS",
       "mengde": "400 g",
       "price": "3 for 2",
@@ -1575,16 +1565,6 @@
       "store_label": "Coop Obs Slitu 🚗",
       "store_key": "obs",
       "merknad": "62,25/kilogram"
-    },
-    {
-      "category": "Brød",
-      "name": "COOP PRIME TIME BURGERBRØD",
-      "mengde": "480 g",
-      "price": "25,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "53,96/kilogram"
     },
     {
       "category": "Brød",
@@ -1887,26 +1867,6 @@
       "merknad": ""
     },
     {
-      "category": "Snacks",
-      "name": "KRONE-IS JORDBÆR OG SJOKOLADE",
-      "mengde": "6-pk",
-      "price": "39,-",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "6,50/piece"
-    },
-    {
-      "category": "Snacks",
-      "name": "COOP KRONE-IS 6 PK JORDBÆR/SJOKOLADE",
-      "mengde": "6 stk",
-      "price": "24,90",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "4,15/piece"
-    },
-    {
       "category": "Kaffe",
       "name": "FILTERMALT KJELDSBERG",
       "mengde": "500 g",
@@ -2015,6 +1975,26 @@
       "store_label": "Europris Mysen",
       "store_key": "europris",
       "merknad": "20,20/liter · spar 39,-"
+    },
+    {
+      "category": "Drikke",
+      "name": "LOLLIPOP",
+      "mengde": "1.2 l",
+      "price": "38,90",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "32,42/liter · før 64,90,- · spar 26,-"
+    },
+    {
+      "category": "Drikke",
+      "name": "DEN STOLTE HANE LOLLIPOP KYLLINGVINGER",
+      "mengde": "700 g",
+      "price": "79,90",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "114,14/kilogram · før 91,50,- · spar 11,-"
     },
     {
       "category": "Drikke",
@@ -2458,16 +2438,6 @@
     },
     {
       "category": "Grønnsaker",
-      "name": "HAMBURGERSALAT",
-      "mengde": "200 g",
-      "price": "19,90",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "99,50/kilogram"
-    },
-    {
-      "category": "Grønnsaker",
       "name": "OLIVIAS POTETSALAT",
       "mengde": "400 g",
       "price": "39,-",
@@ -2725,6 +2695,36 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "74,84/liter · før 79,90,- · spar 32,-"
+    },
+    {
+      "category": "Frukt",
+      "name": "KUTTET FRUKT STORE BEGER",
+      "mengde": "400 g",
+      "price": "44,90",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "121,35/kilogram"
+    },
+    {
+      "category": "Frukt",
+      "name": "KRONE-IS JORDBÆR OG SJOKOLADE",
+      "mengde": "6-pk",
+      "price": "39,-",
+      "store": "Bunnpris",
+      "store_label": "Bunnpris",
+      "store_key": "bunnpris",
+      "merknad": "6,50/piece"
+    },
+    {
+      "category": "Frukt",
+      "name": "COOP KRONE-IS 6 PK JORDBÆR/SJOKOLADE",
+      "mengde": "6 stk",
+      "price": "24,90",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "4,15/piece"
     },
     {
       "category": "Frukt",
