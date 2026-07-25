@@ -152,7 +152,7 @@ def generate_html(deals, output_path="index.html"):
         label = STORE_LABEL.get(store, store)
         is_winner = bool(merknad) and ('spar' in merknad.lower() or 'før' in merknad.lower())
         cls = ' class="rec"' if is_rec else (' class="winner"' if is_winner else ' class="other-store"')
-        return tbl + f'<tr{cls} data-store="{skey}"><td>{name}</td><td class="mengde">{mengde}</td><td class="price">{price}</td><td class="store">{label}</td><td class="desc">{merknad}</td></tr>\n'
+        return tbl + f'<tr{cls} data-store="{skey}"><td class="vare">{name}</td><td class="price right">{price}</td><td class="mengde">{mengde}</td><td class="store">{label}</td><td class="desc">{merknad}</td></tr>\n'
     
     for ci, cat in enumerate(deals.get("categories", [])):
         items = cat.get("items", [])
@@ -195,7 +195,7 @@ def generate_html(deals, output_path="index.html"):
         rec_items = [it for it in items if normalize_store(it.get("store","")) == best_store]
         other_items = [it for it in items if normalize_store(it.get("store","")) != best_store]
         
-        tbl = '<table>\n<tr><th>Vare</th><th>Mengde</th><th>Pris</th><th>Butikk</th><th>Merknad</th></tr>\n'
+        tbl = '<table>\n<tr><th>Vare</th><th class="right">Pris</th><th>Mengde</th><th>Butikk</th><th>Merknad</th></tr>\n'
         
         # Anbefalt butikks varer først (med highlight)
         for item in rec_items:
@@ -295,6 +295,8 @@ def generate_html(deals, output_path="index.html"):
   td {{ padding: 5px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; }}
   tr:hover {{ background: #efede0; }}
   .price {{ font-weight: bold; white-space: nowrap; color: var(--accent2); }}
+  .right {{ text-align: right; }}
+  .vare {{ max-width: 280px; overflow: hidden; text-overflow: ellipsis; }}
   .mengde {{ white-space: nowrap; font-size: 0.85em; color: #555; }}
   .store {{ white-space: nowrap; font-size: 0.85em; }}
   .desc {{ color: #666; font-size: 0.82em; }}
