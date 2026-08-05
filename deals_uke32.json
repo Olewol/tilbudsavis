@@ -150,15 +150,6 @@
           "merknad": "199,50/kilogram · spar 10,-"
         },
         {
-          "name": "MAXCAT KATTESNACKS",
-          "mengde": "30 g",
-          "price": "15,-",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "500,-/kilogram · spar 4,-"
-        },
-        {
           "name": "COOP GRILL PERFEKT KYLLINGSPYD",
           "mengde": "440 g",
           "price": "89,-",
@@ -324,24 +315,6 @@
           "store_label": "Meny Askim 🚗",
           "store_key": "meny",
           "merknad": "269,00/kilogram"
-        },
-        {
-          "name": "MAXDOG VÅTFÔR HUND",
-          "mengde": "",
-          "price": "99,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "4,16/piece"
-        },
-        {
-          "name": "MAXDOG VÅTFÔR HUND",
-          "mengde": "",
-          "price": "49,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "4,16/piece"
         },
         {
           "name": "COOP GRILL BBQ BURGERS",
@@ -622,15 +595,6 @@
           "store_label": "Bunnpris",
           "store_key": "bunnpris",
           "merknad": "133,33/kilogram"
-        },
-        {
-          "name": "VITAKRAFT KATTESNACKS",
-          "mengde": "16x15 g",
-          "price": "79,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "332,92/kilogram"
         }
       ]
     },
@@ -2470,8 +2434,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-08-05T10:25:41.259575",
-    "quality_score": 87.8,
-    "total_products": 254
+    "generated": "2026-08-05T10:27:28.531263",
+    "quality_score": 87.9,
+    "total_products": 250
   }
 }
