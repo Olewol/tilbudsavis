@@ -10,13 +10,22 @@
       "merknad": "198,-/kilogram · spar 70,-"
     },
     {
+      "name": "OMO COLOR & OMO HVITT",
+      "mengde": "3.7 kg",
+      "price": "109,90",
+      "store": "Spar",
+      "store_label": "Spar",
+      "store_key": "spar",
+      "merknad": "29,70/kilogram · før 179,90,- · spar 70,-"
+    },
+    {
       "name": "GRILSTAD HÅNDLAGDE KARBONADER",
       "mengde": "630 g",
       "price": "99,-",
       "store": "Obs",
       "store_label": "Coop Obs Slitu 🚗",
       "store_key": "obs",
-      "merknad": "157,14/kilogram · spar 61,-"
+      "merknad": "157,14/kilogram · før 160,90,- · spar 61,-"
     },
     {
       "name": "FREIA SJOKOLADEPLATER",
@@ -80,15 +89,6 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "111,11/liter · spar 20,-"
-    },
-    {
-      "name": "Coop Grana Padano",
-      "mengde": "150 g",
-      "price": "38,-",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "253,33/kilogram · spar 14,-"
     }
   ],
   "categories": [
@@ -522,15 +522,6 @@
           "merknad": "79,87/kilogram · før 63,90,- · spar 4,-"
         },
         {
-          "name": "Yoghurt",
-          "mengde": "70 g",
-          "price": "10,-",
-          "store": "Meny",
-          "store_label": "Meny Askim 🚗",
-          "store_key": "meny",
-          "merknad": "71,43/kilogram"
-        },
-        {
           "name": "TINE YOGHURT SKOGSBÆR, KIRSEBÆR, FERSKEN, VANILJE OG NATURELL",
           "mengde": "500 g",
           "price": "10,-",
@@ -546,6 +537,15 @@
           "store": "Spar",
           "store_label": "Spar",
           "store_key": "spar",
+          "merknad": "52,63/kilogram"
+        },
+        {
+          "name": "Go Morgen yoghurt",
+          "mengde": "190 g",
+          "price": "10,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
           "merknad": "52,63/kilogram"
         }
       ]
@@ -717,15 +717,6 @@
           "merknad": "111,11/kilogram"
         },
         {
-          "name": "Lerum klem",
-          "mengde": "385 g",
-          "price": "25,-",
-          "store": "Meny",
-          "store_label": "Meny Askim 🚗",
-          "store_key": "meny",
-          "merknad": "65,79/kilogram"
-        },
-        {
           "name": "SKINKE",
           "mengde": "100 g",
           "price": "29,90",
@@ -803,6 +794,15 @@
           "merknad": "74,75/kilogram · før 44,90,- · spar 15,-"
         },
         {
+          "name": "Naan håndlagde",
+          "mengde": "260 g",
+          "price": "25,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "96,15/kilogram · spar 13,-"
+        },
+        {
           "name": "Pinsa",
           "mengde": "230 g",
           "price": "30,-",
@@ -846,15 +846,6 @@
           "store_label": "Extra Mysen",
           "store_key": "extra",
           "merknad": "2,-/piece · spar 6,-"
-        },
-        {
-          "name": "Wasa rugsprø",
-          "mengde": "200 g",
-          "price": "15,-",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "75,-/kilogram · spar 5,-"
         }
       ]
     },
@@ -1171,7 +1162,7 @@
           "store": "Extra",
           "store_label": "Extra Mysen",
           "store_key": "extra",
-          "merknad": "13,33/liter · spar 6,-"
+          "merknad": "13,33/liter · spar 3,-"
         },
         {
           "name": "Rislunsj",
@@ -1269,15 +1260,6 @@
           "merknad": "25,-/kilogram"
         },
         {
-          "name": "Norsk gulrot",
-          "mengde": "400 g",
-          "price": "10,-",
-          "store": "Meny",
-          "store_label": "Meny Askim 🚗",
-          "store_key": "meny",
-          "merknad": "25,-/kilogram"
-        },
-        {
           "name": "Grønn & Frisk salater",
           "mengde": "65 g",
           "price": "10,-",
@@ -1285,6 +1267,15 @@
           "store_label": "Meny Askim 🚗",
           "store_key": "meny",
           "merknad": "153,85/kilogram"
+        },
+        {
+          "name": "Norsk gulrot",
+          "mengde": "400 g",
+          "price": "10,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "25,-/kilogram"
         },
         {
           "name": "Norsk brokkoli",
@@ -1450,11 +1441,106 @@
           "merknad": "30,-/piece"
         }
       ]
+    },
+    {
+      "name": "Husholdning",
+      "items": [
+        {
+          "name": "OMO EXPERT COLOR",
+          "mengde": "750 ml",
+          "price": "49,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "66,53/liter · før 64,90,- · spar 15,-"
+        },
+        {
+          "name": "EFFEKT VASKEPULVER",
+          "mengde": "8 kg",
+          "price": "110,-",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "13,75/kilogram · spar 19,-"
+        },
+        {
+          "name": "DEFINE SHAMPOO, BALSAM",
+          "mengde": "400 ml",
+          "price": "69,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "174,75/liter · før 86,90,- · spar 17,-"
+        },
+        {
+          "name": "DR. GREVE INTIMVASK SENSITIV",
+          "mengde": "200 ml",
+          "price": "26,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "134,50/liter · spar 8,-"
+        },
+        {
+          "name": "LIBERO BABY WASH",
+          "mengde": "200 ml",
+          "price": "29,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "149,50/liter · spar 8,-"
+        },
+        {
+          "name": "Chiron håndsåpe",
+          "mengde": "500 ml",
+          "price": "25,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "50,-/liter · spar 7,-"
+        },
+        {
+          "name": "OMO ULTRA HVITT",
+          "mengde": "750 ml",
+          "price": "44,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "59,87/liter · før 54,90,- · spar 10,-"
+        },
+        {
+          "name": "TOALETTPAPIR",
+          "mengde": "",
+          "price": "99,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "99,-/piece · før 112,40,- · spar 13,-"
+        },
+        {
+          "name": "ALT FRA LANO",
+          "mengde": "",
+          "price": "",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "-40%"
+        },
+        {
+          "name": "ALT FRA ELVITAL",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "41,93/piece · før 129,90,- · -30%"
+        }
+      ]
     }
   ],
   "_meta": {
-    "generated": "2026-08-10T15:05:45.381848",
-    "quality_score": 89.3,
-    "total_products": 141
+    "generated": "2026-08-10T15:35:29.448016",
+    "quality_score": 89.4,
+    "total_products": 150
   }
 }
