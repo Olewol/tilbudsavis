@@ -522,6 +522,15 @@
           "merknad": "79,87/kilogram · før 63,90,- · spar 4,-"
         },
         {
+          "name": "Yoghurt",
+          "mengde": "70 g",
+          "price": "10,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "71,43/kilogram"
+        },
+        {
           "name": "TINE YOGHURT SKOGSBÆR, KIRSEBÆR, FERSKEN, VANILJE OG NATURELL",
           "mengde": "500 g",
           "price": "10,-",
@@ -537,15 +546,6 @@
           "store": "Spar",
           "store_label": "Spar",
           "store_key": "spar",
-          "merknad": "52,63/kilogram"
-        },
-        {
-          "name": "Go Morgen yoghurt",
-          "mengde": "190 g",
-          "price": "10,-",
-          "store": "Meny",
-          "store_label": "Meny Askim 🚗",
-          "store_key": "meny",
           "merknad": "52,63/kilogram"
         }
       ]
@@ -715,6 +715,15 @@
           "store_label": "Spar",
           "store_key": "spar",
           "merknad": "111,11/kilogram"
+        },
+        {
+          "name": "Lerum klem",
+          "mengde": "385 g",
+          "price": "25,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "65,79/kilogram"
         },
         {
           "name": "SKINKE",
@@ -1539,8 +1548,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-08-10T15:35:29.448016",
+    "generated": "2026-08-10T15:37:35.162200",
     "quality_score": 89.4,
-    "total_products": 150
+    "total_products": 151
   }
 }
