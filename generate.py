@@ -54,14 +54,14 @@ CAT_NAV = {
     'Egg':'Egg','Ost':'Ost','Pålegg':'Pålegg','Brød':'Brød',
     'Snacks':'Snacks','Kaffe':'Kaffe','Drikke':'Drikke',
     'Dessert/is':'Is/Des','Grønnsaker':'Grønt','Frukt':'Frukt',
-    'Ingredienser':'Tørrvarer',
+    'Ingredienser':'Tørrvarer','Husholdning':'Husholdning',
 }
 
 CAT_EMOJI = {
     'Kylling':'🐔','Storfe':'🥩','Svin':'🐷','Laks':'🐟','Reker/scampi':'🦐',
     'Yoghurt':'🥛','Egg':'🥚','Ost':'🧀','Pålegg':'🥪','Brød':'🍞',
     'Snacks':'🍫','Kaffe':'☕','Drikke':'🥤','Dessert/is':'🍦',
-    'Grønnsaker':'🥦','Frukt':'🍎','Ingredienser':'🧂',
+    'Grønnsaker':'🥦','Frukt':'🍎','Ingredienser':'🧂','Husholdning':'🧼',
 }
 
 ALL_CATEGORIES = {
@@ -69,6 +69,7 @@ ALL_CATEGORIES = {
     'Yoghurt', 'Egg', 'Ost', 'Pålegg', 'Brød',
     'Snacks', 'Kaffe', 'Drikke', 'Dessert/is',
     'Grønnsaker', 'Frukt', 'Ingredienser',
+    'Husholdning',
 }
 
 
