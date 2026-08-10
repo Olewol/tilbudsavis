@@ -37,15 +37,6 @@
       "merknad": "154,-/kilogram · før 129,00,- · spar 52,-"
     },
     {
-      "name": "FROKOSTKAFFE FRIELE",
-      "mengde": "500 g",
-      "price": "77,40",
-      "store": "Rema 1000",
-      "store_label": "Rema 1000 Mysen",
-      "store_key": "rema",
-      "merknad": "154,80/kilogram · spar 51,-"
-    },
-    {
       "name": "RINGNES",
       "mengde": "",
       "price": "129,-",
@@ -89,6 +80,15 @@
       "store_label": "Spar",
       "store_key": "spar",
       "merknad": "111,11/liter · spar 20,-"
+    },
+    {
+      "name": "Coop Grana Padano",
+      "mengde": "150 g",
+      "price": "38,-",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "253,33/kilogram · spar 14,-"
     }
   ],
   "categories": [
@@ -267,42 +267,6 @@
     {
       "name": "Svin",
       "items": [
-        {
-          "name": "Grilstad Lev Litt Lettere spekeskinke",
-          "mengde": "100 g",
-          "price": "43,-",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "430,-/kilogram · spar 14,-"
-        },
-        {
-          "name": "SKINKE",
-          "mengde": "100 g",
-          "price": "29,90",
-          "store": "Rema 1000",
-          "store_label": "Rema 1000 Mysen",
-          "store_key": "rema",
-          "merknad": "299,-/kilogram"
-        },
-        {
-          "name": "SKINKEOST OG BACONOST PÅ TUBE",
-          "mengde": "175 g",
-          "price": "30,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "171,43/kilogram"
-        },
-        {
-          "name": "GRILSTAD GULLSALAMI, FERSK SALAMI OG SPEKESKINKE STRANDA",
-          "mengde": "80 g",
-          "price": "30,-",
-          "store": "Bunnpris",
-          "store_label": "Bunnpris",
-          "store_key": "bunnpris",
-          "merknad": "375,-/kilogram"
-        },
         {
           "name": "Kokt skinke/ Hamburgerrygg",
           "mengde": "110 g",
@@ -685,15 +649,6 @@
           "merknad": "147,06/kilogram · spar 14,-"
         },
         {
-          "name": "Coop Grana Padano",
-          "mengde": "150 g",
-          "price": "38,-",
-          "store": "Extra",
-          "store_label": "Extra Mysen",
-          "store_key": "extra",
-          "merknad": "253,33/kilogram · spar 14,-"
-        },
-        {
           "name": "Parmigiano Reggiano",
           "mengde": "60 g",
           "price": "30,-",
@@ -728,12 +683,30 @@
           "store_label": "Extra Mysen",
           "store_key": "extra",
           "merknad": "176,-/kilogram · spar 5,-"
+        },
+        {
+          "name": "COOP PIZZA/ PIZZATILBEHØR",
+          "mengde": "",
+          "price": "",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "-30%"
         }
       ]
     },
     {
       "name": "Pålegg",
       "items": [
+        {
+          "name": "Grilstad Lev Litt Lettere spekeskinke",
+          "mengde": "100 g",
+          "price": "43,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "430,-/kilogram · spar 14,-"
+        },
         {
           "name": "MILLS MAJONES, KAVIAR OG LETT MAJONES",
           "mengde": "100 g",
@@ -760,6 +733,24 @@
           "store_label": "Meny Askim 🚗",
           "store_key": "meny",
           "merknad": "65,79/kilogram"
+        },
+        {
+          "name": "SKINKE",
+          "mengde": "100 g",
+          "price": "29,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "299,-/kilogram"
+        },
+        {
+          "name": "GRILSTAD GULLSALAMI, FERSK SALAMI OG SPEKESKINKE STRANDA",
+          "mengde": "80 g",
+          "price": "30,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "375,-/kilogram"
         },
         {
           "name": "Smårett 2-pk.",
@@ -975,6 +966,15 @@
       "name": "Kaffe",
       "items": [
         {
+          "name": "FROKOSTKAFFE FRIELE",
+          "mengde": "500 g",
+          "price": "77,40",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "154,80/kilogram · spar 51,-"
+        },
+        {
           "name": "HELE BØNNER KAFFE",
           "mengde": "500 g",
           "price": "77,40",
@@ -982,6 +982,33 @@
           "store_label": "Rema 1000 Mysen",
           "store_key": "rema",
           "merknad": "154,80/kilogram · spar 51,-"
+        },
+        {
+          "name": "Friele frokostkaffe",
+          "mengde": "500 g",
+          "price": "77,40",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "154,80/kilogram · spar 45,-"
+        },
+        {
+          "name": "Friele frokostkaffe",
+          "mengde": "250 g",
+          "price": "39,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "159,60/kilogram · spar 30,-"
+        },
+        {
+          "name": "FROKOSTKAFFE FRIELE",
+          "mengde": "250 g",
+          "price": "39,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "159,60/kilogram · spar 30,-"
         },
         {
           "name": "GIMOKA KAFFEKAPSLER",
@@ -1027,42 +1054,6 @@
           "store_label": "Spar",
           "store_key": "spar",
           "merknad": "300,-/kilogram"
-        },
-        {
-          "name": "EVERGOOD FILTERMALT/ KOKMALT KAFFE",
-          "mengde": "250 g",
-          "price": "39,90",
-          "store": "Kiwi",
-          "store_label": "Kiwi Mysen",
-          "store_key": "kiwi",
-          "merknad": "159,60/kilogram · før 68,90,-"
-        },
-        {
-          "name": "LEA INSTANT STICKS",
-          "mengde": "",
-          "price": "39,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "1,60/piece"
-        },
-        {
-          "name": "LEA INSTANT",
-          "mengde": "100 g",
-          "price": "49,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "499,-/kilogram"
-        },
-        {
-          "name": "LEA INSTANT",
-          "mengde": "100 g",
-          "price": "59,90",
-          "store": "Europris",
-          "store_label": "Europris Mysen",
-          "store_key": "europris",
-          "merknad": "599,-/kilogram"
         }
       ]
     },
@@ -1462,8 +1453,8 @@
     }
   ],
   "_meta": {
-    "generated": "2026-08-10T15:01:41.604848",
+    "generated": "2026-08-10T15:04:42.789213",
     "quality_score": 89.3,
-    "total_products": 142
+    "total_products": 141
   }
 }
