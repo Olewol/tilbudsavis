@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-10T15:04:42.787412",
+    "generated": "2026-08-10T15:05:45.380471",
     "week": 33,
     "quality_score": 89.3,
     "total_products": 151
@@ -588,16 +588,6 @@
     },
     {
       "category": "Egg",
-      "name": "UTVALGT GILDE PÅLEGG",
-      "mengde": "150 g",
-      "price": "",
-      "store": "Extra",
-      "store_label": "Extra Mysen",
-      "store_key": "extra",
-      "merknad": "-25%"
-    },
-    {
-      "category": "Egg",
       "name": "SNÅL EGG",
       "mengde": "6 stk",
       "price": "20,-",
@@ -605,16 +595,6 @@
       "store_label": "Bunnpris",
       "store_key": "bunnpris",
       "merknad": "3,33/piece"
-    },
-    {
-      "category": "Egg",
-      "name": "Rice-/egg noodles",
-      "mengde": "250 g",
-      "price": "25,-",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "138,89/kilogram"
     },
     {
       "category": "Egg",
@@ -735,6 +715,16 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "430,-/kilogram · spar 14,-"
+    },
+    {
+      "category": "Pålegg",
+      "name": "UTVALGT GILDE PÅLEGG",
+      "mengde": "150 g",
+      "price": "",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "-25%"
     },
     {
       "category": "Pålegg",
@@ -1505,6 +1495,16 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "18,18/kilogram"
+    },
+    {
+      "category": "Ingredienser",
+      "name": "Rice-/egg noodles",
+      "mengde": "250 g",
+      "price": "25,-",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "138,89/kilogram"
     },
     {
       "category": "Ingredienser",
