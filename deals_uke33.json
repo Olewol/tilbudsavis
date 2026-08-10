@@ -1455,6 +1455,15 @@
       "name": "Husholdning",
       "items": [
         {
+          "name": "COOP FLYTENDE VASK COLOR",
+          "mengde": "1000 ml",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "20,-/liter · spar 42,-"
+        },
+        {
           "name": "OMO EXPERT COLOR",
           "mengde": "750 ml",
           "price": "49,90",
@@ -1534,21 +1543,12 @@
           "store_label": "Europris Mysen",
           "store_key": "europris",
           "merknad": "-40%"
-        },
-        {
-          "name": "ALT FRA ELVITAL",
-          "mengde": "",
-          "price": "",
-          "store": "Spar",
-          "store_label": "Spar",
-          "store_key": "spar",
-          "merknad": "41,93/piece · før 129,90,- · -30%"
         }
       ]
     }
   ],
   "_meta": {
-    "generated": "2026-08-10T15:40:41.021842",
+    "generated": "2026-08-10T15:43:24.517552",
     "quality_score": 89.4,
     "total_products": 151
   }
