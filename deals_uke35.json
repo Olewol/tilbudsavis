@@ -1,0 +1,1501 @@
+{
+  "top_picks": [
+    {
+      "name": "FRIELE FROKOSTKAFFE",
+      "mengde": "4x250 g",
+      "price": "159,-",
+      "store": "Europris",
+      "store_label": "Europris Mysen",
+      "store_key": "europris",
+      "merknad": "159,-/kilogram · spar 110,-"
+    },
+    {
+      "name": "FINDUS CHICKEN",
+      "mengde": "1-pk",
+      "price": "100,-",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "196,08/kilogram · spar 69,-"
+    },
+    {
+      "name": "FREIA SJOKOLADEPLATER",
+      "mengde": "1 stk",
+      "price": "100,-",
+      "store": "Obs",
+      "store_label": "Coop Obs Slitu 🚗",
+      "store_key": "obs",
+      "merknad": "222,22/kilogram · spar 64,-"
+    },
+    {
+      "name": "Norvegia 2-pk.",
+      "mengde": "2x1 kg",
+      "price": "99,-",
+      "store": "Spar",
+      "store_label": "Spar",
+      "store_key": "spar",
+      "merknad": "99,-/kilogram · spar 60,-"
+    },
+    {
+      "name": "Laksefilet",
+      "mengde": "Fiskemannen, m/skinn, pr. kg Førpris: 209,00 PARTI- VARE!",
+      "price": "149,-",
+      "store": "Spar",
+      "store_label": "Spar",
+      "store_key": "spar",
+      "merknad": "149,-/kilogram · spar 60,-"
+    },
+    {
+      "name": "COOP FLYTENDE VASK COLOR",
+      "mengde": "1000 ml",
+      "price": "20,-",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "20,-/liter · spar 42,-"
+    },
+    {
+      "name": "LOFOTEN HJERTEKAKER",
+      "mengde": "550 g",
+      "price": "89,90",
+      "store": "Extra",
+      "store_label": "Extra Mysen",
+      "store_key": "extra",
+      "merknad": "163,45/kilogram · spar 30,-"
+    },
+    {
+      "name": "LAKSEBURGER",
+      "mengde": "2x130 G",
+      "price": "44,90",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "172,69/kilogram · spar 15,-"
+    },
+    {
+      "name": "RYVITA KNEKKEBRØD",
+      "mengde": "400 g",
+      "price": "29,90",
+      "store": "Kiwi",
+      "store_label": "Kiwi Mysen",
+      "store_key": "kiwi",
+      "merknad": "74,75/kilogram · før 44,90,- · spar 15,-"
+    },
+    {
+      "name": "YT YOGHURT VANILJE",
+      "mengde": "430 g",
+      "price": "21,90",
+      "store": "Rema 1000",
+      "store_label": "Rema 1000 Mysen",
+      "store_key": "rema",
+      "merknad": "50,93/kilogram · før 31,40,- · spar 9,-"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Kylling",
+      "items": [
+        {
+          "name": "Crispy Sticks",
+          "mengde": "570 g",
+          "price": "89,-",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "156,14/kilogram · spar 40,-"
+        },
+        {
+          "name": "DEN STOLTE HANE KYLLINGKJØTTBOLLER",
+          "mengde": "800 g",
+          "price": "69,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "87,38/kilogram · før 95,90,- · spar 26,-"
+        },
+        {
+          "name": "Prior kyllingfilet naturell",
+          "mengde": "200 g",
+          "price": "40,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "200,-/kilogram · spar 15,-"
+        },
+        {
+          "name": "KYLLINGFILET",
+          "mengde": "200 g",
+          "price": "39,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "199,50/kilogram · før 49,90,,- · spar 10,-"
+        },
+        {
+          "name": "KYLLINGKJØTTBOLLER",
+          "mengde": "800 g",
+          "price": "44,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "56,12/kilogram · før 54,90,,- · spar 10,-"
+        },
+        {
+          "name": "CRISPY KYLLINGFILET",
+          "mengde": "350 g",
+          "price": "69,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "199,71/kilogram · før 79,90,- · spar 10,-"
+        },
+        {
+          "name": "KYLLINGKORV",
+          "mengde": "300 g",
+          "price": "29,40",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "98,00/kilogram · spar 3,-"
+        },
+        {
+          "name": "KYLLINGKORV",
+          "mengde": "300 g",
+          "price": "29,60",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "98,67/kilogram"
+        },
+        {
+          "name": "KYLLINGKJØTTDEIG",
+          "mengde": "400 g",
+          "price": "30,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "75,-/kilogram"
+        },
+        {
+          "name": "COOP KYLLINGFILET",
+          "mengde": "1-pk",
+          "price": "50,-",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "250,-/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Storfe",
+      "items": [
+        {
+          "name": "Biffstrimler",
+          "mengde": "300 g",
+          "price": "69,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "233,-/kilogram · spar 24,-"
+        },
+        {
+          "name": "Coop kjøttdeig",
+          "mengde": "400 g",
+          "price": "40,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "100,-/kilogram · spar 10,-"
+        },
+        {
+          "name": "KJØTTDEIG 10 % FETT",
+          "mengde": "400 g",
+          "price": "69,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "174,75/kilogram"
+        },
+        {
+          "name": "KJØTTDEIG 14 % FETT",
+          "mengde": "400 g",
+          "price": "79,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "199,75/kilogram"
+        },
+        {
+          "name": "Lofotburger 4-pk.",
+          "mengde": "4x125 g",
+          "price": "99,-",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "198,-/kilogram"
+        },
+        {
+          "name": "STOR ASTERSBUKETT",
+          "mengde": "Pr stk",
+          "price": "99,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "99,90/piece"
+        },
+        {
+          "name": "KARBONADER",
+          "mengde": "1.08 kg",
+          "price": "109,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "100,93/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Svin",
+      "items": [
+        {
+          "name": "DEIG AV SVIN OG STORFE",
+          "mengde": "650 g",
+          "price": "64,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "99,85/kilogram · før 75,40,- · spar 10,-"
+        },
+        {
+          "name": "COOP STRIMLET SVINEKJØTT",
+          "mengde": "350 g",
+          "price": "73,50",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "210,-/kilogram"
+        },
+        {
+          "name": "NAKKEKOTELETTER AV SVIN",
+          "mengde": "1.3 kg",
+          "price": "109,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "109,-/kilogram"
+        },
+        {
+          "name": "SVIN YTREFILET",
+          "mengde": "500 g",
+          "price": "154,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "154,-/kilogram"
+        },
+        {
+          "name": "SVIN YTREFILET, SKIVET",
+          "mengde": "900 g",
+          "price": "159,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "159,-/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Laks",
+      "items": [
+        {
+          "name": "Coop laksefilet uten skinn",
+          "mengde": "4x125 g",
+          "price": "89,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "178,-/kilogram · spar 34,-"
+        },
+        {
+          "name": "LAKS LENKE U/SKINN",
+          "mengde": "500 g",
+          "price": "89,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "179,80/kilogram · før 123,00,- · spar 33,-"
+        },
+        {
+          "name": "TROLL RØKT LAKS I SKIVER",
+          "mengde": "100 g",
+          "price": "49,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "499,-/kilogram · før 64,90,- · spar 15,-"
+        },
+        {
+          "name": "Super Mønsj",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "-30%"
+        },
+        {
+          "name": "LAKSEFILET M/SKINN",
+          "mengde": "400 g",
+          "price": "69,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "174,75/kilogram"
+        },
+        {
+          "name": "MINI MIX HUNDESNACK",
+          "mengde": "500 g",
+          "price": "84,90",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "169,80/kilogram"
+        },
+        {
+          "name": "Coop laksefilet",
+          "mengde": "500 g",
+          "price": "99,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "198,-/kilogram"
+        },
+        {
+          "name": "COOP LAKSEFILET HELSIDE",
+          "mengde": "750 g",
+          "price": "149,-",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "198,67/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Fisk",
+      "items": [
+        {
+          "name": "COOP FISKEBURGER HYSE OG SEI",
+          "mengde": "200 g",
+          "price": "19,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "99,50/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Reker/scampi",
+      "items": [
+        {
+          "name": "UTVALGT SNACKING",
+          "mengde": "450 g",
+          "price": "34,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "232,67/kilogram · før 39,00,- · spar 4,-"
+        },
+        {
+          "name": "REKER I LAKE",
+          "mengde": "775 g",
+          "price": "82,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "106,97/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Yoghurt",
+      "items": [
+        {
+          "name": "TINE GRESK YOGHURT NATURELL",
+          "mengde": "1 stk",
+          "price": "45,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "52,33/kilogram · spar 20,-"
+        },
+        {
+          "name": "ALL YT",
+          "mengde": "1000 g",
+          "price": "",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "-30%"
+        },
+        {
+          "name": "ALT FRA YT",
+          "mengde": "1000 g",
+          "price": "",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "-30%"
+        },
+        {
+          "name": "TINE",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "-30%"
+        },
+        {
+          "name": "YOPLAIT YOGHURT",
+          "mengde": "8x125 g",
+          "price": "39,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "39,90/kilogram · spar 7,-"
+        },
+        {
+          "name": "Yoghurt",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "PROTEINDEAL",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": ""
+        },
+        {
+          "name": "Oatly!",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "ACTIMEL 8PK",
+          "mengde": "0.8 kg",
+          "price": "51,10",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "63,88/kilogram · spar 5,-"
+        },
+        {
+          "name": "GO’ MORGEN YOGHURT",
+          "mengde": "1 stk",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "52,63/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Egg",
+      "items": [
+        {
+          "name": "FRITTGÅENDE EGG",
+          "mengde": "15 stk",
+          "price": "49,90",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "3,33/piece"
+        }
+      ]
+    },
+    {
+      "name": "Ost",
+      "items": [
+        {
+          "name": "JARLSBERG®",
+          "mengde": "700 g",
+          "price": "99,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "141,43/kilogram · spar 50,-"
+        },
+        {
+          "name": "OSTEPANETTER",
+          "mengde": "480 g",
+          "price": "59,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "124,79/kilogram · før 76,90,,- · spar 17,-"
+        },
+        {
+          "name": "NORVEGIA ORIGINAL SKIVET",
+          "mengde": "2x225 g",
+          "price": "69,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "155,33/kilogram · før 86,90,- · spar 17,-"
+        },
+        {
+          "name": "FRUKOST FULLKORN",
+          "mengde": "320 g",
+          "price": "19,20",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "60,-/kilogram · før 27,50,- · spar 8,-"
+        },
+        {
+          "name": "Stryhns dansk grov leverpostei",
+          "mengde": "190 g",
+          "price": "21,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "110,53/kilogram · spar 7,-"
+        },
+        {
+          "name": "GÅRDSOST BIT",
+          "mengde": "800 g",
+          "price": "118,80",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "148,50/kilogram · spar 13,-"
+        },
+        {
+          "name": "GUDBRANDSDALSOST",
+          "mengde": "1 kg",
+          "price": "99,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "99,90/kilogram · spar 11,-"
+        },
+        {
+          "name": "KONGSGÅRD BIT",
+          "mengde": "450 g",
+          "price": "72,50",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "161,11/kilogram · spar 8,-"
+        },
+        {
+          "name": "MOZZARELLA/ PARMESAN/ CHEDDAR",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": ""
+        },
+        {
+          "name": "Smaksrike oster",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        }
+      ]
+    },
+    {
+      "name": "Pålegg",
+      "items": [
+        {
+          "name": "Gilde salami Siliana",
+          "mengde": "250 g",
+          "price": "55,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "220,-/kilogram · spar 27,-"
+        },
+        {
+          "name": "GILDE EKTE KOKT SKINKE",
+          "mengde": "110 g",
+          "price": "39,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "362,73/kilogram · før 57,50,- · spar 17,-"
+        },
+        {
+          "name": "KJØTTPØLSE",
+          "mengde": "600 g",
+          "price": "34,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "58,17/kilogram · før 49,90,- · spar 15,-"
+        },
+        {
+          "name": "Skinke",
+          "mengde": "70 g",
+          "price": "14,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "212,86/kilogram · spar 7,-"
+        },
+        {
+          "name": "UTVALGTE TAGA TAPAS",
+          "mengde": "70 g",
+          "price": "3 for 2",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": ""
+        },
+        {
+          "name": "PICNIC SKINKE",
+          "mengde": "325 g",
+          "price": "53,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "165,85/kilogram · spar 6,-"
+        },
+        {
+          "name": "TOASTY URBAN HAM, TUNA MELT OG CHICKEN CLUB",
+          "mengde": "180 g",
+          "price": "30,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "166,67/kilogram"
+        },
+        {
+          "name": "STRANDAMØR SNACKS",
+          "mengde": "120 g",
+          "price": "39,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "325,-/kilogram"
+        },
+        {
+          "name": "COOP KYLLINGPÅLEGG",
+          "mengde": "1 stk",
+          "price": "55,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "275,-/kilogram"
+        },
+        {
+          "name": "SPEKESKINKE",
+          "mengde": "250 g",
+          "price": "89,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "359,60/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Brød",
+      "items": [
+        {
+          "name": "OREO ORIGINAL",
+          "mengde": "154 g",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "129,87/kilogram · spar 15,-"
+        },
+        {
+          "name": "KNEKKEBRØD HAVRE",
+          "mengde": "600 g",
+          "price": "34,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "58,17/kilogram · før 49,90,- · spar 15,-"
+        },
+        {
+          "name": "NYSTEKT GROVT HAVREBRØD",
+          "mengde": "700 g",
+          "price": "35,-",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "50,-/kilogram · spar 12,-"
+        },
+        {
+          "name": "DIN STUND",
+          "mengde": "270 g",
+          "price": "27,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "103,33/kilogram · før 39,90,- · spar 12,-"
+        },
+        {
+          "name": "WASA 100 FRØ & HAVSALT",
+          "mengde": "245 g",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "81,63/kilogram · spar 11,-"
+        },
+        {
+          "name": "KNEKKEBRØD RUNDA",
+          "mengde": "290 g",
+          "price": "27,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "96,21/kilogram · før 38,90,- · spar 11,-"
+        },
+        {
+          "name": "Wasa rugsprø",
+          "mengde": "200 g",
+          "price": "10,40",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "52,-/kilogram · spar 10,-"
+        },
+        {
+          "name": "KNEKKEBRØD HUSMAN",
+          "mengde": "520 g",
+          "price": "20,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "40,19/kilogram · før 29,90,- · spar 9,-"
+        },
+        {
+          "name": "Coop wraps tortilla",
+          "mengde": "6 stk",
+          "price": "12,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "2,-/piece · spar 6,-"
+        },
+        {
+          "name": "RUGSPRØ",
+          "mengde": "200 g",
+          "price": "10,40",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "52,-/kilogram · før 14,90,- · spar 4,-"
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "items": [
+        {
+          "name": "NIDAR STRATOS NØTTER & HAVSALT/ SJOKOLADEFAMILIEN",
+          "mengde": "1 stk",
+          "price": "60,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "193,55/kilogram · spar 33,-"
+        },
+        {
+          "name": "BAREBELLS CARAMEL CHOCO",
+          "mengde": "55 g",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "363,64/kilogram · spar 17,-"
+        },
+        {
+          "name": "Freia storplater",
+          "mengde": "200 g",
+          "price": "34,90",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "232,67/kilogram · spar 15,-"
+        },
+        {
+          "name": "FREIA FIRKLØVER",
+          "mengde": "100 g",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "200,-/kilogram · spar 13,-"
+        },
+        {
+          "name": "Coop tortilla chips cheese",
+          "mengde": "150 g",
+          "price": "11,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "73,33/kilogram · spar 3,-"
+        },
+        {
+          "name": "ALL SNACKS FRA MAARUD",
+          "mengde": "",
+          "price": "",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "-40%"
+        },
+        {
+          "name": "Freia",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "-40%"
+        },
+        {
+          "name": "UTVALGTE FAVORITTER FRA KIMS OG OLW",
+          "mengde": "150 g",
+          "price": "",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "-40%"
+        },
+        {
+          "name": "UTVALGTE SJOKOLADER, POSER OG KJEKS FRA FREIA",
+          "mengde": "60 g",
+          "price": "",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "-30%"
+        },
+        {
+          "name": "Maarud",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "-30%"
+        }
+      ]
+    },
+    {
+      "name": "Kaffe",
+      "items": [
+        {
+          "name": "EVERGOOD",
+          "mengde": "500 g",
+          "price": "77,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "154,-/kilogram · før 129,00,- · spar 52,-"
+        },
+        {
+          "name": "Ali kaffe",
+          "mengde": "250 g",
+          "price": "37,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "151,60/kilogram · spar 25,-"
+        },
+        {
+          "name": "Nescafé gull",
+          "mengde": "100 g",
+          "price": "59,90",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "599,-/kilogram · spar 14,-"
+        },
+        {
+          "name": "EVERGOOD 250 G OG HELE BØNNER",
+          "mengde": "250 g",
+          "price": "",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "-40%"
+        },
+        {
+          "name": "NESCAFÉ",
+          "mengde": "100 g",
+          "price": "",
+          "store": "Coop Marked",
+          "store_label": "Coop Marked",
+          "store_key": "coopmarked",
+          "merknad": "-30%"
+        },
+        {
+          "name": "Coffee of the World",
+          "mengde": "10-pk",
+          "price": "3 for 2",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": ""
+        },
+        {
+          "name": "Kaffekapsler",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "IsKaffe",
+          "mengde": "330 ml",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "EVERGOOD",
+          "mengde": "250 g",
+          "price": "39,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "159,60/kilogram · før 68,90,-"
+        },
+        {
+          "name": "FRIELE KAFFE",
+          "mengde": "1 stk",
+          "price": "90,-",
+          "store": "Coop Marked",
+          "store_label": "Coop Marked",
+          "store_key": "coopmarked",
+          "merknad": "180,-/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Drikke",
+      "items": [
+        {
+          "name": "FANTA ORANGE ZERO SUGAR",
+          "mengde": "1.5 l",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "13,33/liter · spar 11,-"
+        },
+        {
+          "name": "Brus fra Coca-Cola/Farris/Frus/Bris/Imsdal naturell, et utvalg",
+          "mengde": "0.5 l",
+          "price": "19,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "39,80/liter"
+        },
+        {
+          "name": "ÄNGLAMARK DRIKKE",
+          "mengde": "1 stk",
+          "price": "32,-",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "48,48/liter"
+        },
+        {
+          "name": "FAXE KONDI",
+          "mengde": "6x0.33 l",
+          "price": "39,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "20,15/liter"
+        },
+        {
+          "name": "COLA X 10PK",
+          "mengde": "",
+          "price": "49,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "15,12/liter"
+        },
+        {
+          "name": "Coca-Cola Zero Sugar 6 pk",
+          "mengde": "6x1.5 l",
+          "price": "79,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "8,78/liter"
+        },
+        {
+          "name": "COCA-COLA ZERO",
+          "mengde": "6x1.5 l",
+          "price": "79,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "8,78/liter"
+        },
+        {
+          "name": "PEPSI MAX",
+          "mengde": "1.5 l",
+          "price": "89,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "9,89/liter"
+        },
+        {
+          "name": "Coca-Cola original 6 pk",
+          "mengde": "6x1.5 l",
+          "price": "89,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "9,89/liter"
+        },
+        {
+          "name": "SOLO/MOZELL 10 PK",
+          "mengde": "10x0.33 l",
+          "price": "89,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "26,97/liter"
+        }
+      ]
+    },
+    {
+      "name": "Dessert/is",
+      "items": [
+        {
+          "name": "YT SJOKOPUDDING",
+          "mengde": "190 g",
+          "price": "16,70",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "87,89/kilogram · før 23,90,- · spar 7,-"
+        },
+        {
+          "name": "COOP ISTE FERSKEN",
+          "mengde": "1.5 l",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "13,33/liter · spar 6,-"
+        },
+        {
+          "name": "Sandwich",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "DIPLOM-IS SMÅIS",
+          "mengde": "66 ml",
+          "price": "20,-",
+          "store": "Coop Marked",
+          "store_label": "Coop Marked",
+          "store_key": "coopmarked",
+          "merknad": "303,03/liter"
+        },
+        {
+          "name": "DIPLOM-IS ROYAL PINNEIS",
+          "mengde": "115 ml",
+          "price": "25,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "333,33/liter"
+        },
+        {
+          "name": "ISTE FERSKEN OG SITRON U/SUKKER",
+          "mengde": "0.33 l",
+          "price": "49,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "24,75/liter"
+        },
+        {
+          "name": "Sørlandsis",
+          "mengde": "1.2 l",
+          "price": "49,90",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "52,53/liter"
+        },
+        {
+          "name": "COOP ISTE",
+          "mengde": "1 stk",
+          "price": "50,-",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "8,33/liter"
+        },
+        {
+          "name": "SNICKERS IS",
+          "mengde": "6 stk",
+          "price": "59,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "215,33/kilogram"
+        },
+        {
+          "name": "ROYAL PEANØTT & KARAMELL",
+          "mengde": "6 stk",
+          "price": "59,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "9,98/piece"
+        }
+      ]
+    },
+    {
+      "name": "Grønnsaker",
+      "items": [
+        {
+          "name": "Grønn & Frisk",
+          "mengde": "600 g",
+          "price": "",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": "-30%"
+        },
+        {
+          "name": "NORSKE GRØNNSAKER",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": ""
+        },
+        {
+          "name": "BLOMKÅL",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": ""
+        },
+        {
+          "name": "PURRE",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Meny",
+          "store_label": "Meny Askim 🚗",
+          "store_key": "meny",
+          "merknad": ""
+        },
+        {
+          "name": "Sunn Snækk",
+          "mengde": "",
+          "price": "3 for 2",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": ""
+        },
+        {
+          "name": "BROKKOLI",
+          "mengde": "",
+          "price": "14,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "14,90/piece"
+        },
+        {
+          "name": "Norsk hjertesalat 2 stk",
+          "mengde": "",
+          "price": "19,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "9,95/piece"
+        },
+        {
+          "name": "NORSK VÅRLØK",
+          "mengde": "",
+          "price": "19,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "19,90/piece"
+        },
+        {
+          "name": "ADORE SMÅTOMAT",
+          "mengde": "175 g",
+          "price": "19,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "113,71/kilogram"
+        },
+        {
+          "name": "NORSK HJERTESALAT 2 STK",
+          "mengde": "",
+          "price": "19,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "9,95/piece"
+        }
+      ]
+    },
+    {
+      "name": "Frukt",
+      "items": [
+        {
+          "name": "BANANER",
+          "mengde": "Bendit pr. kg\nTILBUD",
+          "price": "15,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "15,-/kilogram"
+        },
+        {
+          "name": "UTVALGT KUTTET FRUKT",
+          "mengde": "200 g",
+          "price": "27,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "139,50/kilogram"
+        },
+        {
+          "name": "KLEMENTINER",
+          "mengde": "Spania pr. kg",
+          "price": "29,-",
+          "store": "Bunnpris",
+          "store_label": "Bunnpris",
+          "store_key": "bunnpris",
+          "merknad": "29,-/kilogram"
+        },
+        {
+          "name": "COOP COTTON CANDY DRUER",
+          "mengde": "400 g",
+          "price": "29,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "74,75/kilogram"
+        },
+        {
+          "name": "AUTUMN CRISP DRUER",
+          "mengde": "500 g",
+          "price": "34,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "69,80/kilogram"
+        },
+        {
+          "name": "GRØNNE DRUER",
+          "mengde": "Pr kg",
+          "price": "34,90",
+          "store": "Obs",
+          "store_label": "Coop Obs Slitu 🚗",
+          "store_key": "obs",
+          "merknad": "34,90/kilogram"
+        },
+        {
+          "name": "KIWI GUL 3PK",
+          "mengde": "325 g",
+          "price": "34,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "107,38/kilogram"
+        },
+        {
+          "name": "KLEMENTINER",
+          "mengde": "Cevita, pr. kg\nIMPORT",
+          "price": "34,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "34,90/kilogram"
+        },
+        {
+          "name": "Stenfrie druer",
+          "mengde": "500 g",
+          "price": "34,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "87,25/kilogram"
+        },
+        {
+          "name": "ANANAS I BITER",
+          "mengde": "400 g",
+          "price": "39,90",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "99,75/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Ingredienser",
+      "items": [
+        {
+          "name": "AXA BJØRN LETTKOKTE/STORE HAVREGRYN",
+          "mengde": "1.1 kg",
+          "price": "20,-",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "18,18/kilogram"
+        }
+      ]
+    },
+    {
+      "name": "Husholdning",
+      "items": [
+        {
+          "name": "SUPERSOFT TOALETTPAPIR",
+          "mengde": "",
+          "price": "79,90",
+          "store": "Europris",
+          "store_label": "Europris Mysen",
+          "store_key": "europris",
+          "merknad": "79,90/piece · spar 39,-"
+        },
+        {
+          "name": "AKTIV & SPORT TØYVASK",
+          "mengde": "750 ml",
+          "price": "41,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "55,87/liter · før 69,90,- · spar 28,-"
+        },
+        {
+          "name": "MILO TØYVASK",
+          "mengde": "750 ml",
+          "price": "41,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "55,87/liter · før 69,90,- · spar 28,-"
+        },
+        {
+          "name": "BLENDA SENSITIVE",
+          "mengde": "750 ml",
+          "price": "38,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "51,87/liter · før 64,90,- · spar 26,-"
+        },
+        {
+          "name": "OMO COLOR FLYTENDE",
+          "mengde": "750 ml",
+          "price": "29,90",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "39,87/liter · før 49,90,- · spar 20,-"
+        },
+        {
+          "name": "OMO HVITT FLYTENDE",
+          "mengde": "750 ml",
+          "price": "26,60",
+          "store": "Rema 1000",
+          "store_label": "Rema 1000 Mysen",
+          "store_key": "rema",
+          "merknad": "35,47/liter · før 44,90,- · spar 18,-"
+        },
+        {
+          "name": "Parodontax Complete Protection Whitening",
+          "mengde": "75 ml",
+          "price": "34,90",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "465,33/liter · spar 15,-"
+        },
+        {
+          "name": "DOVE BEAUTY CREAM BAR SOAP",
+          "mengde": "90 g",
+          "price": "14,90",
+          "store": "Extra",
+          "store_label": "Extra Mysen",
+          "store_key": "extra",
+          "merknad": "165,56/kilogram · spar 4,-"
+        },
+        {
+          "name": "TOALETTPAPIR",
+          "mengde": "",
+          "price": "99,-",
+          "store": "Kiwi",
+          "store_label": "Kiwi Mysen",
+          "store_key": "kiwi",
+          "merknad": "99,-/piece · før 112,40,- · spar 13,-"
+        },
+        {
+          "name": "ALT FRA SUNSILK",
+          "mengde": "",
+          "price": "",
+          "store": "Spar",
+          "store_label": "Spar",
+          "store_key": "spar",
+          "merknad": "14,95/piece · -50%"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "generated": "2026-08-24T08:00:59.673499",
+    "quality_score": 87.9,
+    "total_products": 145
+  }
+}
