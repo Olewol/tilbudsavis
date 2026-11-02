@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-02T09:32:49.772364",
+    "generated": "2026-11-02T09:33:41.476287",
     "week": 45,
     "quality_score": 83.9,
     "total_products": 156
@@ -1038,6 +1038,16 @@
     },
     {
       "category": "Drikke",
+      "name": "Monster uten sukker",
+      "mengde": "0.5 l",
+      "price": "17,90",
+      "store": "Meny",
+      "store_label": "Meny Askim 🚗",
+      "store_key": "meny",
+      "merknad": "35,80/liter · spar 14,-"
+    },
+    {
+      "category": "Drikke",
       "name": "DEN STOLTE HANE LOLLIPOP CHILI BBQ",
       "mengde": "700 g",
       "price": "69,90",
@@ -1105,16 +1115,6 @@
       "store_label": "Extra Mysen",
       "store_key": "extra",
       "merknad": "21,-/liter"
-    },
-    {
-      "category": "Drikke",
-      "name": "URGE, COCA-COLA M OG U/SUKKER OG FANTA U/SUKKER",
-      "mengde": "4x0.33 l",
-      "price": "39,90",
-      "store": "Bunnpris",
-      "store_label": "Bunnpris",
-      "store_key": "bunnpris",
-      "merknad": "30,23/liter"
     },
     {
       "category": "Dessert/is",
@@ -1418,16 +1418,6 @@
     },
     {
       "category": "Ingredienser",
-      "name": "Monster uten sukker",
-      "mengde": "0.5 l",
-      "price": "17,90",
-      "store": "Meny",
-      "store_label": "Meny Askim 🚗",
-      "store_key": "meny",
-      "merknad": "35,80/liter · spar 14,-"
-    },
-    {
-      "category": "Ingredienser",
       "name": "RANA GNOCCHI",
       "mengde": "500 g",
       "price": "39,90",
@@ -1515,6 +1505,16 @@
       "store_label": "Rema 1000 Mysen",
       "store_key": "rema",
       "merknad": "9,95/kilogram"
+    },
+    {
+      "category": "Ingredienser",
+      "name": "MELIS",
+      "mengde": "500 g",
+      "price": "19,90",
+      "store": "Kiwi",
+      "store_label": "Kiwi Mysen",
+      "store_key": "kiwi",
+      "merknad": "39,80/kilogram"
     },
     {
       "category": "Husholdning",
